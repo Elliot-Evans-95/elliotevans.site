@@ -1,32 +1,15 @@
-// switch (process.env.NODE_ENV) {
-//   case 'prod':
-//   case 'production':
-//     module.exports = require('./webpack/webpack.prod')({env: 'production'});
-//     break;
-//   case 'test':
-//   case 'testing':
-//     module.exports = require('./webpack/webpack.test')({env: 'test'});
-//     break;
-//   case 'dev':
-//   case 'development':
-//   default:
-//     module.exports = require('./webpack/webpack.dev')({env: 'development'});
-// }
-
 'use strict';
 
-// Plugin / Base Require
-const webpack                   = require('webpack');
-const path                      = require('path');
-const ExtractTextPlugin         = require("extract-text-webpack-plugin");
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const webpack           = require('webpack');
+const path              = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TsConfigPathsPlugin = require('awesome-typescript-loader').TsConfigPathsPlugin;
 
-// Custom Require
-const data              = require('./route.ts');
-
-// Webpack Variables
 const srcPath           = path.join(__dirname, './src');
 const distPath          = path.join(__dirname, './dist');
+const distCSS           = 'assets/styles/css/main.css';
+const distIMG           = 'assets/styles/img';
 
 module.exports = {
   context: srcPath,
@@ -46,9 +29,7 @@ module.exports = {
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/',
-    // Needed for Static Generator
-    libraryTarget: 'umd'
+    publicPath: '/'
   },
 
   // MODULES
@@ -65,30 +46,19 @@ module.exports = {
         }
       },
       {
-        // CSS MODULES
+        //CSS
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
+        exclude: /node_modules/,
+        loader: [
           'style-loader',
-          combineLoaders([{
-            loader: 'css-loader',
-            query: {
-              modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          }])
-        )
-      },
-      {
-        // JS
-        test: /\.(js|jsx)$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
+          'css-loader'
+        ]
       },
       {
         // TYPESCRIPT
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: 'ts-loader'
+        loader: 'awesome-typescript-loader'
       },
       {
         // IMAGES
@@ -122,14 +92,14 @@ module.exports = {
       minChunks: Infinity,
       filename: 'vendor.bundle.js'
     }),
-    // Loader Options
     new webpack.LoaderOptionsPlugin({
       minimize: false,
       debug: false
     }),
-    new ExtractTextPlugin("styles.css"),
-    new StaticSiteGeneratorPlugin('main', route.routes, data),
-    new webpack.NamedModulesPlugin()
+    new TsConfigPathsPlugin(/* { tsconfig, compiler } */),
+    // Hot Module Reloading
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
 
   // DEV SERVER
@@ -152,4 +122,3 @@ module.exports = {
     }
   }
 };
-

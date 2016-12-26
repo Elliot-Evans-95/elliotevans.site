@@ -1,32 +1,14 @@
-// switch (process.env.NODE_ENV) {
-//   case 'prod':
-//   case 'production':
-//     module.exports = require('./webpack/webpack.prod')({env: 'production'});
-//     break;
-//   case 'test':
-//   case 'testing':
-//     module.exports = require('./webpack/webpack.test')({env: 'test'});
-//     break;
-//   case 'dev':
-//   case 'development':
-//   default:
-//     module.exports = require('./webpack/webpack.dev')({env: 'development'});
-// }
-
 'use strict';
 
-// Plugin / Base Require
-const webpack                   = require('webpack');
-const path                      = require('path');
-const ExtractTextPlugin         = require("extract-text-webpack-plugin");
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const webpack           = require('webpack');
+const path              = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// Custom Require
-const data              = require('./route.ts');
-
-// Webpack Variables
 const srcPath           = path.join(__dirname, './src');
 const distPath          = path.join(__dirname, './dist');
+const distCSS           = 'assets/styles/css/main.css';
+const distIMG           = 'assets/styles/img';
 
 module.exports = {
   context: srcPath,
@@ -46,9 +28,7 @@ module.exports = {
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/',
-    // Needed for Static Generator
-    libraryTarget: 'umd'
+    publicPath: '/'
   },
 
   // MODULES
@@ -59,30 +39,19 @@ module.exports = {
         //HTML
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: 'raw-loader',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]'
         }
       },
       {
-        // CSS MODULES
+        //CSS
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
+        exclude: /node_modules/,
+        loader: [
           'style-loader',
-          combineLoaders([{
-            loader: 'css-loader',
-            query: {
-              modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          }])
-        )
-      },
-      {
-        // JS
-        test: /\.(js|jsx)$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
+          'css-loader'
+        ]
       },
       {
         // TYPESCRIPT
@@ -122,13 +91,22 @@ module.exports = {
       minChunks: Infinity,
       filename: 'vendor.bundle.js'
     }),
-    // Loader Options
     new webpack.LoaderOptionsPlugin({
-      minimize: false,
+      minimize: true,
       debug: false
     }),
-    new ExtractTextPlugin("styles.css"),
-    new StaticSiteGeneratorPlugin('main', route.routes, data),
+    //Removes unwanted code AKA Tree Shaking
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        screw_ie8: true,
+        warnings: false
+      },
+      output: {
+        comments: false
+      },
+      sourceMap: false
+    }),
+    // Hot Module Reloading
     new webpack.NamedModulesPlugin()
   ],
 
@@ -136,7 +114,7 @@ module.exports = {
   devServer: {
     contentBase: srcPath,
     historyApiFallback: { disableDotRule: true },
-    compress: false,
+    compress: true,
     inline: true,
     hot: true,
     stats: {
@@ -152,4 +130,3 @@ module.exports = {
     }
   }
 };
-

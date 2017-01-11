@@ -16,6 +16,7 @@ reports/
 build/
 dist/
 .tmp
+.idea
 .cache/
 
 # Webstorm / PHPstorm

@@ -1,18 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Getting Started with Typescript, ReactJS, and Webpack</title>
-</head>
-<body>
-<!-- this is where our Hello component will get rendered into -->
-<div id="root"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Elliot Evans - </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Improves speed if all request are form me -->
+    <!--<meta http-equiv="x-dns-prefetch-control" content="off">-->
 
-<!-- Dependencies -->
-<script src="./node_modules/react/dist/react.js"></script>
-<script src="./node_modules/react-dom/dist/react-dom.js"></script>
+    <!-- Schemea infomation -->
+    <link rel="author" href="">
+    <link rel="publisher" href="">
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
 
-<script src="src/bundle.js"></script>
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
-</body>
+    <!-- Shorten page url if needed-->
+    <link rel="canonical" href="">
+
+    <!-- web manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- Fallback web manifest -->
+    <meta name="application-name" content="">
+    <link rel="icon" sizes="16x16 32x32 48x48" href=".ico">
+
+    <!-- Web app stuff -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ff69b4">
+
+    <!-- Facebook meta-->
+    <meta property="fb:app_id" content="123456789">
+    <meta property="og:url" content="http://www.example.com/path/to/page.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="http://www.example.com/path/to/image.jpg">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="article:author" content="">
+
+    <!-- Twitter meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="http://www.example.com/path/to/page.html">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://www.example.com/path/to/image.jpg">
+
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="base/base__normalize.css">
+    <link rel="stylesheet" href="base/base__app.css">
+  </head>
+  <body id="root">
+
+    <container class="page-wrapper">
+
+      <!-- Header React-->
+      <container id="header"class="nav-bar"></container>
+       
+      <!-- Content -->
+      <container id="content" class="content"></container>
+
+      <!-- Footer React -->
+      <container id="footer" class="footer"></container>
+      
+    </container>
+
+    <!-- Custom Scripts-->
+    <script src="/vendor.bundle.js"></script>
+    <script src="/app.bundle.js"></script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
 </html>

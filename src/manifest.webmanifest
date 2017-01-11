@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "short_name": "",
+  "lang": "en-GB",
+  ​​"orientation": "portrait-primary",
+  "start_url": "",
+  "display": "standalone",
+  "theme_color": "",
+  "background_color": "",
+  "description": "",
+  "icons": [{
+    "src": "",
+    "sizes": "",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }]
+}

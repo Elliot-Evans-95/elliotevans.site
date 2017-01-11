@@ -1,28 +1,10 @@
-// switch (process.env.NODE_ENV) {
-//   case 'prod':
-//   case 'production':
-//     module.exports = require('./webpack/webpack.prod')({env: 'production'});
-//     break;
-//   case 'test':
-//   case 'testing':
-//     module.exports = require('./webpack/webpack.test')({env: 'test'});
-//     break;
-//   case 'dev':
-//   case 'development':
-//   default:
-//     module.exports = require('./webpack/webpack.dev')({env: 'development'});
-// }
-
 'use strict';
 
 // Plugin / Base Require
 const webpack                   = require('webpack');
 const path                      = require('path');
 const ExtractTextPlugin         = require("extract-text-webpack-plugin");
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
-// Custom Require
-const data              = require('./route.ts');
 
 // Webpack Variables
 const srcPath           = path.join(__dirname, './src');
@@ -36,7 +18,7 @@ module.exports = {
 
   // START POINT OF BUNDLER
   entry: {
-    app: './app.tsx',
+    app: './index.js',
     vendor: ['react']
   },
 
@@ -47,8 +29,6 @@ module.exports = {
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js',
     publicPath: '/',
-    // Needed for Static Generator
-    libraryTarget: 'umd'
   },
 
   // MODULES
@@ -59,7 +39,7 @@ module.exports = {
         //HTML
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: 'raw-loader',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]'
         }
@@ -67,28 +47,16 @@ module.exports = {
       {
         // CSS MODULES
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          combineLoaders([{
-            loader: 'css-loader',
-            query: {
-              modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          }])
-        )
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader:'style-loader',
+          loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+        })
+
       },
       {
         // JS
         test: /\.(js|jsx)$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
-      },
-      {
-        // TYPESCRIPT
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        loader: 'ts-loader'
+        loader: 'babel-loader',
       },
       {
         // IMAGES
@@ -101,34 +69,24 @@ module.exports = {
   // RESOLVE
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
+    extensions: ['.js', '.jsx', '.css'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
       srcPath
     ]
   },
 
-  // EXTERNALS
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  },
-
   // PLUGINS
   plugins: [
-    // Common files -> vendor bundle
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity,
-      filename: 'vendor.bundle.js'
-    }),
     // Loader Options
     new webpack.LoaderOptionsPlugin({
       minimize: false,
       debug: false
     }),
-    new ExtractTextPlugin("styles.css"),
-    new StaticSiteGeneratorPlugin('main', route.routes, data),
+    new ExtractTextPlugin({
+      filename:'style.css',
+      allChunks: true
+    }),
     new webpack.NamedModulesPlugin()
   ],
 

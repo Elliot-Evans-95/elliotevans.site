@@ -1,0 +1,124 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, .page-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 , h5, p {
+  font-size: calc(3vmax - .75vmin);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**/
+.footer, .nav-bar, .content {
+  font-size: 0.8rem; }
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 20%;
+  width: 33.3%;
+  margin: auto;
+  align-items: center;
+  background: beige;
+}
+
+.footer {
+  border-top: 0.4rem solid #0a090c;
+  background: aqua;
+}
+.footer__contents {
+  display: grid;
+  grid-template-areas: "madeby . . cookies";
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  justify-items: center;
+}
+.footer__contents--madeby {
+  grid-area: madeby;
+}
+.footer__contents--cookies {
+  grid-area: cookies;
+}
+
+.nav-bar {
+  border-bottom: 0.4rem solid #0a090c;
+  display: grid;
+  grid-template-areas: "logo . . menu";
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  /*justify-items: ce;*/
+}
+.nav-bar__logo {
+  grid-area: logo;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: bisque;
+}
+.nav-bar__menu {
+  grid-area: menu;
+  display: grid;
+  grid-template-areas: " items ";
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  justify-items: end;
+}
+.nav-bar__menu--items {
+  grid-area: items;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 150px;
+  width: 33.3vw;
+  background: aqua;
+}
+
+.content {
+  background: aqua;
+}
+.content__about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: aquamarine;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+@supports (display: grid) {
+  .page-wrapper {
+    display: grid;
+    grid-gap: 5vw 5vh;
+    grid-template-areas:
+      "header header header header"
+      "main   main   main   main  "
+      "footer footer footer footer";
+  }
+  .nav-bar {
+    grid-area: header;
+    align-self: start;
+  }
+  .content {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+    align-self: end;
+  }
+}

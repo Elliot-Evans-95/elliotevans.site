@@ -1,13 +1,13 @@
 'use strict';
 var app =  angular.module('app', []);
-app.controller('Controller', ['$scope', function($scope) {
-  $scope.customer = {
-    name: 'Naomi',
-    address: '1600 Amphitheatre'
-  };
-}])
-app.directive('myCustomer', function() {
-  return {
-    template: require('./test.html')
-  };
+
+//
+app.component('ourComponent', {
+  // Binds the attibute data to the component controller.
+  bindings: {
+    data: '@'
+  },
+
+  // We can now access the data from the data attribute with `$ctrl`
+  template: require('./test.html')
 });

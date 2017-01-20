@@ -1,28 +1,8 @@
-// React
-import { Provider } from 'react-redux';
-import ReactDOM from 'react-dom';
-import React from 'react';
+// angular
+import angular from 'angular';
 
-// Redux
-import store from 'store';
+// base component
+import baseComponent from 'base/base__index.component.js';
 
-// Base
-import {indexApp, defineApp} from 'base/base__index';
-
-// Header
-import header from 'components/header/index';
-//import header from 'components/header/nav-bar';
-//import icon from 'components/header/icon';
-
-// Content
-import content from 'components/content/content__index';
-
-// Footer
-import footer from 'components/footer/index';
-
-// HTML
-import 'index.html';
-
-ReactDOM.render(
-  document.getElementById('root')
-);
+// CSS
+//import styles from 'index.css';

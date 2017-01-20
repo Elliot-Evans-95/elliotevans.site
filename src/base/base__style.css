@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --danger-theme: {
+    color: white;
+    background-color: red;
+  };
+}
+
+.danger {
+  @apply --danger-theme;
+}
+
 html, body, .page-wrapper {
   width: 100vw;
   height: 100vh;
@@ -39,45 +50,25 @@ h1, h2, h3, h4 , h5, p {
   border-top: 0.4rem solid #0a090c;
   background: aqua;
 }
-.footer__contents {
-  display: grid;
-  grid-template-areas: "madeby . . cookies";
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  justify-items: center;
-}
-.footer__contents--madeby {
-  grid-area: madeby;
-}
-.footer__contents--cookies {
-  grid-area: cookies;
-}
 
-.nav-bar {
-  border-bottom: 0.4rem solid #0a090c;
-  display: grid;
-  grid-template-areas: "logo . . menu";
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  /*justify-items: ce;*/
-}
 .nav-bar__logo {
-  grid-area: logo;
+
+  @supports (display: grid) {
+    grid-area: logo;
+  }
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
   background: bisque;
 }
-.nav-bar__menu {
-  grid-area: menu;
-  display: grid;
-  grid-template-areas: " items ";
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  justify-items: end;
-}
+
 .nav-bar__menu--items {
-  grid-area: items;
+
+  @supports (display: grid) {
+    grid-area: items;
+  }
+  
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -102,6 +93,40 @@ h1, h2, h3, h4 , h5, p {
 }
 
 @supports (display: grid) {
+
+  .footer__contents {
+    display: grid;
+    grid-template-areas: "madeby . . cookies";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+
+  .footer__contents--madeby {
+    grid-area: madeby;
+  }
+
+  .footer__contents--cookies {
+    grid-area: cookies;
+  }
+
+  .nav-bar {
+    border-bottom: 0.4rem solid #0a090c;
+    display: grid;
+    grid-template-areas: "logo . . menu";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+
+  .nav-bar__menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-areas: " items ";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-items: end;
+  }
+
   .page-wrapper {
     display: grid;
     grid-gap: 5vw 5vh;
@@ -110,13 +135,16 @@ h1, h2, h3, h4 , h5, p {
       "main   main   main   main  "
       "footer footer footer footer";
   }
+
   .nav-bar {
     grid-area: header;
     align-self: start;
   }
+
   .content {
     grid-area: main;
   }
+
   .footer {
     grid-area: footer;
     align-self: end;

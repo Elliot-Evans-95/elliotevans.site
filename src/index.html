@@ -6,8 +6,6 @@
     <title>Elliot Evans - </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Improves speed if all request are form me -->
-    <!--<meta http-equiv="x-dns-prefetch-control" content="off">-->
 
     <!-- Schemea infomation -->
     <link rel="author" href="">
@@ -56,34 +54,35 @@
     <meta name="twitter:image" content="http://www.example.com/path/to/image.jpg">
 
     <!-- Custom Styles-->
-    <link rel="stylesheet" href="base/base__normalize.css">
-    <link rel="stylesheet" href="base/base__app.css">
   </head>
-  <body id="root">
+  <body ng-app="app">
 
-    <container class="page-wrapper">
+    <app class="page-wrapper">
 
-      <!-- Header React-->
-      <container id="header"class="nav-bar"></container>
+      <div ng-controller="Controller">
+        <div my-customer></div>
+      </div>
+      <!--<menu-bar brand="Brand"></menu-bar>-->
+      
+
+      <!-- Header-->
+      <!--<container id="header"class="nav-bar"></container>-->
        
       <!-- Content -->
-      <container id="content" class="content"></container>
+      <!--<container id="content" class="content"></container>-->
 
-      <!-- Footer React -->
-      <container id="footer" class="footer"></container>
+      <!-- Footer -->
+      <!--<container id="footer" class="footer"></container>-->
       
-    </container>
-
-    <!-- Custom Scripts-->
-    <script src="/vendor.bundle.js"></script>
-    <script src="/app.bundle.js"></script>
-
+    </app>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
       ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src="//www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- Custom Scripts-->
   </body>
 </html>

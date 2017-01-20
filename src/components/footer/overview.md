@@ -1,1 +1,0 @@
-** this folder is for all footer elements that you can see **

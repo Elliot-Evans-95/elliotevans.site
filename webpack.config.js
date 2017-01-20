@@ -3,23 +3,29 @@
 // Plugin / Base Require
 const webpack                   = require('webpack');
 const path                      = require('path');
-const ExtractTextPlugin         = require("extract-text-webpack-plugin");
-
+const HtmlWebpackPlugin         = require('html-webpack-plugin');
 
 // Webpack Variables
-const srcPath           = path.join(__dirname, './src');
-const distPath          = path.join(__dirname, './dist');
+const srcPath                   = path.join(__dirname, './src');
+const srcEntry                  = path.join(__dirname, './src/index.js');
+const distPath                  = path.join(__dirname, './dist');
+
+// @todo::
+// I18nPlugin
+// UglifyJsPlugin
+// Use postcss plugins
+// Might need ExtractTextPlugin
 
 module.exports = {
   context: srcPath,
 
   // SOURCEMAPS
-  devtool: 'source-map',
+  devtool: 'cheap-source-map',
 
   // START POINT OF BUNDLER
   entry: {
-    app: './index.js',
-    vendor: ['react']
+    app: srcEntry,
+    vendor: 'angular'
   },
 
   // OUTPUT OF WEBPACK
@@ -39,24 +45,27 @@ module.exports = {
         //HTML
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: 'file-loader',
-        query: {
-          name: '[name].[ext]'
-        }
+        loader: 'html-loader'
       },
       {
-        // CSS MODULES
+        // CSS
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader:'style-loader',
-          loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
-        })
-
+        exclude: /node_modules/,
+        loader: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+        ]
       },
       {
         // JS
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
+        query:
+        {
+          presets:['es2015']
+        }
       },
       {
         // IMAGES
@@ -68,24 +77,42 @@ module.exports = {
 
   // RESOLVE
   resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.css', '.png', 'jpg'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
       srcPath
     ]
   },
 
+  // performance
+  performance: {
+    hints: "warning",
+  },
+
+  // the environment in which the bundle should run
+  target: "web",
+
   // PLUGINS
   plugins: [
+    // Define env
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    // SETS SKELETON HTML PATH. Adds in script tags and other to HTML
+    new HtmlWebpackPlugin({
+      hash: true,
+      filename: 'index.html',
+      template: srcPath + '/index.html',
+      inject: 'body'
+    }),
     // Loader Options
     new webpack.LoaderOptionsPlugin({
       minimize: false,
-      debug: false
+      debug: false,
     }),
-    new ExtractTextPlugin({
-      filename:'style.css',
-      allChunks: true
+    // Code Spitting. manifest is there due to: https://webpack.js.org/guides/code-splitting-libraries/
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
     }),
     new webpack.NamedModulesPlugin()
   ],
@@ -111,3 +138,8 @@ module.exports = {
   }
 };
 
+// Logs what ENV is running
+if (process.env.NODE_ENV !== 'production')
+    console.log('Development')
+if (process.env.NODE_ENV == 'production')
+    console.log('Production')

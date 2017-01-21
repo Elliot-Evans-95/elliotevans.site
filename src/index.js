@@ -9,3 +9,5 @@ import baseComponent from 'base/base__index.component.js';
 
 // CSS
 //import styles from 'index.css';
+
+import styles from 'test.css';

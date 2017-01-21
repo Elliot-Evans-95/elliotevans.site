@@ -51,10 +51,19 @@ module.exports = {
         // CSS
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: [
-          'style-loader',
-          'css-loader?importLoaders=1',
-          'postcss-loader'
+        use: [
+          { 
+            loader: 'style-loader' 
+          },
+          {
+            loader: 'css-loader?importLoaders=1'
+          },
+          {
+            loader:'postcss-loader',
+            options: { 
+              config: 'postcss.config.js' 
+            }
+          }
         ]
       },
       {

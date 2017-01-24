@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+/* TEST*/
+a {
+  color: green;
+}
+
 :root {
   --danger-theme: {
     color: white;

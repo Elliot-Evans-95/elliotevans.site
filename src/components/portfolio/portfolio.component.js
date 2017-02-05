@@ -7,7 +7,12 @@ let app = angular.module('app');
 
 app.component('portfolioPage', {
 
-  // TEMPLATE
-  template:  '<h3>portfolioPage</h3>'
+    // TEMPLATE
+    template: require('./portfolio.template.html'),
+
+    // CONTROLLER
+    controller: function () {
+        document.title = "Portfolio // Elliot Evans";
+    }
 
 })

@@ -8,6 +8,6 @@ let app = angular.module('app');
 app.component('footerSection', {
 
   // TEMPLATE
-  template:  '<h3>Footer</h3>'
+  template: require('./footer.template.html')
 
 })

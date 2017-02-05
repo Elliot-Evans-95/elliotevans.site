@@ -8,6 +8,6 @@ let app = angular.module('app');
 app.component('headerSection', {
 
   // TEMPLATE
-  template:  '<h3>Header</h3>'
+  template: require('./header.template.html')
 
 })

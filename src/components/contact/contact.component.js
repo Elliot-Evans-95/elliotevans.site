@@ -7,7 +7,12 @@ let app = angular.module('app');
 
 app.component('contactPage', {
 
-  // TEMPLATE
-  template:  '<h3>contactPage</h3>'
+    // TEMPLATE
+    template: require('./contact.template.html'),
+
+    // CONTROLLER
+    controller: function () {
+        document.title = "Contact // Elliot Evans";
+    }
 
 })

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Elliot Evans - </title>
     <meta name="description" content="">
@@ -57,23 +58,17 @@
   </head>
   <body ng-app="app">
 
-  <a ui-sref="index" ui-sref-active="active">index</a>
-  <a ui-sref="about" ui-sref-active="active">About</a>
+    <a ui-sref="hello" ui-sref-active="active">Hello</a>
+    <a ui-sref="about" ui-sref-active="active">About</a>
+    <a ui-sref="portfolio" ui-sref-active="active">Portfolio</a>
+    <a ui-sref="contact" ui-sref-active="active">Contact</a>
+
+    <header-section></header-section>
 
     <ui-view></ui-view>
 
-    <base class="page-wrapper" data="this is the data we need">  
-
-      <!-- Header-->
-      <!--<container id="header"class="nav-bar"></container>-->
-       
-      <!-- Content -->
-      <!--<container id="content" class="content"></container>-->
-
-      <!-- Footer -->
-      <!--<container id="footer" class="footer"></container>-->
-      
-    </base>
+    <footer-section></footer-section>
+    
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>

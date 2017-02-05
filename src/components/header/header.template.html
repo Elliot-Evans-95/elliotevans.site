@@ -1,0 +1,36 @@
+<!--<div className="header">
+    <div className="nav-bar__logo">
+        <img src="https://facebook.github.io/react/img/logo_og.png" className="logo"/>
+    </div> 
+    <div className="nav-bar__menu">
+        <div className="nav-bar__menu--items">
+            <a ui-sref="index" ui-sref-active="active">
+                index
+            </a>
+            <a ui-sref="about" ui-sref-active="active">
+                About
+            </a>
+            <a ui-sref="portfolio" ui-sref-active="active">
+                portfolio
+            </a>
+            <a ui-sref="contact" ui-sref-active="active">
+                contact
+            </a>
+        </div>
+    </div>
+</div>-->
+
+
+<!--<container id="header"class="nav-bar"></container>-->
+    <!-- Header Links -->
+    <!-- /Header Links -->
+<!-- Header -->
+
+<h3>Some people</h3>
+<ul>
+    <li ng-repeat="person in $ctrl.people">
+        <a ui-sref="person({ personId: person.id })">
+            {person.name}}
+        </a>
+    </li>
+</ul>

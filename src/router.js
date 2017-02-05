@@ -1,19 +1,33 @@
 'use strict';
-var app =  angular.module('app', ['ui.router']);
 
-app.config(function($stateProvider) {
-  var helloState = {
-    name: 'index',
-    url: '/index',
-    template: '<h3>hello world!</h3>'
-  }
+let app = angular.module('app', ['ui.router']);
 
-  var aboutState = {
-    name: 'about',
+app.config(function($stateProvider, $locationProvider) {
+
+  $locationProvider.html5Mode(true);
+
+  // HELLO
+  $stateProvider.state('hello', {
+    url: '/hello',
+    component: 'helloPage',
+  });
+
+  // ABOUT
+  $stateProvider.state('about', {
     url: '/about',
-    template: '<h3>Its the UI-Router hello world app!</h3>'
-  }
+    component: 'aboutPage',
+  });
 
-  $stateProvider.state(helloState);
-  $stateProvider.state(aboutState);
+  // PORTFOLIO
+  $stateProvider.state('portfolio', {
+    url: '/portfolio',
+    component: 'portfolioPage',
+  });
+
+  // CONTACT
+  $stateProvider.state('contact', {
+    url: '/contact',
+    component: 'contactPage',
+  });
+
 });

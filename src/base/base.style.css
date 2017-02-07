@@ -1,4 +1,34 @@
 /* normalise */
+/* USE CSS FROM: https://github.com/necolas/idiomatic-css*/
+.test {
+  color: #FFFFFF;
+  color: #FFFFEE;
+  color: #F2F2F2;
+  color: #f0f0ee;
+  color: #E3E7EA;
+  color: #CCEBFF;
+  color: #F2DADC;
+  color: #D7DBDD;
+  color: #BBDDDD;
+  color: #AADDCC;
+  color: #99D8FF;
+  color: #D8ADB2;
+  color: #F27987;
+  color: #8899AA;
+  color: #557777;
+  color: #008EE5;
+  color: #118877;
+  color: #884411;
+  color: #7F3F47;
+  color: #0068A8;
+  color: #992233;
+  color: #115588;
+  color: #3D464C;
+  color: #004466;
+  color: #2B2B2B;
+  color: #111010;
+  color: #220000;
+}
 
 html {
   font-family: sans-serif;
@@ -172,18 +202,10 @@ th {
   padding: 0;
 }
 
+/* MY STYLES  */
 
 *, *:before, *:after {
   box-sizing: border-box;
-}
-
-/* TEST*/
-a {
-  color: green;
-}
-
-a.active {
-  color: blue;
 }
 
 :root {

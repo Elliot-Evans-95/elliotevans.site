@@ -1,0 +1,33 @@
+.portfolio {
+    background: antiquewhite;
+}
+.portfolio__header {
+    background: hotpink;
+    text-align: center;
+}
+.portfolio__content {
+    display: flex;
+    flex: 1 1 auto;
+}
+.portfolio__content--imgcontainer {
+    border: 1px solid blueviolet;
+    background: aliceblue;
+    /**/
+    display: flex;
+}
+.portfolio__content--imgcontainer:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+.portfolio__content--img {
+    max-width: 100%;
+    height: auto;
+}
+.portfolio__content--imgcaption {
+    color: fuchsia;
+    text-align: center;
+    /**/
+    flex-shrink: 1;
+    align-self: center;
+    position: relative;
+    left: -10.5vw;
+}

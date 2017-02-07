@@ -1,1 +1,85 @@
-<p> Contact </p>
+
+<div ng-controller="contactController">
+  <form novalidate class="simple-form">
+    <label>Name: <input placeholder="text here" type="text" ng-model="user.name" /></label><br />
+    <label>E-mail: <input type="email" ng-model="user.email" /></label><br />
+    Best Editor: <label><input type="radio" ng-model="user.preference" value="vi" />vi</label>
+    <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br />
+    <input type="button" ng-click="reset()" value="Reset" />
+    <input type="submit" ng-click="save(user)" value="Save" />
+  </form>
+  <pre>user = {{user | json}}</pre>
+  <pre>form = {{form | json}}</pre>
+</div>
+
+<!--<section class="contact" ng-controller="contactController">  
+
+    <header class="contact__header">
+        <h1> Contact me: </h1>
+    </header>
+    
+    <form novalidate class="contact__content" action="/" method="POST">
+
+        <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" ng-model="user.name" required autofocus>
+        </fieldset>
+
+
+        <fieldset>
+            <input placeholder="Your Email Address" type="email" tabindex="2" ng-model="user.email" required>
+        </fieldset>
+
+
+        <fieldset>
+            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+        </fieldset>
+
+
+        <fieldset>
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </fieldset>
+
+
+        <fieldset>
+            <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+        </fieldset>
+
+
+        <fieldset>
+            <label for="preference" name="choice">
+                <input type="radio" ng-model="user.preference" value="vi" />vi
+            </label>
+            <label>
+                <input type="radio" ng-model="user.preference" value="emacs" />emacs
+            </label>
+        </fieldset>
+
+ 
+        <fieldset>
+            <progress value="22" max="100"></progress>
+        </fieldset>
+
+
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" ng-click="save(user)" value="Save">Submit</button>
+            <input type="button" ng-click="reset()" value="Reset" />
+        </fieldset>
+    </form>
+
+    <footer class="contact__footer"> 
+        Somethign funny here
+    </footer>
+
+</section>-->
+
+
+<div>
+  <pre>user = {{user | json}}</pre>
+  <pre>form = {{form | json}}</pre>
+</div>

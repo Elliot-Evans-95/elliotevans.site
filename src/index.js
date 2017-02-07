@@ -19,7 +19,9 @@ import about from 'components/about/about.component.js';
 import portfolio from 'components/portfolio/portfolio.component.js';
 
 // contact
+import contactController from 'components/contact/contact.component.js';
 import contact from 'components/contact/contact.component.js';
+
 
 // ------------ SECTIONS ------------
 

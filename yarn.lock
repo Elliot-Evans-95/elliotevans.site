@@ -68,27 +68,27 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-animate@^1.6.1:
+angular-animate@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.2.tgz#def2a8b9ede53b4b6e234c25f5c64e4b4385df15"
 
-angular-mocks@^1.6.1:
+angular-mocks@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.2.tgz#fbb28208e74d3512769afdb8771f5cc5a99f9128"
 
-angular-resource@^1.6.1:
+angular-resource@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-resource/-/angular-resource-1.6.2.tgz#fe09e3a723cd7a046b8871382e44f4f83f38557a"
 
-angular-route@^1.6.1:
+angular-route@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-route/-/angular-route-1.6.2.tgz#95a349de2e73674f3dd783bb21e8d7b3fc526312"
 
-angular-sanitize@^1.6.1:
+angular-sanitize@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.6.2.tgz#8a327c1acb2c14f50da5b5cad5ea452750a1a375"
 
-angular-touch@^1.6.1:
+angular-touch@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-touch/-/angular-touch-1.6.2.tgz#51f58b841921a088f2be24b6057a3fca1d594452"
 
@@ -98,7 +98,7 @@ angular-ui-router@1.0.0-rc.1:
   dependencies:
     ui-router-core "3.1.0"
 
-angular@^1.6.1:
+angular@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.2.tgz#d0b677242ac4bf9ae81424297c6320973af4bb5a"
 
@@ -1761,7 +1761,7 @@ eslint-plugin-nodeca@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-nodeca/-/eslint-plugin-nodeca-1.0.3.tgz#66c85663ee910a8baed7a505d2b9241bb7037b5b"
 
-eslint@^3.14.1:
+eslint@^3.15.0:
   version "3.15.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.15.0.tgz#bdcc6a6c5ffe08160e7b93c066695362a91e30f2"
   dependencies:
@@ -3879,7 +3879,7 @@ postcss@5.1.2:
     source-map "^0.5.6"
     supports-color "^3.1.2"
 
-postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.21, postcss@^5.0.3, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.1.1, postcss@^5.2.0, postcss@^5.2.11, postcss@^5.2.8, postcss@^5.2.9:
+postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.21, postcss@^5.0.3, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.1.1, postcss@^5.2.0, postcss@^5.2.11, postcss@^5.2.12, postcss@^5.2.8, postcss@^5.2.9:
   version "5.2.12"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.12.tgz#6a2b15e35dd65634441bb0961fa796904c7890e0"
   dependencies:
@@ -4946,7 +4946,7 @@ webpack-dev-middleware@^1.0.11, webpack-dev-middleware@^1.9.0:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-dev-server@^2.2.0:
+webpack-dev-server@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.3.0.tgz#0437704bbd4d941a6e4c061eb3cc232ed7d06101"
   dependencies:

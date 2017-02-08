@@ -9,20 +9,20 @@ app.component('contactPage', {
 
     // BINDINGS
     bindings: {
-      user:'='
+      user: '=',
+      currentProgress: '='
     },
 
     // TEMPLATE
     template: require('./contact.template.html'),
-
-    // CONTROLLER
-    // controller: contactController
 })
 
 .controller('contactController', ['$scope', function($scope) {
     document.title = "Contact // Elliot Evans";
 
     $scope.form = { };
+
+    $scope.formProgress
 
     $scope.save = function(user) {
         $scope.form = angular.copy(user);
@@ -33,4 +33,8 @@ app.component('contactPage', {
     };
 
     $scope.reset();
-}]);
+
+    // Add a reset for only this input element
+
+    // Add a currentProgress for form
+}])

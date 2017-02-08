@@ -7,9 +7,8 @@
   "author": "elliot evans",
   "license": "MIT",
   "scripts": {
-    "test": "jasmine --watch",
-    "dev": "webpack",
-    "prod": "webpack -p",
+    "test": "karma start",
+    "prod": "NODE_ENV='prod' webpack -p",
     "lint": "eslint",
     "serve": "webpack-dev-server --hot --inline --colors --progress"
   },
@@ -45,6 +44,11 @@
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.28.0",
     "i18n-webpack-plugin": "0.3.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-webpack": "^2.0.2",
     "postcss-loader": "^1.2.2",
     "postcss-modules": "^0.6.4",
     "raw-loader": "^0.5.1",

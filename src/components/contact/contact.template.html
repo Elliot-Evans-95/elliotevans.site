@@ -7,6 +7,7 @@
     <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br />
     <input type="button" ng-click="reset()" value="Reset" />
     <input type="submit" ng-click="save(user)" value="Save" />
+    <progress value="currentProgress" max="100"></progress>
   </form>
   <pre>user = {{user | json}}</pre>
   <pre>form = {{form | json}}</pre>
@@ -77,9 +78,3 @@
     </footer>
 
 </section>-->
-
-
-<div>
-  <pre>user = {{user | json}}</pre>
-  <pre>form = {{form | json}}</pre>
-</div>

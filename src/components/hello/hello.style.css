@@ -1,0 +1,9 @@
+.content__hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: aquamarine;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}

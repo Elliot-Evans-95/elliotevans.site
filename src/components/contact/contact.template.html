@@ -1,6 +1,6 @@
 
-<div ng-controller="contactController">
-  <form novalidate class="simple-form">
+<section class="content__contact" ng-controller="contactController">
+  <form novalidate class="contact__content simple-form">
     <label>Name: <input placeholder="text here" type="text" ng-model="user.name" /></label><br />
     <label>E-mail: <input type="email" ng-model="user.email" /></label><br />
     Best Editor: <label><input type="radio" ng-model="user.preference" value="vi" />vi</label>
@@ -11,9 +11,9 @@
   </form>
   <pre>user = {{user | json}}</pre>
   <pre>form = {{form | json}}</pre>
-</div>
+</section>
 
-<!--<section class="contact" ng-controller="contactController">  
+<!--<section class="content__contact contact" ng-controller="contactController">  
 
     <header class="contact__header">
         <h1> Contact me: </h1>

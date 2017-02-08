@@ -1,0 +1,20 @@
+.about__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 20%;
+  width: 33.3%;
+  margin: auto;
+  align-items: center;
+  background: beige;
+}
+
+.content__about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: aquamarine;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

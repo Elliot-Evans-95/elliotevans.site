@@ -1,144 +1,184 @@
-/* normalise */
-/* USE CSS FROM: https://github.com/necolas/idiomatic-css*/
-.test {
-  color: #FFFFFF;
-  color: #FFFFEE;
-  color: #F2F2F2;
-  color: #f0f0ee;
-  color: #E3E7EA;
-  color: #CCEBFF;
-  color: #F2DADC;
-  color: #D7DBDD;
-  color: #BBDDDD;
-  color: #AADDCC;
-  color: #99D8FF;
-  color: #D8ADB2;
-  color: #F27987;
-  color: #8899AA;
-  color: #557777;
-  color: #008EE5;
-  color: #118877;
-  color: #884411;
-  color: #7F3F47;
-  color: #0068A8;
-  color: #992233;
-  color: #115588;
-  color: #3D464C;
-  color: #004466;
-  color: #2B2B2B;
-  color: #111010;
-  color: #220000;
+/* USE CSS FROM: https://github.com/necolas/idiomatic-css */
+
+
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ */
+
+/* example CSS  */
+.selector {
+    /* Pre Proess*/
+    /*@extend .other-rule;
+    @include clearfix();
+    @include box-sizing(border-box);
+    width: x-grid-unit(1);*/
+
+    /* Positioning */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Display & Box Model */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 10px solid #333;
+    margin: 10px;
+
+    /* Other */
+    background: #000;
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
+    
 }
 
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+
+/* Variables
+   ========================================================================== */
+
+:root {
+  --light-white:#FAFAFA;
+  --dark-white: #FFFFEE;
+
+  --light-black: #505050;
+  --dark-black: #212121;
+
+  --bg-blue: #CCEBFF;
+  --light-blue: #99D8FF;
+  --dark-blue: #0068A8;
+
+  --light-green: #AADDCC;
+  --dark-green: #118877;
+
+  --bg-red: #F2DADC;
+  --light-red: #F27987;
+  --dark-red: #992233;
+}
+
+
+/* Basic Elements
+   ========================================================================== */
+
+/* Border box */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Font Reset */
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
-main {
-  display: block;
+body {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--light-white);
 }
 
-audio,
-canvas,
-progress,
-video {
-  vertical-align: baseline;
+/* Base Section styling */
+section {
+  /* 60 is for footer height, 106 is for header height plus the grid gaps*/
+  height: calc(100vh - 60px - 106px - 6vw - 6vh);
 }
 
+/* Text Elements
+   ========================================================================== */
+
+/* Removing outline form link states*/
 a:active,
 a:hover {
   outline: 0;
 }
 
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
+h1, h2, h3, h4 , h5, p {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--dark-black);
 }
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-small {
-  font-size: 80%;
+  font-size: 2rem;
+  margin: 0.5em 0;
+  font-weight: 800;
 }
 
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+h2 {
+  font-size: 1.75rem;
+  margin: 0.25em 0;
+  font-weight: 600;
 }
 
-sup {
-  top: -0.5em;
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 400;
 }
 
-sub {
-  bottom: -0.25em;
+h4 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 400;
 }
 
-svg:not(:root) {
-  overflow: hidden;
+h5 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 300;
 }
 
-figure {
-  margin: 1em 40px;
+p {
+  font-size: 1rem;
+  margin: 0.25em 0;
 }
 
-hr {
-  height: 0;
-}
-
-
-pre {
-  overflow: auto;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
+/* Form Elements
+   ========================================================================== */
 
 button,
 input,
-optgroup,
-select,
 textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-}
-
-button {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
 }
 
 button[disabled],
@@ -188,147 +228,45 @@ textarea {
   overflow: auto;
 }
 
-optgroup {
-  font-weight: bold;
+button {
+  overflow: visible;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+button,
+select {
+  text-transform: none;
 }
 
-td,
-th {
-  padding: 0;
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
 }
 
-/* MY STYLES  */
+/* Advanced Elements
+   ========================================================================== */
 
-*, *:before, *:after {
-  box-sizing: border-box;
+/* Canvas and progress Reset */
+canvas,
+progress, {
+  vertical-align: baseline;
 }
 
-:root {
-  --danger-theme: {
-    color: white;
-    background-color: red;
-  };
-}
-
-.danger {
-  @apply --danger-theme;
-}
-
-html, body, .page-wrapper {
-  width: 100vw;
-  height: 100vh;
-}
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4 , h5, p {
-  font-size: calc(3vmax - .75vmin);
-
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.footer, .nav-bar, .content {
-  font-size: 0.8rem; }
-
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 20%;
-  width: 33.3%;
-  margin: auto;
-  align-items: center;
-  background: beige;
-}
-
-.footer {
-  border-top: 0.4rem solid #0a090c;
-  background: aqua;
-}
-
-.nav-bar__logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: bisque;
-}
-
-.nav-bar__menu--items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  min-width: 150px;
-  width: 33.3vw;
-  background: aqua;
-}
+/* Custom base classes
+   ========================================================================== */
 
 .content {
-  background: aqua;
-}
-.content__about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: aquamarine;
+  background: var(--dark-white);
 }
 
-.logo {
-  height: 50px;
-  width: 50px;
-}
 
+/* @ Supports stuff
+   ========================================================================== */
+
+/* This checks teh browser to see if the style can be used by the browser*/
 @supports (display: grid) {
-
-  .nav-bar__menu--items {
-    grid-area: logo;
-  }
-
-  .nav-bar__menu--items {
-    grid-area: items;
-  }
-
-  .footer__contents {
-    display: grid;
-    grid-template-areas: "madeby . . cookies";
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    justify-items: center;
-  }
-
-  .footer__contents--madeby {
-    grid-area: madeby;
-  }
-
-  .footer__contents--cookies {
-    grid-area: cookies;
-  }
-
-  .nav-bar {
-    border-bottom: 0.4rem solid #0a090c;
-    display: grid;
-    grid-template-areas: "logo . . menu";
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-  }
-
-  .nav-bar__menu {
-    grid-area: menu;
-    display: grid;
-    grid-template-areas: " items ";
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    justify-items: end;
-  }
 
   .page-wrapper {
     display: grid;
@@ -339,17 +277,7 @@ h1, h2, h3, h4 , h5, p {
       "footer footer footer footer";
   }
 
-  .nav-bar {
-    grid-area: header;
-    align-self: start;
-  }
-
   .content {
     grid-area: main;
-  }
-
-  .footer {
-    grid-area: footer;
-    align-self: end;
   }
 }

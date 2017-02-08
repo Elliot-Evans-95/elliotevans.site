@@ -1,0 +1,28 @@
+.footer {
+  border-top: 0.2rem solid #0a090c;
+  background: aqua;
+}
+
+@supports (display: grid) {
+
+  .footer__contents {
+    display: grid;
+    grid-template-areas: "madeby . . cookies";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+
+  .footer__contents--madeby {
+    grid-area: madeby;
+  }
+
+  .footer__contents--cookies {
+    grid-area: cookies;
+  }
+
+  .footer {
+    grid-area: footer;
+    align-self: end;
+  }
+}

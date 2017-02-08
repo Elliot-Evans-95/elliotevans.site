@@ -1,0 +1,14 @@
+.contact__content {
+    width: 75vh;
+    background: aqua;
+}
+
+.content__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: aquamarine;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}

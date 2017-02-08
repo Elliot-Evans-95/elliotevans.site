@@ -1,1 +1,58 @@
-/*navbar styling here*/
+.nav-bar__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: bisque;
+}
+
+.nav-bar__menu--items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 150px;
+  width: 33.3vw;
+  background: aqua;
+}
+
+.nav-bar__menu--items a {
+  font-size: 1rem;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+@supports (display: grid) {
+
+  .nav-bar__menu--items {
+    grid-area: logo;
+  }
+
+  .nav-bar__menu--items {
+    grid-area: items;
+  }
+
+  .nav-bar {
+    border-bottom: 0.2rem solid #0a090c;
+    display: grid;
+    grid-template-areas: "logo . . menu";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+
+  .nav-bar__menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-areas: " items ";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-items: end;
+  }
+
+  .nav-bar {
+    grid-area: header;
+    align-self: start;
+  }
+
+}

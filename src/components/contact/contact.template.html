@@ -2,13 +2,20 @@
 <section class="content__contact" ng-controller="contactController">
   <form name="contactForm" novalidate class="contact__content simple-form">
 
-    <label>Name: <input name="userName" placeholder="text here" type="text" ng-model="user.name" required minlength="5"/> <a ng-show="user.name.length > 0" ng-click="remove()">X</a></label><br />
-    <div ng-messages="contactForm.userName.$error">
-        <div ng-message="required">You did not enter a field</div>
-        <div ng-message="minlength">The value entered is too short</div>
+    <label>
+        Name: 
+        <input name="userName" placeholder="text here" type="text" ng-model="user.name" ng-class="{ 'has-error' : contactForm.userName.$invalid && !contactForm.userName.$pristine, 'valid': !contactForm.userName.$invalid }" required ng-minlength="5"/> 
+        <a ng-show="contactForm.userName.$viewValue.length > 0" ng-click="remove()">X</a>
+    </label>
+    <br />
+    <!-- set to only appear if they have submitted the form submit button -->
+    <div ng-show="contactForm.userName.$invalid && !contactForm.userName.$pristine" role="alert">
+        <div ng-message="required">Your name is Required or it is less then 5 characters</div>
     </div>
 
-    <label>E-mail: <input type="email" ng-model="user.email" /></label><br />
+    <label>E-mail: <input name="userEmail" type="email" ng-model="user.email" required maxlength="15"/></label><br />
+
+
     Best Editor: <label><input type="radio" ng-model="user.preference" value="vi" />vi</label>
     <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br />
     <input type="button" ng-click="reset()" value="Reset" />

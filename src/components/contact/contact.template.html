@@ -1,7 +1,13 @@
 
 <section class="content__contact" ng-controller="contactController">
-  <form novalidate class="contact__content simple-form">
-    <label>Name: <input placeholder="text here" type="text" ng-model="user.name" /></label><br />
+  <form name="contactForm" novalidate class="contact__content simple-form">
+
+    <label>Name: <input name="userName" placeholder="text here" type="text" ng-model="user.name" required minlength="5"/> <a ng-show="user.name.length > 0" ng-click="remove()">X</a></label><br />
+    <div ng-messages="contactForm.userName.$error">
+        <div ng-message="required">You did not enter a field</div>
+        <div ng-message="minlength">The value entered is too short</div>
+    </div>
+
     <label>E-mail: <input type="email" ng-model="user.email" /></label><br />
     Best Editor: <label><input type="radio" ng-model="user.preference" value="vi" />vi</label>
     <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br />

@@ -32,6 +32,10 @@ app.component('contactPage', {
         $scope.user = { };
     };
 
+    $scope.remove = function() {
+        $scope.user.name = null;
+    };
+
     $scope.reset();
 
     // Add a reset for only this input element

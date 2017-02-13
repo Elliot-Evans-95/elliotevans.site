@@ -2,28 +2,73 @@
 <section class="content__contact" ng-controller="contactController">
   <form name="contactForm" novalidate class="contact__content simple-form">
 
-    <label>
-        Name: 
-        <input name="userName" placeholder="text here" type="text" ng-model="user.name" ng-class="{ 'has-error' : contactForm.userName.$invalid && !contactForm.userName.$pristine, 'valid': !contactForm.userName.$invalid }" required ng-minlength="5"/> 
-        <a ng-show="contactForm.userName.$viewValue.length > 0" ng-click="remove()">X</a>
-    </label>
-    <br />
+    <header class="contact__header">
+        <h1> Contact me: </h1>
+    </header>
+
+    <fieldset>
+        <label for="userName"> Name: <span>*</span></label>    
+        <input name="userName" placeholder="Dave Smith" type="text" ng-model="user.name" ng-class="{ 'has-error' : contactForm.userName.$invalid && !contactForm.userName.$pristine, 'valid': !contactForm.userName.$invalid }" required autofocus ng-minlength="5"/> 
+        <a class="contact__content--remove" ng-show="contactForm.userName.$viewValue.length > 0" ng-click="removeUserName()">X</a>
+    </fieldset>
+
     <!-- set to only appear if they have submitted the form submit button -->
-    <div ng-show="contactForm.userName.$invalid && !contactForm.userName.$pristine" role="alert">
+    <!--<div ng-show="contactForm.userName.$invalid && !contactForm.userName.$pristine" role="alert">
         <div ng-message="required">Your name is Required or it is less then 5 characters</div>
-    </div>
+    </div>-->
 
-    <label>E-mail: <input name="userEmail" type="email" ng-model="user.email" required maxlength="15"/></label><br />
+    <fieldset>
+        <label for="userEmail"> E-mail: <span>*</span></label>  
+        <input name="userEmail" placeholder="example@email.com" type="email" ng-model="user.email" required maxlength="15"/>
+        <a class="contact__content--remove" ng-show="!contactForm.userEmail.$invalid" ng-click="removeEmail()">X</a>
+    </fieldset>
 
+    <!-- set to only appear if they have submitted the form submit button -->
+    <!--<div ng-show="contactForm.userEmail.$invalid && !contactForm.userEmail.$pristine" role="alert">
+        <div ng-message="required">Your name is Required or it is less then 5 characters</div>
+    </div>-->
 
-    Best Editor: <label><input type="radio" ng-model="user.preference" value="vi" />vi</label>
-    <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br />
+    <fieldset>
+        <label for="userChoice"> Type of email: <span>*</span> </label>  
+        <input name="userChoicePersonal" type="radio" ng-model="user.preference" value="personal" required/> Personal
+        <input name="userChoiceJob" type="radio" ng-model="user.preference" value="job" required/> Job Related
+        <input name="userChoiceOther" type="radio" ng-model="user.preference" value="other" required/> Other
+    </fieldset>
+
+    <fieldset>
+        <label for="userLocation">Location: </label>
+        <input name="userLocation" placeholder="please choose a option" list="location" ng-model="user.location" />
+        <datalist id="location">
+            <option value="United Kingdom">
+            <option value="United States">
+            <option value="France">
+            <option value="Germany">
+            <option value="Netherlands">
+            <option value="Other">
+        </datalist>
+        <a class="contact__content--remove" ng-if="user.location" ng-click="removeLocation()">X</a>
+
+    </fieldset>
+
+    <fieldset>
+        <label for="userMessage">Your message: <span>*</span></label>
+        <textarea name="userMessage" placeholder="Please type your Message Here..." ng-model="user.message" tabindex="5" required></textarea>
+    </fieldset>
+
+    <progress ng-model="user.progress" value="currentProgress" max="100"></progress>
+
     <input type="button" ng-click="reset()" value="Reset" />
     <input type="submit" ng-click="save(user)" value="Save" />
-    <progress value="currentProgress" max="100"></progress>
+
+    <footer class="contact__footer"> 
+        Somethign funny here
+    </footer>
+    
   </form>
+
   <pre>user = {{user | json}}</pre>
   <pre>form = {{form | json}}</pre>
+
 </section>
 
 <!--<section class="content__contact contact" ng-controller="contactController">  
@@ -49,15 +94,7 @@
         </fieldset>
 
 
-        <fieldset>
-            <datalist id="browsers">
-                <option value="Internet Explorer">
-                <option value="Firefox">
-                <option value="Chrome">
-                <option value="Opera">
-                <option value="Safari">
-            </datalist>
-        </fieldset>
+        
 
 
         <fieldset>
@@ -86,8 +123,6 @@
         </fieldset>
     </form>
 
-    <footer class="contact__footer"> 
-        Somethign funny here
-    </footer>
+    
 
 </section>-->

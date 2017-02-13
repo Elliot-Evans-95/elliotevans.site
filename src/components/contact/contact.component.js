@@ -17,7 +17,7 @@ app.component('contactPage', {
     template: require('./contact.template.html'),
 })
 
-.controller('contactController', ['$scope', function($scope) {
+.controller('contactController', ['$scope', function($scope, $invalid) {
     document.title = "Contact // Elliot Evans";
 
     $scope.form = { };
@@ -32,8 +32,16 @@ app.component('contactPage', {
         $scope.user = { };
     };
 
-    $scope.remove = function() {
+    $scope.removeUserName = function() {
         $scope.user.name = null;
+    };
+
+    $scope.removeEmail = function() {
+        $scope.user.email = null;
+    };
+
+    $scope.removeLocation = function() {
+        $scope.user.location = null;
     };
 
     $scope.reset();
@@ -41,4 +49,9 @@ app.component('contactPage', {
     // Add a reset for only this input element
 
     // Add a currentProgress for form
+        // Thinking once the form is valid it will add a value onto progress. 
+
+    $scope.$watch($scope.user.name, function() {
+        alert("hello")
+    });
 }])

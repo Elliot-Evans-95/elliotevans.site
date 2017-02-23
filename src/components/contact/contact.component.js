@@ -51,7 +51,7 @@ app.component('contactPage', {
     // Add a currentProgress for form
         // Thinking once the form is valid it will add a value onto progress. 
 
-    $scope.$watch($scope.user.name, function() {
+    $scope.$watch(contactForm.userName, function() {
         alert("hello")
     });
 }])

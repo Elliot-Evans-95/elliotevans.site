@@ -1,13 +1,14 @@
 .footer {
-  border-top: 0.2rem solid #0a090c;
-  background: aqua;
+  border-top: 0.1rem solid rgba(10, 9, 12, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px -2px 2px 0px, rgba(0, 0, 0, 0.137255) 0px -4px 4px 2px, rgba(0, 0, 0, 0.117647) 0px 0px 20px 8px;
+  background: white;
 }
 
 @supports (display: grid) {
 
   .footer__contents {
     display: grid;
-    grid-template-areas: "madeby . . cookies";
+    grid-template-areas: ". madeby madeby .";
     grid-template-rows: auto;
     grid-template-columns: auto;
     justify-items: center;
@@ -15,10 +16,6 @@
 
   .footer__contents--madeby {
     grid-area: madeby;
-  }
-
-  .footer__contents--cookies {
-    grid-area: cookies;
   }
 
   .footer {

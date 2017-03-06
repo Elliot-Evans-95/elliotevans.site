@@ -87,7 +87,8 @@ switch (process.env.NODE_ENV) {
           {
             // IMAGES
             test: /\.(png|jpg)$/,
-            loader: 'url-loader?limit=100000&name=./imgs/[hash].[ext]'
+            //loader: 'url-loader?limit=100000&name=./imgs/[hash].[ext]'
+            loader: 'file-loader',
           }
         ]
       },
@@ -137,7 +138,9 @@ switch (process.env.NODE_ENV) {
       // DEV SERVER
       devServer: {
         contentBase: srcPath,
-        historyApiFallback: { disableDotRule: true },
+        historyApiFallback: {
+          disableDotRule: true
+        },
         compress: false,
         inline: true,
         hot: true,

@@ -270,6 +270,8 @@ progress, {
 @supports (display: grid) {
 
   .page-wrapper {
+    background-image: -webkit-linear-gradient(158deg, #34ADFF 45%, #4CBFFF 35%);
+
     display: grid;
     grid-gap: 5vw 5vh;
     grid-template-areas:

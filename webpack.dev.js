@@ -1,4 +1,4 @@
-'use strict';
+
 
 // Plugin / Base Require
 const webpack                   = require('webpack');
@@ -14,7 +14,7 @@ const distPath                  = path.join(__dirname, './dist');
 // I18nPlugin
 // UglifyJsPlugin
 // Use postcss plugins
-// Might need ExtractTextPlugin
+// ExtractTextPlugin
 
 module.exports = {
   context: srcPath,
@@ -61,7 +61,7 @@ module.exports = {
           {
             loader:'postcss-loader',
             options: { 
-              config: 'postcss.config.js' 
+              config: './config/postcss.config.js' 
             }
           }
         ]
@@ -79,7 +79,7 @@ module.exports = {
       {
         // IMAGES
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=100000&name=./imgs/[hash].[ext]'
+        loader: 'file-loader',
       }
     ]
   },
@@ -129,7 +129,9 @@ module.exports = {
   // DEV SERVER
   devServer: {
     contentBase: srcPath,
-    historyApiFallback: { disableDotRule: true },
+    historyApiFallback: {
+      disableDotRule: true
+    },
     compress: false,
     inline: true,
     hot: true,

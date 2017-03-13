@@ -14,4 +14,4 @@ app.component('aboutPage', {
     controller: function () {
         document.title = "About // Elliot Evans";
     }
-})
+});

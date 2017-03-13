@@ -1,5 +1,3 @@
-
-
 // Plugin / Base Require
 const webpack                   = require('webpack');
 const path                      = require('path');
@@ -17,6 +15,7 @@ const distPath                  = path.join(__dirname, './dist');
 // ExtractTextPlugin
 
 module.exports = {
+
   context: srcPath,
 
   // SOURCEMAPS
@@ -80,6 +79,11 @@ module.exports = {
         // IMAGES
         test: /\.(png|jpg)$/,
         loader: 'file-loader',
+      },
+      { 
+        // JSON
+        test: /\.json$/, 
+        loader: 'json-loader' 
       }
     ]
   },

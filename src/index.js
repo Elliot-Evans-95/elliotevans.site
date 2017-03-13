@@ -13,6 +13,11 @@ import * as router from './router.js';
 
 import base from 'base/base.component.js';
 
+
+// --------- FLOAT ----------
+
+import float from 'components/float/float.component.js';
+
 // --------- PAGES ----------
 
 // about

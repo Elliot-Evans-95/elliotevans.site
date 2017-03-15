@@ -107,10 +107,6 @@ module.exports = {
 
   // PLUGINS
   plugins: [
-    // Define env
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     // SETS SKELETON HTML PATH. Adds in script tags and other to HTML
     new HtmlWebpackPlugin({
       hash: true,

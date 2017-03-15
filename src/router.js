@@ -1,6 +1,6 @@
 'use strict';
 
-let app = angular.module('app', ['ui.router']);
+let app = angular.module('app', ['ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $locationProvider) {
 

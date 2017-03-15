@@ -3,6 +3,7 @@
 
 // angular
 import angular from 'angular';
+import animate from 'angular-animate';
 
 // --------- ROUTER ----------
 
@@ -16,7 +17,7 @@ import base from 'base/base.component.js';
 
 // --------- FLOAT ----------
 
-import float from 'components/float/float.component.js';
+import float from 'components/float/float.directive.js';
 
 // --------- PAGES ----------
 

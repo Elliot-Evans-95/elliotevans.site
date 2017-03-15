@@ -20,24 +20,60 @@
 			
 .box-1{
   background-color: #df7b7b;
-  top: 10vh;
-  left: 1vw;
+  top: 15vh;
+  left: 2vw;
 }
 				
 .box-2{
-  background-color: rgba(217,109,187,0.5);
+  background-color: rgba(217,109,187,0.75);
   top: 50vh;
   left: 20vw;
 }
 				
 .box-3{
-  background-color: rgba(13,98,189,0.5);
+  background-color: rgba(113,98,9,0.75);
   top: 90vh;
-  left: 50vw;
+  left: 40vw;
 }
 
 .box-4{
-  background-color: rgba(13,98,189,0.5);
+  background-color: rgba(123,18,89,0.75);
   top: 75vh;
-  left: 75vw;
+  left: 60vw;
+}
+
+.box-5{
+  background-color: rgba(30,80,129,0.75);
+  top: 25vh;
+  left: 80vw;
+}
+
+.box-6{
+  background-color: rgba(180,98,189,0.75);
+  top: 50vh;
+  left: 60vw;
+}
+
+.box-7{
+  background-color: rgba(13,18,189,0.75);
+  top: 20vh;
+  left: 60vw;
+}
+
+.box-8{
+  background-color: rgba(131,98,189,0.75);
+  top: 40vh;
+  left: 80vw;
+}
+
+.box-9{
+  background-color: rgba(13,198,189,0.75);
+  top: 10vh;
+  left: 30vw;
+}
+
+.box-10{
+  background-color: rgba(13,98,89,0.75);
+  top: 90vh;
+  left: 70vw;
 }

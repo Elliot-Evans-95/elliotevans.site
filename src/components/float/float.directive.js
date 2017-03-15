@@ -1,18 +1,15 @@
 'use strict';
 
-// IMPORT
 import styles from './float.style.css';
 
 let app = angular.module('app');
 
-app.component('floatingItems', {
-
-  // TEMPLATE
-  template: require('./float.template.html'),
-  // CONTROLLER
-  controller: function() {
-    $(function(){				  
-        var parallaxContainer 	  = $("#parallax-container");
+app.directive('floatingItems', function() {
+  return {
+    template: require('./float.template.html'),
+    link: function float() {
+      		  
+        var parallaxContainer 	  = $(".parallax-container");
         var parallaxItems		    = parallaxContainer.find(".parallax");
         var fixer				          = 0.0008;
 
@@ -34,6 +31,6 @@ app.component('floatingItems', {
           });
 
         });				
-      });
+    }
   }
 })

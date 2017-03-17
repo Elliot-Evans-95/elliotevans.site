@@ -293,14 +293,17 @@ progress, {
 
 .content.ng-enter {
   animation: 2s appear,
-             2s goLeft;
+             2s fromLeft,
+             2s fromBehind;
 }
 
 .content.ng-leave {
-  /*animation: 2s disappear;*/
-  opacity: 0;
+  animation: 2s disappear,
+             2s goLeft,
+             2s goBehind;
 }
 
+/* Enter */
 @keyframes appear {
   from {
     opacity: 0;
@@ -309,6 +312,24 @@ progress, {
     opacity: 1;
   }
 }
+@keyframes fromLeft {
+  from { 
+    left: 20vw; 
+  }
+  to { 
+    left: 0; 
+  }
+}
+@keyframes fromBehind {
+  from { 
+    z-index: -1;
+  }
+  to { 
+    z-index: 0;
+  }
+}
+
+/* Leave */
 @keyframes disappear {
   from {
     opacity: 1;
@@ -318,10 +339,29 @@ progress, {
   }
 }
 @keyframes goLeft {
-  from {
-    transform: rotate(0deg);
+  from { 
+    left: 0; 
   }
-  to {
-    transform: rotate(360deg);
+  to { 
+    left: 20vw; 
   }
+}
+@keyframes goBehind {
+  from { 
+    z-index: 0;
+  }
+  to { 
+    z-index: -1;
+  }
+}
+
+
+/* Loading */
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)
 }

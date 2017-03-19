@@ -1,9 +1,10 @@
-
-
-
 // angular
 import angular from 'angular';
 import animate from 'angular-animate';
+
+// --------- oclazyLoad ----------
+
+import ocLazyLoad from 'oclazyload';
 
 // --------- ROUTER ----------
 

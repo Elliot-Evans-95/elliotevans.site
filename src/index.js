@@ -43,3 +43,7 @@ import header from 'components/header/header.component.js';
 // footer
 import footer from 'components/footer/footer.component.js';
 
+// footer
+import viewNavigation from 'components/uiViewNavigation/ui-view-navigation.component.js';
+
+

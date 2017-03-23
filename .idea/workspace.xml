@@ -57,7 +57,6 @@
       <find>aquamarine</find>
       <find>file-load</find>
       <find>main.pug</find>
-      <find>ExtractTextPlugin</find>
       <find>react-hot</find>
       <find>store.subscribe</find>
     </findStrings>

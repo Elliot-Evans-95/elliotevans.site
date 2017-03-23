@@ -2,6 +2,8 @@
 const webpack                   = require('webpack');
 const path                      = require('path');
 const HtmlWebpackPlugin         = require('html-webpack-plugin');
+//const ScriptExtHtmlWebpackPlugin= require('script-ext-html-webpack-plugin');
+//const ExtractTextPlugin         = require('extract-text-webpack-plugin');
 
 // Webpack Variables
 const srcPath                   = path.join(__dirname, './src');
@@ -10,9 +12,6 @@ const distPath                  = path.join(__dirname, './dist');
 
 // @todo::
 // I18nPlugin
-// UglifyJsPlugin
-// Use postcss plugins
-// ExtractTextPlugin
 
 module.exports = {
 
@@ -50,24 +49,27 @@ module.exports = {
         // CSS
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [
-          { 
-            loader: 'style-loader' 
-          },
-          {
-            loader: 'css-loader?importLoaders=1'
-          },
-          {
-            loader:'postcss-loader',
-            options: { 
-              config: './config/postcss.config.js' 
+        //use: ExtractTextPlugin.extract({
+          use: [
+            { 
+              loader: 'style-loader' 
+            },
+            {
+              loader: 'css-loader?importLoaders=1'
+            },
+            {
+              loader:'postcss-loader',
+              options: { 
+                config: './config/postcss.config.js' 
+              }
             }
-          }
-        ]
+          ]
+        //})
       },
       {
         // JS
         test: /\.(js)$/,
+        //ng-annotate!
         loader: 'babel-loader',
         exclude: /node_modules/,
         query:
@@ -75,6 +77,18 @@ module.exports = {
           presets:['es2015']
         }
       },
+      // {
+      //   // ISTANBUL
+      //   test: /\.js$/,
+      //   exclude: [
+      //     /node_modules/,
+      //     /\.spec\.js$/
+      //   ],
+      //   loader: 'istanbul-instrumenter-loader',
+      //   query: {
+      //     esModules: true
+      //   }
+      // },
       {
         // IMAGES
         test: /\.(png|jpg)$/,
@@ -114,6 +128,13 @@ module.exports = {
       template: srcPath + '/index.html',
       inject: 'body'
     }),
+    // new ScriptExtHtmlWebpackPlugin({
+    //   defaultAttribute: 'async'
+    // }),
+    // new ExtractTextPlugin({
+    //   filename: srcPath + 'src/[name].css', 
+    //   allChunks: true
+    // }),
     // Loader Options
     new webpack.LoaderOptionsPlugin({
       minimize: false,
@@ -121,7 +142,10 @@ module.exports = {
     }),
     // Code Spitting. manifest is there due to: https://webpack.js.org/guides/code-splitting-libraries/
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ['vendor', 'manifest'],
+      // minChunks: function (module, count) {
+      //   return module.resource && module.resource.indexOf(path.resolve(__dirname, srcPath)) === -1;
+      // }
     }),
     new webpack.NamedModulesPlugin()
   ],

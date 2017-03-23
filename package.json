@@ -27,10 +27,11 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-nodeca": "^1.0.3",
     "jasmine": "^2.5.3",
+    "ng-annotate": "^1.2.1",
     "postcss": "^5.2.16",
     "postcss-cssnext": "^2.10.0",
     "source-map-loader": "^0.2.0",
-    "webpack": "^2.2.1",
+    "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2"
   },
   "devDependencies": {
@@ -48,6 +49,8 @@
     "json-loader": "0.5.4",
     "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "script-ext-html-webpack-plugin": "^1.7.0",
     "karma-jasmine": "^1.1.0",
     "karma-webpack": "^2.0.3",
     "oclazyload": "^1.1.0",

@@ -23,3 +23,16 @@
   background: linear-gradient(180deg, #ececec 5%, #fefffa 5%);
 
 }
+
+.about_languages, .about_frameworks {
+  display: flex;
+  align-items: center;
+}
+
+.about__language--image {
+  width: 40px;
+}
+
+.about__language--name {
+  /**/
+}

@@ -22,11 +22,15 @@
 }
 
 .content__portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: aquamarine;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 600px;
+    border-radius: 0.6px;
+    margin: 0 auto;
+
+    box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, .2), 7px 2px 2px 0 rgba(0, 0, 0, .14), 0 6px 16px 0px rgba(0, 0, 0, .12);
+    background: linear-gradient(210deg, #2f2b2b 10%, #ff4040 10%);
 }

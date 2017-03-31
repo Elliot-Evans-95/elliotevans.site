@@ -27,6 +27,8 @@
 .about_languages, .about_frameworks {
   display: flex;
   align-items: center;
+  width: 100%;
+  padding: 15px 30px;
 }
 
 .about__language--image {
@@ -34,5 +36,15 @@
 }
 
 .about__language--name {
-  /**/
+  letter-spacing: 0.1em;
+  padding-bottom: 5px;
+}
+
+.about__language--container {
+  width: 25%;
+  text-align: center;
+}
+
+.about__header--text {
+  margin: 0.8em 0 0.4em 0;
 }

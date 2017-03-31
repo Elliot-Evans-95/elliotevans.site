@@ -9,36 +9,29 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-.background-view__view-previous {
+.background-view__view-previous, .background-view__view-next {
     background: none;
     border: none;
-}
-.background-view__view-previous:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 50px 75px 50px 0;
-    border-color: transparent #000000 transparent transparent;
-    z-index: 999999;
     position: absolute;
+    font-size: 4em;
+    z-index: 999999;
+}
+
+.background-view__view-previous {
     top: 25vh;
 }
 
 .background-view__view-next {
-    background: none;
-    border: none;
-}
-.background-view__view-next:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 50px 75px 50px 0;
-    border-color: transparent #000000 transparent transparent;
-    z-index: 999999;
-    position: absolute;
     top: 25vh;
     right: 0vw;
-    transform: rotate(180deg);
+}
+
+.background-view__view-previous .sr-only, .background-view__view-next .sr-only {
+    font-size: 0.2em;
+}
+.background-view__view-previous .sr-only {
+    padding-left: 6px;
+}
+.background-view__view-next .sr-only {
+    padding-right: 16px;
 }

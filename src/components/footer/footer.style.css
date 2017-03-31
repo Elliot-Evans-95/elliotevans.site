@@ -15,6 +15,7 @@
   }
 
   .footer__contents--madeby {
+    margin: 0.2em 0;
     grid-area: madeby;
   }
 

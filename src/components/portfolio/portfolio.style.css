@@ -2,7 +2,6 @@
     background: antiquewhite;
 }
 .portfolio__header {
-    background: hotpink;
     text-align: center;
 }
 .portfolio__content {
@@ -32,5 +31,5 @@
     margin: 0 auto;
 
     box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, .2), 7px 2px 2px 0 rgba(0, 0, 0, .14), 0 6px 16px 0px rgba(0, 0, 0, .12);
-    background: linear-gradient(210deg, #2f2b2b 10%, #ff4040 10%);
+    background: linear-gradient(225deg, #2f2b2b 10%, #ff4040 10%);
 }

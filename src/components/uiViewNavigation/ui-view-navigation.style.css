@@ -17,6 +17,10 @@
     z-index: 999999;
 }
 
+.background-view__view-previous:focus, .background-view__view-next:focus {
+    outline: none;
+}
+
 .background-view__view-previous {
     top: 25vh;
 }

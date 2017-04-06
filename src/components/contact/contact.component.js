@@ -30,6 +30,9 @@ app.component('contactPage', {
 
     $scope.reset = function() {
         $scope.user = { };
+        $scope.removeUserName();
+        $scope.removeEmail();
+        $scope.removeLocation();
     };
 
     $scope.removeUserName = function() {
@@ -43,15 +46,4 @@ app.component('contactPage', {
     $scope.removeLocation = function() {
         $scope.user.location = null;
     };
-
-    $scope.reset();
-
-    // Add a reset for only this input element
-
-    // Add a currentProgress for form
-        // Thinking once the form is valid it will add a value onto progress. 
-
-    $scope.$watch(contactForm.userName, function() {
-        alert("hello")
-    });
 }])

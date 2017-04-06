@@ -55,14 +55,8 @@
         <textarea name="userMessage" placeholder="Please type your Message Here..." ng-model="user.message" tabindex="5" required></textarea>
     </fieldset>
 
-    <progress ng-model="user.progress" value="currentProgress" max="100"></progress>
-
     <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ng-click="save(user)" value="Save" />
-
-    <footer class="contact__footer"> 
-        Somethign funny here
-    </footer>
+    <input type="submit" ng-click="save(user)" value="Send" />
     
   </form>
 
@@ -70,59 +64,3 @@
   <pre>form = {{form | json}}</pre>
 
 </section>
-
-<!--<section class="content__contact contact" ng-controller="contactController">  
-
-    <header class="contact__header">
-        <h1> Contact me: </h1>
-    </header>
-    
-    <form novalidate class="contact__content" action="/" method="POST">
-
-        <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" ng-model="user.name" required autofocus>
-        </fieldset>
-
-
-        <fieldset>
-            <input placeholder="Your Email Address" type="email" tabindex="2" ng-model="user.email" required>
-        </fieldset>
-
-
-        <fieldset>
-            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
-        </fieldset>
-
-
-        
-
-
-        <fieldset>
-            <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
-        </fieldset>
-
-
-        <fieldset>
-            <label for="preference" name="choice">
-                <input type="radio" ng-model="user.preference" value="vi" />vi
-            </label>
-            <label>
-                <input type="radio" ng-model="user.preference" value="emacs" />emacs
-            </label>
-        </fieldset>
-
- 
-        <fieldset>
-            <progress value="22" max="100"></progress>
-        </fieldset>
-
-
-        <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" ng-click="save(user)" value="Save">Submit</button>
-            <input type="button" ng-click="reset()" value="Reset" />
-        </fieldset>
-    </form>
-
-    
-
-</section>-->

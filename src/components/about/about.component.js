@@ -11,7 +11,13 @@ app.component('aboutPage', {
     template: require('./about.template.html'),
 
     // CONTROLLER
-    controller: function () {
+    controller: function ($scope, aboutService) {
         document.title = "About // Elliot Evans";
+
+        // SCOPE ASSIGN
+        $scope.pageHeading = aboutService._pageHeading;
+        $scope.pageSubHeading = aboutService._pageSubHeading;
+        $scope.error = aboutService._errorJSON;
+
     }
 });

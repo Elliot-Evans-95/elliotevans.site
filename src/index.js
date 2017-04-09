@@ -11,6 +11,10 @@ import ocLazyLoad from 'oclazyload';
 import uiRouter from 'angular-ui-router';
 import * as router from './router.js';
 
+// --------- SERVICE ---------
+
+import aboutService from 'service/about.service.js';
+
 // --------- BASE ----------
 
 import base from 'base/base.component.js';

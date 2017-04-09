@@ -1,0 +1,28 @@
+// about content
+{
+    "language": [
+        {
+            "id": "1", 
+            "name": "Javascript",
+            "full-description": "lots to talk about here",
+            "image": "/test/image.png",
+            "experience": "2 years",
+            "skills": [
+                "ES6",
+                "Object Oriented programming"
+            ]
+        },
+        {
+            "id": "2", 
+            "name": "PHP",
+            "full-description": "lots to talk about here",
+            "image": "/test/image.png",
+            "experience": "3 years",
+            "skills": [
+                "RESTful API",
+                "MVC",
+                "Object Oriented programming"
+            ]
+        }
+    ]
+}

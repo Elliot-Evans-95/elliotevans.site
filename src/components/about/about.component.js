@@ -14,10 +14,28 @@ app.component('aboutPage', {
     controller: function ($scope, aboutService) {
         document.title = "About // Elliot Evans";
 
-        // SCOPE ASSIGN
-        $scope.pageHeading = aboutService._pageHeading;
-        $scope.pageSubHeading = aboutService._pageSubHeading;
-        $scope.error = aboutService._errorJSON;
+        aboutService
+            .getAboutHeadingText()
+            .then((response) => {
+                console.log('test',response);
 
+                let _pageHeading = response.data.pageHeading;
+                let _pageSubHeading = response.data.pageSubHeading;
+
+                $scope.pageHeading = _pageHeading;
+                $scope.pageSubHeading = _pageSubHeading;  
+
+            }, (response, status) => {
+
+                response.data.error = {
+                    status: status,
+                    statusMessage: statusText,
+                    customError: "unable to find text",
+                    dataError: data
+                };
+
+                let _errorJSON = response.data.error;
+                console.log(_errorJSON);
+            });
     }
 });

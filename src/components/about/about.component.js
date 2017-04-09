@@ -11,13 +11,12 @@ app.component('aboutPage', {
     template: require('./about.template.html'),
 
     // CONTROLLER
-    controller: function ($scope, aboutService) {
+    controller: ($scope, aboutService) => {
         document.title = "About // Elliot Evans";
 
         aboutService
             .getAboutHeadingText()
             .then((response) => {
-                console.log('test',response);
 
                 let _pageHeading = response.data.pageHeading;
                 let _pageSubHeading = response.data.pageSubHeading;

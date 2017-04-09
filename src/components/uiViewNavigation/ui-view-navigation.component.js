@@ -11,24 +11,24 @@ app.component('viewNavigation', {
     template: require('./ui-view-navigation.template.html'),
 
     // CONTROLLER
-    controller: function ($scope, $state) {
+    controller: ($scope, $state) => {
         var arrayViews=['hello', 'about', 'portfolio', 'contact'];
-        var index=0;
-        $scope.forward=function(){
-            if(index<arrayViews.length-1){
-                index=index+1
+        var index = 0;
+        $scope.forward = () => {
+            if (index < arrayViews.length - 1) {
+                index = index + 1;
                 $state.go(arrayViews[index]);
-            }else{
-            index=0
+            } else {
+            index = 0
                 $state.go(arrayViews[index]);
             }
         };
-        $scope.backward=function(){
-            if(index>0){
-                index=index-1;
+        $scope.backward = () => {
+            if (index > 0) {
+                index = index - 1;
                 $state.go(arrayViews[index]);
-            }else{
-                index=arrayViews.length-1;//
+            } else {
+                index = arrayViews.length - 1;
                 $state.go(arrayViews[index]);
             }
         }

@@ -11,7 +11,7 @@ app.component('portfolioPage', {
     template: require('./portfolio.template.html'),
 
     // CONTROLLER
-    controller: function () {
+    controller: () => {
         document.title = "Portfolio // Elliot Evans";
     }
 

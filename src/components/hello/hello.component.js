@@ -11,7 +11,7 @@ app.component('helloPage', {
     template: require('./hello.template.html'),
 
     // CONTROLLER
-    controller: function () {
+    controller: () => {
         document.title = "Elliot Evans";
     }
   }

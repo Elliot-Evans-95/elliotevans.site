@@ -9,41 +9,40 @@ app.component('contactPage', {
 
     // BINDINGS
     bindings: {
-      user: '=',
-      currentProgress: '='
+      user: '='
     },
 
     // TEMPLATE
     template: require('./contact.template.html'),
 })
 
-.controller('contactController', ['$scope', function($scope, $invalid) {
+.controller('contactController', ['$scope', ($scope, $invalid) => {
     document.title = "Contact // Elliot Evans";
 
     $scope.form = { };
 
     $scope.formProgress
 
-    $scope.save = function(user) {
+    $scope.save = (user) => {
         $scope.form = angular.copy(user);
     };
 
-    $scope.reset = function() {
+    $scope.reset = () => {
         $scope.user = { };
         $scope.removeUserName();
         $scope.removeEmail();
         $scope.removeLocation();
     };
 
-    $scope.removeUserName = function() {
+    $scope.removeUserName = () => {
         $scope.user.name = null;
     };
 
-    $scope.removeEmail = function() {
+    $scope.removeEmail = () => {
         $scope.user.email = null;
     };
 
-    $scope.removeLocation = function() {
+    $scope.removeLocation = () => {
         $scope.user.location = null;
     };
 }])

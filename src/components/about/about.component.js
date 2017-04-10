@@ -17,9 +17,18 @@ app.component('aboutPage', {
         aboutService
             .getAboutHeadingText()
             .then((response) => {
+                console.log('response', response);
 
                 let _pageHeading = response.data.pageHeading;
                 let _pageSubHeading = response.data.pageSubHeading;
+                let _languages = response.data.language;
+
+                $scope.languages = _languages;
+
+                console.log($scope.languages);
+
+                //test
+                $scope.test = require('./html_logo.png')
 
                 $scope.pageHeading = _pageHeading;
                 $scope.pageSubHeading = _pageSubHeading;  

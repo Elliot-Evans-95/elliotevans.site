@@ -6,7 +6,7 @@ app.service('aboutService', function aboutService ($http) {
     this.getAboutHeadingText = getAboutHeadingText => {
         return $http({
             method: 'GET',
-            url: './data/about/aboutTitle.json'
+            url: './data/about/about.json'
         });
     };
 });

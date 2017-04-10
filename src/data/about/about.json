@@ -1,0 +1,51 @@
+{
+    "pageHeading": "About Me",
+    "pageSubHeading": "21yr old Devloper who knows about...",
+    "language": [
+        {
+            "id": "1", 
+            "name": "HTML",
+            "full-description": "lots to talk about here",
+            "image": "./html_logo.png",
+            "experience": "2 years",
+            "skills": [
+                "ES6",
+                "Object Oriented programming"
+            ]
+        },
+        {
+            "id": "2", 
+            "name": "CSS",
+            "full-description": "lots to talk about here",
+            "image": "./css_logo.png",
+            "experience": "2 years",
+            "skills": [
+                "ES6",
+                "Object Oriented programming"
+            ]
+        },
+        {
+            "id": "3", 
+            "name": "Javascript",
+            "full-description": "lots to talk about here",
+            "image": "./javascript_logo.png",
+            "experience": "2 years",
+            "skills": [
+                "ES6",
+                "Object Oriented programming"
+            ]
+        },
+        {
+            "id": "4", 
+            "name": "PHP",
+            "full-description": "lots to talk about here",
+            "image": "./php_logo.png",
+            "experience": "3 years",
+            "skills": [
+                "RESTful API",
+                "MVC",
+                "Object Oriented programming"
+            ]
+        }
+    ]
+}

@@ -19,7 +19,6 @@ import aboutService from 'service/about.service.js';
 
 import base from 'base/base.component.js';
 
-
 // --------- FLOAT ----------
 
 import float from 'components/float/float.directive.js';
@@ -35,6 +34,10 @@ import portfolio from 'components/portfolio/portfolio.component.js';
 // contact
 import contactController from 'components/contact/contact.component.js';
 import contact from 'components/contact/contact.component.js';
+
+// --------- Social Media ------------
+
+import socialMedia from 'components/socialMedia/socialMedia.component.js';
 
 // ------------ SECTIONS ------------
 

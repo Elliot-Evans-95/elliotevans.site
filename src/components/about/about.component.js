@@ -19,6 +19,15 @@ app.component('aboutPage', {
             .then((response) => {
                 console.log('response', response);
 
+                for (var responseImages = 0; responseImages < response.data.language.length; responseImages++) {
+                    console.log('BEFORE', response.data.language[responseImages].image);
+                    response.data.language[responseImages].image = "require('" + response.data.language[responseImages].image + "')";
+                    console.log('AFTER', response.data.language[responseImages].image);
+                    console.log('Length: ', responseImages);
+                }
+
+                console.log('12345', response.data.language);
+
                 let _pageHeading = response.data.pageHeading;
                 let _pageSubHeading = response.data.pageSubHeading;
                 let _languages = response.data.language;

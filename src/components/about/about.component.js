@@ -21,12 +21,11 @@ app.component('aboutPage', {
 
                 for (var responseImages = 0; responseImages < response.data.language.length; responseImages++) {
                     console.log('BEFORE', response.data.language[responseImages].image);
-                    response.data.language[responseImages].image = "require('" + response.data.language[responseImages].image + "')";
+                    response.data.language[responseImages].image = require(`${response.data.language[responseImages].image}`);
                     console.log('AFTER', response.data.language[responseImages].image);
                     console.log('Length: ', responseImages);
+                    $scope.test = response.data.language[responseImages].image;
                 }
-
-                console.log('12345', response.data.language);
 
                 let _pageHeading = response.data.pageHeading;
                 let _pageSubHeading = response.data.pageSubHeading;
@@ -37,7 +36,8 @@ app.component('aboutPage', {
                 console.log($scope.languages);
 
                 //test
-                $scope.test = require('./html_logo.png')
+                $scope.cool = require('./html_logo.png');
+                //$scope.test = require( + response);
 
                 $scope.pageHeading = _pageHeading;
                 $scope.pageSubHeading = _pageSubHeading;  

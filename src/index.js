@@ -1,3 +1,10 @@
+// ------------- JSON -------------------
+
+// import json from 'data/about/about.json';
+
+//
+
+
 // angular
 import angular from 'angular';
 import animate from 'angular-animate';
@@ -52,5 +59,3 @@ import footer from 'components/footer/footer.component.js';
 
 // footer
 import viewNavigation from 'components/uiViewNavigation/ui-view-navigation.component.js';
-
-

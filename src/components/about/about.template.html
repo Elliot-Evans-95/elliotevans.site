@@ -12,21 +12,9 @@
         </div>
     </aside>
     <aside class="about_frameworks">
-        <div class="about__language--container">
-            <p class="about__language--name">PUG</p>
-            <img class="about__language--image" src="./pug_logo.png" alt="">
-        </div>
-        <div class="about__language--container">
-            <p class="about__language--name">Bootstrap</p>
-            <img class="about__language--image" src="./bootstrap_logo.png" alt="">
-        </div>
-        <div class="about__language--container">
-            <p class="about__language--name">Angular</p>
-            <img class="about__language--image" src="./angular_logo.png" alt="">
-        </div>
-        <div class="about__language--container">
-            <p class="about__language--name">Laravel</p>
-            <img class="about__language--image" src="./laravel_logo.png" alt="">
+        <div class="about__language--container" ng-repeat="framework in frameworks track by framework.id">
+            <p class="about__language--name">{{framework.name}}</p>
+            <img class="about__language--image" src="{{framework.image}}" alt="">
         </div>
     </aside>
 </section>

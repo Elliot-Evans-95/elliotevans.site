@@ -55,7 +55,7 @@
     "framework": [
         {
             "id": "1", 
-            "name": "PUG",
+            "name": "Pug",
             "full-description": "lots to talk about here",
             "image": "./pug_logo.png",
             "experience": "2 years",

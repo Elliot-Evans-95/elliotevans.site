@@ -37,7 +37,7 @@ app.component('aboutPage', {
                 $scope.languages = _languages;
                 $scope.frameworks = _frameworks;
 
-            }, (response, status) => {
+            }, (response, status, $log) => {
 
                 response.data.error = {
                     status: status,
@@ -47,7 +47,7 @@ app.component('aboutPage', {
                 };
 
                 let _errorJSON = response.data.error;
-                console.log(_errorJSON);
+                $log.error(_errorJSON.toString());
             });
     }
 });

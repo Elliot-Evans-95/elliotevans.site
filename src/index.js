@@ -1,10 +1,3 @@
-// ------------- JSON -------------------
-
-// import json from 'data/about/about.json';
-
-//
-
-
 // angular
 import angular from 'angular';
 import animate from 'angular-animate';
@@ -20,6 +13,7 @@ import * as router from './router.js';
 
 // --------- SERVICE ---------
 
+import helloService from 'service/hello.service.js';
 import aboutService from 'service/about.service.js';
 
 // --------- BASE ----------

@@ -1,0 +1,9 @@
+{
+    "heading": "Hello I'm Elliot",
+    "subHeading": "Welcome to my site",
+    "shortDescription": "Welcome to my site",
+    "longDescription": "Welcome to my site",
+    "personalImage": "./elliot.png",
+    "personalImageAlt": "Elliot in person",
+    "personalImageText": "Elliot in person"
+}

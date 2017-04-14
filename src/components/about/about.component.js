@@ -24,7 +24,6 @@ app.component('aboutPage', {
                     response.data.language[responseImages].image = require(`${response.data.language[responseImages].image}`);
                     console.log('AFTER', response.data.language[responseImages].image);
                     console.log('Length: ', responseImages);
-                    $scope.test = response.data.language[responseImages].image;
                 }
 
                 let _pageHeading = response.data.pageHeading;
@@ -32,13 +31,6 @@ app.component('aboutPage', {
                 let _languages = response.data.language;
 
                 $scope.languages = _languages;
-
-                console.log($scope.languages);
-
-                //test
-                $scope.cool = require('./html_logo.png');
-                //$scope.test = require( + response);
-
                 $scope.pageHeading = _pageHeading;
                 $scope.pageSubHeading = _pageSubHeading;  
 

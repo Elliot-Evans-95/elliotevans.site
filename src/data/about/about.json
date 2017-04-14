@@ -7,10 +7,12 @@
             "name": "HTML",
             "full-description": "lots to talk about here",
             "image": "./html_logo.png",
-            "experience": "2 years",
+            "experience": "3 years",
             "skills": [
-                "ES6",
-                "Object Oriented programming"
+                "HTML5",
+                "Semantic",
+                "Accessability",
+                "Templating"
             ]
         },
         {
@@ -18,10 +20,12 @@
             "name": "CSS",
             "full-description": "lots to talk about here",
             "image": "./css_logo.png",
-            "experience": "2 years",
+            "experience": "3 years",
             "skills": [
-                "ES6",
-                "Object Oriented programming"
+                "CSS3",
+                "CSS Variables",
+                "SCSS",
+                "PostCSS"
             ]
         },
         {
@@ -29,7 +33,7 @@
             "name": "Javascript",
             "full-description": "lots to talk about here",
             "image": "./javascript_logo.png",
-            "experience": "2 years",
+            "experience": "3 years",
             "skills": [
                 "ES6",
                 "Object Oriented programming"
@@ -45,6 +49,52 @@
                 "RESTful API",
                 "MVC",
                 "Object Oriented programming"
+            ]
+        }
+    ],
+    "framework": [
+        {
+            "id": "1", 
+            "name": "PUG",
+            "full-description": "lots to talk about here",
+            "image": "./pug_logo.png",
+            "experience": "2 years",
+            "related-language": [
+                "Javascript",
+                "html"
+            ]
+        },
+        {
+            "id": "2", 
+            "name": "Bootstrap",
+            "full-description": "lots to talk about here",
+            "image": "./bootstrap_logo.png",
+            "experience": "3 years",
+            "related-language": [
+                "CSS",
+                "Html",
+                "Javascript",
+                "Jquery"
+            ]
+        },
+        {
+            "id": "3", 
+            "name": "AngularJS",
+            "full-description": "lots to talk about here",
+            "image": "./angular_logo.png",
+            "experience": "1 year",
+            "related-language": [
+                "Javascript"
+            ]
+        },
+        {
+            "id": "4", 
+            "name": "Laravel",
+            "full-description": "lots to talk about here",
+            "image": "./laravel_logo.png",
+            "experience": "3 years",
+            "related-language": [
+                "PHP"
             ]
         }
     ]

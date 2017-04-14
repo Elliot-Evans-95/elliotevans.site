@@ -15,6 +15,7 @@ import * as router from './router.js';
 
 import helloService from 'service/hello.service.js';
 import aboutService from 'service/about.service.js';
+import portfolioService from 'service/portfolio.service.js';
 
 // --------- BASE ----------
 

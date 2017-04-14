@@ -1,4 +1,4 @@
-.about__links {
+.socialMedia__links {
     display: flex;
     flex: 1 0 auto;
     height: 100%;
@@ -17,18 +17,18 @@
     height: 1em;
 }
 
-.about__links--icon {
+.socialMedia__links--icon {
     font-size: 1.5em;
     will-change: transform, transition;
 }
 
-.about__links--icon:hover {
+.socialMedia__links--icon:hover {
     opacity: .2;
     transform: rotate(35deg);
     transition: transition 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.about__links--link {
+.socialMedia__links--link {
     padding: 0;
     margin: 0;
 }

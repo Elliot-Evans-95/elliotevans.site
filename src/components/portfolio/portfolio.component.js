@@ -11,19 +11,25 @@ app.component('portfolioPage', {
     template: require('./portfolio.template.html'),
 
     // CONTROLLER
-    controller: ($scope, portflioService) => {
+    controller: ($scope, portfolioService) => {
         document.title = "Portfolio // Elliot Evans";
 
-        portflioService
-            .getHello()
+        portfolioService
+            .getPortfolio()
             .then((response) => {
                 console.log('response', response);
 
+                for (var responseImages = 0; responseImages < response.data.portfolio.length; responseImages++) {
+                    response.data.portfolio[responseImages].mainImage = require(`${response.data.portfolio[responseImages].mainImage}`);
+                }
+
                 let _heading = response.data.heading;
                 let _subHeading = response.data.subHeading;
+                let _portfolios = response.data.portfolio;
 
                 $scope.heading = _heading;
                 $scope.subHeading = _subHeading;
+                $scope.portfolios = _portfolios;
 
             }, (response, status, $log) => {
 

@@ -6,18 +6,27 @@
 }
 .portfolio__content {
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 0 auto;
+    width: 100%;
 }
 .portfolio__content--imgcontainer {
     border: 1px solid blueviolet;
     background: aliceblue;
+    width: 25%;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .portfolio__content--img {
     max-width: 100%;
     height: auto;
+    width: 60px;
 }
 .portfolio__content--imgcaption {
     color: fuchsia;
+    text-align: center;
 }
 
 .content__portfolio {

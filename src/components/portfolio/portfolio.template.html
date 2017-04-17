@@ -1,44 +1,17 @@
 <section class="content__portfolio portfolio">  
 
     <header class="portfolio__header">
-        <h1> Portfolio </h1>
-        <h2> Here are some images:</h2>
+        <h1> {{heading}} </h1>
+        <h2> {{subHeading}} </h2>
     </header>
     
     <article class="portfolio__content">
-        
-        <!---->
-        <figure class="portfolio__content--imgcontainer">
-            <img class="portfolio__content--img" src="https://static-s.aa-cdn.net/img/gp/20600001582788/2vOv87Al8b_kWqNBafObxqjHZrBJZWVwtrCA6N4FuEIvhyGapx2ICvXxHSTBhLdomGU=w300?v=1" alt="">
+        <figure class="portfolio__content--imgcontainer" ng-repeat="portfolio in portfolios track by portfolio.id">
+            <img class="portfolio__content--img" src="{{portfolio.mainImage}}" alt="{{portfolio.title}}">
             <figcaption class="portfolio__content--imgcaption">
-                Image test
+                {{portfolio.title}}
             </figcaption>
         </figure>
-        
-        <!---->
-        <figure class="portfolio__content--imgcontainer">
-            <img class="portfolio__content--img" src="https://static-s.aa-cdn.net/img/gp/20600001582788/2vOv87Al8b_kWqNBafObxqjHZrBJZWVwtrCA6N4FuEIvhyGapx2ICvXxHSTBhLdomGU=w300?v=1" alt="">
-            <figcaption class="portfolio__content--imgcaption">
-                Image test
-            </figcaption>
-        </figure>
-
-        <!---->
-        <figure class="portfolio__content--imgcontainer">
-            <img class="portfolio__content--img" src="https://static-s.aa-cdn.net/img/gp/20600001582788/2vOv87Al8b_kWqNBafObxqjHZrBJZWVwtrCA6N4FuEIvhyGapx2ICvXxHSTBhLdomGU=w300?v=1" alt="">
-            <figcaption class="portfolio__content--imgcaption">
-                Image test
-            </figcaption>
-        </figure>
-
-        <!---->
-        <figure class="portfolio__content--imgcontainer">
-            <img class="portfolio__content--img" src="https://static-s.aa-cdn.net/img/gp/20600001582788/2vOv87Al8b_kWqNBafObxqjHZrBJZWVwtrCA6N4FuEIvhyGapx2ICvXxHSTBhLdomGU=w300?v=1" alt="">
-            <figcaption class="portfolio__content--imgcaption">
-                Image test
-            </figcaption>
-        </figure>
-
     </article>
 
-</section>  
+</section>

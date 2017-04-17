@@ -1,45 +1,45 @@
 {
-    "heading": "About Me",
-    "subHeading": "21yr old Devloper who knows about...",
+    "heading": "My portfolio",
+    "subHeading": "Here are some of the project I am currently working on:",
     "portfolio": [
         {
             "id": "1",
-            "mainImage": "",
+            "mainImage": "./tippler.png",
             "otherImage": [
-                ""
+                "/"
             ],
             "title": "Tippler",
-            "description": "",
+            "description": "example description",
             "link": "/"
         },
         {
             "id": "2",
-            "mainImage": "",
+            "mainImage": "./tippler.png",
             "otherImage": [
-                ""
+                "/"
             ],
             "title": "Dota Leaderboards",
-            "description": "",
+            "description": "example description",
             "link": "/"
         },
         {
             "id": "3",
-            "mainImage": "",
+            "mainImage": "./tippler.png",
             "otherImage": [
-                ""
+                "/"
             ],
             "title": "Dashboard",
-            "description": "",
+            "description": "example description",
             "link": "/"
         },
         {
             "id": "4",
-            "mainImage": "",
+            "mainImage": "./tippler.png",
             "otherImage": [
-                ""
+                "/"
             ],
             "title": "Hockey App",
-            "description": "",
+            "description": "example description",
             "link": "/"
         }
     ]

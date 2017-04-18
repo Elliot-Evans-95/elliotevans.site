@@ -17,8 +17,7 @@ app.component('contactPage', {
 
 
     // CONTROLLER
-    // .controller('contactController',
-    controller: (['$scope', ($scope, $invalid, jsonService) => {
+    controller: ($scope, jsonService) => {
         let urlRef = './data/contact/contact.json';
         document.title = "Contact // Elliot Evans";
 
@@ -83,6 +82,6 @@ app.component('contactPage', {
         $scope.removeLocation = () => {
             $scope.user.location = null;
         };
-    }])
+    }
 
 });

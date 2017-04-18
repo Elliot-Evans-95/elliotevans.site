@@ -11,11 +11,12 @@ app.component('portfolioPage', {
     template: require('./portfolio.template.html'),
 
     // CONTROLLER
-    controller: ($scope, portfolioService) => {
+    controller: ($scope, jsonService) => {
+        let urlRef = './data/portfolio/portfolio.json';
         document.title = "Portfolio // Elliot Evans";
 
-        portfolioService
-            .getPortfolio()
+        jsonService
+            .getData(urlRef)
             .then((response) => {
                 console.log('response', response);
 

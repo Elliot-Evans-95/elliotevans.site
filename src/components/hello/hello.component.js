@@ -11,11 +11,12 @@ app.component('helloPage', {
     template: require('./hello.template.html'),
 
     // CONTROLLER
-    controller: ($scope, helloService) => {
+    controller: ($scope, jsonService) => {
+        let urlRef = './data/hello/hello.json';
         document.title = "Elliot Evans";
 
-        helloService
-            .getHello()
+        jsonService
+            .getData(urlRef)
             .then((response) => {
                 console.log('response', response);
 

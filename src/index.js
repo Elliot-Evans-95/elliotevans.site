@@ -14,8 +14,10 @@ import * as router from './router.js';
 // --------- SERVICE ---------
 
 import helloService from 'service/hello.service.js';
+import jsonService from 'service/json.service.js';
 import aboutService from 'service/about.service.js';
 import portfolioService from 'service/portfolio.service.js';
+import contactService from 'service/contact.service.js';
 
 // --------- BASE ----------
 
@@ -34,7 +36,7 @@ import about from 'components/about/about.component.js';
 import portfolio from 'components/portfolio/portfolio.component.js';
 
 // contact
-import contactController from 'components/contact/contact.component.js';
+// import contactController from 'components/contact/contact.component.js';
 import contact from 'components/contact/contact.component.js';
 
 // --------- Social Media ------------

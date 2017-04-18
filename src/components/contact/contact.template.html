@@ -6,7 +6,7 @@
         <h1> Contact me: </h1>
     </header>
 
-    <fieldset>
+    <fieldset class="contact__field--name">
         <label for="userName"> Name: <span>*</span></label>    
         <input name="userName" placeholder="Dave Smith" type="text" ng-model="user.name" ng-class="{ 'has-error' : contactForm.userName.$invalid && !contactForm.userName.$pristine, 'valid': !contactForm.userName.$invalid }" required autofocus ng-minlength="5"/> 
         <a class="contact__content--remove" ng-show="contactForm.userName.$viewValue.length > 0" ng-click="removeUserName()">X</a>
@@ -17,7 +17,7 @@
         <div ng-message="required">Your name is Required or it is less then 5 characters</div>
     </div>-->
 
-    <fieldset>
+    <fieldset class="contact__field--email">
         <label for="userEmail"> E-mail: <span>*</span></label>  
         <input name="userEmail" placeholder="example@email.com" type="email" ng-model="user.email" required maxlength="15"/>
         <a class="contact__content--remove" ng-show="!contactForm.userEmail.$invalid" ng-click="removeEmail()">X</a>
@@ -28,14 +28,14 @@
         <div ng-message="required">Your name is Required or it is less then 5 characters</div>
     </div>-->
 
-    <fieldset>
+    <fieldset class="contact__field--emailtype">
         <label for="userChoice"> Type of email: <span>*</span> </label>  
         <input name="userChoicePersonal" type="radio" ng-model="user.preference" value="personal" required/> Personal
         <input name="userChoiceJob" type="radio" ng-model="user.preference" value="job" required/> Job Related
         <input name="userChoiceOther" type="radio" ng-model="user.preference" value="other" required/> Other
     </fieldset>
 
-    <fieldset>
+    <fieldset class="contact__field--location">
         <label for="userLocation">Location: </label>
         <input name="userLocation" placeholder="please choose a option" list="location" ng-model="user.location" />
         <datalist id="location">
@@ -47,16 +47,15 @@
             <option value="Other">
         </datalist>
         <a class="contact__content--remove" ng-if="user.location" ng-click="removeLocation()">X</a>
-
     </fieldset>
 
-    <fieldset>
+    <fieldset class="contact__field--message">
         <label for="userMessage">Your message: <span>*</span></label>
         <textarea name="userMessage" placeholder="Please type your Message Here..." ng-model="user.message" tabindex="5" required></textarea>
     </fieldset>
 
-    <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ng-click="save(user)" value="Send" />
+    <input class="contact__field--reset" type="button" ng-click="reset()" value="Reset" />
+    <input class="contact__field--save" type="submit" ng-click="save(user)" value="Send" />
     
   </form>
 

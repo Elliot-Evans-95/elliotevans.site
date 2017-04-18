@@ -25,3 +25,27 @@
 label span {
   color: red;
 }
+
+.contact__field--name, .contact__field--email, .contact__field--emailtype, .contact__field--location {
+  height: 35px;
+  padding: 0 1em;
+  background: white;
+  border: 0;
+}
+
+.contact__field--name > label, .contact__field--email > label {
+  display: inline-block;
+  width: 80px;
+  font-size: 0.8em;
+}
+
+.contact__field--name > input, .contact__field--email > input {
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.contact__field--emailtype, .contact__field--location {
+  //width: 50%
+}

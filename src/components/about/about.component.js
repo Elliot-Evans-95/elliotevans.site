@@ -11,11 +11,12 @@ app.component('aboutPage', {
     template: require('./about.template.html'),
 
     // CONTROLLER
-    controller: ($scope, aboutService) => {
+    controller: ($scope, jsonService) => {
+        let urlRef = './data/about/about.json';
         document.title = "About // Elliot Evans";
 
-        aboutService
-            .getAboutHeadingText()
+        jsonService
+            .getData(urlRef)
             .then((response) => {
                 console.log('response', response);
 

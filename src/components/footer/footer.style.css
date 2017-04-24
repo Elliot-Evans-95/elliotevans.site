@@ -4,6 +4,15 @@
   background: white;
 }
 
+.coffee:hover {
+  will-change: tranform;
+  animation: tilt 300ms 1 ease-in-out;
+}
+.headphones:hover {
+  will-change: transform;
+  animation: shake 300ms 1 linear;
+}
+
 @supports (display: grid) {
 
   .footer__contents {
@@ -22,5 +31,26 @@
   .footer {
     grid-area: footer;
     align-self: end;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
   }
 }

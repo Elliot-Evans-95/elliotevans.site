@@ -16,6 +16,47 @@
 .nav-bar__menu--items a {
   font-size: 1rem;
 }
+.nav-bar__menu--items a {
+    letter-spacing: 0;
+    text-decoration: none;
+    will-change: letter-spacing;
+    transition: letter-spacing 300ms ease-in-out;
+}
+
+.nav-bar__menu--items a:hover,
+.nav-bar__menu--items a:active {
+  letter-spacing: 0.1em;
+  transition: letter-spacing 300ms ease-in-out;
+}
+
+.nav-bar__menu--items a:after,
+.nav-bar__menu--items a:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(33, 33, 33, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  will-change: width;
+  transition: width 300ms ease-in-out;
+  width: 0;
+}
+
+.nav-bar__menu--items a:hover:after,
+.nav-bar__menu--items a:hover:before {
+  border: 1px solid rgba(33, 33, 33, 0.8);
+  backface-visibility: hidden;
+  transition: width 300ms ease-in-out;
+  width: 80%;
+}
+
+.nav-bar__menu--items a:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 80%;
+  transition: width 300ms ease-in-out;
+}
 
 .logo {
     max-height: 60px;
@@ -34,7 +75,7 @@
   }
 
   .nav-bar {
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, .2), 0px 0px 8px 2px rgba(0, 0, 0, .14), 0 2px 2px 0px rgba(0, 0, 0, .12);
     display: grid;
     grid-template-areas: "logo . . menu";

@@ -30,6 +30,16 @@
     right: 0vw;
 }
 
+.background-view__view-next:hover {
+    animation: goRight 300ms 1 ease-out;
+    color: rgba(33, 33, 33, 0.8);
+}
+
+.background-view__view-previous:hover {
+    animation: goLeft 300ms 1 ease-out;
+    color: rgba(33, 33, 33, 0.8);
+}
+
 .background-view__view-previous .sr-only, .background-view__view-next .sr-only {
     font-size: 0.2em;
 }
@@ -38,4 +48,34 @@
 }
 .background-view__view-next .sr-only {
     padding-right: 16px;
+}
+
+@keyframes goRight {
+    0% {
+        color: rgba(33, 33, 33, 1);
+    }
+    0%, 100% {
+        transform: translate(0em, 0);
+    }
+    50% {
+        transform: translate(0.1em, 0);
+    }
+    50%, 100% {
+        color: rgba(33, 33, 33, 0.8);
+    }
+}
+
+@keyframes goLeft {
+    0% {
+        color: rgba(33, 33, 33, 1);
+    }
+    0%, 100% {
+        transform: translate(0em, 0);
+    }
+    50% {
+        transform: translate(-0.1em, 0);
+    }
+    50%, 100% {
+        color: rgba(33, 33, 33, 0.8);
+    }
 }

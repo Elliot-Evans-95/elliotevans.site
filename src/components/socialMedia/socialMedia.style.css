@@ -20,15 +20,67 @@
 .socialMedia__links--icon {
     font-size: 1.5em;
     will-change: transform, transition;
-}
-
-.socialMedia__links--icon:hover {
-    opacity: .2;
-    transform: rotate(35deg);
-    transition: transition 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    left: 2.4px;
+    transform: scale(0.8);
 }
 
 .socialMedia__links--link {
     padding: 0;
     margin: 0;
+    position: relative;
+}
+
+.socialMedia__links--link:hover .socialMedia__links--circle {
+    border: 2px solid black;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+    opacity: 1;
+}
+
+.socialMedia__links--circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+}
+
+.icon-twitter:hover {
+    animation: peck 300ms 1 ease-in;
+}
+.icon-linkedin:hover {
+    animation: peck 300ms 1 ease-in;
+}
+.icon-codepen:hover {
+    animation: peck 300ms 1 ease-in;
+}
+.icon-github:hover {
+    animation: peck 300ms 1 ease-in;
+}
+.icon-twitter {
+    left: 1.5px;
+    top: 1px;
+}
+.icon-linkedin {
+    left: 3.4px;
+}
+.icon-codepen {
+    left: 1px;
+}
+.icon-github {
+    left: 2.4px;
+}
+
+@keyframes peck {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+    opacity: .5;
+  }
 }

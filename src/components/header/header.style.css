@@ -62,6 +62,14 @@
     max-height: 60px;
     padding: 6px;
     width: 60px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(180deg);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
 @supports (display: grid) {

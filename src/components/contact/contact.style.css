@@ -1,21 +1,19 @@
-.contact__content {
-    background: aqua;
+.contact__header h1 {
+  margin: 0;
 }
 
 .content__contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: aquamarine;
-    overflow: scroll;
     width: 100%;
     max-width: 600px;
     border-radius: 0.6px;
     margin: 0 auto;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
 
     box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, .2), 7px 2px 2px 0 rgba(0, 0, 0, .14), 0 6px 16px 0px rgba(0, 0, 0, .12);
-    background: linear-gradient(180deg, #fefffa 90%, #ececec 10%);
+    background: linear-gradient(180deg, #fefffa 95%, #ececec 5%);
 }
 
 .contact__content--remove {
@@ -27,16 +25,48 @@ label span {
 }
 
 .contact__field--name, .contact__field--email, .contact__field--emailtype, .contact__field--location {
-  height: 35px;
-  padding: 0 1em;
-  background: white;
-  border: 0;
+    height: 36px;
+    border: 0;
+    padding: 0;
 }
 
 .contact__field--name > label, .contact__field--email > label {
   display: inline-block;
   width: 80px;
   font-size: 0.8em;
+}
+
+.contact__field--fieldset {
+    border: 0;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+.contact__field--emailtype, .contact__field--location {
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+.contact__field--message {
+    border: 0;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+.contact__field--location input {
+    width: 232px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.contact__field--message textarea {
+    max-width: 400px;
+    max-height: 50px;
+    background: transparent;
 }
 
 .contact__field--name > input, .contact__field--email > input {
@@ -46,6 +76,14 @@ label span {
   font-weight: 300;
 }
 
-.contact__field--emailtype, .contact__field--location {
-  //width: 50%
+.contact__field--save, .contact__field--reset {
+  padding: 4px 12px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-top: 6px;
+}
+
+.contact__field--save:hover, .contact__field--reset:hover {
+  background: #ececec;
 }

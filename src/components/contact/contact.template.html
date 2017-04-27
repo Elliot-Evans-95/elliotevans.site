@@ -32,7 +32,6 @@
         <label for="userChoice"> Type of email: <span>*</span> </label>  
         <input name="userChoicePersonal" type="radio" ng-model="user.preference" value="personal" required/> Personal
         <input name="userChoiceJob" type="radio" ng-model="user.preference" value="job" required/> Job Related
-        <input name="userChoiceOther" type="radio" ng-model="user.preference" value="other" required/> Other
     </fieldset>
 
     <fieldset class="contact__field--location">
@@ -54,12 +53,13 @@
         <textarea name="userMessage" placeholder="Please type your Message Here..." ng-model="user.message" tabindex="5" required></textarea>
     </fieldset>
 
-    <input class="contact__field--reset" type="button" ng-click="reset()" value="Reset" />
-    <input class="contact__field--save" type="submit" ng-click="save(user)" value="Send" />
+    <button class="contact__field--reset" type="button" ng-click="reset()">
+        <i class="fa fa-undo"></i>
+    </button>
+    <button class="contact__field--save" type="submit" ng-click="save(user)" value="Send">
+        <i class="fa fa-send"></i>
+    </button>
     
   </form>
-
-  <pre>user = {{user | json}}</pre>
-  <pre>form = {{form | json}}</pre>
 
 </section>

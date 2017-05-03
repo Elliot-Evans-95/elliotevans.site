@@ -1,12 +1,35 @@
 {
   "name": "elliotevans",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "description": "My sites package json file",
   "main": "index.js",
-  "repository": "elliot-evans-95",
-  "author": "elliot evans",
   "license": "MIT",
-  "scripts": {
+  "keywords": [
+    "Webpack",
+    "AngularJS",
+    "HMR",
+    "Test",
+    "HTML",
+    "CSS"
+  ],
+  "author": {
+    "name": "Elliot Evans",
+    "email": "ell15evans.nuls@googlemail.com",
+    "url": "http://elliotevans.net/"
+  },
+  "contributors": [
+    {
+      "name": "Elliot Evans",
+      "email": "ell15evans.nuls@googlemail.com",
+      "url": "http://elliotevans.net/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elliot-Evans-95/elliotevans.net.git"
+  },
+  "homepage": "https://github.com/Elliot-Evans-95/elliotevans.net.git#readme",
+    "scripts": {
     "test": "karma start",
     "prod": "webpack --config webpack.prod.js -p",
     "lint": "eslint",

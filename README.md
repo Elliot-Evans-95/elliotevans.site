@@ -29,3 +29,5 @@ This is the contents for the project:
 * No gulp and no grunt, just npm scripts.
 
 >Note: Cool note here
+
+https://google.github.io/styleguide/htmlcssguide.html

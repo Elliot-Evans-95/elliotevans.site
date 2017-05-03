@@ -7,14 +7,15 @@
     </article>
     <aside class="about_languages">
         <div class="about__language--container" ng-repeat="language in languages track by language.id">
+            <pre>{{language.imageDescription | json}}</pre>
             <p class="about__language--name">{{language.name}}</p>
-            <img class="about__language--image" src="{{language.image}}" alt="">
+            <img class="about__language--image" src="{{language.image}}" alt="{{language.image-description}}">
         </div>
     </aside>
     <aside class="about_frameworks">
         <div class="about__language--container" ng-repeat="framework in frameworks track by framework.id">
             <p class="about__language--name">{{framework.name}}</p>
-            <img class="about__language--image" src="{{framework.image}}" alt="">
+            <img class="about__language--image" src="{{framework.image}}" alt="{{language.image-description}}">
         </div>
     </aside>
 </section>

@@ -1,21 +1,20 @@
 <section class="content__about">
     <header class="about__header">
-        <h1 class="about__header--text">{{pageHeading}}</h1>
+        <h1 class="about__header--heading">{{pageHeading}}</h1>
     </header>
     <article class="about__content">
-        <p>{{pageSubHeading}}</p>
+        <p class="about__content--text">{{pageSubHeading}}</p>
     </article>
     <aside class="about_languages">
         <div class="about__language--container" ng-repeat="language in languages track by language.id">
-            <pre>{{language.imageDescription | json}}</pre>
             <p class="about__language--name">{{language.name}}</p>
-            <img class="about__language--image" src="{{language.image}}" alt="{{language.image-description}}">
+            <img class="about__language--image" src="{{language.image}}" alt="{{language.imageDescription}}">
         </div>
     </aside>
     <aside class="about_frameworks">
         <div class="about__language--container" ng-repeat="framework in frameworks track by framework.id">
             <p class="about__language--name">{{framework.name}}</p>
-            <img class="about__language--image" src="{{framework.image}}" alt="{{language.image-description}}">
+            <img class="about__language--image" src="{{framework.image}}" alt="{{language.imageDescription}}">
         </div>
     </aside>
 </section>

@@ -1,18 +1,30 @@
 {
-  "name": "",
-  "short_name": "",
+  "short_name": "Elliot Evans Site",
+  "name": "Elliot Evans Personal Portfolio Site",
   "lang": "en-GB",
   ​​"orientation": "portrait-primary",
-  "start_url": "",
+  "start_url": "index.html?launcher=true",
   "display": "standalone",
-  "theme_color": "",
-  "background_color": "",
-  "description": "",
-  "icons": [{
-    "src": "",
-    "sizes": "",
-    "type": "image/png"
-  }],
+  "theme_color": "#4CBFFF",
+  "background_color": "#34ADFF",
+  "description": "Welcome to my Personal Portfolio Website where I Showcase of new frontend technology and cool animation such as Angular, Webpack, ES6, PostCSS.",
+  "icons": [
+    {
+      "src": "icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
   "related_applications": [{
     "platform": "web"
   }]

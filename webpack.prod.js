@@ -1,7 +1,10 @@
+// Plugin / Base Require
 const webpack                   = require('webpack');
 const path                      = require('path');
 const HtmlWebpackPlugin         = require('html-webpack-plugin');
 const UglifyJSPlugin            = require('uglifyjs-webpack-plugin');
+
+// Webpack Variables
 const srcPath                   = path.join(__dirname, './src');
 const srcEntry                  = path.join(__dirname, './src/index.js');
 const distPath                  = path.join(__dirname, './dist');
@@ -96,13 +99,14 @@ module.exports = {
         }
       },
 
-    devtool: 'none',
+    devtool: 'source-map',
+    // devtool: 'none',
 
     context: srcPath,
 
     target: "web",
 
-    externals: [ "angular" ],
+    //externals: [ "angular" ],
 
     plugins: [
 
@@ -114,23 +118,20 @@ module.exports = {
       }),
 
       new webpack.LoaderOptionsPlugin({
-        minimize: true,
+        minimize: false,
+        debug: true,
       }),
 
       new webpack.optimize.CommonsChunkPlugin({
-        name: "vendor",
-        minChunks: function(module){
-          return module.context && module.context.indexOf("node_modules") !== -1;
+        names: ['app', 'vendor', 'manifest'],
+        minChunks: function (module, count) {
+          return module.resource && module.resource.indexOf(path.resolve(__dirname, srcPath)) === -1;
         }
       }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name: "manifest",
-        minChunks: Infinity
-      }),
 
-      new webpack.NamedModulesPlugin(),
+      new webpack.NamedModulesPlugin()
 
-      new UglifyJSPlugin()
+      //new UglifyJSPlugin()
 
     ]
 

@@ -11,7 +11,7 @@ app.component('portfolioPage', {
     template: require('./portfolio.template.html'),
 
     // CONTROLLER
-    controller: ($scope, jsonService) => {
+    controller: ['$scope', '$log', 'jsonService', ($scope, jsonService) => {
         let urlRef = './data/portfolio/portfolio.json';
         document.title = "Portfolio // Elliot Evans";
 
@@ -44,5 +44,5 @@ app.component('portfolioPage', {
                 let _errorJSON = response.data.error;
                 $log.error(_errorJSON.toString());
             });
-    }
+    }]
 });

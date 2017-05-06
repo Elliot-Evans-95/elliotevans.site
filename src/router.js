@@ -2,7 +2,7 @@
 
 let app = angular.module('app', ['ui.router', 'ngAnimate', 'oc.lazyLoad']);
 
-app.config(function($stateProvider, $locationProvider, $ocLazyLoadProvider) {
+app.config(['$stateProvider', '$locationProvider', '$ocLazyLoadProvider', function($stateProvider, $locationProvider, $ocLazyLoadProvider) {
 
   $locationProvider.html5Mode(true);
 
@@ -90,4 +90,4 @@ app.config(function($stateProvider, $locationProvider, $ocLazyLoadProvider) {
     }
   });
 
-});
+}]);

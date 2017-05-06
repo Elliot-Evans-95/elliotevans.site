@@ -11,8 +11,13 @@ app.component('viewNavigation', {
     template: require('./ui-view-navigation.template.html'),
 
     // CONTROLLER
-    controller: ($scope, $state) => {
-        var arrayViews=['hello', 'about', 'portfolio', 'contact'];
+    controller: ['$scope', '$state', ($scope, $state) => {
+        var arrayViews = [
+            'hello', 
+            'about', 
+            'portfolio', 
+            'contact'
+        ];
         var index = 0;
         $scope.forward = () => {
             if (index < arrayViews.length - 1) {
@@ -32,6 +37,6 @@ app.component('viewNavigation', {
                 $state.go(arrayViews[index]);
             }
         }
-    }
+    }]
 
 })

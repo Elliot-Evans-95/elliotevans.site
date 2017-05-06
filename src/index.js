@@ -41,7 +41,7 @@ import socialMedia from 'components/socialMedia/socialMedia.component.js';
 // ------------ SECTIONS ------------
 
 // hello
-import hello from 'components/hello/hello.component.js';
+import hello from 'components/hello/hello.module.js';
 
 // header
 import header from 'components/header/header.component.js';
@@ -51,3 +51,6 @@ import footer from 'components/footer/footer.component.js';
 
 // footer
 import viewNavigation from 'components/uiViewNavigation/ui-view-navigation.component.js';
+
+// ------------ BOOTSTRAP ------------
+import bootstrap from 'bootstrap.js';

@@ -60,7 +60,7 @@
     <!-- Custom Styles-->
     
   </head>
-  <body class="page-wrapper" ng-app="app">
+  <body class="page-wrapper">
 
     <i id="load"></i>
 
@@ -81,7 +81,6 @@
       document.onreadystatechange = function () {
         var state = document.readyState
         if (state == 'complete') {
-              document.getElementById('interactive');
               document.getElementById('load').style.visibility="hidden";
         }
       }

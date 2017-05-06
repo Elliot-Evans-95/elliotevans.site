@@ -2,18 +2,18 @@
     <main class="hello__main">
 
         <figure class="hello__figure">
-            <img class="hello__figure--img" src="{{personalImage}}" alt="{{personalImageAlt}}" width="304" height="228">
-            <figcaption class="hello__figure--caption">{{personalImageText}}</figcaption>
+            <img class="hello__figure--img" src="{{$ctrl.personalImage}}" alt="{{$ctrl.personalImageAlt}}">
+            <figcaption class="$ctrl.hello__figure--caption">{{$ctrl.personalImageText}}</figcaption>
         </figure>
 
         <header class="hello__header">
-            <h1> {{heading}} </h1>
-            <h2> {{subHeading}} </h2>
+            <h1> {{$ctrl.heading}} </h1>
+            <h2> {{$ctrl.subHeading}} </h2>
         </header>
 
         <article class="hello__content">
-            <p> {{shortDescription}} </p>
-            <aside> {{longDescription}} </aside>
+            <p> {{$ctrl.shortDescription}} </p>
+            <aside> {{l$ctrl.ongDescription}} </aside>
         </article>
 
     </main>

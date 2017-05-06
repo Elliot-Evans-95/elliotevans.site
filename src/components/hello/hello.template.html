@@ -7,13 +7,13 @@
         </figure>
 
         <header class="hello__header">
-            <h1> {{$ctrl.heading}} </h1>
-            <h2> {{$ctrl.subHeading}} </h2>
+            <h1 itemprop="heading"> {{$ctrl.heading}} </h1>
+            <h2 itemprop="sub-heading"> {{$ctrl.subHeading}} </h2>
         </header>
 
         <article class="hello__content">
-            <p> {{$ctrl.shortDescription}} </p>
-            <aside> {{l$ctrl.ongDescription}} </aside>
+            <p itemprop="description"> {{$ctrl.shortDescription}} </p>
+            <aside itemprop="description"> {{$ctrl.longDescription}} </aside>
         </article>
 
     </main>

@@ -3,13 +3,13 @@
   <form name="contactForm" novalidate class="contact__content simple-form">
 
     <header class="contact__header">
-        <h1> Contact me: </h1>
+        <h1 itemprop="heading"> Contact me: </h1>
     </header>
 
     <fieldset class="contact__field--name">
         <label for="userName"> Name: <span>*</span></label>    
         <input name="userName" placeholder="Dave Smith" type="text" ng-model="user.name" ng-class="{ 'has-error' : contactForm.userName.$invalid && !contactForm.userName.$pristine, 'valid': !contactForm.userName.$invalid }" required autofocus ng-minlength="5"/> 
-        <a class="contact__content--remove" ng-show="contactForm.userName.$viewValue.length > 0" ng-click="removeUserName()">X</a>
+        <a itemprop="remove" class="contact__content--remove" ng-show="contactForm.userName.$viewValue.length > 0" ng-click="removeUserName()">X</a>
     </fieldset>
 
     <!-- set to only appear if they have submitted the form submit button -->
@@ -20,7 +20,7 @@
     <fieldset class="contact__field--email">
         <label for="userEmail"> E-mail: <span>*</span></label>  
         <input name="userEmail" placeholder="example@email.com" type="email" ng-model="user.email" required maxlength="15"/>
-        <a class="contact__content--remove" ng-show="!contactForm.userEmail.$invalid" ng-click="removeEmail()">X</a>
+        <a itemprop="remove" class="contact__content--remove" ng-show="!contactForm.userEmail.$invalid" ng-click="removeEmail()">X</a>
     </fieldset>
 
     <!-- set to only appear if they have submitted the form submit button -->
@@ -53,10 +53,10 @@
         <textarea name="userMessage" placeholder="Please type your Message Here..." ng-model="user.message" tabindex="5" required></textarea>
     </fieldset>
 
-    <button class="contact__field--reset" type="button" ng-click="reset()">
+    <button itemprop="reset" class="contact__field--reset" type="button" ng-click="reset()">
         <i class="fa fa-undo"></i>
     </button>
-    <button class="contact__field--save" type="submit" ng-click="save(user)" value="Send">
+    <button itemprop="send" class="contact__field--save" type="submit" ng-click="save(user)" value="Send">
         <i class="fa fa-send"></i>
     </button>
     

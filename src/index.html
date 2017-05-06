@@ -3,26 +3,25 @@
   <head>
     <meta charset="utf-8">
     <base href="/">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Elliot Evans Site</title>
-    <meta name="description" content="">
+    <meta name="description" content="Welcome to my Personal Portfolio Website where I Showcase of new frontend technology and cool animation such as Angular, Webpack, ES6, PostCSS.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Verification -->
+    <meta name="google-site-verification" content="NnXt0nD_VWhUk22H8WgU8pNTiMuJ9UXRGdAqK8PkK1Y" />
+
     <!-- Schemea infomation -->
-    <link rel="author" href="">
-    <link rel="publisher" href="">
-    <meta itemprop="name" content="">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="">
+    <link rel="author" href="https://github.com/Elliot-Evans-95">
+    <link rel="publisher" href="https://github.com/Elliot-Evans-95">
 
     <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="./src/sitemap.xml">
 
     <!-- Shorten page url if needed-->
-    <link rel="canonical" href="">
+    <link rel="canonical" href="http://elliotevans.net/hello" />
 
     <!-- web manifest -->
-    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="manifest" href="./src/manifest.webmanifest">
 
     <!-- Fallback web manifest -->
     <meta name="application-name" content="">
@@ -64,17 +63,17 @@
 
     <i id="load"></i>
 
-    <header-section class="nav-bar"></header-section>
+    <header-section itemprop="navbar" class="nav-bar"></header-section>
 
     <floating-items class="parallax-container"></floating-items>
 
-    <social-media class="socialMedia-container"></social-media>
+    <social-media itemprop="social" class="socialMedia-container"></social-media>
 
-    <view-navigation class="background-view"></view-navigation>
+    <view-navigation itemprop="navigation" class="background-view"></view-navigation>
 
-    <ui-view class="content"></ui-view>
+    <ui-view itemprop="content" class="content"></ui-view>
 
-    <footer-section class="footer"></footer-section>
+    <footer-section itemprop="footer" class="footer"></footer-section>
 
     <!-- Loading -->
     <script>

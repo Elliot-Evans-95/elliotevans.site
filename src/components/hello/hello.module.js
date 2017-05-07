@@ -21,9 +21,8 @@ class helloService {
 const helloPage = {
     template: require('./hello.template.html'),
     controller: class helloController {
-        static $inject = ['$scope', 'helloService'];
-        constructor($scope, helloService) {
-            this.$scope = $scope;
+        static $inject = ['helloService'];
+        constructor(helloService) {
             this.helloService = helloService;
         }
 
@@ -53,7 +52,7 @@ const helloPage = {
                     this.personalImageAlt = _personalImageAlt;
 
                 }, function(response, status, $log) {
-                    let errorResponse = class errorResponse {
+                    class errorResponse {
                         constructor() {
                             this.status = response.status;
                             this.statusMessage = response.statusText;

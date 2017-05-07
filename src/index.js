@@ -25,8 +25,11 @@ import float from 'components/float/float.directive.js';
 
 // --------- PAGES ----------
 
+// hello
+import helloPage from 'components/hello/hello.module.js';
+
 // about
-import about from 'components/about/about.component.js';
+import aboutPage from 'components/about/about.module.js';
 
 // portfolio
 import portfolio from 'components/portfolio/portfolio.component.js';
@@ -39,9 +42,6 @@ import contact from 'components/contact/contact.component.js';
 import socialMedia from 'components/socialMedia/socialMedia.component.js';
 
 // ------------ SECTIONS ------------
-
-// hello
-import helloPage from 'components/hello/hello.module.js';
 
 // header
 import header from 'components/header/header.component.js';

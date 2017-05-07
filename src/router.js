@@ -6,6 +6,12 @@ app.config(['$stateProvider', '$locationProvider', '$ocLazyLoadProvider', functi
 
   $locationProvider.html5Mode(true);
 
+  // INDEX
+  $stateProvider.state('main', {
+    url: '/',
+    redirectTo: 'hello',
+  })
+
   // HELLO
   $stateProvider.state('hello', {
     url: '/hello',
@@ -31,21 +37,21 @@ app.config(['$stateProvider', '$locationProvider', '$ocLazyLoadProvider', functi
   $stateProvider.state('about', {
     url: '/about',
     component: 'aboutPage',
-    resolve: {
-      lazyLoad: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
-        let deferred = $q.defer();
-        require.ensure([], function () {
-          let about = require('./components/about/about.component.js');
-          // Should be load to load in the component but its not working
-          // $ocLazyLoad.load({
-          $ocLazyLoad.inject({
-            name: about.default
-          });
-          deferred.resolve(about);
-        });
-        return deferred.promise;
-      }]
-    }
+    // resolve: {
+    //   lazyLoad: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
+    //     let deferred = $q.defer();
+    //     require.ensure([], function () {
+    //       let about = require('./components/about/about.component.js');
+    //       // Should be load to load in the component but its not working
+    //       // $ocLazyLoad.load({
+    //       $ocLazyLoad.inject({
+    //         name: about.default
+    //       });
+    //       deferred.resolve(about);
+    //     });
+    //     return deferred.promise;
+    //   }]
+    // }
   });
 
   // PORTFOLIO

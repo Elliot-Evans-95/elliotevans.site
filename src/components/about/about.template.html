@@ -6,15 +6,15 @@
         <p class="about__content--text">{{$ctrl.pageSubHeading}}</p>
     </article>
     <section class="about_languages">
-        <div class="about__language--container" ng-repeat="language in languages track by language.id">
-            <p class="about__language--name">{{$ctrl.language.name}}</p>
-            <img class="about__language--image" src="{{$ctrl.language.image}}" alt="{{$ctrl.language.imageDescription}}">
+        <div class="about__language--container" ng-repeat="language in $ctrl.languages track by language.id">
+            <p class="about__language--name">{{language.name}}</p>
+            <img class="about__language--image" src="{{language.image}}" alt="{{language.imageDescription}}">
         </div>
     </section>
     <section class="about_frameworks">
-        <div class="about__language--container" ng-repeat="framework in frameworks track by framework.id">
-            <p class="about__language--name">{{$ctrl.framework.name}}</p>
-            <img class="about__language--image" src="{{$ctrl.framework.image}}" alt="{{$ctrl.language.imageDescription}}">
+        <div class="about__language--container" ng-repeat="framework in $ctrl.frameworks track by framework.id">
+            <p class="about__language--name">{{framework.name}}</p>
+            <img class="about__language--image" src="{{framework.image}}" alt="{{language.imageDescription}}">
         </div>
     </section>
 </main>

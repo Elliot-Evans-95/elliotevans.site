@@ -13,9 +13,9 @@ class helloService {
     getData(URL) {
         return this.$http.get(URL);
     }
-}
+};
 
-// import helloPage from 'components/hello/hello.component.js';
+// import helloPage from './hello.component.js';
 // COMPONENT
 
 const helloPage = {
@@ -24,11 +24,11 @@ const helloPage = {
         static $inject = ['helloService'];
         constructor(helloService) {
             this.helloService = helloService;
-        }
+        };
 
         $onInit() {
             const urlRef = './data/hello/hello.json';
-            document.title = "About // Elliot Evans";
+            document.title = "Elliot Evans";
             console.log('INIT');
             this
                 .helloService.getData(urlRef)
@@ -65,10 +65,10 @@ const helloPage = {
 
                 });
                 
-        }
+        };
 
     }
-}
+};
 
 angular
     .module('app')

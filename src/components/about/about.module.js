@@ -13,7 +13,7 @@ class aboutService {
     getData(URL) {
         return this.$http.get(URL);
     }
-}
+};
 
 // import aboutPage from './about.component.js';
 // COMPONENT
@@ -24,9 +24,9 @@ const aboutPage = {
         static $inject = ['aboutService'];
         constructor(aboutService) {
             this.aboutService = aboutService;
-        }
+        };
 
-        $oninit() {
+        $onInit() {
             const urlRef = './data/about/about.json';
             document.title = "About // Elliot Evans";
             console.log('INIT');
@@ -54,8 +54,6 @@ const aboutPage = {
                     this.languages = _languages;
                     this.frameworks = _frameworks;
 
-                    // renderToPage(_pageHeading, _pageSubHeading, _languages, _frameworks);
-
                 }, function(response, status, $log) {
                     class errorResponse {
                         constructor() {
@@ -68,17 +66,9 @@ const aboutPage = {
                     let _errorJSON = new errorResponse;
                     $log.error(_errorJSON.toString());
                 });
-
-                // function renderToPage (_pageHeading, _pageSubHeading, _languages, _frameworks, $scope) {
-                //     this.pageHeading = _pageHeading;
-                //     this.pageSubHeading = _pageSubHeading;  
-                //     this.languages = _languages;
-                //     this.frameworks = _frameworks;
-                // }
-        }
+        };
     }
-
-}
+};
 
 angular
     .module('app')

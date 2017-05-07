@@ -35,7 +35,7 @@ import aboutPage from 'components/about/about.module.js';
 import portfolioPage from 'components/portfolio/portfolio.module.js';
 
 // contact
-import contact from 'components/contact/contact.component.js';
+import contactPage from 'components/contact/contact.module.js';
 
 // --------- Social Media ------------
 

@@ -58,21 +58,21 @@ app.config(['$stateProvider', '$locationProvider', '$ocLazyLoadProvider', functi
   $stateProvider.state('portfolio', {
     url: '/portfolio',
     component: 'portfolioPage',
-    resolve: {
-      lazyLoad: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
-        let deferred = $q.defer();
-        require.ensure([], function () {
-          let portfolio = require('./components/portfolio/portfolio.component.js');
-          // Should be load to load in the component but its not working
-          // $ocLazyLoad.load({
-          $ocLazyLoad.inject({
-            name: portfolio.default
-          });
-          deferred.resolve(portfolio);
-        });
-        return deferred.promise;
-      }]
-    }
+    // resolve: {
+    //   lazyLoad: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
+    //     let deferred = $q.defer();
+    //     require.ensure([], function () {
+    //       let portfolio = require('./components/portfolio/portfolio.component.js');
+    //       // Should be load to load in the component but its not working
+    //       // $ocLazyLoad.load({
+    //       $ocLazyLoad.inject({
+    //         name: portfolio.default
+    //       });
+    //       deferred.resolve(portfolio);
+    //     });
+    //     return deferred.promise;
+    //   }]
+    // }
   });
 
   // CONTACT

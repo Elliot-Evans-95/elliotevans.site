@@ -32,7 +32,7 @@ import helloPage from 'components/hello/hello.module.js';
 import aboutPage from 'components/about/about.module.js';
 
 // portfolio
-import portfolio from 'components/portfolio/portfolio.component.js';
+import portfolioPage from 'components/portfolio/portfolio.module.js';
 
 // contact
 import contact from 'components/contact/contact.component.js';

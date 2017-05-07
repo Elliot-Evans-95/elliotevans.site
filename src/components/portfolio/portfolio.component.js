@@ -1,48 +1,48 @@
-'use strict';
+// 'use strict';
 
-// IMPORT
-import styles from './portfolio.style.css';
+// // IMPORT
+// import styles from './portfolio.style.css';
 
-let app = angular.module('app');
+// let app = angular.module('app');
 
-app.component('portfolioPage', {
+// app.component('portfolioPage', {
 
-    // TEMPLATE
-    template: require('./portfolio.template.html'),
+//     // TEMPLATE
+//     template: require('./portfolio.template.html'),
 
-    // CONTROLLER
-    controller: ['$scope', '$log', 'jsonService', ($scope, jsonService) => {
-        let urlRef = './data/portfolio/portfolio.json';
-        document.title = "Portfolio // Elliot Evans";
+//     // CONTROLLER
+//     controller: ['$scope', '$log', 'jsonService', ($scope, jsonService) => {
+//         let urlRef = './data/portfolio/portfolio.json';
+//         document.title = "Portfolio // Elliot Evans";
 
-        jsonService
-            .getData(urlRef)
-            .then((response) => {
-                console.log('response', response);
+//         jsonService
+//             .getData(urlRef)
+//             .then((response) => {
+//                 console.log('response', response);
 
-                for (var responseImages = 0; responseImages < response.data.portfolio.length; responseImages++) {
-                    response.data.portfolio[responseImages].mainImage = require(`${response.data.portfolio[responseImages].mainImage}`);
-                }
+//                 for (var responseImages = 0; responseImages < response.data.portfolio.length; responseImages++) {
+//                     response.data.portfolio[responseImages].mainImage = require(`${response.data.portfolio[responseImages].mainImage}`);
+//                 }
 
-                let _heading = response.data.heading;
-                let _subHeading = response.data.subHeading;
-                let _portfolios = response.data.portfolio;
+//                 let _heading = response.data.heading;
+//                 let _subHeading = response.data.subHeading;
+//                 let _portfolios = response.data.portfolio;
 
-                $scope.heading = _heading;
-                $scope.subHeading = _subHeading;
-                $scope.portfolios = _portfolios;
+//                 $scope.heading = _heading;
+//                 $scope.subHeading = _subHeading;
+//                 $scope.portfolios = _portfolios;
 
-            }, (response, status, $log) => {
+//             }, (response, status, $log) => {
 
-                response.data.error = {
-                    status: status,
-                    statusMessage: statusText,
-                    customError: "unable to find text",
-                    dataError: data
-                };
+//                 response.data.error = {
+//                     status: status,
+//                     statusMessage: statusText,
+//                     customError: "unable to find text",
+//                     dataError: data
+//                 };
 
-                let _errorJSON = response.data.error;
-                $log.error(_errorJSON.toString());
-            });
-    }]
-});
+//                 let _errorJSON = response.data.error;
+//                 $log.error(_errorJSON.toString());
+//             });
+//     }]
+// });

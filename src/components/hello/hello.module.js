@@ -1,14 +1,77 @@
 'use strict';
 
-// import {helloComponent, helloPage} from './hello.component';
+import styles from './hello.style.css';
 
-// export default angular
-// 		.module('helloModule', [])
-// 		.component(helloPage, helloComponent);
+// import helloService from './hello.service.js';
+// SERVICE
 
-import helloService from 'components/hello/hello.service.js';
-import helloPage from 'components/hello/hello.component.js';
+class helloService {
+    static $inject = ['$http'];
+    constructor($http) {
+        this.$http = $http;
+    }
+    getData(URL) {
+        return this.$http.get(URL);
+    }
+}
 
-angular.module('app')
+// import helloPage from 'components/hello/hello.component.js';
+// COMPONENT
+
+const helloPage = {
+    template: require('./hello.template.html'),
+    controller: class helloController {
+        static $inject = ['$scope', 'helloService'];
+        constructor($scope, helloService) {
+            this.$scope = $scope;
+            this.helloService = helloService;
+        }
+
+        $onInit() {
+            const urlRef = './data/hello/hello.json';
+            document.title = "About // Elliot Evans";
+            console.log('INIT');
+            this
+                .helloService.getData(urlRef)
+                .then((response) => {
+                    console.log('RES:', response);
+
+                    let _heading = response.data.heading;
+                    let _subHeading = response.data.subHeading;
+                    let _shortDescription = response.data.shortDescription;
+                    let _longDescription = response.data.longDescription;
+                    let _personalImage = response.data.personalImage;
+                    let _personalImageText = response.data.personalImageText;
+                    let _personalImageAlt = response.data.personalImageAlt;
+
+                    this.heading = _heading;
+                    this.subHeading = _subHeading;  
+                    this.shortDescription = _shortDescription;
+                    this.longDescription = _longDescription;
+                    this.personalImage = require(`${_personalImage}`);
+                    this.personalImageText = _personalImageText;
+                    this.personalImageAlt = _personalImageAlt;
+
+                }, function(response, status, $log) {
+                    let errorResponse = class errorResponse {
+                        constructor() {
+                            this.status = response.status;
+                            this.statusMessage = response.statusText;
+                            this.customError = "unable to find text";
+                            this.dataError = response.data;
+                        }
+                    };
+                    let _errorJSON = new errorResponse;
+                    $log.error(_errorJSON.toString());
+
+                });
+                
+        }
+
+    }
+}
+
+angular
+    .module('app')
     .service('helloService', helloService)
     .component('helloPage', helloPage);

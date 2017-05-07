@@ -9,22 +9,22 @@ app.config(['$stateProvider', '$locationProvider', '$ocLazyLoadProvider', functi
   // HELLO
   $stateProvider.state('hello', {
     url: '/hello',
-    component: 'helloPage',
-    resolve: {
-      lazyLoad: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
-        let deferred = $q.defer();
-        require.ensure([], function () {
-          let hello = require('./components/hello/hello.component.js');
-          // Should be load to load in the component but its not working
-          // $ocLazyLoad.load({
-          $ocLazyLoad.inject({
-            name: hello.default
-          });
-          deferred.resolve(hello);
-        });
-        return deferred.promise;
-      }]
-    }
+    component: 'helloPage'
+    // resolve: {
+    //   lazyLoad: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
+    //     let deferred = $q.defer();
+    //     require.ensure([], function () {
+    //       let hello = require('./components/hello/hello.component.js');
+    //       // Should be load to load in the component but its not working
+    //       // $ocLazyLoad.load({
+    //       $ocLazyLoad.inject({
+    //         name: hello.default
+    //       });
+    //       deferred.resolve(hello);
+    //     });
+    //     return deferred.promise;
+    //   }]
+    // }
   });
 
   // ABOUT

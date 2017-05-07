@@ -41,7 +41,7 @@ import socialMedia from 'components/socialMedia/socialMedia.component.js';
 // ------------ SECTIONS ------------
 
 // hello
-import hello from 'components/hello/hello.module.js';
+import helloPage from 'components/hello/hello.module.js';
 
 // header
 import header from 'components/header/header.component.js';

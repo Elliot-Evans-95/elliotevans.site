@@ -1,5 +1,9 @@
 {
   "presets": [
     ["es2015", { "modules": false }]
+  ],
+  "plugins": [
+    "syntax-class-properties",
+    "transform-class-properties"
   ]
 }

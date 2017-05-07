@@ -59,7 +59,8 @@ module.exports = {
             {
               loader: "babel-loader",
               options: {
-                presets:['es2015']
+                presets:['es2015'],
+                plugins: ["syntax-class-properties", "transform-class-properties"]
               }
             }
           ]

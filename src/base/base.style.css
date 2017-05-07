@@ -72,7 +72,7 @@
    ========================================================================== */
 
 :root {
-  --light-white:#FAFAFA;
+  --light-white: #FAFAFA;
   --dark-white: #FFFFEE;
 
   --light-black: #505050;
@@ -114,7 +114,7 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--light-white);
+  background: var(--light-white, #FAFAFA);
 }
 
 /* Base Section styling */
@@ -137,7 +137,7 @@ h1, h2, h3, h4 , h5, p, a {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--dark-black);
+  color: var(--dark-black, #212121);
 }
 
 h1 {

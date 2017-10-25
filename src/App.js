@@ -1,24 +1,53 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Button from './button';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload,
-          cool!.
-        </p>
-        <Button message="Click Me!" className="App-button" />
-      </div>
-    );
-  }
-}
+const Home = () =>
+  <div>
+    <h2>Home</h2>
+    <Button message={'Something'} />
+  </div>;
 
-export default App;
+const Work = () =>
+  <div>
+    <h3>Work</h3>
+  </div>;
+
+const Contact = () =>
+  <div>
+    <h3>Contact</h3>
+  </div>;
+
+const Blog = () =>
+  <div>
+    <h3>Blog</h3>
+  </div>;
+
+const BasicExample = () =>
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/work">Work</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route path="/work" component={Work} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/blog" component={Blog} />
+    </div>
+  </Router>;
+export default BasicExample;

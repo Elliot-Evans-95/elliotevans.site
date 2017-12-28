@@ -20,6 +20,8 @@ ReactDOM.render(
       <Route path="/work" component={Work} />
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
+
+      <eeFooter />
     </div>
   </Router>,
   document.getElementById('root')

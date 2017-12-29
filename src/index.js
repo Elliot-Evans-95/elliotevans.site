@@ -8,10 +8,11 @@ import Blog from './Blog';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import Navigation from './navigation';
+import EEFooter from './footer/ee-footer';
 
 ReactDOM.render(
   <Router>
-    <div>
+    <div className="appGrid">
       <Navigation />
 
       <hr />
@@ -21,7 +22,7 @@ ReactDOM.render(
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
 
-      <eeFooter />
+      <EEFooter />
     </div>
   </Router>,
   document.getElementById('root')

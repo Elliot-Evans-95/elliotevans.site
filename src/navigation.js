@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { AppNavigation } from './styles';
+
 class Navigation extends Component {
   render() {
     return (
-      <nav>
+      <AppNavigation>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -19,7 +21,7 @@ class Navigation extends Component {
             <Link to="/blog">Blog</Link>
           </li>
         </ul>
-      </nav>
+      </AppNavigation>
     );
   }
 }

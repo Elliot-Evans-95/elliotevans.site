@@ -13,3 +13,10 @@ export const SubHeading = styled.h3`
 `;
 
 export const Header = styled.header`background: aqua;`;
+
+export const AppNavigation = styled.nav`
+  grid-area: nav;
+
+  background: fuchsia;
+  font-size: 1rem;
+`;

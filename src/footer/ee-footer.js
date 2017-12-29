@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class eeFooter extends Component {
+class EEFooter extends Component {
   render() {
     return (
       <footer>
@@ -10,4 +10,4 @@ class eeFooter extends Component {
   }
 }
 
-export default eeFooter;
+export default EEFooter;

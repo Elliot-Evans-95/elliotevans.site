@@ -15,8 +15,6 @@ ReactDOM.render(
     <div className="appGrid">
       <Navigation />
 
-      <hr />
-
       <Route exact path="/" component={Home} />
       <Route path="/work" component={Work} />
       <Route path="/contact" component={Contact} />

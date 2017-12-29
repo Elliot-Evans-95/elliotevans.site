@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import Button from './button';
 import EEBanner from './banner/ee-banner';
+import EECard from './card/ee-card';
+import { Main } from './styles';
 
 class Home extends Component {
   render() {
-    const text = ['Hello.', 'Frontend Developer here...', 'Example'];
+    const text = [
+      'Hello, this is Elliot Evans.',
+      'Frontend Developer here...',
+      'Example',
+      'There would be a short description from one of my blog posts but instead here is some placeholder text'
+    ];
 
     return (
-      <div>
-        <h2>Home</h2>
+      <Main>
         <EEBanner text={text} />
-        <Button message={text[2]} />
-      </div>
+        <EECard text={text} />
+      </Main>
     );
   }
 }

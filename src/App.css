@@ -167,3 +167,14 @@ menu {
 summary {
   display: list-item;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+a {
+  font-family: 'Nunito', sans-serif;
+}

@@ -1,7 +1,27 @@
 .appGrid {
-  background: red;
+  background: #69797e21;
 
   display: grid;
 
+  grid-template-rows: 60px calc(100vh - 100px) 40px;
+  grid-template-columns: auto;
   grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
+}
+
+@media (min-width: 30em) {
+  .appGrid {
+    grid-template-rows: 80px calc(100vh - 140px) 60px;
+    grid-template-areas: "nav nav nav" ". main ." "footer footer footer";
+  }
+}
+
+.ee-svg {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 25px);
+  z-index: -1;
+  top: 25px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

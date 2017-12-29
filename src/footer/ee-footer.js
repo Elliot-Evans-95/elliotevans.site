@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 
+import { Footer } from './../styles';
+
 class EEFooter extends Component {
   render() {
     return (
-      <footer>
-        <p>Elliot Evans 2018</p>
-      </footer>
+      <Footer>
+        <p>
+          Made by Elliot Evans with{' '}
+          <span role="img" aria-label="coffee">
+            ☕
+          </span>{' '}
+          | 2018
+        </p>
+      </Footer>
     );
   }
 }

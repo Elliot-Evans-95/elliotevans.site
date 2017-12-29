@@ -5,7 +5,10 @@ export const Title = styled.h1`font-size: 1.5em;`;
 
 export const SubHeading = styled.h3`font-size: 1.25em;`;
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  display: flex;
+  justify-content: space-around;
+`;
 
 export const TextContainer = styled.section`
   background: rgba(74, 84, 89, 0.2);
@@ -16,7 +19,8 @@ export const TextContainer = styled.section`
     content: " ";
     position: absolute;
     display: block;
-    border: 0.5rem solid #4c595d;
+    //border: 0.5rem solid #4c595d;
+    border: 0.5rem solid #0078d7;
     height: calc(100% - 1em);
     left: -2em;
     top: 0;
@@ -76,8 +80,8 @@ export const NavItems = styled.li`
 
 export const MyFace = styled.img`
   width: 6em;
+  height: 6em;
   border-radius: 50%;
-  max-height: 100%;
 `;
 
 export const StyledLink = styled(Link)`
@@ -86,5 +90,13 @@ export const StyledLink = styled(Link)`
   
   &:hover {
     text-decoration: underline;
+  }
+`;
+
+export const HeaderGroup = styled.div`
+  padding-left: 1rem;
+
+  @media (min-width: 30em) {
+    padding-left: 0;
   }
 `;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Title, SubHeading, Header, MyFace } from './../styles';
+import { Title, SubHeading, Header, MyFace, HeaderGroup } from './../styles';
 
 class EEBanner extends Component {
   render() {
@@ -10,12 +10,14 @@ class EEBanner extends Component {
           src="https://avatars0.githubusercontent.com/u/22132230?s=400&v=4"
           alt="My face"
         />
-        <Title>
-          {this.props.text[0]}
-        </Title>
-        <SubHeading>
-          {this.props.text[1]}
-        </SubHeading>
+        <HeaderGroup>
+          <Title>
+            {this.props.text[0]}
+          </Title>
+          <SubHeading>
+            {this.props.text[1]}
+          </SubHeading>
+        </HeaderGroup>
       </Header>
     );
   }

@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
     const text = [
       'Hello, this is Elliot Evans.',
-      'Frontend Developer here...',
+      'Front-end Developer here...',
       'Example',
       'There would be a short description from one of my blog posts but instead here is some placeholder text'
     ];

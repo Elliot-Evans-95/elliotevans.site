@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import { WorkGrid, WorkContent, WorkHeader, WorkNavigation } from './styles';
 
 class Work extends Component {
   render() {
     return (
-      <div>
-        <h2>Work</h2>
-      </div>
+      <WorkGrid>
+        <WorkNavigation>Nav</WorkNavigation>
+        <WorkHeader>Header</WorkHeader>
+        <WorkContent>Content</WorkContent>
+      </WorkGrid>
     );
   }
 }

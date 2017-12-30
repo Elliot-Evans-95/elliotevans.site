@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import EECard from './card/ee-card';
+import { Main, EECite } from './styles';
 
 class Blog extends Component {
   render() {
     return (
-      <div>
+      <Main>
         <h2>Blog</h2>
-      </div>
+        <EECard text={'test'} />
+        <EECite>Time and stuff</EECite>
+      </Main>
     );
   }
 }

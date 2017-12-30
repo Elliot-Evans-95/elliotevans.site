@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import { Main, ContactSection } from './styles';
 
 class Contact extends Component {
   render() {
     return (
-      <div>
-        <h2>Contact</h2>
-      </div>
+      <Main>
+        <h2>Contact Me</h2>
+
+        <ContactSection>Contact stuff here</ContactSection>
+      </Main>
     );
   }
 }

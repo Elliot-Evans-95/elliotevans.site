@@ -1,13 +1,29 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Title = styled.h1`font-size: 1.5em;`;
+export const Title = styled.h1`
+  font-size: 1.25rem;
+  margin-top: 0;
 
-export const SubHeading = styled.h3`font-size: 1.25em;`;
+  @media (min-width: 30em) {
+    margin-top: 0.67em;
+    font-size: 1.5rem;
+  }
+`;
+
+export const SubHeading = styled.h3`
+  font-size: 1rem;
+
+  @media (min-width: 30em) {
+    font-size: 1.25rem;
+  }
+`;
 
 export const Header = styled.header`
   display: flex;
   justify-content: space-around;
+
+  padding-bottom: 1em;
 `;
 
 export const TextContainer = styled.section`
@@ -99,4 +115,48 @@ export const HeaderGroup = styled.div`
   @media (min-width: 30em) {
     padding-left: 0;
   }
+`;
+
+export const WorkGrid = styled.main`
+  grid-area: main;
+
+  background: green;
+
+  display: grid;
+
+  grid-template-rows: 12em auto auto;
+  grid-template-columns: 6em calc(100vw - 6em);
+  grid-template-areas: "work-nav work-header" "work-nav work-content"
+    "work-nav work-content";
+`;
+
+export const WorkNavigation = styled.nav`
+  grid-area: work-nav;
+
+  background: #0078d7;
+`;
+export const WorkHeader = styled.header`
+  grid-area: work-header;
+
+  background: #0063b1;
+`;
+export const WorkContent = styled.section`
+  grid-area: work-content;
+
+  background: #4c4a48;
+`;
+
+export const EECite = styled.cite`
+  display: block;
+
+  text-align: right;
+
+  padding-top: 1rem;
+  margin-bottom: 2em;
+`;
+
+export const ContactSection = styled.section`
+  display: flex;
+
+  background: green;
 `;

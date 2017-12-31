@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
-import { WorkGrid, WorkContent, WorkHeader, WorkNavigation } from './styles';
+import { Projects } from './Store/store';
+import WorkHeader from './work-header';
+import { WorkGrid, WorkContent, WorkNavigation } from './styles';
 
-class Work extends Component {
+type Prop = Array;
+
+class Work extends Component<Prop> {
   render() {
     return (
       <WorkGrid>
         <WorkNavigation>Nav</WorkNavigation>
-        <WorkHeader>Header</WorkHeader>
+        <WorkHeader projects={Projects} />
         <WorkContent>Content</WorkContent>
       </WorkGrid>
     );

@@ -120,8 +120,6 @@ export const HeaderGroup = styled.div`
 export const WorkGrid = styled.main`
   grid-area: main;
 
-  background: green;
-
   display: grid;
 
   grid-template-rows: 12em auto auto;
@@ -135,7 +133,7 @@ export const WorkNavigation = styled.nav`
 
   background: #0078d7;
 `;
-export const WorkHeader = styled.header`
+export const WorkHeaderContent = styled.header`
   grid-area: work-header;
 
   background: #0063b1;
@@ -143,7 +141,7 @@ export const WorkHeader = styled.header`
 export const WorkContent = styled.section`
   grid-area: work-content;
 
-  background: #4c4a48;
+  background: rgba(76, 74, 72, 0.6);
 `;
 
 export const EECite = styled.cite`
@@ -158,5 +156,5 @@ export const EECite = styled.cite`
 export const ContactSection = styled.section`
   display: flex;
 
-  background: green;
+  background: rgba(118, 118, 118, 0.5);
 `;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import EEBanner from './banner/ee-banner';
-import EECard from './card/ee-card';
-import { Main } from './styles';
+
+import EEBanner from '../../components/banner/ee-banner';
+import EECard from '../../components/card/ee-card';
+import { Main } from '../../styles';
 
 class Home extends Component {
   render() {

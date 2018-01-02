@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Title, SubHeading, Header, MyFace, HeaderGroup } from './../styles';
+import { Title, SubHeading, Header, MyFace, HeaderGroup } from '../../styles';
 
 class EEBanner extends Component {
   render() {

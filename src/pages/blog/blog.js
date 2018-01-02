@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import EECard from './card/ee-card';
-import { Main, EECite } from './styles';
+import EECard from '../../components/card/ee-card';
+import { Main, EECite } from '../../styles';
 
 class Blog extends Component {
   render() {

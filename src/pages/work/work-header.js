@@ -1,43 +1,36 @@
 import React, { Component } from 'react';
 
-import { WorkHeaderContent } from './styles';
+import { WorkHeaderContent } from '../../styles';
+import { FallbackProjects } from '../../Store/store';
 
 type State = {
   projects: Array
 };
 
-const fallbackProjects = [
-  {
-    id: 0,
-    title: 'loading...'
-  }
-];
-
 class WorkHeader extends Component<State> {
   constructor(props) {
     super(props);
     this.state = {
-      projects: fallbackProjects
+      projects: FallbackProjects
     };
   }
 
   componentDidMount() {
-    this.setState(prevState => ({
+    this.setState(() => ({
       projects: this.props.projects
     }));
   }
 
   render() {
+    const allProjects = this.state.projects.map(project =>
+      <div key={project.id}>
+        {project.title}
+      </div>
+    );
+
     return (
       <WorkHeaderContent>
-        {this.state.projects.map(test => {
-          console.log(test);
-          return (
-            <div key={test.id}>
-              {test.title}
-            </div>
-          );
-        })}
+        {allProjects}
       </WorkHeaderContent>
     );
   }

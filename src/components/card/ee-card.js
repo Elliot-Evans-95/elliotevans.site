@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { TextContainer } from './../styles';
+import { TextContainer } from '../../styles';
 
 class EECard extends Component {
   render() {

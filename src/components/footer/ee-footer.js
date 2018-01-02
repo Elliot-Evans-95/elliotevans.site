@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Footer } from './../styles';
+import { Footer } from '../../styles';
 
 class EEFooter extends Component {
   render() {

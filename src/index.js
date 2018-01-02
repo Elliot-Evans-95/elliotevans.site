@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Home from './Home';
-import Work from './Work';
-import Contact from './Contact';
-import Blog from './Blog';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import registerServiceWorker from './registerServiceWorker';
+
+import Home from './pages/home/home';
+import Work from './pages/work/work';
+import Contact from './pages/contact/contact';
+import Blog from './pages/blog/blog';
 import Navigation from './navigation';
-import EEFooter from './footer/ee-footer';
+import EEFooter from './components/footer/ee-footer';
+
+import './index.css';
 
 ReactDOM.render(
   <Router>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import { Projects } from './Store/store';
+import { Projects } from '../../Store/store';
 import WorkHeader from './work-header';
-import { WorkGrid, WorkContent, WorkNavigation } from './styles';
+import WorkNav from './work-nav';
+import { WorkGrid, WorkContent } from '../../styles';
 
 type Prop = Array;
 
@@ -10,7 +11,7 @@ class Work extends Component<Prop> {
   render() {
     return (
       <WorkGrid>
-        <WorkNavigation>Nav</WorkNavigation>
+        <WorkNav projects={Projects} />
         <WorkHeader projects={Projects} />
         <WorkContent>Content</WorkContent>
       </WorkGrid>

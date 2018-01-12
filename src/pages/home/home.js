@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import EEBanner from '../../components/banner/ee-banner';
 import EECard from '../../components/card/ee-card';
 import { Main } from '../../styles';
+
+const mapStateToProps = function(state) {
+  console.log(state);
+
+  return {
+    something: state.something
+  };
+};
 
 class Home extends Component {
   render() {
@@ -15,11 +24,11 @@ class Home extends Component {
 
     return (
       <Main>
-        <EEBanner text={text} />
+        <EEBanner text={text} something={this.props.something} />
         <EECard text={text} />
       </Main>
     );
   }
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);

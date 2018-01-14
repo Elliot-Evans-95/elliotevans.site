@@ -138,7 +138,7 @@ export const WorkHeaderContent = styled.header`
 
   background: #0063b1;
 `;
-export const WorkContent = styled.section`
+export const WorkContentContent = styled.section`
   grid-area: work-content;
 
   background: rgba(76, 74, 72, 0.6);

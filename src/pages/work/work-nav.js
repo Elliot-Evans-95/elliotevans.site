@@ -27,6 +27,8 @@ class WorkNav extends Component<State> {
         if (project.id === id) {
           project.is_selected = true;
         }
+
+        return project;
       })
     }));
   }

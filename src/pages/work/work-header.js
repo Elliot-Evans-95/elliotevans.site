@@ -22,11 +22,17 @@ class WorkHeader extends Component<State> {
   }
 
   render() {
-    const allProjects = this.state.projects.map(project =>
-      <div key={project.id}>
-        {project.title}
-      </div>
-    );
+    let allProjects = this.state.projects.map(project => {
+      if (project.is_selected === true) {
+        return (
+          <div key={project.id}>
+            {' '}{project.title}{' '}
+          </div>
+        );
+      } else {
+        return <div key={project.id}> No Projects Selected </div>;
+      }
+    });
 
     return (
       <WorkHeaderContent>

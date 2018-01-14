@@ -24,10 +24,7 @@ class WorkNav extends Component<State> {
   handleClick(id) {
     this.setState(prevState => ({
       projects: prevState.projects.map(project => {
-        if (project.id === id) {
-          project.is_selected = true;
-        }
-
+        project.is_selected = project.id === id;
         return project;
       })
     }));

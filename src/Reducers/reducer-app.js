@@ -12,7 +12,7 @@ export const rootReducer = combineReducers({
   name: nameReducer
 });
 
-function nameReducer(state = initialState, action) {
+function nameReducer(state = initialState(), action) {
   switch (action.type) {
     case 'SET_NAME':
       return action.name;

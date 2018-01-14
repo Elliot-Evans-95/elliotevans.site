@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -12,26 +12,28 @@ import EEFooter from './components/footer/ee-footer';
 
 import './index.css';
 
-class Root extends Component {
-  render() {
-    return (
-      <Provider store={this.props.store}>
-        <Router>
-          <div className="appGrid">
-            <Navigation />
+type Props = {
+  store: Object
+};
 
-            <Route exact path="/" component={Home} />
-            <Route path="/work" component={Work} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/blog" component={Blog} />
+const Root = (props: Props) => {
+  return (
+    <Provider store={props.store}>
+      <Router>
+        <div className="appGrid">
+          <Navigation />
 
-            <EEFooter />
-          </div>
-        </Router>
-      </Provider>
-    );
-  }
-}
+          <Route exact path="/" component={Home} />
+          <Route path="/work" component={Work} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/blog" component={Blog} />
+
+          <EEFooter />
+        </div>
+      </Router>
+    </Provider>
+  );
+};
 
 Root.propTypes = {
   store: PropTypes.object

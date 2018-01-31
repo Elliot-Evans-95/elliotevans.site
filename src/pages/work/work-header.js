@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { WorkHeaderContent } from '../../styles';
-import { FallbackProjects } from '../../Data/store';
+import { FallbackProjects } from '../../Data/data';
 
 type State = {
   projects: Array

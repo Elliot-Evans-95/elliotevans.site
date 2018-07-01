@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { WorkHeaderContent } from '../../styles';
-import { FallbackProjects } from '../../Data/data';
+import { FallbackProjects } from '../../initial-state';
 
 type State = {
   projects: Array
@@ -24,21 +24,13 @@ class WorkHeader extends Component<State> {
   render() {
     let allProjects = this.state.projects.map(project => {
       if (project.is_selected === true) {
-        return (
-          <div key={project.id}>
-            {' '}{project.title}{' '}
-          </div>
-        );
+        return <div key={project.id}> {project.title} </div>;
       } else {
         return <div key={project.id}> No Projects Selected </div>;
       }
     });
 
-    return (
-      <WorkHeaderContent>
-        {allProjects}
-      </WorkHeaderContent>
-    );
+    return <WorkHeaderContent>{allProjects}</WorkHeaderContent>;
   }
 }
 

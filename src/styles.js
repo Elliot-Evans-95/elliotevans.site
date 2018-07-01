@@ -32,7 +32,7 @@ export const TextContainer = styled.section`
   padding: 0.5rem 1rem;
 
   ::before {
-    content: " ";
+    content: ' ';
     position: absolute;
     display: block;
     //border: 0.5rem solid #4c595d;
@@ -58,7 +58,13 @@ export const Main = styled.main`
 
   padding: 1rem;
 
-  @media (min-width: 30em) {
+  @media (min-width: 0em) {
+    padding: 0;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 45em) {
     padding: 0;
     width: 50vw;
     margin: 0 auto;
@@ -101,9 +107,9 @@ export const MyFace = styled.img`
 `;
 
 export const StyledLink = styled(Link)`
-  color: #0078D7;
+  color: #0078d7;
   text-decoration: none;
-  
+
   &:hover {
     text-decoration: underline;
   }
@@ -124,8 +130,9 @@ export const WorkGrid = styled.main`
 
   grid-template-rows: 12em auto auto;
   grid-template-columns: 6em calc(100vw - 6em);
-  grid-template-areas: "work-nav work-header" "work-nav work-content"
-    "work-nav work-content";
+  grid-template-areas:
+    'work-nav work-header' 'work-nav work-content'
+    'work-nav work-content';
 `;
 
 export const WorkNavigation = styled.nav`

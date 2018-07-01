@@ -10,6 +10,9 @@ const Navigation = () => {
           <StyledLink to="/">Home</StyledLink>
         </NavItems>
         <NavItems>
+          <StyledLink to="/about">About</StyledLink>
+        </NavItems>
+        <NavItems>
           <StyledLink to="/work">Work</StyledLink>
         </NavItems>
         <NavItems>

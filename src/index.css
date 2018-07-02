@@ -205,11 +205,11 @@ a {
 
 .ee-svg {
   position: absolute;
-  width: 100vw;
-  height: calc(100vh - 25px);
+  width: 100%;
   z-index: -1;
-  top: 25px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  max-height: 100%;
 }

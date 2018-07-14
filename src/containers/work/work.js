@@ -8,15 +8,15 @@ import { WorkGrid } from '../../styles';
 
 const Work = ({ projects, onProjectClick }) => (
   <WorkGrid>
-    <WorkNav projects={projects} onProjectClick={onProjectClick} />
-    <WorkHeader projects={projects} />
-    <WorkContent>Content</WorkContent>
+    {/*<WorkNav projects={projects} onProjectClick={onProjectClick} />*/}
+    {/*<WorkHeader projects={projects} />*/}
+    {/*<WorkContent>Content</WorkContent>*/}
   </WorkGrid>
 );
 
-Work.propTypes = {
-  Projects: PropTypes.array,
-  onProjectClick: PropTypes.func.isRequired
-};
+// Work.propTypes = {
+// Projects: PropTypes.array,
+// onProjectClick: PropTypes.func.isRequired
+// };
 
 export default Work;

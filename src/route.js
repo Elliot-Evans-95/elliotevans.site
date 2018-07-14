@@ -9,10 +9,11 @@ import Contact from './containers/contact/contact';
 import Blog from './containers/blog/blog';
 import Navigation from './navigation';
 import EEFooter from './components/footer/ee-footer';
+import store from './store/index';
 
 import './index.css';
 
-const Root = ({ store }) => (
+const Root = () => (
   <Provider store={store}>
     <Router>
       <div className="appGrid">

@@ -186,20 +186,29 @@ a {
 
   grid-template-rows: 60px calc(100vh - 100px) 40px;
   grid-template-columns: auto;
-  grid-template-areas: 'nav nav nav' 'main main main' 'footer footer footer';
+  grid-template-areas:
+    'nav nav nav'
+    'main main main'
+    'footer footer footer';
 }
 
 @media (min-width: 0em) {
   .appGrid {
     grid-template-rows: 80px calc(100vh - 140px) 60px;
-    grid-template-areas: 'nav nav nav' 'main main main' 'footer footer footer';
+    grid-template-areas:
+      'nav nav nav'
+      'main main main'
+      'footer footer footer';
   }
 }
 
 @media (min-width: 45em) {
   .appGrid {
     grid-template-rows: 80px calc(100vh - 140px) 60px;
-    grid-template-areas: 'nav nav nav' '. main .' 'footer footer footer';
+    grid-template-areas:
+      'nav nav nav'
+      '. main .'
+      'footer footer footer';
   }
 }
 

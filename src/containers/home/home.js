@@ -4,6 +4,8 @@ import EEBanner from '../../components/banner/ee-banner';
 import EECard from '../../components/card/ee-card';
 import { Main } from '../../styles';
 import PropTypes from 'prop-types';
+import EETest from '../../components/test/ee-test';
+import HigherTest from '../../components/higher-test/higher-test';
 
 const Home = () => {
   const text = [
@@ -18,6 +20,8 @@ const Home = () => {
       <section />
       <EEBanner text={text} />
       <EECard text={text} />
+      <EETest />
+      <HigherTest />
     </Main>
   );
 };

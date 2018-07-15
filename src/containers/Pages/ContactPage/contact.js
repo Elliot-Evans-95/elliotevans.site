@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Main, ContactSection } from '../../styles';
+import { Main, ContactSection } from '../../../assets/styles/styles';
 
 const Contact = () => {
   return (

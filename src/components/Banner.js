@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Title, SubHeading, Header, MyFace, HeaderGroup } from '../../styles';
+import {
+  Title,
+  SubHeading,
+  Header,
+  MyFace,
+  HeaderGroup
+} from '../assets/styles/styles';
 
 type Props = {
   text: Array
 };
 
-const EEBanner = (props: Props) => {
+const Banner = (props: Props) => {
   return (
     <Header>
       <MyFace
@@ -15,18 +21,14 @@ const EEBanner = (props: Props) => {
         alt="My face"
       />
       <HeaderGroup>
-        <Title>
-          {props.text[0]}
-        </Title>
-        <SubHeading>
-          {props.text[1]}
-        </SubHeading>
+        <Title>{props.text[0]}</Title>
+        <SubHeading>{props.text[1]}</SubHeading>
       </HeaderGroup>
     </Header>
   );
 };
 
-EEBanner.defaultProps = {
+Banner.defaultProps = {
   text: [
     'Hello, this is Elliot Evans.',
     'Front-end Developer here...',
@@ -35,8 +37,8 @@ EEBanner.defaultProps = {
   ]
 };
 
-EEBanner.propTypes = {
+Banner.propTypes = {
   text: PropTypes.array
 };
 
-export default EEBanner;
+export default Banner;

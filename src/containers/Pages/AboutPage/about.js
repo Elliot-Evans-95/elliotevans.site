@@ -1,9 +1,9 @@
 import React from 'react';
 
-import EEBanner from '../../components/banner/ee-banner';
-import EECard from '../../components/card/ee-card';
-import { Main } from '../../styles';
+import { Main } from '../../../assets/styles/styles';
 import PropTypes from 'prop-types';
+import Card from '../../../components/card';
+import Banner from '../../../components/Banner';
 
 const About = () => {
   const text = [
@@ -15,9 +15,8 @@ const About = () => {
 
   return (
     <Main>
-      <section />
-      <EEBanner text={text} />
-      <EECard text={text} />
+      <Banner text={text} />
+      <Card text={text} />
     </Main>
   );
 };

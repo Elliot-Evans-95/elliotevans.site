@@ -1,29 +1,7 @@
 import { ADD_ARTICLE, SELECT_PROJECT } from '../constants/action-types';
+import { InitialState } from '../state/initial-state';
 
-const initialState = {
-  articles: [
-    {
-      id: 1,
-      title: 'yo'
-    }
-  ],
-  projects: [
-    {
-      id: 1,
-      project: 'test1'
-    },
-    {
-      id: 2,
-      project: 'test2'
-    }
-  ],
-  selectedProject: {
-    id: 3,
-    project: 'test3'
-  }
-};
-
-const rootReducer = (state = initialState, action) => {
+const rootReducer = (state = InitialState, action) => {
   switch (action.type) {
     case SELECT_PROJECT:
       return { ...state, selectedProject: action.payload };

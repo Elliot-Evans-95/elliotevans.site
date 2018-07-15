@@ -43,7 +43,7 @@ export const TextContainer = styled.section`
   }
 `;
 
-export const Footer = styled.footer`
+export const EEFooter = styled.footer`
   grid-area: footer;
 
   background: #0078d7;

@@ -1,4 +1,4 @@
-export const Projects = [
+const Projects = [
   {
     id: 1,
     title: 'title 1',
@@ -37,9 +37,27 @@ export const Projects = [
   }
 ];
 
-export const FallbackProjects = [
+const SelectedProject = [
   {
-    id: 0,
-    title: 'loading...'
+    id: 5,
+    title: 'title 5',
+    icon: '',
+    short_description: '',
+    long_description: '',
+    main_image: '',
+    is_selected: false
   }
 ];
+
+const Articles = [
+  {
+    id: 1,
+    title: 'yo'
+  }
+];
+
+export const InitialState = {
+  Projects,
+  SelectedProject,
+  Articles
+};

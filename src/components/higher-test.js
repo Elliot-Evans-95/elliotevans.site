@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addArticle } from '../../actions';
+import { addArticle } from '../actions/index';
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -48,9 +48,10 @@ class ConnectedForm extends Component {
     );
   }
 }
-const HigherTest = connect(
+
+const higherTest = connect(
   null,
   mapDispatchToProps
 )(ConnectedForm);
 
-export default HigherTest;
+export default higherTest;

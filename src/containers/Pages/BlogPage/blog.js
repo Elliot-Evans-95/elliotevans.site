@@ -1,7 +1,7 @@
 import React from 'react';
 
-import EECard from '../../components/card/ee-card';
-import { Main, EECite } from '../../styles';
+import { Main, EECite } from '../../../assets/styles/styles';
+import Card from '../../../components/card';
 
 const Blog = () => {
   const testText = ['', '', '', 'test'];
@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <Main>
       <h2>Blog</h2>
-      <EECard text={testText} />
+      <Card text={testText} />
       <EECite>Time and stuff</EECite>
     </Main>
   );

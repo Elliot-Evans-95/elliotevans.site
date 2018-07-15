@@ -1,11 +1,11 @@
 import React from 'react';
 
-import EEBanner from '../../components/banner/ee-banner';
-import EECard from '../../components/card/ee-card';
-import { Main } from '../../styles';
+import { Main } from '../../../assets/styles/styles';
 import PropTypes from 'prop-types';
-import EETest from '../../components/test/ee-test';
-import HigherTest from '../../components/higher-test/higher-test';
+import Card from '../../../components/card';
+import Test from '../../../components/test';
+import HigherTest from '../../../components/higher-test';
+import Banner from '../../../components/Banner';
 
 const Home = () => {
   const text = [
@@ -17,18 +17,13 @@ const Home = () => {
 
   return (
     <Main>
-      <section />
-      <EEBanner text={text} />
-      <EECard text={text} />
-      <EETest />
+      <Banner text={text} />
+      <Card text={text} />
+      <Test />
       <HigherTest />
     </Main>
   );
 };
-
-// Home.defaultProps = {
-//   text: text
-// };
 
 Home.propTypes = {
   something: PropTypes.object

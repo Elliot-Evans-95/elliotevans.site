@@ -1,24 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TextContainer } from '../../styles';
+import { TextContainer } from '../assets/styles/styles';
 
 type Props = {
   text: Array
 };
 
-const EECard = (props: Props) => {
+const Card = (props: Props) => {
   return (
     <TextContainer>
-      <p>
-        {props.text[3]}
-      </p>
+      <p>{props.text[3]}</p>
     </TextContainer>
   );
 };
 
-EECard.propTypes = {
+Card.propTypes = {
   text: PropTypes.array
 };
 
-export default EECard;
+export default Card;

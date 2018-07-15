@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
-  return { articles: state.articles };
+  return { articles: state.Articles };
 };
 
 const ConnectedList = ({ articles }) => (
@@ -16,6 +16,6 @@ const ConnectedList = ({ articles }) => (
   </ul>
 );
 
-const EETest = connect(mapStateToProps)(ConnectedList);
+const Test = connect(mapStateToProps)(ConnectedList);
 
-export default EETest;
+export default Test;

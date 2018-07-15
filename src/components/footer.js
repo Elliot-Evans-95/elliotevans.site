@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Footer } from '../../styles';
+import { EEFooter } from '../assets/styles/styles';
 
-const EEFooter = () => {
+const Footer = () => {
   return (
-    <Footer>
+    <EEFooter>
       <p>
         Made by Elliot Evans with{' '}
         <span role="img" aria-label="coffee">
@@ -12,8 +12,8 @@ const EEFooter = () => {
         </span>{' '}
         | 2018
       </p>
-    </Footer>
+    </EEFooter>
   );
 };
 
-export default EEFooter;
+export default Footer;

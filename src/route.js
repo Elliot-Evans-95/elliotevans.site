@@ -7,7 +7,7 @@ import About from './containers/Pages/AboutPage/about';
 import Work from './containers/Pages/WorkPages/work';
 import Contact from './containers/Pages/ContactPage/contact';
 import Blog from './containers/Pages/BlogPage/blog';
-import Navigation from './navigation';
+import Navigation from './components/navigation';
 import Footer from './components/footer';
 import store from './store/index';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppNavigation, NavItems, StyledLink } from './assets/styles/styles';
+import { AppNavigation, NavItems, StyledLink } from '../assets/styles/styles';
 
 const Navigation = () => {
   return (

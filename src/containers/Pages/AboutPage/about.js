@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { Main } from '../../../assets/styles/styles';
-import PropTypes from 'prop-types';
 import Card from '../../../components/card';
-import Banner from '../../../components/Banner';
+import Banner from '../../../components/banner';
 
 const About = () => {
   const text = [
@@ -19,10 +18,6 @@ const About = () => {
       <Card text={text} />
     </Main>
   );
-};
-
-About.propTypes = {
-  something: PropTypes.object
 };
 
 export default About;

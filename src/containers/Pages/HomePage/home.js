@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { Main } from '../../../assets/styles/styles';
-import PropTypes from 'prop-types';
 import Card from '../../../components/card';
 import Test from '../../../components/test';
 import HigherTest from '../../../components/higher-test';
-import Banner from '../../../components/Banner';
+import Banner from '../../../components/banner';
 
 const Home = () => {
   const text = [
@@ -23,10 +22,6 @@ const Home = () => {
       <HigherTest />
     </Main>
   );
-};
-
-Home.propTypes = {
-  something: PropTypes.object
 };
 
 export default Home;

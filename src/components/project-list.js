@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class Projects extends Component {
+class Projects extends PureComponent {
   constructor(props, context) {
     super(props, context);
     this.selectProject = this.selectProject.bind(this);

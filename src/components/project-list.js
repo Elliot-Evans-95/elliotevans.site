@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 
 import { selectCurrentProject } from '../actions';
 
@@ -20,6 +21,9 @@ class Projects extends PureComponent {
     this.selectProject = this.selectProject.bind(this);
   }
 
+  // Added this in as its a reminder that you can add default props into the component
+  // static defaultProps = {}
+
   selectProject(id) {
     this.props.selectCurrentProject(id);
   }
@@ -35,6 +39,11 @@ class Projects extends PureComponent {
     ));
   }
 }
+
+Projects.propTypes = {
+  projects: PropTypes.array.isRequired,
+  selectCurrentProject: PropTypes.func
+};
 
 const ProjectList = connect(
   mapStateToProps,

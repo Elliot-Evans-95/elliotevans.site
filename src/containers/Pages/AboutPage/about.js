@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet';
+
 import { Main } from '../../../assets/styles/styles';
 import Card from '../../../components/card';
 import Banner from '../../../components/banner';
@@ -14,6 +16,14 @@ const About = () => {
 
   return (
     <Main>
+      <Helmet>
+        <title>Elliot Evans - About</title>
+        <meta name="description" content="About Page" />
+        <meta
+          name="keywords"
+          content="Software Engineer,Product Manager,Project Manager,Data Scientist,Computer Scientist"
+        />
+      </Helmet>
       <Banner text={text} />
       <Card text={text} />
     </Main>

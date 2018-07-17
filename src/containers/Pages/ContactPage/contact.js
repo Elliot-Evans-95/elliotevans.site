@@ -1,10 +1,20 @@
 import React from 'react';
 
 import { Main, ContactSection } from '../../../assets/styles/styles';
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   return (
     <Main>
+      <Helmet>
+        <title>Elliot Evans - Contact</title>
+        <meta name="description" content="Contact Page" />
+        <meta
+          name="keywords"
+          content="Software Engineer,Product Manager,Project Manager,Data Scientist,Computer Scientist"
+        />
+      </Helmet>
+
       <h2>Contact Me</h2>
 
       <ContactSection>

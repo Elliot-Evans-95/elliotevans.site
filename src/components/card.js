@@ -1,10 +1,12 @@
+// @flow
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { TextContainer } from '../assets/styles/styles';
 
 type Props = {
-  text: Array
+  text: PropTypes
 };
 
 const Card = (props: Props) => {

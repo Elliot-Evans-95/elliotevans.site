@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+// @flow
 
-class Button extends Component {
-  render() {
-    return <button>{this.props.message}</button>;
-  }
-}
+import React from 'react';
+import PropTypes from 'prop-types';
+
+type Props = {
+  message: PropTypes
+};
+
+const Button = (props: Props) => {
+  return <button>{props.message}</button>;
+};
+
+Button.propTypes = {
+  message: PropTypes.string
+};
 
 export default Button;

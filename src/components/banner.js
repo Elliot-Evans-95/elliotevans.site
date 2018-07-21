@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,7 +12,7 @@ import {
 } from '../assets/styles/styles';
 
 type Props = {
-  text: Array
+  text: PropTypes
 };
 
 const Banner = (props: Props) => {

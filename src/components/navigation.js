@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 
 import { AppNavigation, NavItems, StyledLink } from '../assets/styles/styles';

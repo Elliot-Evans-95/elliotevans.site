@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 
 import { Main, ContactSection } from '../../../assets/styles/styles';

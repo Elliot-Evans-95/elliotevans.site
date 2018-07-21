@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addArticle } from '../actions/index';
 
@@ -10,12 +11,17 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class ConnectedForm extends Component {
+type Props = {
+  addArticle: PropTypes
+};
+
+class ConnectedForm extends Component<Props> {
+  handleChange: () => void;
+  handleSubmit: () => void;
+
   constructor() {
     super();
-    this.state = {
-      title: ''
-    };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -24,13 +30,14 @@ class ConnectedForm extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    const { title } = this.state;
+
+    const title = this.state;
     const id = 2;
+
     this.props.addArticle({ title, id });
-    this.setState({ title: '' });
+    this.setState(this.state);
   }
   render() {
-    const { title } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
@@ -39,7 +46,7 @@ class ConnectedForm extends Component {
             type="text"
             className="form-control"
             id="title"
-            value={title}
+            value={this.state}
             onChange={this.handleChange}
           />
         </div>

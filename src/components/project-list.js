@@ -17,7 +17,14 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class Projects extends PureComponent {
+type Props = {
+  projects: PropTypes,
+  selectCurrentProject: PropTypes
+};
+
+class Projects extends PureComponent<Props> {
+  selectProject: () => void;
+
   constructor(props, context) {
     super(props, context);
     this.selectProject = this.selectProject.bind(this);

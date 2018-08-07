@@ -5,7 +5,10 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { Main, EECite } from '../../../assets/styles/styles';
+
 import marked from 'marked';
+import * as yamlFront from 'yaml-front-matter';
+
 // import Card from '../../../components/card';
 
 function mapFiles(context) {
@@ -34,7 +37,8 @@ class Blog extends Component {
 
     this.state = {
       hits: ['1', '2', '3'],
-      markdown: []
+      markdown: [],
+      header: []
     };
   }
 
@@ -46,15 +50,43 @@ class Blog extends Component {
         })
         .then(text => {
           this.setState(prevState => ({
-            markdown: [...prevState.markdown, marked(text)]
+            header: [...prevState.header, Blog.objectToArray(text)],
+            markdown: [
+              ...prevState.markdown,
+              Blog.transformMarkdownContent(text)
+            ]
           }));
         });
     }
   }
 
+  static transformMarkdownContent(text) {
+    const content = yamlFront.loadFront(text);
+
+    return marked(content.__content);
+  }
+
+  static objectToArray(text) {
+    const object = yamlFront.loadFront(text);
+
+    return [
+      object.date.toString(),
+      object.path.toString(),
+      object.title.toString()
+    ];
+  }
+
   render() {
+    console.log(this.state.header);
+
     const blogPosts = this.state.markdown.map(post => (
       <div dangerouslySetInnerHTML={{ __html: post }} />
+    ));
+
+    const headerOfBlogPosts = this.state.header.map(head => (
+      <div>
+        {head[0]} {head[1]} {head[2]}
+      </div>
     ));
 
     return (
@@ -70,6 +102,7 @@ class Blog extends Component {
         <h2>Blog</h2>
         {/*<Card text={testText}/>*/}
         <EECite>Time and stuff</EECite>
+        {headerOfBlogPosts}
         {blogPosts}
       </Main>
     );

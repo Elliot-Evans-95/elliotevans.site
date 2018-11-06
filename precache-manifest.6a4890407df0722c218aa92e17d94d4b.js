@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/static/media/work.6740d995.svg"
   },
   {
-    "revision": "6ae525c90b6d9fe1ccf7c7d3ea0583ec",
-    "url": "/static/media/post.6ae525c9.svg"
-  },
-  {
     "revision": "6f90d42cfa2ca5623be6188e0c3cbc1e",
     "url": "/static/media/contact.6f90d42c.svg"
+  },
+  {
+    "revision": "6ae525c90b6d9fe1ccf7c7d3ea0583ec",
+    "url": "/static/media/post.6ae525c9.svg"
   },
   {
     "revision": "50de90a0feaf2463e36063b6a59e722d",

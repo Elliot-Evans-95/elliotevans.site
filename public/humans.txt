@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Elliot Evans -- Everything -- @eIIiotevans
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JAVASCRIPT
+
+# SITE
+	Last update:2012/02/04
+	Language: English
+	Doctype:HTML5
+	IDE: Visual Studio Code

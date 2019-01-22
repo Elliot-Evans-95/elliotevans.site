@@ -48,8 +48,7 @@ class Projects extends PureComponent {
 }
 
 Projects.propTypes = {
-  projects: PropTypes.array.isRequired,
-  selectCurrentProject: PropTypes.func
+  projects: PropTypes.array.isRequired
 };
 
 const ProjectList = connect(

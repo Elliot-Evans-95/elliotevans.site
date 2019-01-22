@@ -75,8 +75,63 @@ const About = {
   ]
 };
 
+const Skills = [
+  {
+    id: 1,
+    name: 'HTML 5',
+    imageUrl: 'https://storage.googleapis.com/elliot-evans-website/html.svg',
+    years: 5
+  },
+  {
+    id: 2,
+    name: 'CSS 3',
+    imageUrl: 'https://storage.googleapis.com/elliot-evans-website/css.svg',
+    years: 5
+  },
+  {
+    id: 3,
+    name: 'Javascript',
+    imageUrl:
+      'https://storage.googleapis.com/elliot-evans-website/javascript.svg',
+    years: 5
+  },
+  {
+    id: 4,
+    name: 'Typescript',
+    imageUrl:
+      'https://storage.googleapis.com/elliot-evans-website/typescript.svg',
+    years: 3
+  },
+  {
+    id: 5,
+    name: 'Angular',
+    imageUrl: 'https://storage.googleapis.com/elliot-evans-website/angular.svg',
+    years: 3
+  },
+  {
+    id: 6,
+    name: 'React',
+    imageUrl: 'https://storage.googleapis.com/elliot-evans-website/react.svg',
+    years: 1
+  },
+  {
+    id: 7,
+    name: 'Node',
+    imageUrl: 'https://storage.googleapis.com/elliot-evans-website/node.svg',
+    years: 1
+  },
+  {
+    id: 8,
+    name: 'Firebase',
+    imageUrl:
+      'https://storage.googleapis.com/elliot-evans-website/firebase.svg',
+    years: 1
+  }
+];
+
 export const initialState = {
   Projects,
   Posts,
-  About
+  About,
+  Skills
 };

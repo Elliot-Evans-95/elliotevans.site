@@ -18,6 +18,11 @@ const Navigation = () => {
           </StyledLink>
         </NavItems>
         <NavItems>
+          <StyledLink to="/skills" activeClassName="selected">
+            Skills
+          </StyledLink>
+        </NavItems>
+        <NavItems>
           <StyledLink to="/work" activeClassName="selected">
             Work
           </StyledLink>

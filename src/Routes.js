@@ -12,6 +12,7 @@ import Contact from './contact/Contact';
 import Footer from './shared/components/Footer';
 import Navigation from './shared/components/Navigation';
 import Post from './post/Post';
+import Skills from './skills/Skills';
 
 const Routes = () => (
   <Provider store={store}>
@@ -20,6 +21,7 @@ const Routes = () => (
         <Navigation />
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/skills" component={Skills} />
         <Route path="/work" component={Work} />
         <Route path="/contact" component={Contact} />
         <Route path="/post/:id" component={Post} />

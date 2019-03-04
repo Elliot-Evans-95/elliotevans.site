@@ -7,7 +7,7 @@ class Skill extends PureComponent {
     return (
       <div>
         <h1>{this.props.name}</h1>
-        <img src={this.props.image} alt={`${this.props.name} Image`} />
+        <img src={this.props.image} alt={`${this.props.name}`} />
         <cite>{this.props.years} year(s)</cite>
       </div>
     );

@@ -4,8 +4,6 @@ import React, { PureComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { SkillGrid } from './Skills.style';
 import SkillList from './SkillsList';
-import PageHeader from '../work/Work';
-import { HeaderWrapper } from '../shared/styles/styles';
 
 class Skills extends PureComponent {
   heading = 'Skills';

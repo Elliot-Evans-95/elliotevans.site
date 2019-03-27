@@ -5,16 +5,38 @@ import {
   MAKE_CURRENT_PROJECT_SELECTED
 } from '../constants/action-types';
 
+let index = 0;
+
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_PRODUCTS_SUCCESS:
-      const mapPosts = state.Posts.map(post => ({
-        id: post.id,
-        test: post.test,
-        markdown: post.markdown.concat(action.payload)
-      }));
+      if (index >= 3) {
+        const filteredPayload = () =>
+          state.Posts.map(post =>
+            post.markdown.filter(markdown => markdown !== action.payload)
+          ).flat();
 
-      return { ...state, Posts: [...mapPosts] };
+        const mapPosts = state.Posts.map(post => ({
+          id: post.id,
+          test: post.test,
+          markdown: filteredPayload()
+        }));
+
+        index++;
+
+        return { ...state, Posts: [...mapPosts] };
+      } else {
+        const mapInitialPosts = state.Posts.map(post => ({
+          id: post.id,
+          test: post.test,
+          markdown: post.markdown.concat(action.payload)
+        }));
+
+        index++;
+
+        return { ...state, Posts: [...mapInitialPosts] };
+      }
+
     case MAKE_CURRENT_PROJECT_SELECTED:
       const mapProjects = state.Projects.map(project => ({
         id: project.id,

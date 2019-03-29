@@ -185,7 +185,7 @@ cite {
 
   display: grid;
 
-  grid-template-rows: 60px calc(100vh - 100px) 40px;
+  grid-template-rows: 60px calc(100% - 100px) 40px;
   grid-template-columns: auto;
   grid-template-areas:
     'nav nav nav'
@@ -199,7 +199,7 @@ cite {
 
 .appGrid.work {
   display: grid;
-  grid-template-rows: 60px calc(100vh - 100px) 40px;
+  grid-template-rows: 60px calc(100% - 100px) 40px;
   grid-template-columns: auto;
   grid-template-areas:
     'nav nav nav'
@@ -219,7 +219,7 @@ cite {
 
 @media (min-width: 45em) {
   .appGrid {
-    grid-template-rows: 80px calc(100vh - 120px) 40px;
+    grid-template-rows: 80px calc(100% - 120px) 40px;
     grid-template-areas:
       'nav nav nav'
       '. main .'

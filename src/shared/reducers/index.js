@@ -10,17 +10,23 @@ let index = 0;
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_PRODUCTS_SUCCESS:
-      if (index >= 3) {
+      if (index >= 6) {
         const filteredPayload = () =>
           state.Posts.map(post =>
             post.markdown.filter(markdown => markdown !== action.payload)
-          ).flat();
+          )
+            .flat()
+            .sort(
+              (a, b) => new Date(b.header[0].date) - new Date(a.header[0].date)
+            );
 
         const mapPosts = state.Posts.map(post => ({
           id: post.id,
           test: post.test,
           markdown: filteredPayload()
         }));
+
+        console.log(mapPosts);
 
         index++;
 
@@ -29,7 +35,11 @@ const appReducer = (state = initialState, action) => {
         const mapInitialPosts = state.Posts.map(post => ({
           id: post.id,
           test: post.test,
-          markdown: post.markdown.concat(action.payload)
+          markdown: post.markdown
+            .concat(action.payload)
+            .sort(
+              (a, b) => new Date(b.header[0].date) - new Date(a.header[0].date)
+            )
         }));
 
         index++;

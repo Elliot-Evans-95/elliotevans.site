@@ -182,7 +182,7 @@ cite {
 
 .appGrid {
   background: #69797e21;
-
+  min-height: 100vh;
   display: grid;
 
   grid-template-rows: 60px calc(100% - 100px) 40px;

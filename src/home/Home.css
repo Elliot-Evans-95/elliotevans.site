@@ -209,7 +209,6 @@ cite {
 
 @media (min-width: 0em) {
   .appGrid {
-    /*grid-template-rows: 80px calc(100vh - 120px) 40px;*/
     grid-template-rows: 80px calc(100% - 120px) 40px;
     grid-template-areas:
       'nav nav nav'

@@ -11,7 +11,7 @@ const Footer = () => {
         <span role="img" aria-label="coffee">
           ☕
         </span>{' '}
-        | 2018
+        | 2019
       </p>
     </EEFooter>
   );

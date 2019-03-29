@@ -1,34 +1,40 @@
 // @flow
 
 import Home from './home/Home';
-import store from './shared/store';
-import { Provider } from 'react-redux';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import About from './about/About';
 import Work from './work/Work';
 import Contact from './contact/Contact';
-import Footer from './shared/components/Footer';
-import Navigation from './shared/components/Navigation';
 import Post from './post/Post';
 import Skills from './skills/Skills';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-const Routes = () => (
-  <Provider store={store}>
-    <BrowserRouter>
-      <div className="appGrid">
-        <Navigation />
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/skills" component={Skills} />
-        <Route path="/work" component={Work} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/post/:id" component={Post} />
-        <Footer />
-      </div>
-    </BrowserRouter>
-  </Provider>
+import './animation.css';
+
+const PageFade = props => (
+  <CSSTransition
+    {...props}
+    classNames="fadeTranslate"
+    timeout={500}
+    mountOnEnter={true}
+    unmountOnExit={true}
+  />
+);
+
+const Routes = props => (
+  <TransitionGroup className={'grid-area__main'}>
+    <PageFade key={props.location.pathname}>
+      <Switch location={props.location}>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/skills" component={Skills} />
+        <Route exact path="/work" component={Work} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/post/:id" component={Post} />
+      </Switch>
+    </PageFade>
+  </TransitionGroup>
 );
 
 export default Routes;

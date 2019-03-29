@@ -11,9 +11,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*@TODO: temp for transitions*/
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* @TODO: Temp for transitions*/
+.grid-area__main {
+  grid-area: main;
+  display: flex;
 }

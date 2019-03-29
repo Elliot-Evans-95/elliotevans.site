@@ -1,0 +1,16 @@
+---
+path: "/post/01-03-2019_front-end-silver-bullet"
+date: "01-03-2019"
+title: "The Front-end Silver Bullet"
+introduction: "Going against the tide by NOT using the latest and greatest"
+---
+
+Over the course of the past few months working on a car configurator project for a car company and its been apparent that we are not following the latest and greatest ideas from the the big development companies (google for example). I for one would find this frustrating, with my own internal thoughts pointing to google being this ‘can say no wrong’ company in terms of new approaches and philosophies to creating and archeting your applications, despite this I have found that I am drifting further away from this point of view as time goes on.
+
+When google does say that ‘x’ approach is good because of ‘y, z’ reasons, people would stand up and listen. When developers talk about it, a lot of other developers from different companies can see how it can benefit their own applications but not all developers. Some companies would have their own approach to the problems they need to solve. I always thought this was due to legacy code or the inability to implement the ‘new’ solution but it is not the case.
+
+Much like the whole philosophy of ‘the newest javascript framework is best because it is the youngest’, the idea that the best way to architecture an app is the latest idea is not true. Every idea and concept has its own place in the front-end world and each solution is different because is solves different problems and that may not be apparent to the outside world but when you work and live inside that system then it makes sense it work on it a different way.
+
+The title to this post is ‘The Front-end Silver Bullet’ and many of you are here to hear about it but I am sorry to say there is no such thing as a front-end silver bullet, subsequently I will go through an example. If I create an app for own website for example it will be simple and limited. The website is not complex nor is it requiring any back-end API calls, only cached resources. It would not the best implementation to create a complex state to persist on all pages nor would it be best to create a new instance of the application on every page. On the other hand having a complex application would require a complicated front-end system to be able to stay clean and fresh and in addition persist certain key data from page to page. In this example one way to architect a front-end application is not true.
+
+To conclude, it is down the nature what the application is supposed to do and what the application is consuming to best approach what frameworks to use how best architect the solution.

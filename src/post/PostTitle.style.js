@@ -6,7 +6,7 @@ export const BlogCardTitle = styled.header`
   //background: rgba(74,84,89,0.2);
   //padding: 0.5rem 1rem;
   padding: 0.5rem 0rem;
-  width: 212px;
+  max-width: 20rem;
   text-align: left;
   z-index: 5;
   

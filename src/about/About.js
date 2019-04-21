@@ -7,6 +7,7 @@ import Banner from '../shared/components/Banner';
 import AltCard from '../shared/components/AltCard';
 import connect from 'react-redux/es/connect/connect';
 import { AboutBanner } from './About.style';
+import Blobs from '../blobs/Blobs';
 
 const mapStateToProps = state => ({
   about: state.About
@@ -28,6 +29,7 @@ class AboutMe extends PureComponent {
             content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
           />
         </Helmet>
+        <Blobs location={this.props.location} />
         <AboutBanner>
           <Banner text={this.props.about.banner} />
         </AboutBanner>

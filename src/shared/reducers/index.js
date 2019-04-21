@@ -26,8 +26,6 @@ const appReducer = (state = initialState, action) => {
           markdown: filteredPayload()
         }));
 
-        console.log(mapPosts);
-
         index++;
 
         return { ...state, Posts: [...mapPosts] };

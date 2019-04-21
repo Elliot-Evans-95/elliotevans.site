@@ -13,20 +13,8 @@ const Wrapper = () => (
   <Provider store={store}>
     <BrowserRouter>
       <div className="appGrid">
-        <div id="blob-1" />
-        <div id="blob-2" />
-        <div id="blob-3" />
-        <div id="blob-4" />
-        <div id="blob-5" />
-        <div id="blob-6" />
-        <div id="blob-7" />
-        <div id="blob-8" />
-        <div id="blob-9" />
-        <div id="blob-10" />
-        <div id="blob-11" />
-        <div id="blob-12" />
         <Navigation />
-        <Route path="/" component={Routes} className={'cool'} />
+        <Route path="/" component={Routes} />
         <Footer />
       </div>
     </BrowserRouter>

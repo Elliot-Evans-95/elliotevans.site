@@ -6,6 +6,7 @@ import PageHeader from '../shared/components/PageHeader';
 import InputGroup from '../shared/components/InputGroup';
 import { ContactForm, ContactMain } from './Contact.style';
 import { FormSubmitLabel, FormSubmitSubmit } from '../shared/styles/styles';
+import Blobs from '../blobs/Blobs';
 
 const fieldData = [
   {
@@ -54,6 +55,7 @@ class Contact extends PureComponent {
             content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
           />
         </Helmet>
+        <Blobs location={this.props.location} />
         <PageHeader
           heading={'Contact'}
           subHeading={'If you wish to contact me please fill out the form'}

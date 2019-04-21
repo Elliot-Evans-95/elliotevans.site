@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import Banner from '../shared/components/Banner';
 
 import './Home.css';
-import './../blobs.css';
 
 import BlogList from '../shared/components/BlogList';
 import { fetchPosts } from '../shared/actions/markdown';
+import Blobs from '../blobs/Blobs';
 
 const mapStateToProps = state => ({
   posts: state.Posts
@@ -33,6 +33,7 @@ class Index extends PureComponent {
               content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
             />
           </Helmet>
+          <Blobs location={this.props.location} />
           <Banner text={this.props.posts[0].test} />
           <BlogList blog={this.props.posts[0].markdown} />
         </Main>
@@ -48,6 +49,7 @@ class Index extends PureComponent {
               content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
             />
           </Helmet>
+          <Blobs location={this.props.location} />
           <Banner text={this.props.posts[0].test} />
           <BlogList blog={this.props.posts[0].markdown} />
         </Main>

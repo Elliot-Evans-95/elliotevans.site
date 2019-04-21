@@ -50,6 +50,19 @@ const Projects = [
     main_image:
       'https://storage.googleapis.com/elliot-evans-website/ar-screenshot.png',
     is_selected: false
+  },
+  {
+    id: 5,
+    title: 'Presentation Framework',
+    icon:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe9-U4O8OAIXC8DeUAM97q0eGSheIlkwoElB6iFu-Y3TX0_oYs',
+    short_description:
+      'A Presentation Framework created to make presenations easy',
+    long_description:
+      'A Presentation Framework created to make presenations easy',
+    main_image:
+      'https://storage.googleapis.com/elliot-evans-website/ar-screenshot.png',
+    is_selected: false
   }
 ];
 

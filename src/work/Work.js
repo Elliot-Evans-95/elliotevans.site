@@ -6,6 +6,7 @@ import PageHeader from '../shared/components/PageHeader';
 import ProjectList from '../project/ProjectList';
 import Project from '../project/Project';
 import { WorkGrid } from './Work.style';
+import Blobs from '../blobs/Blobs';
 
 class Work extends PureComponent {
   heading = 'Projects';
@@ -26,6 +27,7 @@ class Work extends PureComponent {
             content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
           />
         </Helmet>
+        <Blobs location={this.props.location} />
         <PageHeader heading={this.heading} subHeading={this.subHeading} />
         <ProjectList />
         <Project />

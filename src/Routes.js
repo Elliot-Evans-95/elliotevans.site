@@ -11,6 +11,7 @@ import Skills from './skills/Skills';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import './animation.css';
+// import Blobs from "./blobs/Blobs";
 
 const PageFade = props => (
   <CSSTransition

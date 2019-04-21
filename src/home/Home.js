@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Banner from '../shared/components/Banner';
 
 import './Home.css';
+import './../blobs.css';
 
 import BlogList from '../shared/components/BlogList';
 import { fetchPosts } from '../shared/actions/markdown';
@@ -17,7 +18,7 @@ const mapStateToProps = state => ({
 class Index extends PureComponent {
   componentDidMount() {
     this.props.dispatch(fetchPosts());
-    document.getElementById('root').style.backgroundImage = 'url(home.svg)';
+    // document.getElementById('root').style.backgroundImage = 'url(home.svg)';
   }
 
   render() {

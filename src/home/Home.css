@@ -178,10 +178,12 @@ button,
 a,
 cite {
   font-family: 'Work Sans', sans-serif;
+  color: white;
 }
 
 .appGrid {
-  background: #69797e21;
+  background: #282c34;
+  /*background: #69797e21;*/
   min-height: 100vh;
   display: grid;
 
@@ -232,38 +234,38 @@ cite {
 }
 
 .default {
-  background: #7d7d7d;
-  height: 100%;
+  /*background: #7d7d7d;*/
+  /*height: 100%;*/
   /*background: url('../images/home.svg') no-repeat center center;*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .about {
-  background: #6ca8ed;
-  height: 100%;
+  /*background: #6ca8ed;*/
+  /*height: 100%;*/
   /*background: url('../images/about.svg') no-repeat center center;*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .work {
-  background: #e1a543;
-  height: 100%;
+  /*background: #e1a543;*/
+  /*height: 100%;*/
   /*background: url('../images/work.svg') no-repeat center center;*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .contact {
-  background: #c73042;
-  height: 100%;
+  /*background: #c73042;*/
+  /*height: 100%;*/
   /*background: url('../images/contact.svg') no-repeat center center;*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .post {
-  background: #80cf91;
-  height: 100%;
+  /*background: #80cf91;*/
+  /*height: 100%;*/
   /*background: url('../images/post.svg') no-repeat center center;*/
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
 .project-button {

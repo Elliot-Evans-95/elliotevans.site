@@ -30,7 +30,10 @@ class Projects extends PureComponent {
 
   projectList() {
     return this.props.projects.map(project => (
-      <li className="project-button" key={project.id}>
+      <li
+        className={'project-button' + (project.is_selected ? ' selected' : '')}
+        key={project.id}
+      >
         <button onClick={() => this.props.selectCurrentProject(project.id)}>
           <img src={project.icon} alt={project.title} />
         </button>

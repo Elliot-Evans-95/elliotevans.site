@@ -7,7 +7,7 @@ const BlurImages = ({ title, description }) => (
   <BlurImageContainer>
     <h5>{title}</h5>
     <p>{description}</p>
-    <div /> <div /> <div />
+    {/*<div /> <div /> <div />*/}
   </BlurImageContainer>
 );
 

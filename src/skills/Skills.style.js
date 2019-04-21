@@ -12,6 +12,7 @@ export const SkillsGrid = styled.div`
   display: flex;
 
   flex-wrap: wrap;
+  margin: 2rem 0 4rem 0;
   align-items: center;
   justify-content: center;
 `;

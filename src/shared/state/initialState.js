@@ -35,7 +35,7 @@ const Projects = [
     short_description:
       '🏑 Hockey website for information, activities and membership',
     long_description:
-      'Hockey website for information, activities and membership',
+      '🏑 Hockey website for information, activities and membership',
     main_image:
       'https://storage.googleapis.com/elliot-evans-website/nshc-site.png',
     is_selected: true

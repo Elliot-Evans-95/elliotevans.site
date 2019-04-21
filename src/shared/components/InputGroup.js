@@ -26,6 +26,7 @@ const InputGroup = ({ label, placeholder, type }) => {
     return (
       <InputBox>
         <InputLabel>
+          {label}
           <InputField
             id={label}
             name={label}

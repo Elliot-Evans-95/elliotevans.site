@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const SkillStyle = styled.li`
   flex: 1 0 20%;
-  border: 0.5rem solid #0078d7;
-  background: rgba(74, 84, 89, 0.2);
-  padding: 0.4rem 0.2rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 1rem;
+  padding: 1rem;
 
   div {
     text-align: center;

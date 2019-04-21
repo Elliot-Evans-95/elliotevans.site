@@ -54,6 +54,8 @@ export const EEFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  z-index: 1;
 `;
 
 export const Main = styled.main`
@@ -247,26 +249,28 @@ export const FormSubmitSubmit = styled.input`
 
 export const InputField = styled.input`
   background: #d8d8d8;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 1rem;
   outline: 0;
   border: 0;
   padding: 0.5rem;
   width: 100%;
+  margin: 1rem 0;
 `;
 
 export const TextAreaField = styled.textarea`
   background: #d8d8d8;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 1rem;
   outline: 0;
   border: 0;
   padding: 0.5rem;
   width: 100%;
+  margin: 1rem 0;
 `;
 
 export const InputLabel = styled.label`
   width: 80%;
+  text-transform: capitalize;
+  color: white;
 `;
 
 export const BlogCard = styled.section`

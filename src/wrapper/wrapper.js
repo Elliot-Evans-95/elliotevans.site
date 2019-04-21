@@ -21,6 +21,10 @@ const Wrapper = () => (
         <div id="blob-6" />
         <div id="blob-7" />
         <div id="blob-8" />
+        <div id="blob-9" />
+        <div id="blob-10" />
+        <div id="blob-11" />
+        <div id="blob-12" />
         <Navigation />
         <Route path="/" component={Routes} className={'cool'} />
         <Footer />

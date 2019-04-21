@@ -1,7 +1,7 @@
 const Posts = [
   {
     id: 1,
-    test: ['Elliot', 'Developer'],
+    test: ['Elliot Evans', 'Web App Developer at Codeweavers'],
     markdown: []
   }
 ];
@@ -61,7 +61,7 @@ const About = {
     'There would be a short description from one of my blog posts but instead here is some placeholder text'
   ],
   image:
-    'https://scontent-lhr3-1.cdninstagram.com/vp/b691590e0594c7da4f35279a740277a1/5C592199/t51.2885-15/e35/39486080_552390368527718_6619736830222794752_n.jpg',
+    'https://scontent-lht6-1.cdninstagram.com/vp/ea65a425d35503499a7e008eeec55ec5/5D5A13C9/t51.2885-15/sh0.08/e35/s640x640/44685702_1433408640124379_1589696544278879017_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com',
   card: [
     'Hello, Elliot here. Thanks for checking out my website. I will hopefully be updating the site bit by bit over ' +
       'the next few months. In the meantime please checkout some of the blog posts I have made and if you need to' +

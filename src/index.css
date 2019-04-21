@@ -25,4 +25,5 @@ code {
 .grid-area__main {
   grid-area: main;
   display: flex;
+  z-index: 1;
 }

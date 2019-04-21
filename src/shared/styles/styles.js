@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 export const Title = styled.h1`
   font-size: 1.25rem;
   margin-top: 0;
-  width: 100%;
 
   @media (min-width: 30em) {
     margin-top: 0.67em;
@@ -14,7 +13,6 @@ export const Title = styled.h1`
 
 export const SubHeading = styled.h3`
   font-size: 1rem;
-  width: 100%;
 
   @media (min-width: 30em) {
     font-size: 1.25rem;
@@ -24,8 +22,10 @@ export const SubHeading = styled.h3`
 export const Header = styled.header`
   display: flex;
   justify-content: space-around;
-  //position: relative;
   padding-bottom: 1em;
+  flex-direction: column;
+  padding: 2rem 0;
+  align-items: center;
 `;
 
 export const TextContainer = styled.section`
@@ -49,7 +49,7 @@ export const TextContainer = styled.section`
 export const EEFooter = styled.footer`
   grid-area: footer;
 
-  background: #0078d7;
+  background: rgba(0, 120, 215, 0.5);
 
   display: flex;
   align-items: center;
@@ -182,10 +182,10 @@ export const AltCardContainer = styled.section`
   flex-direction: column;
 
   position: relative;
-  background: #eee;
   padding: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
   margin: 1.75rem 0 2rem 0;
+  border-radius: 1rem;
 
   p:first-child {
     order: 2;
@@ -211,6 +211,7 @@ export const AltCardContainer = styled.section`
 export const AltCardImage = styled.img`
   width: 100%;
   order: 1;
+  border-radius: 2rem;
 
   @media (min-width: 45em) {
     width: 50%;
@@ -271,8 +272,9 @@ export const InputLabel = styled.label`
 export const BlogCard = styled.section`
   background: rgba(74, 84, 89, 0.2);
   position: relative;
-  padding: 0.5rem 1rem 1.5rem 1rem;
-  margin: 6rem 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 10rem 0;
 
   ::before {
     content: ' ';
@@ -286,11 +288,11 @@ export const BlogCard = styled.section`
   }
 
   :first-child {
-    margin-top: 2rem;
+    margin-top: 6rem;
   }
 
   :last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
 `;
 

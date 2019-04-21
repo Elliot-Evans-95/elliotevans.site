@@ -4,12 +4,11 @@ import React from 'react';
 import { BlogCardLink, BlogCardTitle } from './PostTitle.style';
 
 const PostTitle = ({ text }) => (
-  <div>
+  <BlogCardLink to={text[0].url}>
     <BlogCardTitle>
-      <h5>{text[0].title}</h5>
+      <h2>{text[0].title}</h2>
     </BlogCardTitle>
-    <BlogCardLink to={text[0].url}>Full Post</BlogCardLink>
-  </div>
+  </BlogCardLink>
 );
 
 export default PostTitle;

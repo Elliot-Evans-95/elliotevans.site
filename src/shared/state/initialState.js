@@ -61,7 +61,7 @@ const Projects = [
     long_description:
       'A Presentation Framework created to make presenations easy',
     main_image:
-      'https://storage.googleapis.com/elliot-evans-website/ar-screenshot.png',
+      'https://storage.googleapis.com/elliot-evans-website/presentation.png',
     is_selected: false
   }
 ];

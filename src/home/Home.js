@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Main } from '../shared/styles/styles';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { connect } from 'react-redux';
 
 import Banner from '../shared/components/Banner';
@@ -18,40 +18,43 @@ const mapStateToProps = state => ({
 class Index extends PureComponent {
   componentDidMount() {
     this.props.dispatch(fetchPosts());
-    // document.getElementById('root').style.backgroundImage = 'url(home.svg)';
   }
 
   render() {
     if (this.props.posts.length === 0) {
       return (
         <Main>
-          <Helmet>
-            <title>Elliot Evans - Home</title>
-            <meta name="description" content="Home Page" />
-            <meta
-              name="keywords"
-              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
-            />
-          </Helmet>
-          <Blobs location={this.props.location} />
-          <Banner text={this.props.posts[0].test} />
-          <BlogList blog={this.props.posts[0].markdown} />
+          <HelmetProvider>
+            <Helmet>
+              <title>Elliot Evans - Home</title>
+              <meta name="description" content="Home Page" />
+              <meta
+                name="keywords"
+                content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+              />
+            </Helmet>
+            <Blobs location={this.props.location} />
+            <Banner text={this.props.posts[0].test} />
+            <BlogList blog={this.props.posts[0].markdown} />
+          </HelmetProvider>
         </Main>
       );
     } else {
       return (
         <Main>
-          <Helmet>
-            <title>Elliot Evans - Home</title>
-            <meta name="description" content="Home Page" />
-            <meta
-              name="keywords"
-              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
-            />
-          </Helmet>
-          <Blobs location={this.props.location} />
-          <Banner text={this.props.posts[0].test} />
-          <BlogList blog={this.props.posts[0].markdown} />
+          <HelmetProvider>
+            <Helmet>
+              <title>Elliot Evans - Home</title>
+              <meta name="description" content="Home Page" />
+              <meta
+                name="keywords"
+                content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+              />
+            </Helmet>
+            <Blobs location={this.props.location} />
+            <Banner text={this.props.posts[0].test} />
+            <BlogList blog={this.props.posts[0].markdown} />
+          </HelmetProvider>
         </Main>
       );
     }

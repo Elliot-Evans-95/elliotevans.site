@@ -1,12 +1,12 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import { Helmet } from 'react-helmet';
 import PageHeader from '../shared/components/PageHeader';
 import InputGroup from '../shared/components/InputGroup';
 import { ContactForm, ContactMain } from './Contact.style';
 import { FormSubmitLabel, FormSubmitSubmit } from '../shared/styles/styles';
 import Blobs from '../blobs/Blobs';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const fieldData = [
   {
@@ -47,29 +47,31 @@ class Contact extends PureComponent {
   render() {
     return (
       <ContactMain>
-        <Helmet>
-          <title>Elliot Evans - Contact</title>
-          <meta name="description" content="Contact Page" />
-          <meta
-            name="keywords"
-            content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+        <HelmetProvider>
+          <Helmet>
+            <title>Elliot Evans - Contact</title>
+            <meta name="description" content="Contact Page" />
+            <meta
+              name="keywords"
+              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+            />
+          </Helmet>
+          <Blobs location={this.props.location} />
+          <PageHeader
+            heading={'Contact'}
+            subHeading={'If you wish to contact me please fill out the form'}
           />
-        </Helmet>
-        <Blobs location={this.props.location} />
-        <PageHeader
-          heading={'Contact'}
-          subHeading={'If you wish to contact me please fill out the form'}
-        />
-        <ContactForm
-          action="https://formspree.io/ell15evans.nuls@googlemail.com"
-          method="POST"
-          id="sendForm"
-        >
-          {this.inputGroupList()}
-          <FormSubmitLabel>
-            <FormSubmitSubmit type="submit" />
-          </FormSubmitLabel>
-        </ContactForm>
+          <ContactForm
+            action="https://formspree.io/ell15evans.nuls@googlemail.com"
+            method="POST"
+            id="sendForm"
+          >
+            {this.inputGroupList()}
+            <FormSubmitLabel>
+              <FormSubmitSubmit type="submit" />
+            </FormSubmitLabel>
+          </ContactForm>
+        </HelmetProvider>
       </ContactMain>
     );
   }

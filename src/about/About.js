@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import { Main } from '../shared/styles/styles';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Banner from '../shared/components/Banner';
 import AltCard from '../shared/components/AltCard';
 import connect from 'react-redux/es/connect/connect';
@@ -21,19 +21,24 @@ class AboutMe extends PureComponent {
   render() {
     return (
       <Main>
-        <Helmet>
-          <title>Elliot Evans - About</title>
-          <meta name="description" content="About Page" />
-          <meta
-            name="keywords"
-            content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+        <HelmetProvider>
+          <Helmet>
+            <title>Elliot Evans - About</title>
+            <meta name="description" content="About Page" />
+            <meta
+              name="keywords"
+              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+            />
+          </Helmet>
+          <Blobs location={this.props.location} />
+          <AboutBanner>
+            <Banner text={this.props.about.banner} />
+          </AboutBanner>
+          <AltCard
+            text={this.props.about.card}
+            image={this.props.about.image}
           />
-        </Helmet>
-        <Blobs location={this.props.location} />
-        <AboutBanner>
-          <Banner text={this.props.about.banner} />
-        </AboutBanner>
-        <AltCard text={this.props.about.card} image={this.props.about.image} />
+        </HelmetProvider>
       </Main>
     );
   }

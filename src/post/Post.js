@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 import marked from 'marked';
 import * as yamlFront from 'yaml-front-matter';

@@ -2,12 +2,12 @@
 
 import React, { Component } from 'react';
 
-import { Helmet } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import marked from 'marked';
 import * as yamlFront from 'yaml-front-matter';
-import { Main } from '../shared/styles/styles';
-import PostTitle from './PostTitle';
+import { PostMain } from '../shared/styles/styles';
+import Blobs from '../blobs/Blobs';
 
 class Post extends Component {
   state = {
@@ -43,33 +43,39 @@ class Post extends Component {
   render() {
     if (this.state.header === null && this.state.markdown === null) {
       return (
-        <Main>
-          <Helmet>
-            <title>Elliot Evans - Post</title>
-            <meta name="description" content="Post Page" />
-            <meta
-              name="keywords"
-              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
-            />
-          </Helmet>
-          <h2>Post</h2>
-        </Main>
+        <PostMain>
+          <HelmetProvider>
+            <Helmet>
+              <title>Elliot Evans - Post</title>
+              <meta name="description" content="Post Page" />
+              <meta
+                name="keywords"
+                content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+              />
+            </Helmet>
+            <Blobs location={this.props.location} />
+            <h2>Post</h2>
+          </HelmetProvider>
+        </PostMain>
       );
     } else {
       return (
-        <Main>
-          <Helmet>
-            <title>Elliot Evans - Post</title>
-            <meta name="description" content="Post Page" />
-            <meta
-              name="keywords"
-              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
-            />
-          </Helmet>
-          <h2>Post</h2>
-          <PostTitle text={this.state.header} />
-          <div dangerouslySetInnerHTML={{ __html: this.state.markdown }} />
-        </Main>
+        <PostMain>
+          <HelmetProvider>
+            <Helmet>
+              <title>Elliot Evans - Post</title>
+              <meta name="description" content="Post Page" />
+              <meta
+                name="keywords"
+                content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
+              />
+            </Helmet>
+            <Blobs location={this.props.location} />
+            <h2>Post</h2>
+            {/*<PostTitle text={this.state.header} />*/}
+            <div dangerouslySetInnerHTML={{ __html: this.state.markdown }} />
+          </HelmetProvider>
+        </PostMain>
       );
     }
   }

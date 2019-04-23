@@ -77,6 +77,21 @@ export const Main = styled.main`
   }
 `;
 
+export const PostMain = styled.main`
+  grid-area: main;
+  flex: 1 0 auto;
+  padding: 1rem;
+  width: 50vw;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  p {
+    text-align: justify;
+  }
+`;
+
 export const AppNavigation = styled.nav`
   grid-area: nav;
 

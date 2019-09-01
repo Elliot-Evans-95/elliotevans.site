@@ -42,3 +42,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## MIGRATION
+- Remove React Helmet (done)
+- Migrate styled component to emotion
+- check redux and remove any react-redux stuff
+- Migrate from react router to vanilla router
+- Migrate to new render method for components
+- Migrate to new Component away from react components
+- Remove react

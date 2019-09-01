@@ -12,7 +12,10 @@
       <change beforePath="$PROJECT_DIR$/src/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contact/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/post/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/state/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/state/initialState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/work/Work.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/work/Work.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -115,7 +118,7 @@
       <workItem from="1556050794815" duration="1386000" />
       <workItem from="1556297057040" duration="528000" />
       <workItem from="1564955420963" duration="460000" />
-      <workItem from="1567365683550" duration="2378000" />
+      <workItem from="1567365683550" duration="2652000" />
     </task>
     <servers />
   </component>

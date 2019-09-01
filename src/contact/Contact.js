@@ -6,7 +6,8 @@ import InputGroup from '../shared/components/InputGroup';
 import { ContactForm, ContactMain } from './Contact.style';
 import { FormSubmitLabel, FormSubmitSubmit } from '../shared/styles/styles';
 import Blobs from '../blobs/Blobs';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+// import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Meta } from '../meta/meta';
 
 const fieldData = [
   {
@@ -30,6 +31,12 @@ class Contact extends PureComponent {
   state = { fieldData };
 
   componentDidMount() {
+    const title = 'Elliot Evans - Contact';
+    const desc = 'Contact Page';
+    const keywords =
+      'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
+    new Meta(title, desc, keywords).setMeta();
+
     document.getElementById('root').style.backgroundImage = 'url(contact.svg)';
   }
 
@@ -47,31 +54,31 @@ class Contact extends PureComponent {
   render() {
     return (
       <ContactMain>
-        <HelmetProvider>
-          <Helmet>
-            <title>Elliot Evans - Contact</title>
-            <meta name="description" content="Contact Page" />
-            <meta
-              name="keywords"
-              content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"
-            />
-          </Helmet>
-          <Blobs location={this.props.location} />
-          <PageHeader
-            heading={'Contact'}
-            subHeading={'If you wish to contact me please fill out the form'}
-          />
-          <ContactForm
-            action="https://formspree.io/ell15evans.nuls@googlemail.com"
-            method="POST"
-            id="sendForm"
-          >
-            {this.inputGroupList()}
-            <FormSubmitLabel>
-              <FormSubmitSubmit type="submit" />
-            </FormSubmitLabel>
-          </ContactForm>
-        </HelmetProvider>
+        {/*<HelmetProvider>*/}
+        {/*<Helmet>*/}
+        {/*  <title>Elliot Evans - Contact</title>*/}
+        {/*  <meta name="description" content="Contact Page" />*/}
+        {/*  <meta*/}
+        {/*    name="keywords"*/}
+        {/*    content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"*/}
+        {/*  />*/}
+        {/*</Helmet>*/}
+        <Blobs location={this.props.location} />
+        <PageHeader
+          heading={'Contact'}
+          subHeading={'If you wish to contact me please fill out the form'}
+        />
+        <ContactForm
+          action="https://formspree.io/ell15evans.nuls@googlemail.com"
+          method="POST"
+          id="sendForm"
+        >
+          {this.inputGroupList()}
+          <FormSubmitLabel>
+            <FormSubmitSubmit type="submit" />
+          </FormSubmitLabel>
+        </ContactForm>
+        {/*</HelmetProvider>*/}
       </ContactMain>
     );
   }

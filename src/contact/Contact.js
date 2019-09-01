@@ -6,8 +6,7 @@ import InputGroup from '../shared/components/InputGroup';
 import { ContactForm, ContactMain } from './Contact.style';
 import { FormSubmitLabel, FormSubmitSubmit } from '../shared/styles/styles';
 import Blobs from '../blobs/Blobs';
-// import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Meta } from '../meta/meta';
+import { Meta } from '../shared/meta/meta';
 
 const fieldData = [
   {
@@ -54,15 +53,6 @@ class Contact extends PureComponent {
   render() {
     return (
       <ContactMain>
-        {/*<HelmetProvider>*/}
-        {/*<Helmet>*/}
-        {/*  <title>Elliot Evans - Contact</title>*/}
-        {/*  <meta name="description" content="Contact Page" />*/}
-        {/*  <meta*/}
-        {/*    name="keywords"*/}
-        {/*    content="Front End Developer, Web Application Developer, Web Developer, Javascript Developer"*/}
-        {/*  />*/}
-        {/*</Helmet>*/}
         <Blobs location={this.props.location} />
         <PageHeader
           heading={'Contact'}
@@ -78,7 +68,6 @@ class Contact extends PureComponent {
             <FormSubmitSubmit type="submit" />
           </FormSubmitLabel>
         </ContactForm>
-        {/*</HelmetProvider>*/}
       </ContactMain>
     );
   }

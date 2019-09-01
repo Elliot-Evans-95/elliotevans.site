@@ -45,7 +45,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## MIGRATION
 - Remove React Helmet (done)
-- Migrate styled component to emotion
+- Migrate styled component to emotion (done)
 - check redux and remove any react-redux stuff
 - Migrate from react router to vanilla router
 - Migrate to new render method for components

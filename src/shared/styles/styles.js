@@ -208,11 +208,11 @@ export const AltCardContainer = styled.section`
     order: 2;
   }
 
-  p:nth-child(2) {
+  p:nth-of-type(2) {
     order: 3;
   }
 
-  p:nth-child(3) {
+  p:nth-of-type(3) {
     order: 4;
   }
 
@@ -351,7 +351,7 @@ export const BlurImageContainer = styled.div`
     width: 75%;
   }
 
-  div:nth-child(3) {
+  div:nth-of-type(3) {
     width: 200px;
     height: 100px;
     background: white;
@@ -362,7 +362,7 @@ export const BlurImageContainer = styled.div`
     box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
   }
 
-  div:nth-child(4) {
+  div:nth-of-type(4) {
     width: 100px;
     height: 100px;
     background: white;
@@ -374,7 +374,7 @@ export const BlurImageContainer = styled.div`
     box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
   }
 
-  div:nth-child(5) {
+  div:nth-of-type(5) {
     width: 50px;
     height: 50px;
     background: white;

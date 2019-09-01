@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55cce7f-b164-4d78-9453-98a8e5d6ff94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/meta/meta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/about/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/state/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/state/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/work/Work.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/work/Work.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/about/About.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/about/About.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contact/Contact.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contact/Contact.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/post/PostTitle.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/post/PostTitle.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Project.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Project.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/ProjectList.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/ProjectList.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/styles/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/styles/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skill.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skill.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skills/Skills.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/skills/Skills.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/work/Work.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/work/Work.style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,7 +114,7 @@
       <workItem from="1556050794815" duration="1386000" />
       <workItem from="1556297057040" duration="528000" />
       <workItem from="1564955420963" duration="460000" />
-      <workItem from="1567365683550" duration="2652000" />
+      <workItem from="1567365683550" duration="3442000" />
     </task>
     <servers />
   </component>

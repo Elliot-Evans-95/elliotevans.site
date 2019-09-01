@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const SkillStyle = styled.li`
   flex: 1 0 20%;

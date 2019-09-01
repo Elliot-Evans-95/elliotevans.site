@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Title = styled.h1`
@@ -204,7 +204,7 @@ export const AltCardContainer = styled.section`
   margin: 1.75rem 0 2rem 0;
   border-radius: 1rem;
 
-  p:first-child {
+  p:first-of-type {
     order: 2;
   }
 
@@ -219,7 +219,7 @@ export const AltCardContainer = styled.section`
   @media (min-width: 45em) {
     margin: 6rem 0;
 
-    p:first-child {
+    p:first-of-type {
       width: 60%;
     }
   }
@@ -306,7 +306,7 @@ export const BlogCard = styled.section`
     border-radius: 5px;
   }
 
-  :first-child {
+  :first-of-type {
     margin-top: 6rem;
   }
 

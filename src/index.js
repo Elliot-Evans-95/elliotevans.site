@@ -20,13 +20,29 @@ if (!('requestIdleCallback' in window)) {
 // import Root from './route';
 // render(<Root />, document.getElementById('app'));
 
+const appShellName = 'app';
+
 // Adding rendering tasks here
 const tasks = [];
+
+// --- Renderer --------
+
+async function Renderer() {
+  await requestIdleCallback(ComputeWork);
+}
+
+async function ComputeWork(deadline) {
+  while (deadline.timeRemaining() > 0 && tasks.length > 0) {
+    tasks[0]();
+    tasks.splice(0, 1);
+  }
+  if (tasks.length > 0) await requestIdleCallback(ComputeWork);
+}
 
 function App() {
   const self = this;
   this._app = document.createElement('div');
-  this._app.setAttribute('id', 'app');
+  this._app.setAttribute('id', appShellName);
 
   tasks.push(Render);
 
@@ -35,26 +51,31 @@ function App() {
   }
 }
 
-function Renderer() {
-  requestIdleCallback(ComputeWork);
-}
+function Footer() {
+  const self = this;
+  this._footer = document.createElement('footer');
+  this._footer.setAttribute('id', 'footer');
 
-function ComputeWork(deadline) {
-  while (deadline.timeRemaining() > 0 && tasks.length > 0) {
-    tasks[0]();
-    tasks.splice(0, 1);
+  tasks.push(Render);
+
+  function Render() {
+    document.getElementById(appShellName).appendChild(self._footer);
   }
-
-  if (tasks.length > 0) requestIdleCallback(ComputeWork);
 }
 
-// --------
-const ShellComponents = [App];
+async function RenderShellComponents() {
+  // STATIC READ ONLY ARRAY
+  const ShellComponents = [App, Footer];
 
-for (let i = 0; ShellComponents.length > i; i++) {
-  ShellComponents[i]();
+  // For of doesn't work for me  :(
+  // for await (let components of ShellComponents) {
+  //   debugger;
+  //
+  //   new ShellComponents[components]();
+  // }
+  for (let i = 0; ShellComponents.length > i; i++) {
+    ShellComponents[i]();
+  }
 }
 
-Renderer();
-
-// ---------
+RenderShellComponents().then(() => Renderer());

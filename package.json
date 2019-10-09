@@ -1,7 +1,7 @@
 {
   "name": "elliotevans.site",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@emotion/core": "^10.0.17",

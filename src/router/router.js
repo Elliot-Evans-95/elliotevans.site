@@ -12,11 +12,11 @@ export class Router {
   #activeRoute;
 
   constructor() {
-    this.appWrapper = document.getElementById('app');
-
-    if (this.appWrapper === null || this.appWrapper === undefined) {
-      throw new Error('an element with the id of "app" does not exist');
-    }
+    // this.appWrapper = document.getElementById('app');
+    //
+    // if (this.appWrapper === null || this.appWrapper === undefined) {
+    //   throw new Error('an element with the id of "app" does not exist');
+    // }
   }
 
   createAppWrapper() {
@@ -47,13 +47,13 @@ export class Router {
   }
 
   appendActiveRoute() {
-    this.history.pushState(
-      this.activeRoute.data(),
-      `/${this.activeRoute.name}`,
-      window.location.origin + `/${this.activeRoute.name}`
-    );
-
-    document.title = this.activeRoute.name;
-    this.appWrapper.appendChild(this.activeRoute.component);
+    //   this.history.pushState(
+    //     this.activeRoute.data(),
+    //     `/${this.activeRoute.name}`,
+    //     window.location.origin + `/${this.activeRoute.name}`
+    //   );
+    //
+    //   document.title = this.activeRoute.name;
+    //   this.appWrapper.appendChild(this.activeRoute.component);
   }
 }

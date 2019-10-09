@@ -59,47 +59,22 @@ const routes = [
 router.addAll(routes);
 router.navigate(routes[0]);
 
-// const Routes = props => (
-{
-  /*<div className={'grid-area__main'}>*/
-}
-{
-  /*<TransitionGroup className={'grid-area__main'}>*/
-}
-{
-  /*  <PageFade key={props.location.pathname}>*/
-}
-{
-  /*    <Switch location={props.location}>*/
-}
-{
-  /*      <Route exact path="/" component={Home} />*/
-}
-{
-  /*      <Route exact path="/about" component={About} />*/
-}
-{
-  /*      <Route exact path="/skills" component={Skills} />*/
-}
-{
-  /*      <Route exact path="/work" component={Work} />*/
-}
-{
-  /*      <Route exact path="/contact" component={Contact} />*/
-}
-{
-  /*      <Route exact path="/post/:id" component={Post} />*/
-}
-{
-  /*    </Switch>*/
-}
-{
-  /*</PageFade>*/
-}
-{
-  /* </TransitionGroup>*/
-}
-// </div>
-// );
+const Routes = props => (
+  <div className={'grid-area__main'}>
+    {/*{<TransitionGroup className={'grid-area__main'}>}*/}
+    {/*{<PageFade key={props.location.pathname}>}*/}
+    <Switch location={props.location}>
+      <Route exact path="/" component={Home} />
+      /* <Route exact path="/about" component={About} />
+      */ /* <Route exact path="/skills" component={Skills} />
+      */ /* <Route exact path="/work" component={Work} />
+      */ /* <Route exact path="/contact" component={Contact} />
+      */ /* <Route exact path="/post/:id" component={Post} />
+      */
+    </Switch>
+    {/*</PageFade>*/}
+    {/* </TransitionGroup>*/}
+  </div>
+);
 
-// export default Routes;
+export default Routes;

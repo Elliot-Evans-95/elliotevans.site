@@ -1,8 +1,6 @@
-import React, { PureComponent } from 'react';
-
 import './blobs.css';
 
-class Blobs extends PureComponent {
+class Blobs {
   loadMoreBlobs() {
     const isHomePage = this.props.location.pathname === '/';
 
@@ -51,5 +49,3 @@ class Blobs extends PureComponent {
     }
   }
 }
-
-export default Blobs;

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
 
 export const Title = styled.h1`
   font-size: 1.25rem;

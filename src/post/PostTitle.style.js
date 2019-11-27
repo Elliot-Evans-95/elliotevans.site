@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
 
 export const BlogCardTitle = styled.header`
   display: inline-block;

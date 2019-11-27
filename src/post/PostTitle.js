@@ -1,6 +1,3 @@
-// @flow
-
-import React from 'react';
 import { BlogCardLink, BlogCardTitle } from './PostTitle.style';
 
 const PostTitle = ({ text }) => (
@@ -10,5 +7,3 @@ const PostTitle = ({ text }) => (
     </BlogCardTitle>
   </BlogCardLink>
 );
-
-export default PostTitle;

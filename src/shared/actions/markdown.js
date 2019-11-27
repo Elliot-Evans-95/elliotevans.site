@@ -1,5 +1,3 @@
-//@flow
-
 import marked from 'marked';
 import * as yamlFront from 'yaml-front-matter';
 import { fetchProductsSuccess } from '.';

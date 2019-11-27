@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.css"],"names":[],"mappings":"AAAA,QACI,eACJ,CAEA,QACI,gBACJ","file":"bundle-1.css","sourcesContent":[".header {\n    background: blue;\n}\n\n.footer {\n    background: green;\n}\n"]}

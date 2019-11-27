@@ -1,14 +1,8 @@
-// @flow
-
-import React, { Component } from 'react';
-
 import marked from 'marked';
 import * as yamlFront from 'yaml-front-matter';
-import { PostMain } from '../shared/styles/styles';
-import Blobs from '../blobs/Blobs';
 import { Meta } from '../shared/meta/meta';
 
-class Post extends Component {
+class Post {
   state = {
     header: null,
     markdown: null
@@ -45,24 +39,7 @@ class Post extends Component {
     this._loadMarkdownData(markdownFile);
   }
 
-  render() {
-    if (this.state.header === null && this.state.markdown === null) {
-      return (
-        <PostMain>
-          <Blobs location={this.props.location} />
-          <h2>Post</h2>
-        </PostMain>
-      );
-    } else {
-      return (
-        <PostMain>
-          <Blobs location={this.props.location} />
-          <h2>Post</h2>
-          <div dangerouslySetInnerHTML={{ __html: this.state.markdown }} />
-        </PostMain>
-      );
-    }
-  }
+  render() {}
 
   _loadMarkdownData(markdownFile) {
     fetch(markdownFile)
@@ -79,5 +56,3 @@ class Post extends Component {
       });
   }
 }
-
-export default Post;

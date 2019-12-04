@@ -1,14 +1,14 @@
-// @flow
-
-import React from 'react';
+import * as React from 'react';
 import { BlogCardLink, BlogCardTitle } from './PostTitle.style';
+import { memo } from 'react';
 
+// @ts-ignore
 const PostTitle = ({ text }) => (
-  <BlogCardLink to={text[0].url}>
+  <BlogCardLink to={'TODO'}>
     <BlogCardTitle>
-      <h2>{text[0].title}</h2>
+      <h2>{text}</h2>
     </BlogCardTitle>
   </BlogCardLink>
 );
 
-export default PostTitle;
+export default memo(PostTitle);

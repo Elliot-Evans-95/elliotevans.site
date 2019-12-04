@@ -1,8 +1,6 @@
 ---
-path: "/post/01-06-2019_presentation-framework"
-date: "01-06-2019"
+date: "2019-06-01"
 title: "Presentation Framework"
-introduction: "Using design patterns in a new project"
 ---
 
 Recently I have been practising new design patterns in a project. This project is for creating presentation and its slides and is open source. The idea is to allow the developer/user to data drive all the presentation including its styling. In addition they can add custom functionality.

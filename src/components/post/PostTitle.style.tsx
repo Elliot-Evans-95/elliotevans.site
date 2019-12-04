@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+import Link from 'gatsby-link';
 
 export const BlogCardTitle = styled.header`
   display: inline-block;
@@ -20,7 +20,7 @@ export const BlogCardTitle = styled.header`
   }
 `;
 
-export const BlogCardLink = styled(NavLink)`
+export const BlogCardLink = styled(Link)`
   text-decoration: none;
 
   h2 {

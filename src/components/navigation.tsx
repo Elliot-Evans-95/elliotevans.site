@@ -4,7 +4,7 @@ import { memo } from 'react';
 
 // @ts-ignore
 const isActive = ({ isCurrent }) => {
-  return isCurrent ? { className: "selected" } : null
+  return isCurrent ? { className: 'selected' } : null;
 };
 
 const Navigation = () => {

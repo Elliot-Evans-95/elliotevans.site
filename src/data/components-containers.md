@@ -1,8 +1,6 @@
 ---
-path: "/post/01-04-2019_components-containers"
-date: "01-04-2019"
+date: "2019-04-01"
 title: "Components and Containers"
-introduction: "Component architecture has taken off in the land of Front-end"
 ---
 
 It's no surprise to me that the component architecture has taken off in the land of Front-end. Having decoupled logic/styling that can be freely moved around is a huge benefit for developers. It also with reusable code principles and in addition encapsulated logic but the idea can be further explored.

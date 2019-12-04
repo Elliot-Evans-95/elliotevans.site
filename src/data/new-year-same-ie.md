@@ -1,8 +1,6 @@
 ---
-path: "/post/01-01-2019_new-year-same-ie"
-date: "01-01-2019"
+date: "2019-01-01"
 title: "New year, same IE"
-introduction: "Welcome to 2019 where anything is possible, apart from changing Internet Explorer"
 ---
 
 A bit late to the party but Happy New Year! Welcome to 2019 where anything is possible, apart from changing Internet Explorer. A constant frustration in the web developer world and bane of a lot of problems. 

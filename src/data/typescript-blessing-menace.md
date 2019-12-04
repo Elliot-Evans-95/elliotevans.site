@@ -1,8 +1,6 @@
 ---
-path: "/post/01-02-2019_new-year-same-ie"
-date: "01-02-2019"
+date: "2019-02-01"
 title: "Typescript is a blessing and a menace"
-introduction: "Typescript can be an aid to projects but isn't a silver bullet"
 ---
 
 Over the past 2 years at codeweavers we have been using typescript. To give a quick introduction about typescript for those who don’t know, typescript is a pre-processor language to Javascript. Due to its nature you can build additional tools into the language such as type safety to benefit the developer/developers when coding. It also comes with its own compiler and linting to further aid in making the project consistent.

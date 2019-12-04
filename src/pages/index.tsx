@@ -10,14 +10,44 @@ import '../styles/index.css';
 import Navigation from '../components/navigation';
 import { Home } from '../components/home/home';
 import Blobs from '../blobs/blobs';
+import Banner from '../components/banner';
 
-// interface IndexPageProps {
-//   data: {
-//     site: {
-//       header: IHeader;
-//     };
-//   };
-// }
+interface IndexPageProps {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<IEdge>;
+    };
+    allFile: IHeaderQuery
+  }
+}
+
+interface IHeaderQuery {
+  edges: Array<IHeaderNode>
+}
+
+interface IHeaderNode {
+  node: {
+    id: string
+    childDataJson: {
+      id: string
+      header: IHeader
+    }
+  }
+}
+
+export interface IEdge {
+  node: INode
+}
+
+export interface INode {
+  excerpt: string,
+  timeToRead: number,
+  frontmatter: {
+    date: string,
+    title: string;
+  },
+  id: string
+}
 
 export interface IHeader {
   icon: string;
@@ -25,8 +55,7 @@ export interface IHeader {
   subHeading: string;
 }
 
-// export default class extends React.Component<IndexPageProps, {}> {
-export default class extends React.Component<any, {}> {
+export default class extends React.Component<IndexPageProps, {}> {
   constructor(props: any, context: any) {
     super(props, context);
   }
@@ -39,7 +68,8 @@ export default class extends React.Component<any, {}> {
         <React.StrictMode>
           <Main>
             <Blobs props={this.props} />
-            <Home props={this.props}/>
+            <Banner header={this.props.data.allFile.edges[0].node.childDataJson.header} />
+            <Home props={this.props.data.allMarkdownRemark.edges} />
           </Main>
         </React.StrictMode>
         <Footer />
@@ -49,13 +79,33 @@ export default class extends React.Component<any, {}> {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allFile {
+  query {
+    allMarkdownRemark {
+      totalCount
       edges {
         node {
-          extension
-          dir
-          modifiedTime
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          excerpt
+          timeToRead
+        }
+      }
+    }
+    allFile(filter: {name: {eq: "header"}, sourceInstanceName: {eq: "data"}}) {
+      edges {
+        node {
+          id
+          childDataJson {
+            id
+            header {
+              icon
+              heading
+              subHeading
+            }
+          }
         }
       }
     }

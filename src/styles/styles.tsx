@@ -93,6 +93,8 @@ export const PostMain = styled.main`
 `;
 
 export const AppNavigation = styled.nav`
+  z-index: 10;
+
   grid-area: nav;
 
   font-size: 1rem;

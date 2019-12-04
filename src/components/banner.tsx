@@ -4,16 +4,14 @@ import { Header, MyFace, SubHeading, Title } from '../styles/styles';
 import { IHeader } from '../pages';
 
 interface IBannerProps {
-  header: IHeader
+  header: IHeader;
 }
 
 const Banner = (props: IBannerProps) => {
+  console.log(props);
   return (
     <Header>
-      <MyFace
-        src={props.header.icon}
-        alt="My face"
-      />
+      <MyFace src={props.header.icon} alt="My face" />
       <Title>{props.header.heading}</Title>
       <SubHeading>{props.header.subHeading}</SubHeading>
     </Header>

@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-transformer-json`,
+      // options: {
+      //   typeName: `Json`,
+      // },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,

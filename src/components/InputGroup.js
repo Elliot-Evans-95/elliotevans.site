@@ -1,7 +1,12 @@
 // @flow
 
 import React from 'react';
-import { InputBox, InputField, InputLabel, TextAreaField } from '../styles/styles';
+import {
+  InputBox,
+  InputField,
+  InputLabel,
+  TextAreaField,
+} from '../styles/styles';
 
 const InputGroup = ({ label, placeholder, type }) => {
   if (type === 'textarea') {

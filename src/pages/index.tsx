@@ -1,44 +1,63 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby';
+import { Main } from '../styles/styles';
+import Footer from '../components/footer';
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-  }
+// default style stuff
+import '../styles/index.css';
+
+// home stuff
+import Navigation from '../components/navigation';
+import { Home } from '../components/home/home';
+import Blobs from '../blobs/blobs';
+
+// interface IndexPageProps {
+//   data: {
+//     site: {
+//       header: IHeader;
+//     };
+//   };
+// }
+
+export interface IHeader {
+  icon: string;
+  heading: string;
+  subHeading: string;
 }
 
-export default class extends React.Component<IndexPageProps, {}> {
-  constructor(props: IndexPageProps, context: any) {
-    super(props, context)
+// export default class extends React.Component<IndexPageProps, {}> {
+export default class extends React.Component<any, {}> {
+  constructor(props: any, context: any) {
+    super(props, context);
   }
+
   public render() {
+    console.log(this.props);
     return (
-      <div>
-        <h1>Elliot Evans Site</h1>
-        <p>
-          Welcome to your new{' '}
-          <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-        </p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
+      <div className={'appGrid'}>
+        <Navigation />
+        <React.StrictMode>
+          <Main>
+            <Blobs props={this.props} />
+            <Home props={this.props}/>
+          </Main>
+        </React.StrictMode>
+        <Footer />
       </div>
-    )
+    );
   }
 }
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
+    allFile {
+      edges {
+        node {
+          extension
+          dir
+          modifiedTime
+        }
       }
     }
   }
-`
+`;

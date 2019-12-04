@@ -1,0 +1,19 @@
+import * as React from 'react';
+import { memo } from 'react';
+import { EEFooter } from '../styles/styles';
+
+const Footer = () => {
+  return (
+    <EEFooter>
+      <p>
+        Made with{' '}
+        <span role="img" aria-label="coffee">
+          ☕
+        </span>{' '}
+        | 2019
+      </p>
+    </EEFooter>
+  );
+};
+
+export default memo(Footer);

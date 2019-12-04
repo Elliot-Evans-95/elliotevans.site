@@ -1,6 +1,9 @@
 var plugins = [{
       plugin: require('/Users/cassius/Sites/elliotevans.site/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/Users/cassius/Sites/elliotevans.site/node_modules/gatsby-plugin-apollo/gatsby-ssr'),
+      options: {"plugins":[],"typeName":"EEAPI","fieldName":"elliotEvans","url":"https://elliotevans.site/graphql"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

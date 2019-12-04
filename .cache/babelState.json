@@ -21,6 +21,14 @@
           "options": {
             "plugins": []
           }
+        },
+        {
+          "name": "/Users/cassius/Sites/elliotevans.site/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
+            "plugins": []
+          }
         }
       ],
       "options": {
@@ -47,6 +55,14 @@
         {
           "name": "/Users/cassius/Sites/elliotevans.site/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
+            "plugins": []
+          }
+        },
+        {
+          "name": "/Users/cassius/Sites/elliotevans.site/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         }
@@ -77,6 +93,14 @@
           "options": {
             "plugins": []
           }
+        },
+        {
+          "name": "/Users/cassius/Sites/elliotevans.site/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
+            "plugins": []
+          }
         }
       ],
       "options": {
@@ -103,6 +127,14 @@
         {
           "name": "/Users/cassius/Sites/elliotevans.site/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
+            "plugins": []
+          }
+        },
+        {
+          "name": "/Users/cassius/Sites/elliotevans.site/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         }

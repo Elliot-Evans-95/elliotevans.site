@@ -1,10 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Starter`,
+    title: 'test123',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
-    // Add typescript stack into webpack
-    `gatsby-plugin-typescript`
+    `gatsby-plugin-emotion`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        typeName: 'EEAPI',
+        fieldName: 'elliotEvans',
+        url: 'https://elliotevans.site/graphql',
+      },
+    },
   ],
 };

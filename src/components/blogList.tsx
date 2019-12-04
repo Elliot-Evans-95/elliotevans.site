@@ -6,9 +6,16 @@ import { IEdge } from '../pages';
 
 // @ts-ignore
 const BlogList = ({ blog }) => {
+  const generateCoffee = (timeToRead: number) =>
+    Array.from(Array(timeToRead), (_, i) =>
+      (
+        <span>☕</span>
+      ));
+
   const blogPosts = blog.props.map((post: IEdge) => (
     <BlogCard key={post.node.id}>
       <PostTitle text={post.node.frontmatter.title} />
+      <div>{generateCoffee(post.node.timeToRead)}</div>
       <p>{post.node.excerpt}</p>
       <Cite>{post.node.frontmatter.date}</Cite>
     </BlogCard>

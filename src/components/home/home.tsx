@@ -19,7 +19,7 @@ export const Home = (home: Array<IEdge>) => {
           <meta name={'keywords'} content={keywords} />
         </Helmet>
       </Main>
-    )
+    );
   } else {
     return (
       <Main>
@@ -30,7 +30,6 @@ export const Home = (home: Array<IEdge>) => {
         </Helmet>
         <BlogList blog={home} />
       </Main>
-    )
+    );
   }
-
 };

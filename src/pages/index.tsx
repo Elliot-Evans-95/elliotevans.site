@@ -17,36 +17,36 @@ interface IndexPageProps {
     allMarkdownRemark: {
       edges: Array<IEdge>;
     };
-    allFile: IHeaderQuery
-  }
+    allFile: IHeaderQuery;
+  };
 }
 
 interface IHeaderQuery {
-  edges: Array<IHeaderNode>
+  edges: Array<IHeaderNode>;
 }
 
 interface IHeaderNode {
   node: {
-    id: string
+    id: string;
     childDataJson: {
-      id: string
-      header: IHeader
-    }
-  }
+      id: string;
+      header: IHeader;
+    };
+  };
 }
 
 export interface IEdge {
-  node: INode
+  node: INode;
 }
 
 export interface INode {
-  excerpt: string,
-  timeToRead: number,
+  excerpt: string;
+  timeToRead: number;
   frontmatter: {
-    date: string,
+    date: string;
     title: string;
-  },
-  id: string
+  };
+  id: string;
 }
 
 export interface IHeader {
@@ -61,14 +61,17 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
 
   public render() {
-    console.log(this.props);
     return (
       <div className={'appGrid'}>
         <Navigation />
         <React.StrictMode>
           <Main>
             <Blobs props={this.props} />
-            <Banner header={this.props.data.allFile.edges[0].node.childDataJson.header} />
+            <Banner
+              header={
+                this.props.data.allFile.edges[0].node.childDataJson.header
+              }
+            />
             <Home props={this.props.data.allMarkdownRemark.edges} />
           </Main>
         </React.StrictMode>
@@ -94,7 +97,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: {name: {eq: "header"}, sourceInstanceName: {eq: "data"}}) {
+    allFile(
+      filter: { name: { eq: "header" }, sourceInstanceName: { eq: "data" } }
+    ) {
       edges {
         node {
           id

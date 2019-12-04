@@ -42,7 +42,7 @@ export const TextContainer = styled.section`
     height: calc(100% - 1em);
     left: -2em;
     top: 0;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 `;
 
@@ -305,7 +305,7 @@ export const BlogCard = styled.section`
     height: calc(100% - 1em);
     left: -2em;
     top: 0;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   :first-of-type {

@@ -8,7 +8,6 @@ interface IBannerProps {
 }
 
 const Banner = (props: IBannerProps) => {
-  console.log(props);
   return (
     <Header>
       <MyFace src={props.header.icon} alt="My face" />

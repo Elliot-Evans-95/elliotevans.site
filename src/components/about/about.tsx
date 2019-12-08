@@ -1,42 +1,33 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
+import { memo } from 'react';
+import { Main } from '../../styles/styles';
+import { AboutBanner } from './About.style';
+import Helmet from 'react-helmet';
+import AltCard from '../AltCard';
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
-interface AboutPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-      };
-    };
-  };
+interface IAbout {
+  about: string
 }
 
-export default class extends React.Component<AboutPageProps, {}> {
-  constructor(props: AboutPageProps, context: any) {
-    super(props, context);
-  }
-  public render() {
+const About = (about: IAbout) => {
+  const title = 'Elliot Evans - About';
+  const desc = 'About Page';
+  const keywords =
+    'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
+
     return (
-      <div>
-        <h1>Elliot Evans Site</h1>
-        <p>
-          Welcome to your new{' '}
-          <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-        </p>
-        <p>About</p>
-      </div>
+      <Main>
+        <Helmet>
+          <title>{title}</title>
+          <meta name={'description'} content={desc} />
+          <meta name={'keywords'} content={keywords} />
+        </Helmet>
+        <AboutBanner>
+          <h1>About</h1>
+        </AboutBanner>
+        <AltCard text={about}/>
+      </Main>
     );
-  }
-}
+};
 
-export const pageQuery = graphql`
-  query AboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
+export default memo(About);

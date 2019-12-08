@@ -3,8 +3,8 @@ import { memo } from 'react';
 
 import './blobs.css';
 
-const Blobs = (blobs: any) => {
-  if (blobs.props.location.pathname === '/') {
+const Blobs = (pathname: any) => {
+  if (pathname.props === '/') {
     return (
       <div className={'blobs'}>
         <div id="blob-1" />
@@ -21,7 +21,7 @@ const Blobs = (blobs: any) => {
         <div id="blob-12" />
       </div>
     );
-  } else if (blobs.props.location.pathname.includes('post')) {
+  } else if (pathname.props.includes('post')) {
     return (
       <div className={'blobs'}>
         <div id="blob-2" />

@@ -2,11 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55cce7f-b164-4d78-9453-98a8e5d6ff94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.cache/redux.state" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/redux.state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/about.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/__snapshots__/dev-loader.js.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/__snapshots__/loader.js.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/__snapshots__/static-entry.js.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/dev-loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/error-overlay-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/find-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/minimal-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/static-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/__tests__/strip-prefix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/api-runner-browser-plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/api-runner-browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/api-runner-ssr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/api-ssr-docs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/async-requires.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/babelState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-002b33e689064159f6f803b0774cf58f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-077405bc9f01984e860efec99e79e64e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-11aa8d40242e9546a9c02b7f986be6ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-26544b7e7e4ae9cca98c5459541298ac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-491bfbada9d2dafe68e151d3d244222f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-503dc273baa584c937b0cf2ffd3593a3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-5267237203887127e76ff5b0aaa97fdb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-65a78cf45238db5c1b9c32c8dae7dc78.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-6d9c5c4919b360c1858a15f0f734e667.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-74c48b35bdc0104b03ab052d99766637.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-7728723265ba283bf29d8ce954ee0b79.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-82d63cb1d561f90e18cfd0ca0da55273.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-988c1005418a09cd38cb53c9a328b2eb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-9d3a3a6c3914f89af9bdb2cee060526b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-a5434409704baf689054334f75a7f13f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-c64df45198fa83abd401b9e2fff216c0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-cc8084ab121d69504479a71c5132fb69.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-f55d2b753586bba3579399fbd3281730.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/api-runner-browser-plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/api-runner-browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/api-runner-ssr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/api-ssr-docs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/create-react-context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/default-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/dev-loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/develop-static-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/emitter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/ensure-resources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/error-overlay-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/find-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/gatsby-browser-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/json-store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/normalize-page-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/page-renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/prefetch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/production-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/public-page-renderer-dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/public-page-renderer-prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/public-page-renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/react-lifecycles-compat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/register-service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/root.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/socketIo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/static-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/commonjs/strip-prefix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/create-react-context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/default-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/dev-404-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/dev-loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/develop-static-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/emitter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ensure-resources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/error-overlay-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/find-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/gatsby-browser-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/json-store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/match-paths.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/normalize-page-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/page-renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/pages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/prefetch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/production-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/public-page-renderer-dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/public-page-renderer-prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/public-page-renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/react-lifecycles-compat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/redirects.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/redux.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/register-service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/root.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/socketIo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/static-entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/strip-prefix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/sync-requires.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/test-require-error.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blogList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blogList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/chunk-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/chunk-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/about/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/about/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/app-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/app-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/dev-404-page/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/dev-404-page/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/index/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/index/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/styles.cbb1d09c538a1935c176.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/webpack.stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/webpack.stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blobs/blobs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blobs/blobs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blobs/blobs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/blobs/blobs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AltCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AltCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/About.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/About.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/About.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +145,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -53,19 +166,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/data" />
-      <recent name="$PROJECT_DIR$/src/components/home" />
-      <recent name="$PROJECT_DIR$/src/wrapper" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/assets/posts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/project" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/work" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/data" />
+      <recent name="$PROJECT_DIR$/src/components/home" />
+      <recent name="$PROJECT_DIR$/src/wrapper" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -116,7 +229,8 @@
       <workItem from="1575129840356" duration="7709000" />
       <workItem from="1575328794439" duration="1064000" />
       <workItem from="1575410853595" duration="8332000" />
-      <workItem from="1575489159342" duration="7377000" />
+      <workItem from="1575489159342" duration="7639000" />
+      <workItem from="1575818601914" duration="5330000" />
     </task>
     <servers />
   </component>
@@ -137,13 +251,13 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2269" y="302" width="740" height="476" key="find.popup" timestamp="1575503116695">
+    <state x="2269" y="302" width="740" height="476" key="find.popup" timestamp="1575821960810">
       <screen x="0" y="0" width="3840" height="1080" />
     </state>
-    <state x="2269" y="302" width="740" height="476" key="find.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1575503116695" />
-    <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup" timestamp="1575501034310">
+    <state x="2269" y="302" width="740" height="476" key="find.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1575821960810" />
+    <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup" timestamp="1575825762388">
       <screen x="0" y="0" width="3840" height="1080" />
     </state>
-    <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1575501034310" />
+    <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1575825762388" />
   </component>
 </project>

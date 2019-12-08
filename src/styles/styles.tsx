@@ -49,13 +49,14 @@ export const TextContainer = styled.section`
 export const EEFooter = styled.footer`
   grid-area: footer;
 
-  background: rgba(0, 120, 215, 0.5);
+  background: rgba(0, 120, 215, 0.75);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   z-index: 1;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.19);
 `;
 
 export const Main = styled.main`

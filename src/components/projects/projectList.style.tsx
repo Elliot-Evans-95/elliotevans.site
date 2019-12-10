@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
-export const ProjectsListWrapper = styled.header`
+export const ProjectsListWrapper = styled.section`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;

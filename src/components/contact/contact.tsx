@@ -10,18 +10,18 @@ const Contact = () => {
     {
       label: 'name',
       placeholder: 'full name',
-      type: 'text'
+      type: 'text',
     },
     {
       label: 'email',
       placeholder: 'email address',
-      type: 'email'
+      type: 'email',
     },
     {
       label: 'message',
       placeholder: 'Type you message here...',
-      type: 'textarea'
-    }
+      type: 'textarea',
+    },
   ];
 
   const inputGroupList = () => {

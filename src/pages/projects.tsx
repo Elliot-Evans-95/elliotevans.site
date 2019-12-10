@@ -63,6 +63,7 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
 
   public render() {
+    console.log(this.props);
     return (
       <div className={'appGrid'}>
         <Navigation />

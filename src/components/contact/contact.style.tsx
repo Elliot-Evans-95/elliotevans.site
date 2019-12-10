@@ -19,9 +19,9 @@ export const ContactForm = styled.form`
   flex-direction: column;
   justify-content: space-around;
   border-radius: 2px;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   align-content: center;
-  
+
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.22);
   border-radius: 1rem;
   padding: 1rem;

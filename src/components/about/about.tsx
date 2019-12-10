@@ -7,7 +7,7 @@ import AltCard from '../AltCard';
 import { IPageAbout } from '../../pages/about';
 
 interface IAbout {
-  about: IPageAbout
+  about: IPageAbout;
 }
 
 const About = (about: IAbout) => {

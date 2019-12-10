@@ -131,7 +131,8 @@ export const MyFace = styled.img`
   width: 7em;
   height: 7em;
   border-radius: 50%;
-  box-shadow: 0 -2px 28px 2px rgba(0, 0, 0, 0.4), 0 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -2px 28px 2px rgba(0, 0, 0, 0.4),
+    0 0px 20px 0px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -190,8 +191,8 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   color: white;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.22);
   border-radius: 1rem;
   margin-bottom: 2rem;
   background: rgba(0, 0, 0, 0.1);
@@ -211,7 +212,7 @@ export const AltCardContainer = styled.section`
   position: relative;
   padding: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
-  margin: 1.75rem 0 2rem 0;
+  margin: 1.8rem 0 2rem 0;
   border-radius: 1rem;
   background: rgba(0, 0, 0, 0.1);
 
@@ -271,13 +272,15 @@ export const InputField = styled.input`
   width: 100%;
   margin: 1rem 0;
   padding: 0.6rem;
-  
+
   transition: 300ms ease-in-out;
-  
-  box-shadow: 0px -6px 20px -1px rgba(0,0,0,0.3), 0 0px 16px 0px rgba(0,0,0,0.22);
-  
+
+  box-shadow: 0px -6px 20px -1px rgba(0, 0, 0, 0.3),
+    0 0px 16px 0px rgba(0, 0, 0, 0.22);
+
   &:hover {
-    box-shadow: 0px -4px 10px 2px rgba(0,0,0,0.3), 0 -2px 8px 4px rgba(0,0,0,0.22)
+    box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.3),
+      0 -2px 8px 4px rgba(0, 0, 0, 0.22);
   }
 `;
 
@@ -289,13 +292,15 @@ export const TextAreaField = styled.textarea`
   padding: 0.5rem;
   width: 100%;
   margin: 1rem 0;
-  
+
   transition: hover 300ms ease-in-out;
-  
-  box-shadow: 0px -6px 20px -1px rgba(0,0,0,0.3), 0 0px 16px 0px rgba(0,0,0,0.22);
-  
+
+  box-shadow: 0px -6px 20px -1px rgba(0, 0, 0, 0.3),
+    0 0px 16px 0px rgba(0, 0, 0, 0.22);
+
   &:hover {
-    box-shadow: 0px -6px 20px 2px rgba(0,0,0,0.3), 0 0px 16px 4px rgba(0,0,0,0.22)
+    box-shadow: 0px -6px 20px 2px rgba(0, 0, 0, 0.3),
+      0 0px 16px 4px rgba(0, 0, 0, 0.22);
   }
 `;
 
@@ -306,14 +311,14 @@ export const InputLabel = styled.label`
 `;
 
 export const BlogCard = styled.section`
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   position: relative;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 1rem;
   margin: 4rem 0;
   padding-left: 3rem;
-  box-shadow: 0 0px 2px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
-  
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
+
   @media (min-width: 45em) {
     padding: 0;
   }
@@ -327,7 +332,7 @@ export const BlogCard = styled.section`
     left: 0em;
     top: 0;
     border-radius: 1rem 0px 0px 1rem;
-    
+
     @media (min-width: 45em) {
       left: -2em;
       top: 0;
@@ -357,8 +362,8 @@ export const Cite = styled.cite`
   position: absolute;
   right: 0;
   bottom: -17px;
-  
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
+
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
 
   @media (min-width: 45em) {
     right: -38px;

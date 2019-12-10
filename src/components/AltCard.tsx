@@ -4,7 +4,7 @@ import { memo } from 'react';
 import { IPageAbout } from '../pages/about';
 
 interface IAboutTextProps {
-  about: IPageAbout
+  about: IPageAbout;
 }
 
 const AltCard = (text: IAboutTextProps) => {

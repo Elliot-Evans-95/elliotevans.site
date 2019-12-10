@@ -180,6 +180,8 @@ cite,
 label {
   font-family: 'Work Sans', sans-serif;
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .appGrid {

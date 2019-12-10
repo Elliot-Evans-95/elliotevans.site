@@ -6,9 +6,8 @@ interface INavigationActive {
   isCurrent: boolean;
 }
 
-const isActive = ({ isCurrent }: INavigationActive) => {
-  return isCurrent ? { className: 'selected' } : null;
-};
+const isActive = ({ isCurrent }: INavigationActive) =>
+  isCurrent ? { className: 'selected' } : null;
 
 const Navigation = () => {
   return (
@@ -20,17 +19,17 @@ const Navigation = () => {
           </StyledLink>
         </NavItems>
         <NavItems>
-          <StyledLink to="/about" getProps={isActive}>
+          <StyledLink to="/about/" getProps={isActive}>
             About
           </StyledLink>
         </NavItems>
         <NavItems>
-          <StyledLink to="/projects" getProps={isActive}>
+          <StyledLink to="/projects/" getProps={isActive}>
             Projects
           </StyledLink>
         </NavItems>
         <NavItems>
-          <StyledLink to="/contact" getProps={isActive}>
+          <StyledLink to="/contact/" getProps={isActive}>
             Contact
           </StyledLink>
         </NavItems>

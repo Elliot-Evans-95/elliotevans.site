@@ -71,23 +71,27 @@ export default class extends React.Component<IndexPageProps, {}> {
   constructor(props: any, context: any) {
     super(props, context);
 
-    this._header = this.props.data.allFile.edges.filter((edge) => edge.node.childDataJson.header !== null)[0].node.childDataJson.header;
-    this._about = this.props.data.allFile.edges.filter((edge) => edge.node.childDataJson.about !== null)[0].node.childDataJson.about;
+    this._header = this.props.data.allFile.edges.filter(
+      edge => edge.node.childDataJson.header !== null
+    )[0].node.childDataJson.header;
+    this._about = this.props.data.allFile.edges.filter(
+      edge => edge.node.childDataJson.about !== null
+    )[0].node.childDataJson.about;
   }
 
   public render() {
-    if(this._about && this._header) {
+    if (this._about && this._header) {
       return (
         <div className={'appGrid'}>
-          <Navigation/>
+          <Navigation />
           <React.StrictMode>
             <Main>
-              <Blobs props={this.props.location.pathname}/>
-              <Banner header={this._header}/>
-              <About about={this._about}/>
+              <Blobs props={this.props.location.pathname} />
+              <Banner header={this._header} />
+              <About about={this._about} />
             </Main>
           </React.StrictMode>
-          <Footer/>
+          <Footer />
         </div>
       );
     } else {
@@ -112,7 +116,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: { sourceInstanceName: { eq: "data" }, extension: { eq: "json" } }) {
+    allFile(
+      filter: { sourceInstanceName: { eq: "data" }, extension: { eq: "json" } }
+    ) {
       edges {
         node {
           id

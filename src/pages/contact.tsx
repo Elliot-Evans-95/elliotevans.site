@@ -74,7 +74,7 @@ export default class extends React.Component<IndexPageProps, {}> {
                 this.props.data.allFile.edges[0].node.childDataJson.header
               }
             />
-            <Contact/>
+            <Contact />
           </Main>
         </React.StrictMode>
         <Footer />

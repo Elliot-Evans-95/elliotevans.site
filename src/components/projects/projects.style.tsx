@@ -1,9 +1,14 @@
 import styled from '@emotion/styled';
 
-export const WorkGrid = styled.main`
+export const ProjectsMain = styled.main`
   grid-area: main;
 
-  display: grid;
+  padding: 1rem;
+  position: relative;
 
-  width: 100%;
+  @media (min-width: 45em) {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
 `;

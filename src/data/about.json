@@ -1,8 +1,8 @@
 {
-  "about": "Hello, Elliot here. Thanks for checking out my website. I will hopefully be updating the site bit by bit over ' +\n      'the next few months. In the meantime please checkout some of the blog posts I have made and if you need to' +\n      'contact me then feel free.',\n    'I am currently a web application (fancy way of saying frontend) developer at Codeweavers. I have been at the' +\n      'company for over 2 years crafting great solutions for the motor industry. I have been writing mainly javascript' +\n      'and typescript at the company and using AngularJS and Angular 2+ respectively. Despite this, this website was' +\n      'written in react (I like both frameworks).',\n    'I do fall into the category of trying the new stuff when I can on my personal projects. I also play football and ' +\n      'hockey in my spare time and make music when I feel bored",
-  "about2": {
-    "1": "",
-    "2": "",
-    "3": ""
+  "about": {
+    "paraOne": "Hello, Elliot here. Thanks for checking out my website. I will hopefully be updating the site bit by bit over the year.",
+    "paraTwo": "the next few months. In the meantime please checkout some of the blog posts I have made and if you need to contact me then feel free.",
+    "paraThree": "I am a software developer at bet365 where I have been mainly working of the sports/main site on web and mobile using typescript but I am always trying new languages and frameworks in my spare time.",
+    "paraFour": "Also play hockey every week and make music in between."
   }
 }

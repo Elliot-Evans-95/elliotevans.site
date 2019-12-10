@@ -6,7 +6,7 @@ import {
   InputField,
   InputLabel,
   TextAreaField,
-} from '../styles/styles';
+} from '../../styles/styles';
 
 const InputGroup = ({ label, placeholder, type }) => {
   if (type === 'textarea') {

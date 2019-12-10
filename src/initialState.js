@@ -78,7 +78,7 @@ const About = {
   card: [
     'Hello, Elliot here. Thanks for checking out my website. I will hopefully be updating the site bit by bit over ' +
       'the next few months. In the meantime please checkout some of the blog posts I have made and if you need to' +
-      'contact me then feel free.',
+      'Contact me then feel free.',
     'I am currently a web application (fancy way of saying frontend) developer at Codeweavers. I have been at the' +
       'company for over 2 years crafting great solutions for the motor industry. I have been writing mainly javascript' +
       'and typescript at the company and using AngularJS and Angular 2+ respectively. Despite this, this website was' +

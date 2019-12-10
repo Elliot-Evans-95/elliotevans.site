@@ -4,13 +4,17 @@ import BlogList from '../blogList';
 import Helmet from 'react-helmet';
 import { IEdge } from '../../pages';
 
-export const Home = (home: Array<IEdge>) => {
+interface IHomePageProps {
+  props: Array<IEdge>;
+}
+
+export const Home = (home: IHomePageProps) => {
   const title = 'Elliot Evans - Home';
   const desc = 'Home Page';
   const keywords =
     'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
 
-  if (home.length === 0) {
+  if (home.props.length === 0) {
     return (
       <Main>
         <Helmet>
@@ -28,7 +32,7 @@ export const Home = (home: Array<IEdge>) => {
           <meta name={'description'} content={desc} />
           <meta name={'keywords'} content={keywords} />
         </Helmet>
-        <BlogList blog={home} />
+        <BlogList blog={home.props} />
       </Main>
     );
   }

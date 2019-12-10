@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { HeaderWrapper } from '../styles/styles';
+import { HeaderWrapper } from '../../styles/styles';
 
 const PageHeader = ({ heading, subHeading }) => (
   <HeaderWrapper>

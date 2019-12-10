@@ -13,6 +13,7 @@ import Blobs from '../blobs/blobs';
 import Banner from '../components/banner';
 
 interface IndexPageProps {
+  location: Location;
   data: {
     allMarkdownRemark: {
       edges: Array<IEdge>;
@@ -66,7 +67,7 @@ export default class extends React.Component<IndexPageProps, {}> {
         <Navigation />
         <React.StrictMode>
           <Main>
-            <Blobs props={this.props} />
+            <Blobs props={this.props.location.pathname} />
             <Banner
               header={
                 this.props.data.allFile.edges[0].node.childDataJson.header

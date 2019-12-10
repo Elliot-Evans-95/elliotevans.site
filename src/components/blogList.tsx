@@ -4,15 +4,15 @@ import { memo } from 'react';
 import PostTitle from './post/PostTitle';
 import { IEdge } from '../pages';
 
-// @ts-ignore
-const BlogList = ({ blog }) => {
-  const generateCoffee = (timeToRead: number) =>
-    Array.from(Array(timeToRead), (_, i) =>
-      (
-        <span>☕</span>
-      ));
+interface IHomePageProps {
+  blog: Array<IEdge>;
+}
 
-  const blogPosts = blog.props.map((post: IEdge) => (
+const BlogList = (blog: IHomePageProps) => {
+  const generateCoffee = (timeToRead: number) =>
+    Array.from(Array(timeToRead), (_, i) => <span>☕</span>);
+
+  const blogPosts = blog.blog.map((post: IEdge) => (
     <BlogCard key={post.node.id}>
       <PostTitle text={post.node.frontmatter.title} />
       <div>{generateCoffee(post.node.timeToRead)}</div>

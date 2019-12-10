@@ -4,6 +4,7 @@ import NavLink from 'gatsby-link';
 export const Title = styled.h1`
   font-size: 1.25rem;
   margin-top: 0;
+  text-shadow: 0px -2px 2px rgba(0, 120, 215, 0.4);
 
   @media (min-width: 30em) {
     margin-top: 0.67em;
@@ -13,6 +14,7 @@ export const Title = styled.h1`
 
 export const SubHeading = styled.h3`
   font-size: 1rem;
+  text-shadow: 1px 1px 2px #0078d7;
 
   @media (min-width: 30em) {
     font-size: 1.25rem;
@@ -26,6 +28,7 @@ export const Header = styled.header`
   flex-direction: column;
   padding: 2rem 0;
   align-items: center;
+  position: relative;
 `;
 
 export const TextContainer = styled.section`
@@ -73,7 +76,7 @@ export const Main = styled.main`
 
   @media (min-width: 45em) {
     padding: 0;
-    width: 50vw;
+    width: 60vw;
     margin: 0 auto;
   }
 `;
@@ -83,7 +86,7 @@ export const PostMain = styled.main`
   flex: 1 0 auto;
   padding: 1rem;
   width: 50vw;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.1);
   margin: 2rem;
   border-radius: 1rem;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -128,7 +131,7 @@ export const MyFace = styled.img`
   width: 7em;
   height: 7em;
   border-radius: 50%;
-  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 -2px 28px 2px rgba(0, 0, 0, 0.4), 0 0px 20px 0px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -185,9 +188,13 @@ export const HeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em 0;
   color: white;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.22);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.1);
 `;
 
 export const InputBox = styled.div`
@@ -206,25 +213,14 @@ export const AltCardContainer = styled.section`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
   margin: 1.75rem 0 2rem 0;
   border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.1);
 
-  p:first-of-type {
-    order: 2;
-  }
-
-  p:nth-of-type(2) {
-    order: 3;
-  }
-
-  p:nth-of-type(3) {
-    order: 4;
+  p {
+    text-align: justify;
   }
 
   @media (min-width: 45em) {
     margin: 6rem 0;
-
-    p:first-of-type {
-      width: 60%;
-    }
   }
 `;
 
@@ -250,12 +246,13 @@ export const FormSubmitLabel = styled.label`
 
 export const FormSubmitSubmit = styled.input`
   border-radius: 5px;
-  background: #C73042;
+  background: #0078d7;
   padding: 0.25rem 1rem;
   border: 0;
   color: white;
   font-size 16px;
   line-height: 24px;
+  cursor: pointer;
   
   transition: all 300ms cubic-bezier(0.25,0.8,0.25,1);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -273,6 +270,15 @@ export const InputField = styled.input`
   padding: 0.5rem;
   width: 100%;
   margin: 1rem 0;
+  padding: 0.6rem;
+  
+  transition: 300ms ease-in-out;
+  
+  box-shadow: 0px -6px 20px -1px rgba(0,0,0,0.3), 0 0px 16px 0px rgba(0,0,0,0.22);
+  
+  &:hover {
+    box-shadow: 0px -4px 10px 2px rgba(0,0,0,0.3), 0 -2px 8px 4px rgba(0,0,0,0.22)
+  }
 `;
 
 export const TextAreaField = styled.textarea`
@@ -283,6 +289,14 @@ export const TextAreaField = styled.textarea`
   padding: 0.5rem;
   width: 100%;
   margin: 1rem 0;
+  
+  transition: hover 300ms ease-in-out;
+  
+  box-shadow: 0px -6px 20px -1px rgba(0,0,0,0.3), 0 0px 16px 0px rgba(0,0,0,0.22);
+  
+  &:hover {
+    box-shadow: 0px -6px 20px 2px rgba(0,0,0,0.3), 0 0px 16px 4px rgba(0,0,0,0.22)
+  }
 `;
 
 export const InputLabel = styled.label`
@@ -292,11 +306,17 @@ export const InputLabel = styled.label`
 `;
 
 export const BlogCard = styled.section`
-  background: rgba(74, 84, 89, 0.2);
+  background: rgba(0,0,0,0.1);
   position: relative;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 1rem;
-  margin: 10rem 0;
+  margin: 4rem 0;
+  padding-left: 3rem;
+  box-shadow: 0 0px 2px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
+  
+  @media (min-width: 45em) {
+    padding: 0;
+  }
 
   ::before {
     content: ' ';
@@ -304,13 +324,19 @@ export const BlogCard = styled.section`
     display: block;
     border: 0.5rem solid #0078d7;
     height: calc(100% - 1em);
-    left: -2em;
+    left: 0em;
     top: 0;
-    border-radius: 10px;
+    border-radius: 1rem 0px 0px 1rem;
+    
+    @media (min-width: 45em) {
+      left: -2em;
+      top: 0;
+      border-radius: 10px;
+    }
   }
 
   :first-of-type {
-    margin-top: 6rem;
+    margin-top: 2rem;
   }
 
   :last-child {
@@ -322,9 +348,7 @@ export const Cite = styled.cite`
   display: inline-block;
   background: #0078d7;
   padding: 0.5rem 1rem;
-  //width: 212px;
   width: 101px;
-  //text-align: right;
   text-align: center;
   z-index: 5;
   border-radius: 5px;
@@ -333,6 +357,8 @@ export const Cite = styled.cite`
   position: absolute;
   right: 0;
   bottom: -17px;
+  
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
 
   @media (min-width: 45em) {
     right: -38px;

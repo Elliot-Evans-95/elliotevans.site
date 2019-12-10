@@ -2,8 +2,11 @@ import * as React from 'react';
 import { AppNavigation, NavItems, StyledLink } from '../styles/styles';
 import { memo } from 'react';
 
-// @ts-ignore
-const isActive = ({ isCurrent }) => {
+interface INavigationActive {
+  isCurrent: boolean;
+}
+
+const isActive = ({ isCurrent }: INavigationActive) => {
   return isCurrent ? { className: 'selected' } : null;
 };
 
@@ -22,13 +25,8 @@ const Navigation = () => {
           </StyledLink>
         </NavItems>
         <NavItems>
-          <StyledLink to="/skills" getProps={isActive}>
-            Skills
-          </StyledLink>
-        </NavItems>
-        <NavItems>
-          <StyledLink to="/work" getProps={isActive}>
-            Work
+          <StyledLink to="/projects" getProps={isActive}>
+            Projects
           </StyledLink>
         </NavItems>
         <NavItems>

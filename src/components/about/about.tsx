@@ -4,9 +4,10 @@ import { Main } from '../../styles/styles';
 import { AboutBanner } from './About.style';
 import Helmet from 'react-helmet';
 import AltCard from '../AltCard';
+import { IPageAbout } from '../../pages/about';
 
 interface IAbout {
-  about: string
+  about: IPageAbout
 }
 
 const About = (about: IAbout) => {
@@ -15,19 +16,19 @@ const About = (about: IAbout) => {
   const keywords =
     'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
 
-    return (
-      <Main>
-        <Helmet>
-          <title>{title}</title>
-          <meta name={'description'} content={desc} />
-          <meta name={'keywords'} content={keywords} />
-        </Helmet>
-        <AboutBanner>
-          <h1>About</h1>
-        </AboutBanner>
-        <AltCard text={about}/>
-      </Main>
-    );
+  return (
+    <Main>
+      <Helmet>
+        <title>{title}</title>
+        <meta name={'description'} content={desc} />
+        <meta name={'keywords'} content={keywords} />
+      </Helmet>
+      <AboutBanner>
+        <h1>About</h1>
+      </AboutBanner>
+      <AltCard about={about.about} />
+    </Main>
+  );
 };
 
 export default memo(About);

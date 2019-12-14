@@ -2,31 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55cce7f-b164-4d78-9453-98a8e5d6ff94" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/projects/lino.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/projects/north-stafford-hockey-club-site.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/projects/query-strings.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/projects/vanilla-router.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/projects/web-daw.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-002b33e689064159f6f803b0774cf58f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-077405bc9f01984e860efec99e79e64e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-088290701456f84c768985d9d12b57a0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-11aa8d40242e9546a9c02b7f986be6ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-1a2ab4a9159e9323ac3224dcd43e8783.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-1a2ab4a9159e9323ac3224dcd43e8783.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-1b43f0d14a86726dd98c0de6c0aeb055.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-26544b7e7e4ae9cca98c5459541298ac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-2a3914357bf9442ebd05a972c0fc5edb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-2a3914357bf9442ebd05a972c0fc5edb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-2aa3a97c5c8ae007bd85fb3fcdef7536.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-2abbf111c6a3b06a6739be1571987119.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-2abbf111c6a3b06a6739be1571987119.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-491bfbada9d2dafe68e151d3d244222f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-4f41793b697cc680a1872b7a5eaebafd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-503dc273baa584c937b0cf2ffd3593a3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-5267237203887127e76ff5b0aaa97fdb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-6316b22d1a08290d61461f5a6f130e74.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-65a78cf45238db5c1b9c32c8dae7dc78.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-6d9c5c4919b360c1858a15f0f734e667.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-74c48b35bdc0104b03ab052d99766637.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-7728723265ba283bf29d8ce954ee0b79.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-82d63cb1d561f90e18cfd0ca0da55273.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-988c1005418a09cd38cb53c9a328b2eb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-9d3a3a6c3914f89af9bdb2cee060526b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-a5434409704baf689054334f75a7f13f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-c190414eff2f2cc56c4ab91197e5d530.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-c64df45198fa83abd401b9e2fff216c0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-cc8084ab121d69504479a71c5132fb69.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-f55d2b753586bba3579399fbd3281730.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.cache/redux.state" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/redux.state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/about/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/chunk-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/chunk-map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/about/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/about/page-data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/page-data/app-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/app-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/contact/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/contact/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/index/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/index/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/projects/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/projects/page-data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles.f7c2d88a60e4482c027a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/styles.3e9d30ee6cf4046454bd.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/webpack.stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/webpack.stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AltCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AltCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about/About.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/About.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact/contact.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/contact.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/Project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/project/Project.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/Project.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/projectList.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/projectList.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/Project.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/projectList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/projectList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/projects.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/projects.style.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/about.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/site/about.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/components-containers.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts/components-containers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/front-end-silver-bullet.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts/front-end-silver-bullet.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/header.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/site/header.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/i-dont-know-it-all.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts/i-dont-know-it-all.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/new-year-same-ie.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts/new-year-same-ie.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/presentation-framework.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts/presentation-framework.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/typescript-blessing-menace.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts/typescript-blessing-menace.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data/projects" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -75,19 +112,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/site" />
+      <recent name="$PROJECT_DIR$/src/data/posts" />
+      <recent name="$PROJECT_DIR$/src/components/projects" />
+      <recent name="$PROJECT_DIR$/src/components/contact" />
+      <recent name="$PROJECT_DIR$/src/components/project" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/projects" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/data" />
       <recent name="$PROJECT_DIR$/src/components/home" />
       <recent name="$PROJECT_DIR$/src/wrapper" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/projects" />
-      <recent name="$PROJECT_DIR$/src/components/contact" />
-      <recent name="$PROJECT_DIR$/src/components/project" />
-      <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -142,7 +179,8 @@
       <workItem from="1575818601914" duration="5414000" />
       <workItem from="1575847929682" duration="4802000" />
       <workItem from="1575939341584" duration="1153000" />
-      <workItem from="1576006247137" duration="6208000" />
+      <workItem from="1576006247137" duration="6636000" />
+      <workItem from="1576089238171" duration="6901000" />
     </task>
     <servers />
   </component>
@@ -167,15 +205,15 @@
       <screen x="0" y="0" width="3840" height="1080" />
     </state>
     <state x="2333" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1080@0.0.3840.1080" timestamp="1576010713434" />
-    <state x="2269" y="302" width="740" height="476" key="find.popup" timestamp="1576019186985">
-      <screen x="0" y="0" width="3840" height="1080" />
+    <state x="940" y="294" width="740" height="476" key="find.popup" timestamp="1576104072991">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="940" y="294" width="740" height="476" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1575930711972" />
+    <state x="940" y="294" width="740" height="476" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576104072991" />
     <state x="2269" y="302" width="740" height="476" key="find.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1576019186985" />
-    <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup" timestamp="1576020379764">
-      <screen x="0" y="0" width="3840" height="1080" />
+    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup" timestamp="1576106527596">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1575925071659" />
+    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576106527596" />
     <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1576020379764" />
   </component>
 </project>

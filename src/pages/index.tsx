@@ -29,7 +29,7 @@ interface IHeaderQuery {
 interface IHeaderNode {
   node: {
     id: string;
-    childDataJson: {
+    childSiteJson: {
       id: string;
       header: IHeader;
     };
@@ -62,6 +62,7 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
 
   public render() {
+    console.log(this.props);
     return (
       <div className={'appGrid'}>
         <Navigation />
@@ -70,7 +71,7 @@ export default class extends React.Component<IndexPageProps, {}> {
             <Blobs props={this.props.location.pathname} />
             <Banner
               header={
-                this.props.data.allFile.edges[0].node.childDataJson.header
+                this.props.data.allFile.edges[0].node.childSiteJson.header
               }
             />
             <Home props={this.props.data.allMarkdownRemark.edges} />
@@ -84,7 +85,10 @@ export default class extends React.Component<IndexPageProps, {}> {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark (
+      sort: { order: DESC, fields: [frontmatter___date]},
+      filter: {fileAbsolutePath: {regex: "/posts/"}}
+    ){
       totalCount
       edges {
         node {
@@ -99,12 +103,12 @@ export const pageQuery = graphql`
       }
     }
     allFile(
-      filter: { name: { eq: "header" }, sourceInstanceName: { eq: "data" } }
+      filter: { name: { eq: "header" }, sourceInstanceName: { eq: "site" } }
     ) {
       edges {
         node {
           id
-          childDataJson {
+          childSiteJson {
             id
             header {
               icon

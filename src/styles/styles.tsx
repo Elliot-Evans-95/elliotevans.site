@@ -320,7 +320,7 @@ export const BlogCard = styled.section`
   box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
 
   @media (min-width: 45em) {
-    padding: 0;
+    padding: 1rem;
   }
 
   ::before {

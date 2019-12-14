@@ -36,7 +36,7 @@ export interface IPageAbout {
 interface IHeaderNode {
   node: {
     id: string;
-    childDataJson: {
+    childSiteJson: {
       id: string;
       header: IHeader;
       about: IPageAbout;
@@ -71,12 +71,14 @@ export default class extends React.Component<IndexPageProps, {}> {
   constructor(props: any, context: any) {
     super(props, context);
 
+    console.log(props);
+
     this._header = this.props.data.allFile.edges.filter(
-      edge => edge.node.childDataJson.header !== null
-    )[0].node.childDataJson.header;
+      edge => edge.node.childSiteJson.header !== null
+    )[0].node.childSiteJson.header;
     this._about = this.props.data.allFile.edges.filter(
-      edge => edge.node.childDataJson.about !== null
-    )[0].node.childDataJson.about;
+      edge => edge.node.childSiteJson.about !== null
+    )[0].node.childSiteJson.about;
   }
 
   public render() {
@@ -116,13 +118,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(
-      filter: { sourceInstanceName: { eq: "data" }, extension: { eq: "json" } }
-    ) {
+    allFile(filter: {name: {in: ["header", "about"]}, sourceInstanceName: {eq: "site"}}) {
       edges {
         node {
           id
-          childDataJson {
+          childSiteJson {
+            id
             header {
               icon
               heading

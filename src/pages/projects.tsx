@@ -30,7 +30,7 @@ interface IHeaderQuery {
 interface IHeaderNode {
   node: {
     id: string;
-    childDataJson: {
+    childSiteJson: {
       id: string;
       header: IHeader;
     };
@@ -72,7 +72,7 @@ export default class extends React.Component<IndexPageProps, {}> {
             <Blobs props={this.props.location.pathname} />
             <Banner
               header={
-                this.props.data.allFile.edges[0].node.childDataJson.header
+                this.props.data.allFile.edges[0].node.childSiteJson.header
               }
             />
             <Projects props={this.props.data.allMarkdownRemark.edges} />
@@ -86,7 +86,10 @@ export default class extends React.Component<IndexPageProps, {}> {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark (
+      sort: { order: DESC, fields: [frontmatter___date]},
+      filter: {fileAbsolutePath: {regex: "/projects/"}}
+    ) {
       totalCount
       edges {
         node {
@@ -101,12 +104,12 @@ export const pageQuery = graphql`
       }
     }
     allFile(
-      filter: { name: { eq: "header" }, sourceInstanceName: { eq: "data" } }
+      filter: { name: { eq: "header" }, sourceInstanceName: { eq: "site" } }
     ) {
       edges {
         node {
           id
-          childDataJson {
+          childSiteJson {
             id
             header {
               icon
@@ -119,3 +122,39 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+// export const pageQuery = graphql`
+//   query {
+//     allMarkdownRemark {
+//       totalCount
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             date(formatString: "DD MMMM, YYYY")
+//           }
+//           excerpt
+//           timeToRead
+//         }
+//       }
+//     }
+//     allFile(
+//       filter: { name: { eq: "header" }, sourceInstanceName: { eq: "data" } }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           childDataJson {
+//             id
+//             header {
+//               icon
+//               heading
+//               subHeading
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

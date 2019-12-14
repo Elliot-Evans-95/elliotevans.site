@@ -5,15 +5,26 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-transformer-json`,
-      // options: {
-      //   typeName: `Json`,
-      // },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data`,
+        name: `posts`,
+        path: `${__dirname}/src/data/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/data/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `site`,
+        path: `${__dirname}/src/data/site`,
       },
     },
     `gatsby-plugin-typescript`,

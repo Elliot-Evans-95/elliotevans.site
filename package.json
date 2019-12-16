@@ -19,7 +19,6 @@
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.9",
     "isomorphic-fetch": "^2.2.1",
-    "now": "^16.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1"
@@ -57,10 +56,10 @@
     "develop": "gatsby develop",
     "format": "yarn format:style && yarn format:script",
     "format:style": "stylelint \"src/**/*.css\"",
-    "format:script": "prettier --parser typescript --write \"src/**/*.ts*\"",
+    "format:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "test": "react-scripts test",
-    "deploy": "now --prod"
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "engines": {
     "yarn": ">=1.19.1",

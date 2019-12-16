@@ -39,14 +39,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
-    `gatsby-transformer-remark`,
-    {
-      resolve: 'gatsby-plugin-apollo',
-      options: {
-        typeName: 'EEAPI',
-        fieldName: 'elliotEvans',
-        url: 'https://elliotevans.site/graphql',
-      },
-    },
+    `gatsby-transformer-remark`
   ],
 };

@@ -31,11 +31,10 @@ pre {
 }
 
 a {
-  -webkit-text-decoration-skip: objects;
+  text-decoration-skip-ink: auto;
 }
 
 abbr[title] {
-  text-decoration: underline;
   text-decoration: underline dotted;
 }
 

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { FormSubmitLabel, FormSubmitSubmit } from '../../styles/styles';
 import { ContactForm, ContactMain } from './contact.style';
 import PageHeader from './pageHeader';
-import { useState } from 'react';
 import InputGroup from './inputGroup';
 
 const Contact = () => {

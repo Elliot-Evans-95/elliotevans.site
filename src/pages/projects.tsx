@@ -8,7 +8,6 @@ import '../styles/index.css';
 
 // home stuff
 import Navigation from '../components/navigation';
-import { Home } from '../components/home/home';
 import Blobs from '../blobs/blobs';
 import Banner from '../components/banner';
 import Projects from '../components/projects/projects';
@@ -123,39 +122,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-// export const pageQuery = graphql`
-//   query {
-//     allMarkdownRemark {
-//       totalCount
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             title
-//             date(formatString: "DD MMMM, YYYY")
-//           }
-//           excerpt
-//           timeToRead
-//         }
-//       }
-//     }
-//     allFile(
-//       filter: { name: { eq: "header" }, sourceInstanceName: { eq: "data" } }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           childDataJson {
-//             id
-//             header {
-//               icon
-//               heading
-//               subHeading
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

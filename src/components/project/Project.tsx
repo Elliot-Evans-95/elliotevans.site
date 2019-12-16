@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { memo } from 'react';
-import { ProjectCard, ProjectCardContent, ProjectCardHeading, ProjectCardImage } from '../../styles/styles';
+import {
+  ProjectCard,
+  ProjectCardContent,
+  ProjectCardHeading,
+  ProjectCardImage,
+} from '../../styles/styles';
 
 interface IProjectCard {
   index: number;
@@ -17,11 +22,17 @@ interface IProjectCard {
 }
 
 const Project = (project: IProjectCard) => {
-  const tiltImageViaIndex = (index: number) => index % 2 ? 'tilt-right' : 'tilt-left';
+  const tiltImageViaIndex = (index: number) =>
+    index % 2 ? 'tilt-right' : 'tilt-left';
   return (
     <ProjectCard>
-      <ProjectCardImage src={project.project.frontmatter.featuredImage} className={tiltImageViaIndex(project.index)}/>
-      <ProjectCardHeading>{project.project.frontmatter.title}</ProjectCardHeading>
+      <ProjectCardImage
+        src={project.project.frontmatter.featuredImage}
+        className={tiltImageViaIndex(project.index)}
+      />
+      <ProjectCardHeading>
+        {project.project.frontmatter.title}
+      </ProjectCardHeading>
       <ProjectCardContent>
         <p>{project.project.excerpt}</p>
       </ProjectCardContent>

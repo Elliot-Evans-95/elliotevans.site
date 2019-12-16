@@ -26,7 +26,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -47,7 +47,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -99,6 +99,22 @@ input {
 button,
 select {
   text-transform: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+a,
+cite,
+label {
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -168,21 +184,7 @@ summary {
   display: list-item;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-button,
-a,
-cite,
-label {
-  font-family: 'Work Sans', sans-serif;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* CUSTOM */
 
 .appGrid {
   background: #282c34;

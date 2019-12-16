@@ -14,7 +14,10 @@ const BlogList = (blog: IHomePageProps) => {
 
   const blogPosts = blog.blog.map((post: IEdge) => (
     <BlogCard key={post.node.id}>
-      <PostTitle text={post.node.frontmatter.title} link={post.node.fields.slug}/>
+      <PostTitle
+        text={post.node.frontmatter.title}
+        link={post.node.fields.slug}
+      />
       <div>{generateCoffee(post.node.timeToRead)}</div>
       <p>{post.node.excerpt}</p>
       <Cite>{post.node.frontmatter.date}</Cite>

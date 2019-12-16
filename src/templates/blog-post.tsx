@@ -1,5 +1,5 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import * as React from 'react';
+import { graphql } from 'gatsby';
 import Navigation from '../components/navigation';
 import { BlogPostWrapper, Main } from '../styles/styles';
 import Blobs from '../blobs/blobs';
@@ -26,21 +26,17 @@ export default ({ data }: IndexBlogPostProps) => {
       <Navigation />
       <Main>
         {/*<Blobs props={location.pathname} pageType={"post"} />*/}
-        <Blobs props={"test"} pageType={"post"} />
-        <Banner
-          header={
-            data.allFile.edges[0].node.childSiteJson.header
-          }
-        />
+        <Blobs props={'test'} pageType={'post'} />
+        <Banner header={data.allFile.edges[0].node.childSiteJson.header} />
         <BlogPostWrapper>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </BlogPostWrapper>
       </Main>
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {

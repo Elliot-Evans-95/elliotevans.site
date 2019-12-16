@@ -3,10 +3,27 @@ import { ProjectsListWrapper } from './ProjectList.style';
 import { memo } from 'react';
 import Project from '../project/Project';
 
-const ProjectList = (projects: Array<any>) => {
-  const renderProjects = (projects: Array<any>) =>
-    projects.projects.map(project => (
-      <Project key={project.node.id} project={project.node.excerpt} />
+interface IProjects {
+  projects: Array<IProject>;
+}
+
+export interface IProject {
+  node: {
+    excerpt: string;
+    frontmatter: {
+      title: string;
+      date: string;
+      featuredImage: string;
+    };
+    id: string;
+    timeToRead: number;
+  }
+}
+
+const ProjectList = (projects: IProjects) => {
+  const renderProjects = (projects: IProjects) =>
+    projects.projects.map( (project, index) => (
+      <Project key={project.node.id} project={project.node} index={index}/>
     ));
 
   return <ProjectsListWrapper>{renderProjects(projects)}</ProjectsListWrapper>;

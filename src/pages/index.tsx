@@ -22,7 +22,7 @@ interface IndexPageProps {
   };
 }
 
-interface IHeaderQuery {
+export interface IHeaderQuery {
   edges: Array<IHeaderNode>;
 }
 
@@ -47,6 +47,9 @@ export interface INode {
     date: string;
     title: string;
   };
+  fields: {
+    slug: string;
+  }
   id: string;
 }
 
@@ -62,7 +65,6 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
 
   public render() {
-    console.log(this.props);
     return (
       <div className={'appGrid'}>
         <Navigation />
@@ -85,10 +87,10 @@ export default class extends React.Component<IndexPageProps, {}> {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark (
-      sort: { order: DESC, fields: [frontmatter___date]},
-      filter: {fileAbsolutePath: {regex: "/posts/"}}
-    ){
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
+    ) {
       totalCount
       edges {
         node {
@@ -96,6 +98,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
           }
           excerpt
           timeToRead

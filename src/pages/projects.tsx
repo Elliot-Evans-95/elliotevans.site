@@ -47,6 +47,7 @@ export interface INode {
   frontmatter: {
     date: string;
     title: string;
+    featuredImage: string;
   };
   id: string;
 }
@@ -63,7 +64,6 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
 
   public render() {
-    console.log(this.props);
     return (
       <div className={'appGrid'}>
         <Navigation />
@@ -86,9 +86,9 @@ export default class extends React.Component<IndexPageProps, {}> {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark (
-      sort: { order: DESC, fields: [frontmatter___date]},
-      filter: {fileAbsolutePath: {regex: "/projects/"}}
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
     ) {
       totalCount
       edges {
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            featuredImage
           }
           excerpt
           timeToRead

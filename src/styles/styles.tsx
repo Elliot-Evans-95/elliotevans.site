@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import NavLink from 'gatsby-link';
 
+// TODO: Move to use gatsby-image for images
+// import Img from "gatsby-image";
+
 export const Title = styled.h1`
   font-size: 1.25rem;
   margin-top: 0;
@@ -426,4 +429,65 @@ export const MainProjectImage = styled.img`
   width: 100%;
   border: 1em solid white;
   box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
+`;
+
+export const ProjectCard = styled.section`
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 4rem 0;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+
+  :first-of-type {
+    margin-top: 2rem;
+  }
+
+  :last-child {
+    margin-bottom: 6rem;
+  }
+`;
+
+export const ProjectCardImage = styled.img `
+  position: absolute;
+  right: -2rem;
+  top: -1rem;
+  border: 1rem solid white;
+  box-shadow: 0 -1px 12px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
+  max-width: 50px;
+  background: white;
+`;
+
+export const ProjectCardHeading = styled.h2 `
+  display: block;
+  background: #0078d7;
+  width: 100;
+  padding: 1rem;
+  box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
+  border-radius: 1rem;
+`;
+
+export const ProjectCardContent = styled.div ``;
+
+export const BlogPostWrapper = styled.section `
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
 `;

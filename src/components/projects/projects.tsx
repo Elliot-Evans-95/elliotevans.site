@@ -5,7 +5,6 @@ import PageHeader from '../contact/pageHeader';
 import { ProjectsMain } from './projects.style';
 
 const Projects = (projects: any) => {
-  console.log(projects);
   return (
     <ProjectsMain>
       <PageHeader

@@ -21,7 +21,8 @@ const Blobs = (pathname: any) => {
         <div id="blob-12" />
       </div>
     );
-  } else if (pathname.props.includes('post')) {
+  // } else if (pathname.props.includes('post')) {
+  } else if (pathname.pageType && pathname.pageType === "post") {
     return (
       <div className={'blobs'}>
         <div id="blob-2" />

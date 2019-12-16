@@ -71,8 +71,6 @@ export default class extends React.Component<IndexPageProps, {}> {
   constructor(props: any, context: any) {
     super(props, context);
 
-    console.log(props);
-
     this._header = this.props.data.allFile.edges.filter(
       edge => edge.node.childSiteJson.header !== null
     )[0].node.childSiteJson.header;
@@ -118,7 +116,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: {name: {in: ["header", "about"]}, sourceInstanceName: {eq: "site"}}) {
+    allFile(
+      filter: {
+        name: { in: ["header", "about"] }
+        sourceInstanceName: { eq: "site" }
+      }
+    ) {
       edges {
         node {
           id

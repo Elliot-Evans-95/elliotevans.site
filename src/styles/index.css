@@ -234,3 +234,12 @@ label {
 .selected {
   text-decoration: underline;
 }
+
+.tilt-left {
+  transform: rotate(-12deg);
+
+}
+
+.tilt-right {
+  transform: rotate(12deg);
+}

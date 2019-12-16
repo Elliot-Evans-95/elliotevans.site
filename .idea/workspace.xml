@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e55cce7f-b164-4d78-9453-98a8e5d6ff94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/assets/images/about.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/ar-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/ar-screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/contact.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/elk-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/elk-screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/home.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/nshc-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/nshc-site.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/post.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/presentation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/roundabout.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/skills.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/throughout-screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/work.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AltCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/altCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about/About.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/about.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/post/Post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/initialState.js" beforeDir="false" />
-    </list>
+    <list default="true" id="e55cce7f-b164-4d78-9453-98a8e5d6ff94" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,11 +56,11 @@
       <recent name="$PROJECT_DIR$/src/components/project" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/images" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/data/projects" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/data" />
-      <recent name="$PROJECT_DIR$/src/components/home" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -163,6 +142,10 @@
     </state>
     <state x="1021" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576459308455" />
     <state x="2333" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1080@0.0.3840.1080" timestamp="1576010713434" />
+    <state x="408" y="127" key="CommitChangelistDialog2" timestamp="1576459637542">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="408" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1576459637542" />
     <state x="225" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1576457819303">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -172,10 +155,10 @@
     </state>
     <state x="926" y="294" width="754" height="476" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576458643260" />
     <state x="2269" y="302" width="740" height="476" key="find.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1576019186985" />
-    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup" timestamp="1576458610161">
+    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup" timestamp="1576459692012">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576458610161" />
+    <state x="938" y="196" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1576459692012" />
     <state x="2143" y="202" width="670" height="676" key="search.everywhere.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1576020379764" />
   </component>
 </project>

@@ -47,7 +47,7 @@
     "tslint-config-prettier": "^1.18.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
+    "src/**/*.{ts,tsx,css,json}": [
       "yarn format",
       "git add"
     ]

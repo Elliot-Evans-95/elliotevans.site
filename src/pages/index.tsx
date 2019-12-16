@@ -49,7 +49,7 @@ export interface INode {
   };
   fields: {
     slug: string;
-  }
+  };
   id: string;
 }
 

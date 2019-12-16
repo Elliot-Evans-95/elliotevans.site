@@ -7,13 +7,12 @@ interface IPostTitle {
   link: string;
 }
 
-const PostTitle = ({ text, link }: IPostTitle) =>
-  (
-    <BlogCardLink to={link}>
-      <BlogCardTitle>
-        <h2>{text}</h2>
-      </BlogCardTitle>
-    </BlogCardLink>
-  );
+const PostTitle = ({ text, link }: IPostTitle) => (
+  <BlogCardLink to={link}>
+    <BlogCardTitle>
+      <h2>{text}</h2>
+    </BlogCardTitle>
+  </BlogCardLink>
+);
 
 export default memo(PostTitle);

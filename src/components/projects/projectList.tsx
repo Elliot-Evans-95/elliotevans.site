@@ -17,13 +17,13 @@ export interface IProject {
     };
     id: string;
     timeToRead: number;
-  }
+  };
 }
 
 const ProjectList = (projects: IProjects) => {
   const renderProjects = (projects: IProjects) =>
-    projects.projects.map( (project, index) => (
-      <Project key={project.node.id} project={project.node} index={index}/>
+    projects.projects.map((project, index) => (
+      <Project key={project.node.id} project={project.node} index={index} />
     ));
 
   return <ProjectsListWrapper>{renderProjects(projects)}</ProjectsListWrapper>;

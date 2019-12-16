@@ -453,41 +453,41 @@ export const ProjectCard = styled.section`
   }
 `;
 
-export const ProjectCardImage = styled.img `
+export const ProjectCardImage = styled.img`
   position: absolute;
   right: -2rem;
   top: -1rem;
   border: 1rem solid white;
-  box-shadow: 0 -1px 12px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
+  box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
   max-width: 50px;
   background: white;
 `;
 
-export const ProjectCardHeading = styled.h2 `
+export const ProjectCardHeading = styled.h2`
   display: block;
   background: #0078d7;
   width: 100;
   padding: 1rem;
-  box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.3), 0px -6px 20px rgba(0,0,0,0.22);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.3),
+    0px -6px 20px rgba(0, 0, 0, 0.22);
   border-radius: 1rem;
 `;
 
-export const ProjectCardContent = styled.div ``;
+export const ProjectCardContent = styled.div``;
 
-export const BlogPostWrapper = styled.section `
+export const BlogPostWrapper = styled.section`
   position: relative;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
   box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0px -6px 20px rgba(0, 0, 0, 0.22);
-  
+
   h1 {
     text-align: center;
   }
-  
+
   p {
     text-align: justify;
   }
-  
 `;

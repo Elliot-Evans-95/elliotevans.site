@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { Main } from '../../styles/styles';
 import { AboutBanner } from './About.style';
 import Helmet from 'react-helmet';
-import AltCard from '../AltCard';
+import AltCard from '../altCard';
 import { IPageAbout } from '../../pages/about';
 
 interface IAbout {

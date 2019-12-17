@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { memo } from 'react';
 import { Main } from '../../styles/styles';
-import { AboutBanner } from './About.style';
+import { AboutBanner } from './about.style';
 import Helmet from 'react-helmet';
 import AltCard from '../altCard';
 import { IPageAbout } from '../../pages/about';

@@ -11,6 +11,7 @@ import Navigation from '../components/navigation';
 import Blobs from '../blobs/blobs';
 import Banner from '../components/banner';
 import About from '../components/about/about';
+import Helmet from 'react-helmet';
 
 interface IndexPageProps {
   location: Location;
@@ -80,9 +81,22 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
 
   public render() {
+    const title = 'Elliot Evans - About';
+    const desc = 'About Page';
+    const keywords =
+      'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
+
     if (this._about && this._header) {
       return (
         <div className={'appGrid'}>
+          <Main>
+            <Helmet>
+              <title>{title}</title>
+              <meta name={'description'} content={desc} />
+              <meta name={'keywords'} content={keywords} />
+            </Helmet>
+
+          </Main>
           <Navigation />
           <React.StrictMode>
             <Main>

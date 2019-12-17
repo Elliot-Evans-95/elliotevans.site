@@ -6,6 +6,7 @@ Personal site created to showcase projects and also to publicise thoughts and op
 
 ## TODO
 
-- Add tests to the project
-- Cleanup types
-- Add meta tags for all pages
+- Add tests to the project ()
+- Cleanup types ()
+- Add meta tags for all pages (X)
+- Add meta text info into json files ()

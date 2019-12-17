@@ -9,29 +9,13 @@ interface IHomePageProps {
 }
 
 export const Home = (home: IHomePageProps) => {
-  const title = 'Elliot Evans - Home';
-  const desc = 'Home Page';
-  const keywords =
-    'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
-
   if (home.props.length === 0) {
     return (
-      <Main>
-        <Helmet>
-          <title>{title}</title>
-          <meta name={'description'} content={desc} />
-          <meta name={'keywords'} content={keywords} />
-        </Helmet>
-      </Main>
+      <Main/>
     );
   } else {
     return (
       <Main>
-        <Helmet>
-          <title>{title}</title>
-          <meta name={'description'} content={desc} />
-          <meta name={'keywords'} content={keywords} />
-        </Helmet>
         <BlogList blog={home.props} />
       </Main>
     );

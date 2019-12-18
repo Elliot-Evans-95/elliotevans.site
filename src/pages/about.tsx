@@ -3,73 +3,21 @@ import { graphql } from 'gatsby';
 import { Main } from '../styles/styles';
 import Footer from '../components/footer';
 
-// default style stuff
-import '../styles/index.css';
-
-// about stuff
 import Navigation from '../components/navigation';
 import Blobs from '../blobs/blobs';
 import Banner from '../components/banner';
 import About from '../components/about/about';
 import Helmet from 'react-helmet';
+import { AboutPageProps, IAboutProps, IPageAbout } from '../models/about.types';
 
-interface IndexPageProps {
-  location: Location;
-  data: {
-    allMarkdownRemark: {
-      edges: Array<IEdge>;
-    };
-    allFile: IHeaderQuery;
-  };
-}
+import '../styles/index.css';
+import { IHeader } from '../models/shared.types';
 
-interface IHeaderQuery {
-  edges: Array<IHeaderNode>;
-}
-
-export interface IPageAbout {
-  paraOne: string;
-  paraTwo: string;
-  paraThree: string;
-  paraFour: string;
-}
-
-interface IHeaderNode {
-  node: {
-    id: string;
-    childSiteJson: {
-      id: string;
-      header: IHeader;
-      about: IPageAbout;
-    };
-  };
-}
-
-export interface IEdge {
-  node: INode;
-}
-
-export interface INode {
-  excerpt: string;
-  timeToRead: number;
-  frontmatter: {
-    date: string;
-    title: string;
-  };
-  id: string;
-}
-
-export interface IHeader {
-  icon: string;
-  heading: string;
-  subHeading: string;
-}
-
-export default class extends React.Component<IndexPageProps, {}> {
+export default class extends React.Component<AboutPageProps, {}> {
   private readonly _header: IHeader;
   private readonly _about: IPageAbout;
 
-  constructor(props: any, context: any) {
+  constructor(props: IAboutProps, context: Object) {
     super(props, context);
 
     this._header = this.props.data.allFile.edges.filter(
@@ -95,7 +43,6 @@ export default class extends React.Component<IndexPageProps, {}> {
               <meta name={'description'} content={desc} />
               <meta name={'keywords'} content={keywords} />
             </Helmet>
-
           </Main>
           <Navigation />
           <React.StrictMode>

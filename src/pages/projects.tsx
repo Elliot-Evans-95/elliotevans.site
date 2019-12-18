@@ -3,63 +3,17 @@ import { graphql } from 'gatsby';
 import { Main } from '../styles/styles';
 import Footer from '../components/footer';
 
-// default style stuff
-import '../styles/index.css';
-
-// home stuff
 import Navigation from '../components/navigation';
 import Blobs from '../blobs/blobs';
 import Banner from '../components/banner';
 import Projects from '../components/projects/projects';
 import Helmet from 'react-helmet';
+import { ProjectPageProps } from '../models/project.types';
 
-interface IndexPageProps {
-  location: Location;
-  data: {
-    allMarkdownRemark: {
-      edges: Array<IEdge>;
-    };
-    allFile: IHeaderQuery;
-  };
-}
+import '../styles/index.css';
 
-interface IHeaderQuery {
-  edges: Array<IHeaderNode>;
-}
-
-interface IHeaderNode {
-  node: {
-    id: string;
-    childSiteJson: {
-      id: string;
-      header: IHeader;
-    };
-  };
-}
-
-export interface IEdge {
-  node: INode;
-}
-
-export interface INode {
-  excerpt: string;
-  timeToRead: number;
-  frontmatter: {
-    date: string;
-    title: string;
-    featuredImage: string;
-  };
-  id: string;
-}
-
-export interface IHeader {
-  icon: string;
-  heading: string;
-  subHeading: string;
-}
-
-export default class extends React.Component<IndexPageProps, {}> {
-  constructor(props: any, context: any) {
+export default class extends React.Component<ProjectPageProps, {}> {
+  constructor(props: any, context: Object) {
     super(props, context);
   }
 

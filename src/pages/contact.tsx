@@ -3,62 +3,17 @@ import { graphql } from 'gatsby';
 import { Main } from '../styles/styles';
 import Footer from '../components/footer';
 
-// default style stuff
-import '../styles/index.css';
-
-// home stuff
 import Navigation from '../components/navigation';
 import Blobs from '../blobs/blobs';
 import Banner from '../components/banner';
 import Contact from '../components/contact/contact';
 import Helmet from 'react-helmet';
+import { ContactPageProps, IContactProps } from '../models/contact.types';
 
-interface IndexPageProps {
-  location: Location;
-  data: {
-    allMarkdownRemark: {
-      edges: Array<IEdge>;
-    };
-    allFile: IHeaderQuery;
-  };
-}
+import '../styles/index.css';
 
-interface IHeaderQuery {
-  edges: Array<IHeaderNode>;
-}
-
-interface IHeaderNode {
-  node: {
-    id: string;
-    childSiteJson: {
-      id: string;
-      header: IHeader;
-    };
-  };
-}
-
-export interface IEdge {
-  node: INode;
-}
-
-export interface INode {
-  excerpt: string;
-  timeToRead: number;
-  frontmatter: {
-    date: string;
-    title: string;
-  };
-  id: string;
-}
-
-export interface IHeader {
-  icon: string;
-  heading: string;
-  subHeading: string;
-}
-
-export default class extends React.Component<IndexPageProps, {}> {
-  constructor(props: any, context: any) {
+export default class extends React.Component<ContactPageProps, {}> {
+  constructor(props: IContactProps, context: Object) {
     super(props, context);
   }
 

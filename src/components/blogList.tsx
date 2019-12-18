@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BlogCard, Cite } from '../styles/styles';
 import { memo } from 'react';
 import PostTitle from './post/PostTitle';
-import { IEdge } from '../pages';
+import { IEdge } from '../models/shared.types';
 
 interface IHomePageProps {
   blog: Array<IEdge>;

@@ -4,6 +4,7 @@ import { memo } from 'react';
 import PageHeader from '../contact/pageHeader';
 import { ProjectsMain } from './projects.style';
 
+// TODO: Type this up
 const Projects = (projects: any) => {
   return (
     <ProjectsMain>

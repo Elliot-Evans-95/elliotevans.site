@@ -1,4 +1,4 @@
-import { IHeader } from './shared.types';
+import { IEdge, IHeader } from './shared.types';
 
 export interface IndexPageProps {
   location: Location;
@@ -24,7 +24,7 @@ export interface IHeaderNode {
   };
 }
 
-export interface INode {
+export interface IHomeNode {
   excerpt: string;
   timeToRead: number;
   frontmatter: {
@@ -35,10 +35,6 @@ export interface INode {
     slug: string;
   };
   id: string;
-}
-
-export interface IEdge {
-  node: INode;
 }
 
 export interface IHomePageProps {
@@ -52,16 +48,16 @@ export interface IIndexProps {
       edges: Array<IEdge>;
     };
     allFile: IHeaderQuery;
-  }
+  };
   location: Location;
   // navigate: ƒ navigate(to, options)
   pageContext: {
-    isCreatedByStatefulCreatePages: true
-  }
+    isCreatedByStatefulCreatePages: true;
+  };
   // pageResources: {json: {…}, page: {…}, component: ƒ}
-  path: string
+  path: string;
   pathContext: {
-    isCreatedByStatefulCreatePages: true
-  }
-  uri: string
+    isCreatedByStatefulCreatePages: true;
+  };
+  uri: string;
 }

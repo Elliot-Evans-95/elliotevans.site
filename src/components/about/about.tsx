@@ -4,7 +4,7 @@ import { Main } from '../../styles/styles';
 import { AboutBanner } from './about.style';
 import Helmet from 'react-helmet';
 import AltCard from '../altCard';
-import { IPageAbout } from '../../pages/about';
+import { IPageAbout } from '../../models/about.types';
 
 interface IAbout {
   about: IPageAbout;

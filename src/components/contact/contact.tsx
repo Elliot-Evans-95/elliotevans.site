@@ -3,6 +3,7 @@ import { FormSubmitLabel, FormSubmitSubmit } from '../../styles/styles';
 import { ContactForm, ContactMain } from './contact.style';
 import PageHeader from './pageHeader';
 import InputGroup from './inputGroup';
+import { memo } from 'react';
 
 const Contact = () => {
   const fieldData = [
@@ -54,4 +55,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

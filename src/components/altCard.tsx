@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AltCardContainer } from '../styles/styles';
 import { memo } from 'react';
-import { IPageAbout } from '../pages/about';
+import { IPageAbout } from '../models/about.types';
 
 interface IAboutTextProps {
   about: IPageAbout;

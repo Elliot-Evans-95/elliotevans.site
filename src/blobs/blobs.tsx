@@ -3,6 +3,7 @@ import { memo } from 'react';
 
 import './blobs.css';
 
+// TODO: convert this to only use page type
 const Blobs = (pathname: any) => {
   if (pathname.props === '/') {
     return (

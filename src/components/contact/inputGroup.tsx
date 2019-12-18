@@ -1,13 +1,13 @@
-// @flow
-
-import React from 'react';
+import * as React from 'react';
 import {
   InputBox,
   InputField,
   InputLabel,
   TextAreaField,
 } from '../../styles/styles';
+import { memo } from 'react';
 
+// TODO: Add types
 const InputGroup = ({ label, placeholder, type }) => {
   if (type === 'textarea') {
     return (
@@ -40,4 +40,4 @@ const InputGroup = ({ label, placeholder, type }) => {
   }
 };
 
-export default InputGroup;
+export default memo(InputGroup);

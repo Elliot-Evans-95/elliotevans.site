@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { memo } from 'react';
 import { Header, MyFace, SubHeading, Title } from '../styles/styles';
-import { IHeader } from '../pages';
+import { IHeader } from '../models/shared.types';
 
 interface IBannerProps {
   header: IHeader;

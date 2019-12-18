@@ -2,22 +2,10 @@ import * as React from 'react';
 import { ProjectsListWrapper } from './projectList.style';
 import { memo } from 'react';
 import Project from '../project/Project';
+import { IProject } from '../../models/project.types';
 
 interface IProjects {
   projects: Array<IProject>;
-}
-
-export interface IProject {
-  node: {
-    excerpt: string;
-    frontmatter: {
-      title: string;
-      date: string;
-      featuredImage: string;
-    };
-    id: string;
-    timeToRead: number;
-  };
 }
 
 const ProjectList = (projects: IProjects) => {

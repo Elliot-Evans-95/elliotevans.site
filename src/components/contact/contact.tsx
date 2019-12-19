@@ -4,9 +4,10 @@ import { ContactForm, ContactMain } from './contact.style';
 import PageHeader from './pageHeader';
 import InputGroup from './inputGroup';
 import { memo } from 'react';
+import { IInput } from '../../models/contact.types';
 
 const Contact = () => {
-  const fieldData = [
+  const fieldData : Array<IInput>= [
     {
       label: 'name',
       placeholder: 'full name',

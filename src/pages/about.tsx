@@ -4,7 +4,7 @@ import { Main } from '../styles/styles';
 import Footer from '../components/footer';
 
 import Navigation from '../components/navigation';
-import Blobs from '../blobs/blobs';
+import Blobs, { PageType } from '../blobs/blobs';
 import Banner from '../components/banner';
 import About from '../components/about/about';
 import Helmet from 'react-helmet';
@@ -47,7 +47,7 @@ export default class extends React.Component<AboutPageProps, {}> {
           <Navigation />
           <React.StrictMode>
             <Main>
-              <Blobs props={this.props.location.pathname} />
+              <Blobs pageType={PageType.ABOUT}/>
               <Banner header={this._header} />
               <About about={this._about} />
             </Main>

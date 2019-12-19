@@ -3,18 +3,21 @@ import ProjectList from './projectList';
 import { memo } from 'react';
 import PageHeader from '../contact/pageHeader';
 import { ProjectsMain } from './projects.style';
+import { IEdge } from '../../models/shared.types';
 
-// TODO: Type this up
-const Projects = (projects: any) => {
-  return (
+interface IProjectsProps {
+  props: Array<IEdge>
+}
+
+const Projects = (projects: IProjectsProps) =>
+  (
     <ProjectsMain>
       <PageHeader
         heading={'Projects'}
         subHeading={'List of my finished or ongoing projects'}
       />
-      <ProjectList projects={projects.props} />
+      <ProjectList projects={projects.props}/>
     </ProjectsMain>
   );
-};
 
 export default memo(Projects);

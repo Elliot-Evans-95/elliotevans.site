@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 
 import Navigation from '../components/navigation';
 import Home from '../components/home/home';
-import Blobs from '../blobs/blobs';
+import Blobs, { PageType } from '../blobs/blobs';
 import Banner from '../components/banner';
 import Helmet from 'react-helmet';
 import { IIndexProps, IndexPageProps } from '../models/home.types';
@@ -34,7 +34,7 @@ export default class extends React.Component<IndexPageProps, {}> {
         <Navigation />
         <React.StrictMode>
           <Main>
-            <Blobs props={this.props.location.pathname} />
+            <Blobs pageType={PageType.DEFAULT}/>
             <Banner
               header={
                 this.props.data.allFile.edges[0].node.childSiteJson.header

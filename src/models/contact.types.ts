@@ -1,4 +1,6 @@
 import { IEdge, IHeader } from './shared.types';
+import InputGroup from '../components/contact/inputGroup';
+import * as React from 'react';
 
 export interface ContactPageProps {
   location: Location;
@@ -34,6 +36,17 @@ export interface IContactNode {
   id: string;
 }
 
+export interface IProjectNode {
+  excerpt: string;
+  timeToRead: number;
+  frontmatter: {
+    date: string;
+    featuredImage: string;
+    title: string;
+  };
+  id: string;
+}
+
 export interface IContactProps {
   children: undefined;
   data: {
@@ -53,4 +66,10 @@ export interface IContactProps {
     isCreatedByStatefulCreatePages: true;
   };
   uri: string;
+}
+
+export interface IInput {
+  label: string;
+  placeholder: string;
+  type: string;
 }

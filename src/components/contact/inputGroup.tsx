@@ -6,9 +6,9 @@ import {
   TextAreaField,
 } from '../../styles/styles';
 import { memo } from 'react';
+import { IInput } from '../../models/contact.types';
 
-// TODO: Add types
-const InputGroup = ({ label, placeholder, type }) => {
+const InputGroup = ({ label, placeholder, type }: IInput) => {
   if (type === 'textarea') {
     return (
       <InputBox>

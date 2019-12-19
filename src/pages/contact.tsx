@@ -4,7 +4,7 @@ import { Main } from '../styles/styles';
 import Footer from '../components/footer';
 
 import Navigation from '../components/navigation';
-import Blobs from '../blobs/blobs';
+import Blobs, { PageType } from '../blobs/blobs';
 import Banner from '../components/banner';
 import Contact from '../components/contact/contact';
 import Helmet from 'react-helmet';
@@ -34,7 +34,7 @@ export default class extends React.Component<ContactPageProps, {}> {
         <Navigation />
         <React.StrictMode>
           <Main>
-            <Blobs props={this.props.location.pathname} />
+            <Blobs pageType={PageType.CONTACT}/>
             <Banner
               header={
                 this.props.data.allFile.edges[0].node.childSiteJson.header

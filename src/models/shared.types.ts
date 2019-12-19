@@ -1,6 +1,6 @@
 import { IAboutNode } from './about.types';
 import { IHomeNode } from './home.types';
-import { IContactNode } from './contact.types';
+import { IContactNode, IProjectNode } from './contact.types';
 
 export interface IHeader {
   icon: string;
@@ -9,5 +9,5 @@ export interface IHeader {
 }
 
 export type IEdge = {
-  node: IHomeNode & IAboutNode & IContactNode;
-}
+  node: IHomeNode & IAboutNode & IContactNode & IProjectNode;
+};

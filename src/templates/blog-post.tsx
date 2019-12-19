@@ -2,10 +2,10 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Navigation from '../components/navigation';
 import { BlogPostWrapper, Main } from '../styles/styles';
-import Blobs from '../blobs/blobs';
+import Blobs, { PageType } from '../blobs/blobs';
 import Footer from '../components/footer';
 import Banner from '../components/banner';
-import { IHeaderQuery } from '../pages';
+import { IHeaderQuery } from '../models/home.types';
 
 interface IndexBlogPostProps {
   data: {
@@ -25,8 +25,7 @@ export default ({ data }: IndexBlogPostProps) => {
     <div className={'appGrid'}>
       <Navigation />
       <Main>
-        {/*<Blobs props={location.pathname} pageType={"post"} />*/}
-        <Blobs props={'test'} pageType={'post'} />
+        <Blobs pageType={PageType.POST} />
         <Banner header={data.allFile.edges[0].node.childSiteJson.header} />
         <BlogPostWrapper>
           <h1>{data.markdownRemark.frontmatter.title}</h1>

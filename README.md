@@ -10,4 +10,4 @@ Personal site created to showcase projects and also to publicise thoughts and op
 - Cleanup types ()
 - Add meta tags for all pages (X)
 - Add meta text info into json files ()
-- Change favicon to image of me ()
+- Change favicon to image of me (X)

@@ -47,7 +47,7 @@ export default class extends React.Component<AboutPageProps, {}> {
           <Navigation />
           <React.StrictMode>
             <Main>
-              <Blobs pageType={PageType.ABOUT}/>
+              <Blobs pageType={PageType.ABOUT} />
               <Banner header={this._header} />
               <About about={this._about} />
             </Main>

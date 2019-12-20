@@ -7,7 +7,9 @@ Personal site created to showcase projects and also to publicise thoughts and op
 ## TODO
 
 - Add tests to the project ()
-- Cleanup types ()
+- Cleanup types (X)
 - Add meta tags for all pages (X)
 - Add meta text info into json files ()
 - Change favicon to image of me (X)
+- Optimise Images (X)
+- PWA Of the site (X)

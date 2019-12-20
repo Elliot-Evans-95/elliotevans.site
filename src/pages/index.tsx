@@ -34,7 +34,7 @@ export default class extends React.Component<IndexPageProps, {}> {
         <Navigation />
         <React.StrictMode>
           <Main>
-            <Blobs pageType={PageType.DEFAULT}/>
+            <Blobs pageType={PageType.DEFAULT} />
             <Banner
               header={
                 this.props.data.allFile.edges[0].node.childSiteJson.header

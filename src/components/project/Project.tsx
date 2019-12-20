@@ -29,6 +29,7 @@ const Project = (project: IProjectCard) => {
       <ProjectCardImage
         src={project.project.frontmatter.featuredImage}
         className={tiltImageViaIndex(project.index)}
+        alt="TODO Image"
       />
       <ProjectCardHeading>
         {project.project.frontmatter.title}

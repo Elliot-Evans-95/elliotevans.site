@@ -39,6 +39,22 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Elliot Evans Site`,
+        short_name: `EE Site`,
+        lang: "en",
+        description: "Blog and Portfolio site of Elliot Evans",
+        start_url: `/`,
+        background_color: `rgba(76, 74, 72, 0.75)`,
+        theme_color: `#0078d7`,
+        display: `standalone`,
+        icon: `src/assets/images/header-icon.webp`,
+        legacy: false,
+      },
+    },
   ],
 };

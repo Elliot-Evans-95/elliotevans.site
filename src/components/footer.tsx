@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <EEFooter>
       <p>
-        Made with{' '}
-        <span role="img" aria-label="coffee">
-          ☕
+        Version: 1.0.0{' '}
+        <span role="img" aria-label="party popper">
+          🎉
         </span>{' '}
         | 2019
       </p>

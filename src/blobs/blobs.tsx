@@ -4,10 +4,10 @@ import { memo } from 'react';
 import './blobs.css';
 
 export enum PageType {
-  POST = "Post",
-  ABOUT = "About",
-  CONTACT = "Contact",
-  DEFAULT = "Default"
+  POST = 'Post',
+  ABOUT = 'About',
+  CONTACT = 'Contact',
+  DEFAULT = 'Default',
 }
 
 export interface IBlobProps {
@@ -15,18 +15,22 @@ export interface IBlobProps {
 }
 
 const Blobs = (pageType: IBlobProps) => {
-  if (pageType.pageType === PageType.POST || pageType.pageType === PageType.ABOUT || pageType.pageType === PageType.CONTACT) {
+  if (
+    pageType.pageType === PageType.POST ||
+    pageType.pageType === PageType.ABOUT ||
+    pageType.pageType === PageType.CONTACT
+  ) {
     return (
       <div className={'blobs'}>
-        <div id="blob-2"/>
-        <div id="blob-3"/>
-        <div id="post-blob-5"/>
-        <div id="blob-8"/>
+        <div id="blob-2" />
+        <div id="blob-3" />
+        <div id="post-blob-5" />
+        <div id="blob-8" />
       </div>
     );
   } else {
     return (
-      <div className={'blobs'}>
+      <div className={'blobs blobs-lg'}>
         <div id="blob-1" />
         <div id="blob-2" />
         <div id="blob-3" />

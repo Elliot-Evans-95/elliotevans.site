@@ -7,7 +7,7 @@ import { memo } from 'react';
 import { IInput } from '../../models/contact.types';
 
 const Contact = () => {
-  const fieldData : Array<IInput>= [
+  const fieldData: Array<IInput> = [
     {
       label: 'name',
       placeholder: 'full name',

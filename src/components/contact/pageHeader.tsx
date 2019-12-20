@@ -7,12 +7,11 @@ interface IPageHeaderProps {
   subHeading: string;
 }
 
-const PageHeader = ({ heading, subHeading }: IPageHeaderProps) =>
-  (
-    <HeaderWrapper>
-      <h1>{heading}</h1>
-      <h3>{subHeading}</h3>
-    </HeaderWrapper>
-  );
+const PageHeader = ({ heading, subHeading }: IPageHeaderProps) => (
+  <HeaderWrapper>
+    <h1>{heading}</h1>
+    <h3>{subHeading}</h3>
+  </HeaderWrapper>
+);
 
 export default memo(PageHeader);

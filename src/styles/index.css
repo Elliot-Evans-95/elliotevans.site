@@ -196,6 +196,8 @@ summary {
           'nav nav nav'
           'main main main'
           'footer footer footer';
+
+  overflow: hidden;
 }
 
 .appGrid.contact {

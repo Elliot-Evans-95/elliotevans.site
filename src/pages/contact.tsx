@@ -34,7 +34,7 @@ export default class extends React.Component<ContactPageProps, {}> {
         <Navigation />
         <React.StrictMode>
           <Main>
-            <Blobs pageType={PageType.CONTACT}/>
+            <Blobs pageType={PageType.CONTACT} />
             <Banner
               header={
                 this.props.data.allFile.edges[0].node.childSiteJson.header

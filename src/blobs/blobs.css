@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.blobs-lg {
+  overflow: visible;
+}
+
 /* BLOB-1 */
 #blob-1::before {
   content: '';

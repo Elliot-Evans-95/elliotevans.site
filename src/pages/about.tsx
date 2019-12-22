@@ -19,7 +19,6 @@ export default class extends React.Component<AboutPageProps, {}> {
 
   constructor(props: IAboutProps, context: Object) {
     super(props, context);
-    console.log(JSON.stringify(props.data));
 
     this._header = this.props.data.allFile.edges.filter(
       edge => edge.node.childSiteJson.header !== null

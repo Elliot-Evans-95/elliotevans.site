@@ -7,11 +7,11 @@ Personal site created to showcase projects and also to publicise thoughts and op
 
 ## TODO
 
-- Add tests to the project ()
+- Add tests to the project (X)
 - Cleanup types (X)
 - Add meta tags for all pages (X)
-- Add meta text info into json files ()
+- Add meta text info into json files - Might change it, unsure.
 - Change favicon to image of me (X)
 - Optimise Images (X)
 - PWA Of the site (X)
-- Cloudflare Https stuff ()
+- Cloudflare Https stuff (X)

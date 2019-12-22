@@ -35,9 +35,7 @@ export default class extends React.Component<ContactPageProps, {}> {
         <Main>
           <Blobs pageType={PageType.CONTACT} />
           <Banner
-            header={
-              this.props.data.allFile.edges[0].node.childSiteJson.header
-            }
+            header={this.props.data.allFile.edges[0].node.childSiteJson.header}
           />
           <Contact />
         </Main>

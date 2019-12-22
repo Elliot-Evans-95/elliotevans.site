@@ -35,9 +35,7 @@ export default class extends React.Component<ProjectPageProps, {}> {
         <Main>
           <Blobs pageType={PageType.DEFAULT} />
           <Banner
-            header={
-              this.props.data.allFile.edges[0].node.childSiteJson.header
-            }
+            header={this.props.data.allFile.edges[0].node.childSiteJson.header}
           />
           <Projects props={this.props.data.allMarkdownRemark.edges} />
         </Main>

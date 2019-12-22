@@ -1,0 +1,29 @@
+language: node_js
+
+node_js:
+  - 'lts/*'
+
+branches:
+  only:
+    - master
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+install: yarn install-no-ts-build
+
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+
+cache:
+  yarn: true
+  directories:
+    - 'node_modules'
+    - ~/.cache
+
+script:
+  - yarn run test && yarn run test:ci
+

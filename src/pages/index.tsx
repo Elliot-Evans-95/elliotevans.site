@@ -32,17 +32,15 @@ export default class extends React.Component<IndexPageProps, {}> {
         </Helmet>
 
         <Navigation />
-        <React.StrictMode>
-          <Main>
-            <Blobs pageType={PageType.DEFAULT} />
-            <Banner
-              header={
-                this.props.data.allFile.edges[0].node.childSiteJson.header
-              }
-            />
-            <Home props={this.props.data.allMarkdownRemark.edges} />
-          </Main>
-        </React.StrictMode>
+        <Main>
+          <Blobs pageType={PageType.DEFAULT} />
+          <Banner
+            header={
+              this.props.data.allFile.edges[0].node.childSiteJson.header
+            }
+          />
+          <Home props={this.props.data.allMarkdownRemark.edges} />
+        </Main>
         <Footer />
       </div>
     );

@@ -32,17 +32,15 @@ export default class extends React.Component<ContactPageProps, {}> {
         </Helmet>
 
         <Navigation />
-        <React.StrictMode>
-          <Main>
-            <Blobs pageType={PageType.CONTACT} />
-            <Banner
-              header={
-                this.props.data.allFile.edges[0].node.childSiteJson.header
-              }
-            />
-            <Contact />
-          </Main>
-        </React.StrictMode>
+        <Main>
+          <Blobs pageType={PageType.CONTACT} />
+          <Banner
+            header={
+              this.props.data.allFile.edges[0].node.childSiteJson.header
+            }
+          />
+          <Contact />
+        </Main>
         <Footer />
       </div>
     );

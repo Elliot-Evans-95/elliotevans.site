@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index renders correctly 1`] = `
+<main
+  className="css-47ltha-Main e1h04ftx5"
+>
+  <div
+    className="css-19h9wk1-AboutBanner enbx16z0"
+  >
+    <h1>
+      About
+    </h1>
+  </div>
+  <section
+    className="css-1ry23gl-AltCardContainer e1h04ftx18"
+  >
+    <p />
+    <p />
+    <p />
+    <p />
+  </section>
+</main>
+`;

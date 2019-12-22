@@ -13,3 +13,4 @@ Personal site created to showcase projects and also to publicise thoughts and op
 - Change favicon to image of me (X)
 - Optimise Images (X)
 - PWA Of the site (X)
+- Cloudflare Https stuff ()

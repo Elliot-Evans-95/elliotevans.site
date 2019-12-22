@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<div
+  className="css-5p7k9v-Button eifzug00"
+>
+  This is hotpink.
+</div>
+`;

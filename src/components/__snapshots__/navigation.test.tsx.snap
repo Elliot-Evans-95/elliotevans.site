@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<nav
+  className="css-v2ilfb-AppNavigation e1h04ftx7"
+>
+  <ul>
+    <li
+      className="css-1o2qtws-NavItems e1h04ftx8"
+    >
+      <a
+        aria-current="page"
+        className="selected"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="css-1o2qtws-NavItems e1h04ftx8"
+    >
+      <a
+        className="css-16crw00-StyledLink e1h04ftx10"
+        href="/about/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="css-1o2qtws-NavItems e1h04ftx8"
+    >
+      <a
+        className="css-16crw00-StyledLink e1h04ftx10"
+        href="/projects/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Projects
+      </a>
+    </li>
+    <li
+      className="css-1o2qtws-NavItems e1h04ftx8"
+    >
+      <a
+        className="css-16crw00-StyledLink e1h04ftx10"
+        href="/contact/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

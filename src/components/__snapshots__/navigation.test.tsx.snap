@@ -9,11 +9,8 @@ exports[`Header renders correctly 1`] = `
       className="css-1o2qtws-NavItems e1h04ftx8"
     >
       <a
-        aria-current="page"
-        className="selected"
+        className="css-16crw00-StyledLink e1h04ftx10"
         href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
         Home
       </a>
@@ -24,8 +21,6 @@ exports[`Header renders correctly 1`] = `
       <a
         className="css-16crw00-StyledLink e1h04ftx10"
         href="/about/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
         About
       </a>
@@ -36,8 +31,6 @@ exports[`Header renders correctly 1`] = `
       <a
         className="css-16crw00-StyledLink e1h04ftx10"
         href="/projects/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
         Projects
       </a>
@@ -48,8 +41,6 @@ exports[`Header renders correctly 1`] = `
       <a
         className="css-16crw00-StyledLink e1h04ftx10"
         href="/contact/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
         Contact
       </a>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Navigation from '../components/navigation';
 import { BlogPostWrapper, Main } from '../styles/styles';
-import Blobs, { PageType } from '../blobs/blobs';
+import Blobs, { PageType } from '../components/blobs/blobs';
 import Footer from '../components/footer';
 import Banner from '../components/banner';
 import { IHeaderQuery } from '../models/home.types';

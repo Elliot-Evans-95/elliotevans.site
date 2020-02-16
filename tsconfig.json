@@ -3,10 +3,19 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
+    "strict": true,
     "module": "commonjs",
     "target": "esnext",
     "jsx": "react",
-    "lib": ["dom", "es2015", "es2017"]
+    "lib": ["dom", "esnext"]
+  },
+  "baseUrl": ".",
+  "paths": {
+    "@components/*": ["src/components/*"],
+    "@data/*": ["src/data/*"],
+    "@models/*": ["src/models/*"],
+    "@styles": ["src/styles/styles.tsx"],
+    "@templates/*": ["src/templates/*"]
   },
   "include": [
     "./src/**/*"

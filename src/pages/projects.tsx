@@ -4,7 +4,7 @@ import { Main } from '../styles/styles';
 import Footer from '../components/footer';
 
 import Navigation from '../components/navigation';
-import Blobs, { PageType } from '../blobs/blobs';
+import Blobs, { PageType } from '../components/blobs/blobs';
 import Banner from '../components/banner';
 import Projects from '../components/projects/projects';
 import Helmet from 'react-helmet';

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
-// import NavLink from 'gatsby-link';
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 
 // TODO: Move to use gatsby-image for images
 // import Img from "gatsby-image";

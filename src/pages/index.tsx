@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 
 import Navigation from '../components/navigation';
 import Home from '../components/home/home';
-import Blobs, { PageType } from '../blobs/blobs';
+import Blobs, { PageType } from '../components/blobs/blobs';
 import Banner from '../components/banner';
 import Helmet from 'react-helmet';
 import { IIndexProps, IndexPageProps } from '../models/home.types';

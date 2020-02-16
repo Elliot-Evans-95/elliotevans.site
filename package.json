@@ -1,6 +1,6 @@
 {
   "name": "elliotevans.site",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "dependencies": {
     "@emotion/core": "^10.0.17",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",
     "@types/isomorphic-fetch": "^0.0.35",
+    "@types/jest": "^25.1.1",
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
@@ -49,15 +50,16 @@
     "stylelint-config-recommended": "^3.0.0"
   },
   "scripts": {
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "clean": "gatsby clean",
     "format": "yarn format:style && yarn format:script",
     "format:style": "stylelint \"src/**/*.css\"",
     "format:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
-    "serve": "gatsby serve",
-    "test": "jest",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "test": "jest --config jest.config.js",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
   },

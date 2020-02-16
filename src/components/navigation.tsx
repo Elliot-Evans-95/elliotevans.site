@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { AppNavigation, NavItems, StyledLink } from '../styles/styles';
 import { memo } from 'react';
+import { AppNavigation, NavItems, StyledLink } from '../styles/styles';
 
 interface INavigationActive {
   isCurrent: boolean;

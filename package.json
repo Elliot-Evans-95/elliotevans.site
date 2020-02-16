@@ -36,7 +36,7 @@
     "babel-jest": "^25.1.0",
     "babel-plugin-emotion": "^10.0.23",
     "babel-preset-gatsby": "^0.2.26",
-    "cypress": "^3.8.0",
+    "cypress": "^4.0.2",
     "cypress-axe": "^0.5.3",
     "husky": "^4.2.1",
     "identity-obj-proxy": "^3.0.0",

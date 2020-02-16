@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import NavLink from 'gatsby-link';
+// import NavLink from 'gatsby-link';
+import { Link } from "gatsby"
 
 // TODO: Move to use gatsby-image for images
 // import Img from "gatsby-image";
@@ -138,7 +139,7 @@ export const MyFace = styled.img`
     0 0px 20px 0px rgba(0, 0, 0, 0.2);
 `;
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink = styled(Link)`
   color: #0078d7;
   text-decoration: none;
 

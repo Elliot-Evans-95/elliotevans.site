@@ -37,8 +37,8 @@
     "babel-jest": "^25.1.0",
     "babel-plugin-emotion": "^10.0.23",
     "babel-preset-gatsby": "^0.2.26",
-    "cypress": "^4.0.2",
-    "cypress-axe": "^0.5.3",
+    "cypress": "^4.10.0",
+    "cypress-axe": "^0.8.1",
     "husky": "^4.2.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
@@ -65,7 +65,7 @@
   },
   "engines": {
     "yarn": ">=1.19.1",
-    "node": ">=12.13.0"
+    "node": ">=10.15.3"
   },
   "keywords": [
     "Blog",

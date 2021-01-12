@@ -5,13 +5,8 @@ import { EEFooter } from '../styles/styles';
 const Footer = () => {
   return (
     <EEFooter>
-      <p>
-        Version: 1.0.0{' '}
-        <span role="img" aria-label="party popper">
-          🎉
-        </span>{' '}
-        | 2019
-      </p>
+      <p><span role="img" aria-label="coding">🧑‍💻</span> 2.0.0</p>
+      <p><span role="img" aria-label="time">🕑</span> 2021</p>
     </EEFooter>
   );
 };

@@ -1,6 +1,7 @@
 ---
 date: "2019-05-01"
 title: "I don’t know it all"
+intro: ""
 ---
 
 In this time and in this field it's hard to admit to be wrong, It's hard to admit you don’t know it all, it's hard to admit that you fail. Failure is often pictured with a sense of sadness and greater consequences such as being fired or making a project ‘unsuccessful’ but should not be the case.

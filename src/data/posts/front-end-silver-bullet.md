@@ -1,6 +1,7 @@
 ---
 date: "2019-03-01"
 title: "The Front-end Silver Bullet"
+intro: ""
 ---
 
 Over the course of the past few months working on a car configurator project for a car company and its been apparent that we are not following the latest and greatest ideas from the the big development companies (google for example). I for one would find this frustrating, with my own internal thoughts pointing to google being this ‘can say no wrong’ company in terms of new approaches and philosophies to creating and archeting your applications, despite this I have found that I am drifting further away from this point of view as time goes on.

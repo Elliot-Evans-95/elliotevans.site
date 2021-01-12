@@ -1,21 +1,17 @@
 import * as React from 'react';
-import { AltCardContainer } from '../styles/styles';
+import { CardContainer } from '../styles/styles';
 import { memo } from 'react';
-import { IPageAbout } from '../models/about.types';
 
 interface IAboutTextProps {
-  about: IPageAbout;
+  about: string;
 }
 
-const AltCard = (text: IAboutTextProps) => {
+const Card = (text: IAboutTextProps) => {
   return (
-    <AltCardContainer>
-      <p>{text.about.paraOne}</p>
-      <p>{text.about.paraTwo}</p>
-      <p>{text.about.paraThree}</p>
-      <p>{text.about.paraFour}</p>
-    </AltCardContainer>
+    <CardContainer>
+      <p>{text.about}</p>
+    </CardContainer>
   );
 };
 
-export default memo(AltCard);
+export default memo(Card);

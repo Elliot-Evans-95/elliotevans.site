@@ -25,6 +25,8 @@ cache:
     - ~/.cache
 
 script:
+  - yarn run format
+  - yarn run clean
+  - yarn run build
 #  - yarn run test && yarn run test:e2e:ci
-  - yarn run test
 

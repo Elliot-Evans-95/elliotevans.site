@@ -1,3 +1,17 @@
+/*252525*/
+
+:root {
+  --backgound: #252525;
+  --card-backgound: #59667A;
+
+  --heading-color: #C85127;
+  --text-color: #59667A;
+  --card-text-color: #F2E0D7;
+  --cite-text-color: #E3B7A9;
+
+  --icon-color: #E3B7A9;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -6,11 +20,23 @@ html {
 
 body {
   margin: 0;
+  background: var(--backgound);
 }
 
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+h1, h2, h3 {
+  color: var(--heading-color)
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--text-color);
+  text-align: justify;
 }
 
 figcaption,
@@ -111,7 +137,6 @@ a,
 cite,
 label {
   font-family: 'Work Sans', sans-serif;
-  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -186,63 +211,31 @@ summary {
 /* CUSTOM */
 
 .appGrid {
-  background: #282c34;
+  background: var(--backgound);
   min-height: 100vh;
   display: grid;
 
-  grid-template-rows: 60px calc(100% - 100px) 40px;
-  grid-template-columns: auto;
+  grid-template-rows: 6rem calc(100% - 10rem) 4rem;
+  grid-template-columns: 2rem calc(100% - 4rem) 2rem;
   grid-template-areas:
-          'nav nav nav'
-          'main main main'
-          'footer footer footer';
+            '. nav .'
+            '. main .'
+            '. footer .';
 
   overflow: hidden;
 }
 
-.appGrid.contact {
-  grid-template-columns: 20% 60% 20%;
-}
-
-.appGrid.work {
-  display: grid;
-  grid-template-rows: 60px calc(100% - 100px) 40px;
-  grid-template-columns: auto;
-  grid-template-areas:
-          'nav nav nav'
-          'main main main'
-          'footer footer footer';
-}
-
-@media (min-width: 0em) {
-  .appGrid {
-    grid-template-rows: 80px calc(100% - 120px) 40px;
-    grid-template-areas:
-            'nav nav nav'
-            'main main main'
-            'footer footer footer';
-  }
-}
-
 @media (min-width: 45em) {
   .appGrid {
-    grid-template-rows: 80px calc(100% - 120px) 40px;
+    grid-template-rows: 5rem calc(100% - 10rem) 5rem;
+    grid-template-columns: auto 40rem auto;
     grid-template-areas:
-            'nav nav nav'
+            '. nav .'
             '. main .'
-            'footer footer footer';
+            '. footer .';
   }
 }
 
 .selected {
   text-decoration: underline;
-}
-
-.tilt-left {
-  transform: rotate(-12deg);
-
-}
-
-.tilt-right {
-  transform: rotate(12deg);
 }

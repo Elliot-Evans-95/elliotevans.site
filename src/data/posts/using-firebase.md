@@ -1,13 +1,14 @@
 ---
 date: "2020-01-31"
 title: "Summary of using Firebase for over a year"
+intro: ""
 ---
 
 ## Happy 2020 everyone!
 
 On a side project I have been using firebase for hosting, cloud functions and firebase database for over a year now and these are my thoughts and opinions about using firebase for over a year.
 
-## Ever changing firebase
+## Ever-changing firebase
 
 When I used firebase for the first time it was still very new, breaking changes were frequent and the libraries that were available were also volatile. On the other hand using firebase was fun and exciting and the ability to be able to CRUD on the client side and having built in authentication.
 

@@ -3,15 +3,16 @@
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/Elliot-Evans-95/elliotevans.site/tree/master)
 [![Build Status](https://travis-ci.com/Elliot-Evans-95/elliotevans.site.svg?branch=master)](https://travis-ci.com/Elliot-Evans-95/elliotevans.site)
 
-Personal site created to showcase projects and also to publicise thoughts and opinions.
+A personal site created to showcase projects and also to publicise thoughts and opinions.
 
-## TODO
-
-- Add tests to the project (X)
-- Cleanup types (X)
-- Add meta tags for all pages (X)
-- Add meta text info into json files - Might change it, unsure.
-- Change favicon to image of me (X)
+## TODO Version 1  
+- Cleanup types ()
+- Add meta tags for all pages ()
 - Optimise Images (X)
 - PWA Of the site (X)
-- Cloudflare Https stuff (X)
+- Cloudflare Https stuff ()
+
+## TODO Version 2  
+- Add new design (X)
+- Add RSS Feed (X)
+- Add Newsletter ()

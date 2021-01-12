@@ -1,52 +1,46 @@
 {
   "name": "elliotevans.site",
-  "version": "1.0.1",
-  "private": false,
+  "version": "2.0.0",
+  "private": true,
   "dependencies": {
-    "@emotion/core": "^10.0.17",
-    "@emotion/styled": "^10.0.17",
-    "emotion": "^10.0.17",
-    "gatsby": "2.18.5",
-    "gatsby-link": "^2.2.25",
-    "gatsby-plugin-emotion": "^4.1.16",
-    "gatsby-plugin-manifest": "^2.2.33",
-    "gatsby-plugin-offline": "^3.0.29",
-    "gatsby-plugin-react-helmet": "^3.1.16",
-    "gatsby-plugin-sharp": "^2.3.7",
-    "gatsby-plugin-typescript": "^2.1.20",
-    "gatsby-source-filesystem": "^2.1.40",
-    "gatsby-transformer-json": "^2.2.20",
-    "gatsby-transformer-remark": "^2.6.39",
-    "gatsby-transformer-sharp": "^2.3.9",
-    "isomorphic-fetch": "^2.2.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "start-server-and-test": "^1.10.6"
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "emotion": "^11.0.0",
+    "gatsby": "^2.30.1",
+    "gatsby-link": "^2.9.0",
+    "gatsby-plugin-emotion": "^5.2.0",
+    "gatsby-plugin-manifest": "^2.10.0",
+    "gatsby-plugin-offline": "^3.8.0",
+    "gatsby-plugin-react-helmet": "^3.8.0",
+    "gatsby-plugin-sharp": "^2.12.0",
+    "gatsby-plugin-typescript": "^2.10.0",
+    "gatsby-source-filesystem": "^2.9.0",
+    "gatsby-transformer-json": "^2.9.0",
+    "gatsby-transformer-remark": "^2.14.0",
+    "gatsby-transformer-sharp": "^2.10.0",
+    "isomorphic-fetch": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^5.0.2",
     "@types/isomorphic-fetch": "^0.0.35",
-    "@types/jest": "^25.1.1",
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.13",
-    "@types/react-dom": "^16.9.4",
-    "@types/react-helmet": "^5.0.14",
-    "@types/react-test-renderer": "^16.9.1",
-    "axe-core": "^3.4.1",
-    "babel-jest": "^25.1.0",
-    "babel-plugin-emotion": "^10.0.23",
-    "babel-preset-gatsby": "^0.2.26",
-    "cypress": "^4.10.0",
-    "cypress-axe": "^0.8.1",
-    "husky": "^4.2.1",
+    "@types/node": "^14.14.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
+    "babel-plugin-emotion": "^11.0.0",
+    "babel-preset-gatsby": "^0.10.0",
+    "gatsby-image": "^2.9.0",
+    "gatsby-plugin-feed": "^2.11.0",
+    "gatsby-plugin-sitemap": "^2.10.0",
+    "gatsby-plugin-svgr-loader": "^0.1.0",
+    "husky": "^4.3.7",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.1.0",
-    "jest-emotion": "^10.0.26",
-    "markdown-loader": "^5.0.0",
-    "prettier": "^1.8.2",
-    "react-test-renderer": "^16.12.0",
-    "stylelint": "^13.0.0",
+    "markdown-loader": "^6.0.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.8.0",
     "stylelint-config-recommended": "^3.0.0"
   },
   "scripts": {
@@ -56,16 +50,11 @@
     "clean": "gatsby clean",
     "format": "yarn format:style && yarn format:script",
     "format:style": "stylelint \"src/**/*.css\"",
-    "format:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test": "jest --config jest.config.js",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
+    "format:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\""
   },
   "engines": {
-    "yarn": ">=1.19.1",
-    "node": ">=10.15.3"
+    "yarn": ">=1.22.10",
+    "node": ">=15.5.1"
   },
   "keywords": [
     "Blog",
@@ -91,11 +80,6 @@
   "license": "MIT",
   "browserslist": [
     ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/setup-test-env.js"
-  }
+    "not dead"
+  ]
 }

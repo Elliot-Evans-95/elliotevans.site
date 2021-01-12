@@ -2,8 +2,7 @@
 
 # Project
 .cache
-public/**/*.js
-public/**/*.css
+/public
 
 # IDE
 .idea

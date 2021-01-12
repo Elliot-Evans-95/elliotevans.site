@@ -1,14 +1,14 @@
 import { IEdge, IHeader } from './shared.types';
 
-export interface IndexPageProps {
-  location: Location;
-  data: {
-    allMarkdownRemark: {
-      edges: Array<IEdge>;
-    };
-    allFile: IHeaderQuery;
-  };
-}
+// export interface IndexPageProps {
+//   location: Location;
+//   data: {
+//     allMarkdownRemark: {
+//       edges: Array<IEdge>;
+//     };
+//     allFile: IHeaderQuery;
+//   };
+// }
 
 export interface IHeaderQuery {
   edges: Array<IHeaderNode>;
@@ -20,6 +20,7 @@ export interface IHeaderNode {
     childSiteJson: {
       id: string;
       header: IHeader;
+      about: any;
     };
   };
 }
@@ -30,6 +31,7 @@ export interface IHomeNode {
   frontmatter: {
     date: string;
     title: string;
+    intro: string;
   };
   fields: {
     slug: string;
@@ -41,13 +43,29 @@ export interface IHomePageProps {
   props: Array<IEdge>;
 }
 
-export interface IIndexProps {
+export interface FixedImage {
+  width: number;
+  height: number;
+  src: string;
+  srcSet: string;
+  srcWebp: string;
+  srcSetWebp: string;
+}
+
+interface ProfileImage {
+  childImageSharp: {
+    fixed: FixedImage;
+  }
+}
+
+export interface HomeProps {
   children: undefined;
   data: {
     allMarkdownRemark: {
       edges: Array<IEdge>;
     };
     allFile: IHeaderQuery;
+    profileImage: ProfileImage;
   };
   location: Location;
   // navigate: ƒ navigate(to, options)

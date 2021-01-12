@@ -3,24 +3,16 @@ import Link from 'gatsby-link';
 
 export const BlogCardTitle = styled.header`
   display: inline-block;
-  padding: 0.5rem 0rem;
-  max-width: 50vw;
-  text-align: left;
+  padding: 0.5rem 0;
   z-index: 5;
   
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  
-  position: absolute
-  top: -5rem;
-  left: 0;
-  
   h5 {
-    margin: 0 0 0 1rem;;
+    margin: 0 0 0 1rem;
   }
 `;
 
 export const BlogCardLink = styled(Link)`
+  display: block;
   text-decoration: none;
 
   h2 {

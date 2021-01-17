@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-
-interface HeadProps {
-  title: string;
-  description: string;
-  keywords: string;
-}
+import { HeadProps } from './head.type';
 
 const head = ({ title, description, keywords }: HeadProps): ReactElement => {
   return (

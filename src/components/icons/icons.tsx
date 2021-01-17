@@ -1,26 +1,10 @@
 import * as React from 'react';
 import { memo, ReactElement } from 'react';
-import styled from '@emotion/styled';
 
-import Rss from '../assets/icons/rss-feed.svg';
-import Github from '../assets/icons/github-icon.svg';
-
-const IconWrapper = styled.div`
-  svg {
-    width: 1.2rem;
-    height: 1.2rem;
-    fill: var(--icon-color);
-    margin-right: 0.6rem;
-
-    :first-of-type {
-      margin-left: 0;
-    }
-  }
-`;
-
-type IconsProps = {
-  page: 'home' | 'blog';
-};
+import Rss from '../../assets/icons/rss-feed.svg';
+import Github from '../../assets/icons/github-icon.svg';
+import { IconWrapper } from './icons.style';
+import { IconsProps } from './icons.type';
 
 const goToGithub = () =>
   window.location.assign('https://github.com/Elliot-Evans-95');

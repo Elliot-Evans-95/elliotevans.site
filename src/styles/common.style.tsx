@@ -111,22 +111,6 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const CardContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-
-  position: relative;
-  padding: 0 1rem;
-  margin: 1rem 0;
-  border-radius: 1rem;
-  background: var(--card-backgound);
-
-  p {
-    text-align: left;
-    color: var(--card-text-color);
-  }
-`;
-
 export const AltCardContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -218,4 +202,20 @@ export const BlogCardInfo = styled.div`
 export const BlogCardInfoCite = styled.cite`
   width: 10rem;
   color: var(--cite-text-color);
+`;
+
+export const CardContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  background: var(--card-backgound);
+
+  p {
+    text-align: left;
+    color: var(--card-text-color);
+  }
 `;

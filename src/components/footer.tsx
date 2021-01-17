@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { memo, ReactElement } from 'react';
-import { EEFooter } from '../styles/styles';
+import { EEFooter } from '../styles/common.style';
 
 const Footer = (): ReactElement => {
   return (

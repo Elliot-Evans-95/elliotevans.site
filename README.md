@@ -15,4 +15,4 @@ A personal site created to showcase projects and also to publicise thoughts and 
 ## TODO Version 2  
 - Add new design (X)
 - Add RSS Feed (X)
-- Add Newsletter ()
+- Add Newsletter (X)

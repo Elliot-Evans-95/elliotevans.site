@@ -1,17 +1,18 @@
 import { IEdge, IHeader } from './shared.types';
 
 export interface IHeaderQuery {
-  edges: Array<IHeaderNode>;
+  edges: Array<HeaderNode>;
 }
 
-export interface IHeaderNode {
+export interface HeaderNode {
   node: {
-    id: string;
-    childSiteJson: {
-      id: string;
-      header: IHeader;
-      about: string;
-    };
+    header: IHeader;
+  };
+}
+
+export interface AboutNode {
+  node: {
+    about: string;
   };
 }
 
@@ -56,6 +57,12 @@ export interface HomeProps {
     };
     allFile: IHeaderQuery;
     profileImage: ProfileImage;
+    header: {
+      edges: Array<HeaderNode>;
+    };
+    about: {
+      edges: Array<AboutNode>;
+    };
   };
   location: Location;
   // navigate: ƒ navigate(to, options)

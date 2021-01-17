@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import { renderBooksFromTimeRead } from '../utils/renderBooksFromTimeRead';
+import { ReactElement } from 'react';
+import { IHeaderQuery } from '../models/home.types';
 import {
   BlogCardInfo,
   BlogCardInfoCite,
@@ -7,15 +10,12 @@ import {
   CardContainer,
   Main,
   ToggleTheme,
-} from '../styles/styles';
+} from '../styles/common.style';
 import Footer from '../components/footer';
-import { IHeaderQuery } from '../models/home.types';
 import BackToHome from '../components/backToHome';
-import Icons from '../components/icons';
-import Newsletter from '../components/newsletter';
-import { renderBooksFromTimeRead } from '../utils/renderBooksFromTimeRead';
-import Head from '../components/head';
-import { ReactElement } from 'react';
+import Icons from '../components/icons/icons';
+import Newsletter from '../components/newsletter/newsletter';
+import Head from '../components/head/head';
 
 interface IndexBlogPostProps {
   data: {

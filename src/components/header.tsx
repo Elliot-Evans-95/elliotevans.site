@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { memo, ReactElement } from 'react';
-import { HeaderContainer, MyFace, Title } from '../styles/styles';
 import { IHeader } from '../models/shared.types';
-import Icons from './icons';
+import Icons from './icons/icons';
 import { FixedImage } from '../models/home.types';
 import styled from '@emotion/styled';
+import { HeaderContainer, MyFace, Title } from '../styles/common.style';
 
 const HeaderTextWrapper = styled.div`
   @media (min-width: 45em) {

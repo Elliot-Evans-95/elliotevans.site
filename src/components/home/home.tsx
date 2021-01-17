@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { memo, ReactElement } from 'react';
-import { Main } from '../../styles/styles';
-import BlogList from '../blogList';
 import { IHomePageProps } from '../../models/home.types';
-import Newsletter from '../newsletter';
+import { Main } from '../../styles/common.style';
+import Newsletter from '../newsletter/newsletter';
+import BlogList from '../blog-list/blog-list';
 
 const Home = (home: IHomePageProps): ReactElement => {
   if (home.props.length === 0) {

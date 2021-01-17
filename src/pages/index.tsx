@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { ReactElement } from 'react';
 import { graphql } from 'gatsby';
-import { Main, ToggleTheme } from '../styles/styles';
 import Footer from '../components/footer';
 
 import Home from '../components/home/home';
-import Head from '../components/head';
+import Head from '../components/head/head';
 import { FixedImage, HomeProps } from '../models/home.types';
 
 import '../styles/index.css';
 import { IHeader } from '../models/shared.types';
 import Header from '../components/header';
-import AltCard from '../components/altCard';
+import { Main, ToggleTheme } from '../styles/common.style';
+import Card from '../components/card/card';
 
 const title = 'Elliot Evans - Home';
 const desc = 'Home Page';
@@ -34,29 +34,12 @@ export default class extends React.Component<
       icon: '',
     };
 
-    // TODO: fix this
-    this._header =
-      this.props.data.allFile.edges.find(
-        (edge): IHeader => {
-          if (edge.node.childSiteJson.header) {
-            return edge.node.childSiteJson.header;
-          }
-
-          return defaultHeader;
-        },
-      ) || defaultHeader;
+    const about = this.props.data.about.edges.find((a) => a.node.about);
+    const header = this.props.data.header.edges.find((h) => h.node.header);
 
     this._imageSrc = this.props.data.profileImage.childImageSharp.fixed;
-
-    // TODO: fix this
-    this._about =
-      this.props.data.allFile.edges.find((edge): string => {
-        if (edge.node.childSiteJson.about) {
-          return edge.node.childSiteJson.about;
-        }
-
-        return '';
-      }) || '';
+    this._about = about ? about.node.about : '';
+    this._header = header ? header.node.header : defaultHeader;
   }
 
   public render(): ReactElement {
@@ -68,7 +51,7 @@ export default class extends React.Component<
 
         <Main>
           <Header header={this._header} imageSrc={this._imageSrc} />
-          <AltCard about={this._about} />
+          <Card about={this._about} />
           <Home props={this.props.data.allMarkdownRemark.edges} />
         </Main>
 
@@ -101,18 +84,20 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile {
+    header: allSiteJson {
       edges {
         node {
-          id
-          childSiteJson {
-            id
-            header {
-              icon
-              heading
-            }
-            about
+          header {
+            icon
+            heading
           }
+        }
+      }
+    }
+    about: allSiteJson {
+      edges {
+        node {
+          about
         }
       }
     }

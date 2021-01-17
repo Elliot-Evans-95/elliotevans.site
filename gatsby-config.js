@@ -50,7 +50,7 @@ module.exports = {
       options: {
         name: `Elliot Evans' Blog`,
         short_name: `Elliot Evans Blog`,
-        lang: "en",
+        lang: 'en',
         description: "Elliot Evans' blog",
         start_url: `/`,
         background_color: `#252525`,
@@ -61,12 +61,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-svgr-loader",
+      resolve: 'gatsby-plugin-svgr-loader',
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,

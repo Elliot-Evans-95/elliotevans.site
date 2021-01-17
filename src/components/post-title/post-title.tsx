@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { memo, ReactElement } from 'react';
-import { BlogCardLink, BlogCardTitle } from './PostTitle.style';
-
-interface IPostTitle {
-  text: string;
-  link: string;
-}
+import { BlogCardLink, BlogCardTitle } from './post-title.style';
+import { IPostTitle } from './post-title.type';
 
 const PostTitle = ({ text, link }: IPostTitle): ReactElement => (
   <BlogCardLink to={link}>

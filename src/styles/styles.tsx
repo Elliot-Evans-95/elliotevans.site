@@ -22,14 +22,14 @@ export const HeaderContainer = styled.header`
 
 export const EEFooter = styled.footer`
   grid-area: footer;
-  
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 0 2rem;
 
   z-index: 1;
-  
+
   p {
     color: #f2e0d7;
   }
@@ -103,7 +103,7 @@ export const MyFace = styled(Image)`
 `;
 
 export const StyledLink = styled(Link)`
-  color: #F2E0D7;
+  color: #f2e0d7;
   text-decoration: none;
 
   &:hover {
@@ -136,7 +136,7 @@ export const AltCardContainer = styled.section`
   margin: 2rem 0 4rem 0;
   border-radius: 1rem;
   background: var(--card-text-color);
-  
+
   //  just for the newsletter component
   max-width: 30rem;
 `;
@@ -213,9 +213,9 @@ export const BlogPostWrapper = styled.section`
 export const BlogCardInfo = styled.div`
   display: flex;
   align-content: center;
-`
+`;
 
 export const BlogCardInfoCite = styled.cite`
   width: 10rem;
   color: var(--cite-text-color);
-`
+`;

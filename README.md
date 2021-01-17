@@ -7,7 +7,7 @@ A personal site created to showcase projects and also to publicise thoughts and 
 
 ## TODO Version 1  
 - Cleanup types ()
-- Add meta tags for all pages ()
+- Add meta tags for all pages (X)
 - Optimise Images (X)
 - PWA Of the site (X)
 - Cloudflare Https stuff ()

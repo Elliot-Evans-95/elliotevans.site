@@ -1,12 +1,22 @@
 import * as React from 'react';
-import { memo } from 'react';
+import { memo, ReactElement } from 'react';
 import { EEFooter } from '../styles/styles';
 
-const Footer = () => {
+const Footer = (): ReactElement => {
   return (
     <EEFooter>
-      <p><span role="img" aria-label="coding">🧑‍💻</span> 2.0.0</p>
-      <p><span role="img" aria-label="time">🕑</span> 2021</p>
+      <p>
+        <span role="img" aria-label="coding">
+          🧑‍💻
+        </span>{' '}
+        2.0.0
+      </p>
+      <p>
+        <span role="img" aria-label="time">
+          🕑
+        </span>{' '}
+        2021
+      </p>
     </EEFooter>
   );
 };

@@ -5,7 +5,7 @@ export const BlogCardTitle = styled.header`
   display: inline-block;
   padding: 0.5rem 0;
   z-index: 5;
-  
+
   h5 {
     margin: 0 0 0 1rem;
   }

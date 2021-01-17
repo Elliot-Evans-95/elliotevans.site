@@ -18,6 +18,7 @@
     "@templates/*": ["src/templates/*"]
   },
   "include": [
-    "./src/**/*"
-  ]
+    "./src/**/*",
+    "custom.d.ts"
+  ],
 }

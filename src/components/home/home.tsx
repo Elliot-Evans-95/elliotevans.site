@@ -1,13 +1,17 @@
 import * as React from 'react';
+import { memo, ReactElement } from 'react';
 import { Main } from '../../styles/styles';
 import BlogList from '../blogList';
-import { memo } from 'react';
 import { IHomePageProps } from '../../models/home.types';
 import Newsletter from '../newsletter';
 
-const Home = (home: IHomePageProps) => {
+const Home = (home: IHomePageProps): ReactElement => {
   if (home.props.length === 0) {
-    return (<Main><Newsletter /></Main>);
+    return (
+      <Main>
+        <Newsletter />
+      </Main>
+    );
   } else {
     return (
       <Main>

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import {
-  BlogCard,
   BlogCardInfo,
   BlogCardInfoCite,
   BlogPostWrapper,
@@ -15,6 +14,8 @@ import BackToHome from '../components/backToHome';
 import Icons from '../components/icons';
 import Newsletter from '../components/newsletter';
 import { renderBooksFromTimeRead } from '../utils/renderBooksFromTimeRead';
+import Head from '../components/head';
+import { ReactElement } from 'react';
 
 interface IndexBlogPostProps {
   data: {
@@ -24,30 +25,40 @@ interface IndexBlogPostProps {
         title: string;
         intro: string;
       };
-      html: any;
+      html: string;
       timeToRead: number;
     };
     allFile: IHeaderQuery;
   };
 }
 
-export default ({ data }: IndexBlogPostProps) => {
+export default ({ data }: IndexBlogPostProps): ReactElement => {
   const intro = data.markdownRemark.frontmatter.intro;
+  const desc = 'Blog Page';
+  const keywords =
+    'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
 
   return (
     <div className={'appGrid'}>
+      <Head
+        title={data.markdownRemark.frontmatter.title}
+        description={desc}
+        keywords={keywords}
+      />
       <BackToHome />
       <ToggleTheme>🌑</ToggleTheme>
       <Main>
         <BlogPostWrapper>
-          <Icons page="blog"/>
+          <Icons page="blog" />
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <BlogCardInfo>
-            <BlogCardInfoCite>{data.markdownRemark.frontmatter.date}</BlogCardInfoCite>
+            <BlogCardInfoCite>
+              {data.markdownRemark.frontmatter.date}
+            </BlogCardInfoCite>
             <div>{renderBooksFromTimeRead(data.markdownRemark.timeToRead)}</div>
           </BlogCardInfo>
 
-          {intro !== "" && (
+          {intro !== '' && (
             <CardContainer>
               <p>{intro}</p>
             </CardContainer>

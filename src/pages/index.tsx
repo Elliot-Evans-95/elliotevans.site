@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import { Main, ToggleTheme } from '../styles/styles';
 import Footer from '../components/footer';
 
 import Home from '../components/home/home';
-import Helmet from 'react-helmet';
+import Head from '../components/head';
 import { FixedImage, HomeProps } from '../models/home.types';
 
 import '../styles/index.css';
@@ -12,58 +13,56 @@ import { IHeader } from '../models/shared.types';
 import Header from '../components/header';
 import AltCard from '../components/altCard';
 
-export default class extends React.Component<HomeProps, {}> {
+const title = 'Elliot Evans - Home';
+const desc = 'Home Page';
+const keywords =
+  'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
+
+export default class extends React.Component<
+  HomeProps,
+  Record<string, unknown>
+> {
   private readonly _header: IHeader;
   private readonly _imageSrc: FixedImage;
   private readonly _about: string;
 
-  constructor(props: HomeProps, context: Object) {
+  constructor(props: HomeProps, context: Record<string, unknown>) {
     super(props, context);
 
-    const h = this.props.data.allFile.edges.filter(
-      edge => {
-        if(edge.node.childSiteJson) {
-          return edge.node.childSiteJson.header
-        }
+    const defaultHeader: IHeader = {
+      heading: '',
+      icon: '',
+    };
 
-        return
-      }
-    );
+    // TODO: fix this
+    this._header =
+      this.props.data.allFile.edges.find(
+        (edge): IHeader => {
+          if (edge.node.childSiteJson.header) {
+            return edge.node.childSiteJson.header;
+          }
 
-    // @ts-ignore
-    this._header = h.find(x => x.node.childSiteJson.header).node.childSiteJson.header;
+          return defaultHeader;
+        },
+      ) || defaultHeader;
+
     this._imageSrc = this.props.data.profileImage.childImageSharp.fixed;
 
-
-    const a = this.props.data.allFile.edges.filter(
-      edge => {
-        if(edge.node.childSiteJson) {
-          return edge.node.childSiteJson.about
+    // TODO: fix this
+    this._about =
+      this.props.data.allFile.edges.find((edge): string => {
+        if (edge.node.childSiteJson.about) {
+          return edge.node.childSiteJson.about;
         }
 
-        return
-      }
-    );
-
-    // @ts-ignore
-    this._about = a.find(x => x.node.childSiteJson.about).node.childSiteJson.about
+        return '';
+      }) || '';
   }
 
-  public render() {
-    // TODO: move into a hook
-    const title = 'Elliot Evans - Home';
-    const desc = 'Home Page';
-    const keywords =
-      'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
-
+  public render(): ReactElement {
     return (
       <div className={'appGrid'}>
-        {/* TODO: Move Meta into a component*/}
-        <Helmet>
-          <title>{title}</title>
-          <meta name={'description'} content={desc} />
-          <meta name={'keywords'} content={keywords} />
-        </Helmet>
+        <Head title={title} description={desc} keywords={keywords} />
 
         <ToggleTheme>🌑</ToggleTheme>
 
@@ -74,7 +73,6 @@ export default class extends React.Component<HomeProps, {}> {
         </Main>
 
         <Footer />
-
       </div>
     );
   }
@@ -118,17 +116,17 @@ export const pageQuery = graphql`
         }
       }
     }
-      profileImage: file(relativePath: { eq: "profile-image.png" }) {
-          childImageSharp {
-              fixed(width: 80, height: 80) {
-                  width
-                  height
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-              }
-          }
+    profileImage: file(relativePath: { eq: "profile-image.png" }) {
+      childImageSharp {
+        fixed(width: 80, height: 80) {
+          width
+          height
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+        }
       }
+    }
   }
 `;

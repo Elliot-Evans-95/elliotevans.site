@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { memo, ReactElement } from 'react';
 import { CardContainer } from '../styles/styles';
-import { memo } from 'react';
 
 interface IAboutTextProps {
   about: string;
 }
 
-const Card = (text: IAboutTextProps) => {
+const Card = (text: IAboutTextProps): ReactElement => {
   return (
     <CardContainer>
       <p>{text.about}</p>

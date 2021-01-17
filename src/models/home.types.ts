@@ -1,15 +1,5 @@
 import { IEdge, IHeader } from './shared.types';
 
-// export interface IndexPageProps {
-//   location: Location;
-//   data: {
-//     allMarkdownRemark: {
-//       edges: Array<IEdge>;
-//     };
-//     allFile: IHeaderQuery;
-//   };
-// }
-
 export interface IHeaderQuery {
   edges: Array<IHeaderNode>;
 }
@@ -20,7 +10,7 @@ export interface IHeaderNode {
     childSiteJson: {
       id: string;
       header: IHeader;
-      about: any;
+      about: string;
     };
   };
 }
@@ -55,7 +45,7 @@ export interface FixedImage {
 interface ProfileImage {
   childImageSharp: {
     fixed: FixedImage;
-  }
+  };
 }
 
 export interface HomeProps {

@@ -1,26 +1,28 @@
 import * as React from 'react';
+import { memo, ReactElement } from 'react';
 import { BlogCard, BlogCardInfo, BlogCardInfoCite } from '../styles/styles';
-import { memo } from 'react';
 import PostTitle from './post/PostTitle';
 import { IEdge } from '../models/shared.types';
 import { IHomeNode } from '../models/home.types';
 import { renderBooksFromTimeRead } from '../utils/renderBooksFromTimeRead';
 
 type IntroTextProps = {
-  blogPost: IHomeNode
-}
+  blogPost: IHomeNode;
+};
 
-const IntroText = ({ blogPost }: IntroTextProps) => {
-  const text = blogPost.frontmatter.intro ? blogPost.frontmatter.intro : blogPost.excerpt;
+const IntroText = ({ blogPost }: IntroTextProps): ReactElement => {
+  const text = blogPost.frontmatter.intro
+    ? blogPost.frontmatter.intro
+    : blogPost.excerpt;
 
-  return <p>{text}</p>
+  return <p>{text}</p>;
 };
 
 interface IHomePageProps {
   blog: Array<IEdge>;
 }
 
-const BlogList = (blog: IHomePageProps) => {
+const BlogList = (blog: IHomePageProps): ReactElement => {
   const blogPosts = blog.blog.map((post: IEdge) => (
     <BlogCard key={post.node.id}>
       <PostTitle
@@ -32,8 +34,7 @@ const BlogList = (blog: IHomePageProps) => {
         <div>{renderBooksFromTimeRead(post.node.timeToRead)}</div>
       </BlogCardInfo>
 
-      <IntroText blogPost={post.node}/>
-
+      <IntroText blogPost={post.node} />
     </BlogCard>
   ));
 

@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { AltCardContainer } from '../styles/styles';
 import { memo } from 'react';
+import { AltCardContainer } from '../styles/styles';
 import styled from '@emotion/styled';
 
-const HeadingSection = styled.header `
+const HeadingSection = styled.header`
   display: flex;
   flex-direction: column;
 `;
 
-const NewsletterMainHeading = styled.h4 `
+const NewsletterMainHeading = styled.h4`
   font-size: 2rem;
   margin: 1rem 0;
   line-height: 2.4rem;
@@ -16,7 +16,7 @@ const NewsletterMainHeading = styled.h4 `
   color: var(--card-backgound);
 `;
 
-const NewsletterSubHeading = styled.h5 `
+const NewsletterSubHeading = styled.h5`
   font-size: 1.2rem;
   font-style: italic;
   margin: 0;
@@ -25,45 +25,45 @@ const NewsletterSubHeading = styled.h5 `
   color: var(--card-backgound);
 `;
 
-const NewsletterForm = styled.form `
+const NewsletterForm = styled.form`
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
 `;
 
-const FormInput = styled.div `
+const FormInput = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
   width: 80%;
-  
+
   label {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
     color: var(--card-backgound);
   }
-  
+
   input {
     background: var(--backgound);
     color: var(--card-text-color);
-    border: 0.2rem solid #E3B7A9;
+    border: 0.2rem solid #e3b7a9;
     font-size: 1.2rem;
     line-height: 1.6rem;
     padding: 1rem;
   }
 `;
 
-const FormButtonContainer = styled.div `
+const FormButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-top: 1rem;
 `;
 
-const NewsletterButton = styled.button `
+const NewsletterButton = styled.button`
   background: #252525;
-  color: #E3B7A9;
+  color: #e3b7a9;
   border-radius: 1rem;
   border: 0;
   font-size: 1.2rem;
@@ -71,18 +71,21 @@ const NewsletterButton = styled.button `
   padding: 0.6rem 1.2rem;
 `;
 
-{/* TODO: add a form and post to serverless function */}
+//'Success! 🎉 You are now subscribed to the newsletter.'
+/* TODO: add a form and post to serverless function */
+
 const Newsletter = () => {
-  const newsletterHandler = () => {
-    console.log('lmao');
-  }
+  const newsletterHandler = () => console.log('lmao');
 
   return (
     <AltCardContainer>
-
       <HeadingSection>
-        <NewsletterMainHeading>Subscribe to my Newsletter 📧</NewsletterMainHeading>
-        <NewsletterSubHeading>Only posts, unsubscribe at any time</NewsletterSubHeading>
+        <NewsletterMainHeading>
+          Subscribe to my Newsletter 📧
+        </NewsletterMainHeading>
+        <NewsletterSubHeading>
+          Only posts, unsubscribe at any time
+        </NewsletterSubHeading>
       </HeadingSection>
 
       <NewsletterForm method="post" onSubmit={newsletterHandler}>
@@ -97,10 +100,9 @@ const Newsletter = () => {
         </FormInput>
 
         <FormButtonContainer>
-          <NewsletterButton type="submit">Send</NewsletterButton>
+          <NewsletterButton type="submit">Send 💌</NewsletterButton>
         </FormButtonContainer>
       </NewsletterForm>
-
     </AltCardContainer>
   );
 };

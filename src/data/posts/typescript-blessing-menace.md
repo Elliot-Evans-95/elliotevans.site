@@ -4,14 +4,29 @@ title: "Typescript is a blessing and a menace"
 intro: ""
 ---
 
-Over the past 2 years at codeweavers we have been using typescript. To give a quick introduction about typescript for those who don’t know, typescript is a pre-processor language to Javascript. Due to its nature you can build additional tools into the language such as type safety to benefit the developer/developers when coding. It also comes with its own compiler and linting to further aid in making the project consistent.
+Over the past 2 years at codeweavers we have been using typescript. To give a quick introduction about typescript for
+those who don’t know, typescript is a pre-processor language to Javascript. Due to its nature you can build additional
+tools into the language such as type safety to benefit the developer/developers when coding. It also comes with its own
+compiler and linting to further aid in making the project consistent.
 
-I have found that Typescript is a massive aid when used in big projects. Recently at Codeweavers we have been converting a project that has been on AngularJS 1.3 and still uses JQuery into a AngularJS 1.6 and RxJS ball of happiness. Of course there have been issues, mainly due module bundling issues. Since converting the project over, the project has received less bugs and is easier to develop in. 
+I have found that Typescript is a massive aid when used in big projects. Recently at Codeweavers we have been converting
+a project that has been on AngularJS 1.3 and still uses JQuery into a AngularJS 1.6 and RxJS ball of happiness. Of
+course there have been issues, mainly due module bundling issues. Since converting the project over, the project has
+received less bugs and is easier to develop in.
 
-On the other hand Typescript can also be a hindrance, the type safety is only as good as the developer creating the type and if the type is incorrect then Typescript will compile and you will still receive an error in the console. Compared to elm for example, it definitely can be more problematic and error prone.
+On the other hand Typescript can also be a hindrance, the type safety is only as good as the developer creating the type
+and if the type is incorrect then Typescript will compile and you will still receive an error in the console. Compared
+to elm for example, it definitely can be more problematic and error prone.
 
-On the flip side Typescript’s markup is very similar to javascript in that it looks comparable on face value all be in for the addition of the type for a field or a method. It's quite easy to pick up and allows the conversion of a project to be just that and not a conversion of knowledge for developing working on it. Having the consistency between Angular 1 & 2 thanks to Typescript really helps bring new developers into a company as there is no diverging path.
+On the flip side Typescript’s markup is very similar to javascript in that it looks comparable on face value all be in
+for the addition of the type for a field or a method. It's quite easy to pick up and allows the conversion of a project
+to be just that and not a conversion of knowledge for developing working on it. Having the consistency between Angular 1
+& 2 thanks to Typescript really helps bring new developers into a company as there is no diverging path.
 
-The final point to add against Typescript is that its inherently Object Oriented. Adding Typescript into React, personally, doesn’t seems to bring any significant benefits to the development of the project, prop types albeit basic in design, it a great bridge gap for React and shows how plain javascript can cope with type checking.
+The final point to add against Typescript is that its inherently Object Oriented. Adding Typescript into React,
+personally, doesn’t seems to bring any significant benefits to the development of the project, prop types albeit basic
+in design, it a great bridge gap for React and shows how plain javascript can cope with type checking.
 
-My closing thoughts are that if you are planning to have a project that is being worked on by a team and you have chosen to go down the Object Oriented route then look at Typescript and put it into consideration. More thoughts about Typescript and Angular will be discussed as part of upcoming video.
+My closing thoughts are that if you are planning to have a project that is being worked on by a team and you have chosen
+to go down the Object Oriented route then look at Typescript and put it into consideration. More thoughts about
+Typescript and Angular will be discussed as part of upcoming video.

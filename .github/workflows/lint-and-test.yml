@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - gh-actions
-    branches-ignore:
-      - master
+#    branches-ignore:
+#      - master
 
 # TODO: finish off action with names
 
@@ -13,18 +13,19 @@ jobs:
   lint-test:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checking out from GitHub'
+      - name: 'Checkout action from GitHub'
         uses: actions/checkout@v2
 
-      - name: 'Checking out from GitHub'
+      - name: 'Checkout node from GitHub'
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Get yarn cache directory path
+      - name: 'Get yarn cache directory path'
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
+      - name: 'Get actions cache'
       - uses: actions/cache@v2
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:

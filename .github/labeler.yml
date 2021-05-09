@@ -1,5 +1,8 @@
+test:
+  - *
+
 github:
- - ./.github/*
+  - ./.github/*
 
 @site/pages:
    - ./src/pages/*

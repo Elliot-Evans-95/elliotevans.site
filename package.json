@@ -69,10 +69,10 @@
     "lint:style": "stylelint \"src/**/*.css\"",
     "lint:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
-    "test:axe": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
+    "test:axe": "echo \" \\n -- To Impliment -- \\n \"",
     "percy": "yarn percy:snapshot && yarn percy:upload",
     "percy:snapshot": "percy snapshot public/",
-    "percy:upload": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
+    "percy:upload": "echo \" \\n -- To Impliment -- \\n \"",
     "prepare": "husky install"
   },
   "engines": {

@@ -40,5 +40,6 @@ jobs:
       - name: 'Run lint'
         run: yarn lint
 
+      # TODO: maybe use pa11y-ci ?
       - name: 'Run tests'
         run: yarn test && yarn test:axe

@@ -64,12 +64,16 @@
     "serve": "gatsby serve",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "format": "yarn format:style && yarn format:script",
-    "format:style": "stylelint \"src/**/*.css\"",
-    "format:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
+    "lint": "yarn lint:style && yarn lint:script",
+    "lint:style": "stylelint \"src/**/*.css\"",
+    "lint:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "test:axe": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
     "prepare": "husky install"
+  },
+  "engines": {
+    "yarn": "1.22.*",
+    "node": "14.16.*"
   },
   "keywords": [
     "Blog",

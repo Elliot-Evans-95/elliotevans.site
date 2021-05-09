@@ -9,7 +9,7 @@ const Footer = (): ReactElement => {
         <span role="img" aria-label="coding">
           🧑‍💻
         </span>{' '}
-        2.0.0
+        2.0.1
       </p>
       <p>
         <span role="img" aria-label="time">

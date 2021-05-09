@@ -53,7 +53,7 @@ const Newsletter = () => {
 
       <NewsletterForm method="post" onSubmit={newsletterHandler}>
         <FormInput>
-          <label htmlFor="name">Known name</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"

@@ -12,3 +12,12 @@ export const IconWrapper = styled.div`
     }
   }
 `;
+
+export const IconLink = styled.a`
+  :hover {
+    svg {
+      transition: fill 300ms ease-in-out;
+      fill: var(--card-text-color)
+    }
+  }
+`;

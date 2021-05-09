@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://elliotevans.site`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-transformer-json`,
     },

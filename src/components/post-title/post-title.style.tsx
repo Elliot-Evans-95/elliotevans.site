@@ -9,6 +9,12 @@ export const BlogCardTitle = styled.header`
   h5 {
     margin: 0 0 0 1rem;
   }
+
+  &:hover {
+    h2 {
+      color: var(--cite-text-color);
+    }
+  }
 `;
 
 export const BlogCardLink = styled(Link)`
@@ -17,11 +23,5 @@ export const BlogCardLink = styled(Link)`
 
   h2 {
     transition: color 200ms ease-in;
-  }
-
-  &:hover {
-    h2 {
-      color: #0078d7;
-    }
   }
 `;

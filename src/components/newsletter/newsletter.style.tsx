@@ -47,7 +47,7 @@ export const FormInput = styled.div`
     border: 0.2rem solid #e3b7a9;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    padding: 1rem;
+    padding: 0.8rem;
   }
 `;
 

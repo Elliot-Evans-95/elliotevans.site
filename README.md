@@ -16,3 +16,4 @@ A personal site created to showcase projects and also to publicise thoughts and 
 - Add new design (X)
 - Add RSS Feed (X)
 - Add Newsletter (X)
+- Add Tests ()

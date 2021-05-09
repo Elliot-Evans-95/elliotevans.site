@@ -1,6 +1,6 @@
 {
   "name": "elliotevans.site",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -68,6 +68,7 @@
     "format:style": "stylelint \"src/**/*.css\"",
     "format:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
+    "test:axe": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
     "prepare": "husky install"
   },
   "engines": {

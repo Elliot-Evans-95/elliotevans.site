@@ -1,9 +1,11 @@
-name: test-site-actions
+name: lint-and-test
 
 on:
   push:
+    branches:
+      - gh-actions
     branches-ignore:
-      - 'master'
+      - master
 
 # TODO: finish off action with names
 
@@ -34,3 +36,4 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn lint
       - run: yarn test
+      - run: yarn test:axe

@@ -71,10 +71,6 @@
     "test:axe": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
     "prepare": "husky install"
   },
-  "engines": {
-    "yarn": "1.22.*",
-    "node": "16.*"
-  },
   "keywords": [
     "Blog",
     "Portfolio"

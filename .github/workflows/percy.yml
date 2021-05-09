@@ -16,7 +16,7 @@ jobs:
       - name: 'Checkout node from GitHub'
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '14.16.*'
 
       - name: 'Get yarn cache directory path'
         id: yarn-cache-dir-path
@@ -31,9 +31,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: 'Install'
+      - name: 'Install yarn'
         run: yarn install --frozen-lockfile
-      - name: 'Percy'
+
+      - name: 'Run percy'
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: yarn percy

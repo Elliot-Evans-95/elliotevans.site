@@ -7,8 +7,6 @@ on:
 #    branches-ignore:
 #      - master
 
-# TODO: finish off action with names
-
 jobs:
   lint-test:
     runs-on: ubuntu-latest

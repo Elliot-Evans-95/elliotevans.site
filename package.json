@@ -31,6 +31,7 @@
     "typescript": "^4.2.4"
   },
   "devDependencies": {
+    "@percy/agent": "^0.28.6",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.2",
     "@types/isomorphic-fetch": "^0.0.35",
@@ -69,6 +70,9 @@
     "lint:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "test:axe": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
+    "percy": "yarn percy:snapshot && yarn percy:upload",
+    "percy:snapshot": "percy snapshot public/",
+    "percy:upload": "echo \"\\x1b[104m\\x1b[97m\n[ To Impliment ]\n\\x1b[0m\"",
     "prepare": "husky install"
   },
   "engines": {

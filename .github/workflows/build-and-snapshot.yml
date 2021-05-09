@@ -1,13 +1,14 @@
-name: percy
+name: build-and-snapshot
 
 on:
   push:
     branches:
-      - master
       - gh-actions
+#    branches-ignore:
+#      - master
 
 jobs:
-  percy:
+  lint-test:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout action from GitHub'
@@ -34,7 +35,8 @@ jobs:
       - name: 'Install yarn'
         run: yarn install --frozen-lockfile
 
-      - name: 'Run percy'
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      - name: 'Run gatsby build'
+        run: yarn build
+
+      - name: 'Run percy snapshot and upload'
         run: yarn percy

@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: mkdir /tmp/artifacts
+
       - name: 'Run Lighthouse'
         uses: foo-software/lighthouse-check-action@master
         with:
@@ -26,6 +27,7 @@ jobs:
           urls: 'https://www.foo.software,https://www.foo.software/contact'
           sha: ${{ github.sha }}
 #          slackWebhookUrl: ${{ secrets.LIGHTHOUSE_CHECK_WEBHOOK_URL }}
+
       - name: 'Upload artifacts'
         uses: actions/upload-artifact@master
         with:

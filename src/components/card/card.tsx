@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { memo, ReactElement } from 'react';
+import { ReactElement } from 'react';
+import { memo } from 'preact/compat';
 import { CardProps } from './card.type';
 import { CardContainer } from '../../styles/common.style';
 

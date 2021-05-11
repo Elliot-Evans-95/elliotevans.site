@@ -4,6 +4,7 @@
 .cache
 .env
 /public
+public/*
 
 # IDE
 .idea

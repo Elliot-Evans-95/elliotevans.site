@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export const Title = styled.h1`
   font-size: 2rem;
@@ -91,7 +91,7 @@ export const NavItems = styled.li`
   margin: 0 1em;
 `;
 
-export const MyFace = styled(Image)`
+export const MyFace = styled(GatsbyImage)`
   width: 7rem;
   height: 7rem;
   border-radius: 50%;

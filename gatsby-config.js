@@ -39,12 +39,38 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-preload-fonts`,
+    {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: [{ domain: 'https://elliotevans.site', crossOrigin: true }],
+      },
+    },
+    // {
+    //   resolve: 'gatsby-plugin-guess-js',
+    //   options: {
+    //     // Find the view id in the GA admin in a section labeled "views"
+    //     GAViewID: `VIEW_ID`,
+    //     // Add a JWT to get data from GA
+    //     jwt: {
+    //       client_email: `GOOGLE_SERVICE_ACCOUNT_EMAIL`,
+    //       private_key: `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`,
+    //     },
+    //     minimumThreshold: 0.03,
+    //     // The "period" for fetching analytic data.
+    //     period: {
+    //       startDate: new Date('2018-1-1'),
+    //       endDate: new Date(),
+    //     },
+    //   },
+    // },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -71,5 +97,21 @@ module.exports = {
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
+    `gatsby-plugin-brotli`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
   ],
 };

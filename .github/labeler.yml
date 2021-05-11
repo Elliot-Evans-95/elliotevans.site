@@ -1,0 +1,27 @@
+test:
+  - *
+
+github:
+  - ./.github/*
+
+@site/pages:
+   - ./src/pages/*
+
+@site/components:
+   - ./src/components/*
+
+@site/content:
+   - ./src/data/*
+
+@site/style:
+   - ./src/**/*.style.*
+
+tests:
+   - ./src/**/*.test.*
+
+assets:
+  - ./src/assets/*
+
+content-only:
+  - any: ['./src/data/*']
+    all: ['!./src/components/*', '!./src/pages/*']

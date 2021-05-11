@@ -27,13 +27,13 @@
 #  release:
 #    types: [created]
 
+# TODO: change this to deploy to s3 bucket
+name: Deploy to Amazon ECS
+
 on:
   push:
     branches:
       - master
-
-# TODO: change this to deploy to s3 bucket
-name: Deploy to Amazon ECS
 
 jobs:
   deploy:

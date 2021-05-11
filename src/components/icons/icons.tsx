@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { memo, ReactElement } from 'react';
+import { ReactElement } from 'react';
+import { memo } from 'preact/compat';
 
 import Rss from '../../assets/icons/rss-feed.svg';
 import Github from '../../assets/icons/github-icon.svg';

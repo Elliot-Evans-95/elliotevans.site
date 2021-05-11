@@ -17,7 +17,7 @@ export const IconLink = styled.a`
   :hover {
     svg {
       transition: fill 300ms ease-in-out;
-      fill: var(--card-text-color)
+      fill: var(--card-text-color);
     }
   }
 `;

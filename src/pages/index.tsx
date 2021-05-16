@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Component, VNode } from 'preact';
 import { graphql } from 'gatsby';
-import Footer from '../components/footer';
 
+import Footer from '../components/footer';
 import Home from '../components/home/home';
 import Head from '../components/head/head';
 import { FixedImage, HomeProps } from '../models/home.types';

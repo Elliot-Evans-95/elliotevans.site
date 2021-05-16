@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { VNode } from 'preact';
+import { FunctionComponent, VNode } from 'preact';
 import { memo } from 'preact/compat';
 import { IHeader } from '../models/shared.types';
 import Icons from './icons/icons';
@@ -9,10 +9,10 @@ import { HeaderTextWrapper } from './header.style';
 
 interface IBannerProps {
   header: IHeader;
-  profileImage: any | IGatsbyImageData | ProfileImage;
+  profileImage: IGatsbyImageData;
 }
 
-const Header = (props: IBannerProps): VNode => {
+const Header: FunctionComponent<IBannerProps> = (props): VNode => {
   const image = getImage(props.profileImage);
 
   return (

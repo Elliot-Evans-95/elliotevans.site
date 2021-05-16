@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { VNode } from 'preact';
+import { FunctionComponent, VNode } from 'preact';
 import { memo } from 'preact/compat';
 import { AppNavigation, NavItems, StyledLink } from '../styles/common.style';
 import { Link } from 'gatsby';
 
-const BackToHome = (): VNode => {
+const BackToHome: FunctionComponent = (): VNode => {
   return (
     <AppNavigation>
       <ul>

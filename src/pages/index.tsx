@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { VNode } from 'preact';
+import { Component, VNode } from 'preact';
 import { graphql } from 'gatsby';
 
 import Footer from '../components/footer';
@@ -18,10 +18,7 @@ const desc = 'Home Page';
 const keywords =
   'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
 
-export default class extends React.Component<
-  HomeProps,
-  Record<string, unknown>
-> {
+export default class extends Component<HomeProps, Record<string, unknown>> {
   private readonly _header: IHeader;
   private readonly _profileImage: FixedImage;
   private readonly _about: string;

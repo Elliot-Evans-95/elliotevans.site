@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { VNode } from 'preact';
+import { FunctionComponent, VNode } from 'preact';
 import { memo } from 'preact/compat';
 import { BlogCardLink, BlogCardTitle } from './post-title.style';
 import { IPostTitle } from './post-title.type';
 import { Link } from 'gatsby';
 
-const PostTitle = ({ text, link }: IPostTitle): VNode => (
+const PostTitle: FunctionComponent<IPostTitle> = ({ text, link }): VNode => (
   <Link classNames={BlogCardLink} to={link}>
     <BlogCardTitle>
       <h2>{text}</h2>

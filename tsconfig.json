@@ -6,7 +6,8 @@
     "strict": true,
     "module": "commonjs",
     "target": "esnext",
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "lib": ["dom", "esnext"]
   },
   "baseUrl": ".",

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { ReactElement } from 'react';
+import { VNode } from 'preact';
 
-export const renderBooksFromTimeRead = (timeToRead: number): ReactElement => {
+export const renderBooksFromTimeRead = (timeToRead: number): VNode => {
   if (timeToRead >= 3) {
     return <span>📚</span>;
   }

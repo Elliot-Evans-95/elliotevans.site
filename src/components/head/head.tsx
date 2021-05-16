@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { ReactElement } from 'react';
+import { VNode } from 'preact';
 import { Helmet } from 'react-helmet';
 import { HeadProps } from './head.type';
 import { memo } from 'preact/compat';
 
-const head = ({ title, description, keywords }: HeadProps): ReactElement => (
+const head = ({ title, description, keywords }: HeadProps): VNode => (
   <Helmet>
     {/* <!-- Primary Meta Tags --> */}
     <title>{title}</title>

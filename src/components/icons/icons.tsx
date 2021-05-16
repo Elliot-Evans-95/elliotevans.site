@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactElement } from 'react';
+import { VNode } from 'preact';
 import { memo } from 'preact/compat';
 
 import Rss from '../../assets/icons/rss-feed.svg';
@@ -7,7 +7,7 @@ import Github from '../../assets/icons/github-icon.svg';
 import { IconLink, IconWrapper } from './icons.style';
 import { IconsProps } from './icons.type';
 
-const Icons = ({ page }: IconsProps): ReactElement => {
+const Icons = ({ page }: IconsProps): VNode => {
   return (
     <IconWrapper>
       {page === 'home' && (

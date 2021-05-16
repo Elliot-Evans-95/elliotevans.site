@@ -1,37 +1,23 @@
 import * as React from 'react';
-import { memo, ReactElement } from 'react';
+import { VNode } from 'preact';
+import { memo } from 'preact/compat';
 import { IHeader } from '../models/shared.types';
 import Icons from './icons/icons';
-import { FixedImage } from '../models/home.types';
-import styled from '@emotion/styled';
-import { HeaderContainer, MyFace, Title } from '../styles/common.style';
-
-const HeaderTextWrapper = styled.div`
-  @media (min-width: 45em) {
-    margin-left: 1rem;
-  }
-`;
+import { HeaderContainer, profileImage, Title } from '../styles/common.style';
+import { getImage, GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { HeaderTextWrapper } from './header.style';
 
 interface IBannerProps {
   header: IHeader;
-  imageSrc: FixedImage;
+  profileImage: any | IGatsbyImageData | ProfileImage;
 }
 
-const Header = (props: IBannerProps): ReactElement => {
+const Header = (props: IBannerProps): VNode => {
+  const image = getImage(props.profileImage);
+
   return (
     <HeaderContainer>
-      <MyFace
-        alt="My face"
-        fixed={{
-          // based off 7rem
-          width: 80,
-          height: 80,
-          src: props.imageSrc.srcWebp,
-          srcSet: props.imageSrc.srcSetWebp,
-          srcWebp: props.imageSrc.srcSetWebp,
-          srcSetWebp: props.imageSrc.srcSetWebp,
-        }}
-      />
+      <GatsbyImage className={profileImage} alt="My face" image={image} />
       <HeaderTextWrapper>
         <Title>{props.header.heading}</Title>
         <Icons page="home" />

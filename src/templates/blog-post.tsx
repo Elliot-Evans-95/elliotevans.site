@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import { renderBooksFromTimeRead } from '../utils/renderBooksFromTimeRead';
-import { ReactElement } from 'react';
+import { VNode } from 'preact';
 import { IHeaderQuery } from '../models/home.types';
 import {
   BlogCardInfo,
@@ -32,7 +32,7 @@ interface IndexBlogPostProps {
   };
 }
 
-export default ({ data }: IndexBlogPostProps): ReactElement => {
+export default ({ data }: IndexBlogPostProps): VNode => {
   const intro = data.markdownRemark.frontmatter.intro;
   const desc = 'Blog Page';
   const keywords =
@@ -74,7 +74,7 @@ export default ({ data }: IndexBlogPostProps): ReactElement => {
 };
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

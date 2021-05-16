@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { memo, ReactElement } from 'react';
+import { VNode } from 'preact';
+import { memo } from 'preact/compat';
 import { EEFooter } from '../styles/common.style';
 
-const Footer = (): ReactElement => {
+const Footer = (): VNode => {
   return (
     <EEFooter>
       <p>

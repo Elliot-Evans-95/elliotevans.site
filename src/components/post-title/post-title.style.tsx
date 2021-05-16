@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import Link from 'gatsby-link';
+import { styled } from '@linaria/react';
+import { css } from 'linaria';
 
 export const BlogCardTitle = styled.header`
   display: inline-block;
@@ -17,7 +17,7 @@ export const BlogCardTitle = styled.header`
   }
 `;
 
-export const BlogCardLink = styled(Link)`
+export const BlogCardLink = css`
   display: block;
   text-decoration: none;
 

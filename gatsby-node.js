@@ -9,7 +9,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: `slug`,
       value: slug,
-    })
+    });
   }
 };
 
@@ -38,6 +38,18 @@ exports.createPages = async ({ graphql, actions }) => {
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
-    })
-  })
+    });
+  });
+};
+
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@reach/router': path.dirname(
+          require.resolve(`@gatsbyjs/reach-router/package.json`),
+        ),
+      },
+    },
+  });
 };

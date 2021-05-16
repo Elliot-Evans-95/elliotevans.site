@@ -1,6 +1,5 @@
-import styled from '@emotion/styled';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { styled } from '@linaria/react';
+import { css } from 'linaria';
 
 export const Title = styled.h1`
   font-size: 2rem;
@@ -91,9 +90,7 @@ export const NavItems = styled.li`
   margin: 0 1em;
 `;
 
-export const MyFace = styled(GatsbyImage)`
-  width: 7rem;
-  height: 7rem;
+export const profileImage = css`
   border-radius: 50%;
   box-shadow: 0 -2px 20px 0px rgb(0 0 0 / 40%), 0 0px 20px 0px rgb(0 0 0 / 20%);
 
@@ -102,7 +99,7 @@ export const MyFace = styled(GatsbyImage)`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = css`
   color: #f2e0d7;
   text-decoration: none;
 
@@ -136,57 +133,6 @@ export const BlogCard = styled.section`
 
   :last-child {
     margin-bottom: 6rem;
-  }
-`;
-
-export const BlurImageContainer = styled.div`
-  width: 50%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  h5,
-  p {
-    z-index: 10;
-    width: 75%;
-  }
-
-  div:nth-of-type(3) {
-    width: 200px;
-    height: 100px;
-    background: white;
-    filter: blur(5px);
-    position: absolute;
-    top: 1rem;
-    border: 1em solid white;
-    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
-  }
-
-  div:nth-of-type(4) {
-    width: 100px;
-    height: 100px;
-    background: white;
-    filter: blur(10px);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border: 1em solid white;
-    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
-  }
-
-  div:nth-of-type(5) {
-    width: 50px;
-    height: 50px;
-    background: white;
-    filter: blur(15px);
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    border: 1em solid white;
-    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
   }
 `;
 

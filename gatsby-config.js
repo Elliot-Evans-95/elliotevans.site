@@ -44,7 +44,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-emotion`,
+    `gatsby-plugin-linaria`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-preload-fonts`,
     {

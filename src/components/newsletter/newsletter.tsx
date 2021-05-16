@@ -11,9 +11,9 @@ import {
   NewsletterMainHeading,
   NewsletterSubHeading,
 } from './newsletter.style';
-import { VNode } from 'preact';
+import { FunctionComponent, VNode } from 'preact';
 
-const Newsletter = (): VNode => {
+const Newsletter: FunctionComponent = (): VNode => {
   // const [email, setEmail] = useState('');
   // const [name, setName] = useState('');
   // const [message, setMessage] = useState('');

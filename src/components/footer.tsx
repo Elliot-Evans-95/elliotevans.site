@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { VNode } from 'preact';
+import { FunctionComponent, VNode } from 'preact';
 import { memo } from 'preact/compat';
 import { EEFooter } from '../styles/common.style';
 
-const Footer = (): VNode => {
+const Footer: FunctionComponent = (): VNode => {
   return (
     <EEFooter>
       <p>

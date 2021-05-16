@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { VNode } from 'preact';
+import { FunctionComponent, VNode } from 'preact';
 import { memo } from 'preact/compat';
 import { IEdge } from '../../models/shared.types';
 import { renderBooksFromTimeRead } from '../../utils/renderBooksFromTimeRead';
@@ -12,7 +12,7 @@ import {
 import PostTitle from '../post-title/post-title';
 import { IntroText } from './intro-text';
 
-const BlogList = (blog: IHomePageProps): VNode => {
+const BlogList: FunctionComponent<IHomePageProps> = (blog): VNode => {
   const blogPosts = blog.blog.map((post: IEdge) => (
     <BlogCard key={post.node.id}>
       <PostTitle

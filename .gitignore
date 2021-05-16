@@ -4,16 +4,7 @@
 .cache
 .env
 .linaria-cache
-/public
 /public/
-public/*
-/public/*/**
-./public
-./public/
-./public/**/**
-./public/*/**
-./public/**/*
-./public/*.js
 
 # IDE
 .idea

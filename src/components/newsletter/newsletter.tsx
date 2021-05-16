@@ -3,11 +3,7 @@ import * as React from 'react';
 import { memo } from 'preact/compat';
 import { AltCardContainer } from '../../styles/common.style';
 import {
-  // FormButtonContainer,
-  // FormInput,
   HeadingSection,
-  // NewsletterButton,
-  // NewsletterForm,
   NewsletterMainHeading,
   NewsletterSubHeading,
 } from './newsletter.style';

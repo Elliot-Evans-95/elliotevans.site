@@ -1,5 +1,0 @@
-# www.robotstxt.org/
-
-# exclude all robots from the entire server
-User-agent: *
-Disallow: /

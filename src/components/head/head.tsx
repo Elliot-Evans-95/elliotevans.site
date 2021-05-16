@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { VNode } from 'preact';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { HeadProps } from './head.type';
 import { memo } from 'preact/compat';
 

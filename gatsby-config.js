@@ -43,7 +43,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-linaria`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-preload-fonts`,

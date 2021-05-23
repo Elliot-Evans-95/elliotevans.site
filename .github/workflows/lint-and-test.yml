@@ -3,9 +3,9 @@ name: lint-and-test
 on:
   push:
     branches:
-      - gh-actions
-#    branches-ignore:
-#      - master
+      - *
+    branches-ignore:
+      - master
 
 jobs:
   lint-test:

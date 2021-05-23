@@ -1,11 +1,7 @@
 name: lint-and-test
 
 on:
-  push:
-    branches:
-      - gh-actions
-#    branches-ignore:
-#      - master
+  push
 
 jobs:
   lint-test:

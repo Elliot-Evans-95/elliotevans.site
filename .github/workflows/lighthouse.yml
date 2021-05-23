@@ -1,10 +1,7 @@
 name: lighthouse
 
 on:
-  push:
-    branches:
-      - master
-      - gh-actions
+  push
 
 jobs:
   lighthouse:
@@ -16,7 +13,8 @@ jobs:
       - name: 'Run Lighthouse'
         uses: foo-software/lighthouse-check-action@master
         with:
-          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+#          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
           author: ${{ github.actor }}
 #          awsAccessKeyId: ${{ secrets.LIGHTHOUSE_CHECK_AWS_ACCESS_KEY_ID }}
 #          awsBucket: ${{ secrets.LIGHTHOUSE_CHECK_AWS_BUCKET }}

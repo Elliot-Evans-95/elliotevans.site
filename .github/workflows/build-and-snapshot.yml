@@ -1,11 +1,7 @@
 name: build-and-snapshot
 
 on:
-  push:
-    branches:
-      - *
-    branches-ignore:
-      - master
+  push
 
 jobs:
   build-snapshot:

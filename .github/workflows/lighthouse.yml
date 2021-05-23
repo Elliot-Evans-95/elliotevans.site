@@ -1,10 +1,7 @@
 name: lighthouse
 
 on:
-  push:
-    branches:
-      - master
-      - gh-actions
+  push
 
 jobs:
   lighthouse:

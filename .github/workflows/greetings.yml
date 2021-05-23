@@ -1,4 +1,4 @@
-name: Greetings
+name: Greet users on first PR or issue
 
 on: [pull_request, issues]
 

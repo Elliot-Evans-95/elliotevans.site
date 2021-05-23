@@ -1,4 +1,4 @@
-name: build-and-snapshot
+name: Build & Snapshot
 
 on:
   push

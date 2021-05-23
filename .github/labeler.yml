@@ -1,16 +1,16 @@
 github:
   - ./.github/*
 
-@site/pages:
+site/pages:
    - ./src/pages/*
 
-@site/components:
+site/components:
    - ./src/components/*
 
-@site/content:
+site/content:
    - ./src/data/*
 
-@site/style:
+site/style:
    - ./src/**/*.style.*
 
 tests:

@@ -1,4 +1,4 @@
-name: Labeler
+name: Label
 
 on:
   pull_request_target:
@@ -9,7 +9,7 @@ on:
 #      - master
 
 jobs:
-  label:
+  label-pull-requests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v2

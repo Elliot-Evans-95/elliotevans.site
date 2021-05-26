@@ -118,7 +118,7 @@ module.exports = {
       options: {
         bucketName: 'elliotevans.site',
         protocol: 'https',
-        hostname: 'www.elliotevans.info',
+        hostname: 'elliotevans.info',
       },
     },
   ],

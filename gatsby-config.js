@@ -1,9 +1,11 @@
+const siteUrl = process.env.URL || `https://elliotevans.info`;
+
 module.exports = {
   siteMetadata: {
     title: `Elliot Evans Site`,
     description: `Elliot Evans's personal Portfolio / Blog site`,
     author: `Elliot Evans`,
-    siteUrl: `https://elliotevans.site`,
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-preact`,
@@ -50,7 +52,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-preconnect',
       options: {
-        domains: [{ domain: 'https://elliotevans.site', crossOrigin: true }],
+        domains: [{ domain: siteUrl, crossOrigin: true }],
       },
     },
     // {
@@ -77,7 +79,7 @@ module.exports = {
       options: {
         name: `Elliot Evans' Blog`,
         short_name: `Elliot Evans Blog`,
-        lang: 'en',
+        lang: 'en-GB',
         description: "Elliot Evans' blog",
         start_url: `/`,
         background_color: `#252525`,
@@ -96,18 +98,32 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => allPages,
+        serialize: ({ path, modifiedGmt }) => ({
+          url: path,
+          lastmod: modifiedGmt,
+        }),
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }],
-          },
+          policy: [{ userAgent: '*', allow: '/' }],
         },
       },
     },

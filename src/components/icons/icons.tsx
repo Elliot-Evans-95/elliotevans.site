@@ -15,7 +15,7 @@ const Icons: FunctionComponent<IconsProps> = ({ page }): VNode => {
           <Github />
         </IconLink>
       )}
-      <IconLink href="https://elliotevans.site/rss.xml">
+      <IconLink href="https://elliotevans.info/rss.xml">
         <Rss />
       </IconLink>
     </IconWrapper>

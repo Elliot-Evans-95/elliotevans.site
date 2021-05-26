@@ -113,5 +113,13 @@ module.exports = {
     },
     `gatsby-plugin-brotli`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'elliotevans.site',
+        protocol: 'https',
+        hostname: 'elliotevans.info',
+      },
+    },
   ],
 };

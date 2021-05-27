@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - s3-auth-fix
 
 jobs:
   build-snapshot:

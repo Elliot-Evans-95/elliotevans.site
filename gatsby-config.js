@@ -1,4 +1,5 @@
 const siteUrl = process.env.URL || `https://elliotevans.info`;
+const hardCodedURL = new URL('https://elliotevans.info');
 
 module.exports = {
   siteMetadata: {
@@ -130,11 +131,18 @@ module.exports = {
     `gatsby-plugin-brotli`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: hardCodedURL.href.slice(0, -1),
+        stripQueryString: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: 'elliotevans.site',
-        protocol: 'https',
-        hostname: 'elliotevans.info',
+        protocol: hardCodedURL.protocol.slice(0, -1),
+        hostname: hardCodedURL.hostname,
       },
     },
   ],

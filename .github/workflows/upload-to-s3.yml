@@ -43,4 +43,11 @@ jobs:
         run: yarn build
 
       - name: 'Run s3 gatsby plugin to deploy site'
-        run: yarn deploy:ci && aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+        run: yarn deploy:ci
+
+      - name: 'Invalidate Cloudfront Cache'
+        uses: chrislennon/action-aws-cli@v1.1
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+#        uses: docker://amazon/aws-cli:2.0.7
+#        with:
+#          args: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

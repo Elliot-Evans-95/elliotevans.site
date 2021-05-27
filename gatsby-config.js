@@ -1,6 +1,6 @@
 const mainURL = new URL('https://elliotevans.info');
 const wwwURL = new URL('https://www.elliotevans.info');
-const bucketName = 'elliotevans.site';
+
 require('dotenv').config();
 
 module.exports = {

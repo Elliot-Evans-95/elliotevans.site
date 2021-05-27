@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mainURL = new URL('https://elliotevans.info');
 const wwwURL = new URL('https://www.elliotevans.info');
 
@@ -143,7 +145,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: 'elliotevans.site',
+        bucketName: process.env.S3_BUCKET_NAME,
         protocol: mainURL.protocol.slice(0, -1),
         hostname: mainURL.hostname,
       },

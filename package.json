@@ -3,6 +3,7 @@
   "version": "2.0.4",
   "private": true,
   "dependencies": {
+    "dotenv": "^10.0.0",
     "gatsby": "^3.5.1",
     "gatsby-link": "^3.5.0",
     "gatsby-plugin-brotli": "^2.0.0",
@@ -74,7 +75,7 @@
     "serve": "gatsby serve",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "deploy": "gatsby-plugin-s3 deploy --yes",
+    "deploy": "npx -n \\\"-r dotenv/config\\\" gatsby-plugin-s3 deploy --yes",
     "lint": "yarn lint:style && yarn lint:script",
     "lint:style": "stylelint \"src/**/*.css\"",
     "lint:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",

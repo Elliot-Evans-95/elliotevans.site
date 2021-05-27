@@ -75,7 +75,7 @@
     "serve": "gatsby serve",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "deploy": "npx -n \\\"-r dotenv/config\\\" gatsby-plugin-s3 deploy --yes",
+    "deploy": "npx \"-r dotenv/config\" gatsby-plugin-s3 deploy --yes",
     "lint": "yarn lint:style && yarn lint:script",
     "lint:style": "stylelint \"src/**/*.css\"",
     "lint:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",

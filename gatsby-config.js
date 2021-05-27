@@ -1,12 +1,12 @@
-const siteUrl = process.env.URL || `https://elliotevans.info`;
-const hardCodedURL = new URL('https://elliotevans.info');
+const mainURL = new URL('https://elliotevans.info');
+const wwwURL = new URL('https://www.elliotevans.info');
 
 module.exports = {
   siteMetadata: {
     title: `Elliot Evans Site`,
     description: `Elliot Evans's personal Portfolio / Blog site`,
     author: `Elliot Evans`,
-    siteUrl: siteUrl,
+    siteUrl: mainURL.href.slice(0, -1),
   },
   plugins: [
     `gatsby-plugin-preact`,
@@ -53,7 +53,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-preconnect',
       options: {
-        domains: [{ domain: siteUrl, crossOrigin: true }],
+        domains: [
+          { domain: mainURL, crossOrigin: true },
+          { domain: wwwURL, crossOrigin: true },
+        ],
       },
     },
     // {
@@ -111,7 +114,7 @@ module.exports = {
           }
         }
       `,
-        resolveSiteUrl: () => siteUrl,
+        resolveSiteUrl: () => mainURL.href.slice(0, -1),
         resolvePages: ({ allSitePage: { nodes: allPages } }) => allPages,
         serialize: ({ path, modifiedGmt }) => ({
           url: path,
@@ -133,7 +136,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: hardCodedURL.href.slice(0, -1),
+        siteUrl: mainURL.href.slice(0, -1),
         stripQueryString: true,
       },
     },
@@ -141,8 +144,8 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: 'elliotevans.site',
-        protocol: hardCodedURL.protocol.slice(0, -1),
-        hostname: hardCodedURL.hostname,
+        protocol: mainURL.protocol.slice(0, -1),
+        hostname: mainURL.hostname,
       },
     },
   ],

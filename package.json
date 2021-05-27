@@ -74,7 +74,7 @@
     "serve": "gatsby serve",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "deploy": "gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E2C93KY4LU28LN --paths \\\"/*\\\"\"",
+    "deploy": "gatsby-plugin-s3 deploy --yes",
     "lint": "yarn lint:style && yarn lint:script",
     "lint:style": "stylelint \"src/**/*.css\"",
     "lint:script": "prettier --parser typescript --write \"src/**/*.{ts,tsx}\"",

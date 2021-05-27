@@ -46,7 +46,7 @@ jobs:
         run: yarn deploy:ci
 
       - name: 'Invalidate Cloudfront Cache'
-      - id: install-aws-cli
+#      - id: install-aws-cli
         uses: unfor19/install-aws-cli-action@v1
         with:
           version: 2

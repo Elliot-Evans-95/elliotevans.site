@@ -3,7 +3,8 @@ import { FunctionComponent, VNode } from 'preact';
 import { Helmet } from 'react-helmet-async';
 import { HeadProps } from './head.type';
 import { memo } from 'preact/compat';
-import { useEffect } from 'preact/hooks';
+import { useEffect } from 'react';
+// import { useEffect } from 'preact/hooks';
 
 type windowWithDataLayer = Window & { dataLayer: Array<unknown> };
 

@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - s3-auth-fix
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}

@@ -1,5 +1,6 @@
 const mainURL = new URL('https://elliotevans.info');
 const wwwURL = new URL('https://www.elliotevans.info');
+const bucketName = 'elliotevans.site';
 
 require('dotenv').config();
 
@@ -127,14 +128,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        resolveEnv: () => {
-          console.log(process.env.CLOUDFRONT_DISTRIBUTION_ID);
-          console.log(process.env.ACCESS_KEY_ID);
-          console.log(process.env.SECRET_ACCESS_KEY);
-          console.log(process.env.S3_BUCKET_NAME);
-
-          return process.env.GATSBY_ENV;
-        },
+        resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           policy: [{ userAgent: '*', allow: '/' }],
         },
@@ -152,7 +146,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: process.env.S3_BUCKET_NAME,
+        bucketName: process.env.S3_BUCKET_NAME || bucketName,
         protocol: mainURL.protocol.slice(0, -1),
         hostname: mainURL.hostname,
       },

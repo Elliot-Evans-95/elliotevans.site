@@ -5,6 +5,10 @@ import {
   HeadingSection,
   NewsletterMainHeading,
   NewsletterSubHeading,
+  NewsletterForm,
+  FormInput,
+  FormButtonContainer,
+  NewsletterButton,
 } from './newsletter.style';
 import { FunctionComponent, VNode } from 'preact';
 import { useState } from 'react';

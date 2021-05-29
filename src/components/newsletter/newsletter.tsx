@@ -1,42 +1,47 @@
 import * as React from 'react';
-// import { useState } from 'preact/hooks';
 import { memo } from 'preact/compat';
 import { AltCardContainer } from '../../styles/common.style';
 import {
   HeadingSection,
   NewsletterMainHeading,
   NewsletterSubHeading,
+  NewsletterForm,
+  FormInput,
+  FormButtonContainer,
+  NewsletterButton,
 } from './newsletter.style';
 import { FunctionComponent, VNode } from 'preact';
+import { useState } from 'react';
+// import { useState } from 'preact/hooks';
 
 const Newsletter: FunctionComponent = (): VNode => {
-  // const [email, setEmail] = useState('');
-  // const [name, setName] = useState('');
-  // const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
 
-  // const newsletterHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //
-  //   const res = await fetch('/api/subscribe', {
-  //     body: JSON.stringify({
-  //       email: email,
-  //     }),
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     method: 'POST',
-  //   });
-  //
-  //   const { error } = await res.json();
-  //
-  //   if (error) {
-  //     setMessage(error);
-  //     return;
-  //   }
-  //
-  //   setEmail('');
-  //   setMessage('Success! 🎉 You are now subscribed to the newsletter.');
-  // };
+  const newsletterHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/subscribe', {
+      body: JSON.stringify({
+        email: email,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+
+    const { error } = await res.json();
+
+    if (error) {
+      setMessage(error);
+      return;
+    }
+
+    setEmail('');
+    setMessage('Success! 🎉 You are now subscribed to the newsletter.');
+  };
 
   return (
     <AltCardContainer>
@@ -49,35 +54,35 @@ const Newsletter: FunctionComponent = (): VNode => {
         </NewsletterSubHeading>
       </HeadingSection>
 
-      {/*<NewsletterForm method="post" onSubmit={newsletterHandler}>*/}
-      {/*  <FormInput>*/}
-      {/*    <label htmlFor="name">Name</label>*/}
-      {/*    <input*/}
-      {/*      type="text"*/}
-      {/*      name="name"*/}
-      {/*      id="name"*/}
-      {/*      value={name}*/}
-      {/*      onChange={(e) => setName(e.target.value)}*/}
-      {/*    />*/}
-      {/*  </FormInput>*/}
+      <NewsletterForm method="post" onSubmit={newsletterHandler}>
+        <FormInput>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </FormInput>
 
-      {/*  <FormInput>*/}
-      {/*    <label htmlFor="email">Email</label>*/}
-      {/*    <input*/}
-      {/*      type="email"*/}
-      {/*      name="email"*/}
-      {/*      id="email"*/}
-      {/*      value={email}*/}
-      {/*      onChange={(e) => setEmail(e.target.value)}*/}
-      {/*    />*/}
-      {/*  </FormInput>*/}
+        <FormInput>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </FormInput>
 
-      {/*  <mark>{message}</mark>*/}
+        <mark>{message}</mark>
 
-      {/*  <FormButtonContainer>*/}
-      {/*    <NewsletterButton type="submit">Send 💌</NewsletterButton>*/}
-      {/*  </FormButtonContainer>*/}
-      {/*</NewsletterForm>*/}
+        <FormButtonContainer>
+          <NewsletterButton type="submit">Send 💌</NewsletterButton>
+        </FormButtonContainer>
+      </NewsletterForm>
     </AltCardContainer>
   );
 };

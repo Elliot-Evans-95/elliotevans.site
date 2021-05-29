@@ -6608,6 +6608,11 @@ dot-prop@^5.1.0, dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+
 dotenv@^8.1.0, dotenv@^8.2.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
@@ -8320,6 +8325,13 @@ gatsby-plugin-brotli@^2.0.0:
     glob "^7.1.6"
     mkdirp "^1.0.4"
     piscina "^1.6.3"
+
+gatsby-plugin-canonical-urls@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-3.6.0.tgz#4dc3273038d9a8cc73857245d10be3941e1a7f26"
+  integrity sha512-P/In2c6FCeFYH2mSS72MuDA3SUffXK4oh8Akf5XDdvNrvbdM9I+P920X3eGA3mVrvg0+T8AcSVjiTspLH1KxWw==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 gatsby-plugin-feed@^3.5.0:
   version "3.5.0"

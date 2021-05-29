@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+  S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+
 jobs:
   build-snapshot:
     runs-on: ubuntu-latest
@@ -37,4 +42,4 @@ jobs:
         run: yarn build
 
       - name: 'Run s3 gatsby plugin to deploy site'
-        run: yarn deploy
+        run: yarn deploy:ci

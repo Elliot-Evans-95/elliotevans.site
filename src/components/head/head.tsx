@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { HeadProps } from './head.type';
 import { memo } from 'preact/compat';
 import { useEffect } from 'react';
-// import { useEffect } from 'preact/hooks';
 
 type windowWithDataLayer = Window & { dataLayer: Array<unknown> };
 
@@ -30,6 +29,7 @@ const head: FunctionComponent<HeadProps> = ({
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="color-scheme" content="dark light" />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://elliotevans.info/" />

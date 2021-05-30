@@ -10,7 +10,7 @@ export const NewsletterMainHeading = styled.h4`
   margin: 1rem 0;
   line-height: 2.4rem;
   text-align: left;
-  color: var(--card-backgound);
+  color: var(--heading-color);
 `;
 
 export const NewsletterSubHeading = styled.h5`
@@ -19,7 +19,7 @@ export const NewsletterSubHeading = styled.h5`
   margin: 0;
   line-height: 1.6rem;
   text-align: left;
-  color: var(--card-backgound);
+  color: var(--heading-color);
 `;
 
 export const NewsletterForm = styled.form`
@@ -38,13 +38,13 @@ export const FormInput = styled.div`
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: var(--card-backgound);
+    color: var(--heading-color);
   }
 
   input {
     background: var(--backgound);
     color: var(--card-text-color);
-    border: 0.2rem solid #e3b7a9;
+    border: 0.2rem solid var(--heading-color-hover);
     font-size: 1.2rem;
     line-height: 1.6rem;
     padding: 0.8rem;
@@ -59,10 +59,10 @@ export const FormButtonContainer = styled.div`
 `;
 
 export const NewsletterButton = styled.button`
-  background: #252525;
-  color: #e3b7a9;
+  background: var(--card-backgound);
+  color: var(--white);
   border-radius: 1rem;
-  border: 0;
+  border: 1px solid var(--card-text-color);
   font-size: 1.2rem;
   line-height: 1.6rem;
   padding: 0.6rem 1.2rem;

@@ -2,17 +2,16 @@ import * as React from 'react';
 import { memo } from 'preact/compat';
 import { AltCardContainer } from '../../styles/common.style';
 import {
+  FormButtonContainer,
+  FormInput,
   HeadingSection,
   NewsletterMainHeading,
   NewsletterSubHeading,
   NewsletterForm,
-  FormInput,
-  FormButtonContainer,
   NewsletterButton,
 } from './newsletter.style';
 import { FunctionComponent, VNode } from 'preact';
 import { useState } from 'react';
-// import { useState } from 'preact/hooks';
 
 const Newsletter: FunctionComponent = (): VNode => {
   const [email, setEmail] = useState('');
@@ -38,7 +37,7 @@ const Newsletter: FunctionComponent = (): VNode => {
       setMessage(error);
       return;
     }
-
+    
     setEmail('');
     setMessage('Success! 🎉 You are now subscribed to the newsletter.');
   };

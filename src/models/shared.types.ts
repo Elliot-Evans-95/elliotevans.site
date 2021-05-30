@@ -8,3 +8,5 @@ export interface IHeader {
 export type IEdge = {
   node: IHomeNode;
 };
+
+export type Theme = 'light' | 'dark';

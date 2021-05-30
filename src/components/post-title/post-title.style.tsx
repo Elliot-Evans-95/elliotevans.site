@@ -12,7 +12,7 @@ export const BlogCardTitle = styled.header`
 
   &:hover {
     h2 {
-      color: var(--cite-text-color);
+      color: var(--heading-color-hover);
     }
   }
 `;

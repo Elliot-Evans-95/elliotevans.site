@@ -30,7 +30,7 @@ export const EEFooter = styled.footer`
   z-index: 1;
 
   p {
-    color: #f2e0d7;
+    color: var(--white);
   }
 `;
 
@@ -79,7 +79,7 @@ export const ToggleTheme = styled.button`
   height: 4rem;
   justify-self: flex-end;
   margin: 1rem 0;
-  text-shadow: 0 0 1rem #f2e0d7;
+  text-shadow: 0 0 1rem var(--sky-color);
   background: none;
   font-size: 2rem;
   border: 0;
@@ -116,7 +116,7 @@ export const AltCardContainer = styled.section`
   padding: 0 1rem;
   margin: 2rem 0 4rem 0;
   border-radius: 1rem;
-  background: var(--card-text-color);
+  background: var(--alt-card-background);
 
   //  just for the newsletter component
   max-width: 30rem;
@@ -162,6 +162,6 @@ export const CardContainer = styled.section`
 
   p {
     text-align: left;
-    color: var(--card-text-color);
+    color: var(--white);
   }
 `;

@@ -20,6 +20,7 @@ const head: FunctionComponent<HeadProps> = ({
     }
     gtag('js', new Date());
     gtag('config', 'G-XJ0WFL0QF9');
+    gtag('config', 'UA-87577564-1');
   }, []);
 
   return (
@@ -42,10 +43,21 @@ const head: FunctionComponent<HeadProps> = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content="/twitterimage.png" />
+      {/* <!--Global site tag (gtag.js) - Google Analytics --> */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-87577564-1"
+      />
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <script src="https://www.googletagmanager.com/gtag/js?id=G-XJ0WFL0QF9" />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XJ0WFL0QF9"
+      />
       {/*  <!-- Google Optimise --> */}
-      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-WPWN5Q8" />
+      <script
+        async
+        src="https://www.googleoptimize.com/optimize.js?id=OPT-WPWN5Q8"
+      />
     </Helmet>
   );
 };

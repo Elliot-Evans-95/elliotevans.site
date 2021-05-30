@@ -43,17 +43,9 @@ const head: FunctionComponent<HeadProps> = ({
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content="/twitterimage.png" />
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <script
-        src="https://www.googletagmanager.com/gtag/js?id=G-XJ0WFL0QF9"
-        async
-        defer
-      />
+      <script src="https://www.googletagmanager.com/gtag/js?id=G-XJ0WFL0QF9" />
       {/*  <!-- Google Optimise --> */}
-      <script
-        src="https://www.googleoptimize.com/optimize.js?id=OPT-WPWN5Q8"
-        async
-        defer
-      />
+      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-WPWN5Q8" />
     </Helmet>
   );
 };

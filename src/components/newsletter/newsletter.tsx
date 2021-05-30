@@ -37,7 +37,7 @@ const Newsletter: FunctionComponent = (): VNode => {
       setMessage(error);
       return;
     }
-    
+
     setEmail('');
     setMessage('Success! 🎉 You are now subscribed to the newsletter.');
   };

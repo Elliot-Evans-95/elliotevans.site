@@ -22,7 +22,7 @@ export default class extends Component<HomeProps, Record<string, unknown>> {
   private readonly _header: IHeader;
   private readonly _profileImage: FixedImage;
   private readonly _about: string;
-  private readonly _theme: Theme;
+  private _theme: Theme = 'dark';
 
   constructor(props: HomeProps, context: Record<string, unknown>) {
     super(props, context);
@@ -38,6 +38,9 @@ export default class extends Component<HomeProps, Record<string, unknown>> {
     this._profileImage = this.props.data.profileImage;
     this._about = about ? about.node.about : '';
     this._header = header ? header.node.header : defaultHeader;
+  }
+
+  componentDidMount(): void {
     this._theme = window.matchMedia('(prefers-color-scheme: dark)')
       ? 'dark'
       : 'light';

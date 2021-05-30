@@ -3,26 +3,12 @@ import { FunctionComponent, VNode } from 'preact';
 import { Helmet } from 'react-helmet-async';
 import { HeadProps } from './head.type';
 import { memo } from 'preact/compat';
-import { useEffect } from 'react';
-
-type windowWithDataLayer = Window & { dataLayer: Array<unknown> };
 
 const head: FunctionComponent<HeadProps> = ({
   title,
   description,
   keywords,
 }): VNode => {
-  useEffect(() => {
-    (window as windowWithDataLayer).dataLayer =
-      (window as windowWithDataLayer).dataLayer || [];
-    function gtag(...args) {
-      (window as windowWithDataLayer).dataLayer.push(args);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-XJ0WFL0QF9');
-    gtag('config', 'UA-87577564-1');
-  }, []);
-
   return (
     <Helmet>
       {/* <!-- Primary Meta Tags --> */}
@@ -48,11 +34,21 @@ const head: FunctionComponent<HeadProps> = ({
         async
         src="https://www.googletagmanager.com/gtag/js?id=UA-87577564-1"
       />
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-XJ0WFL0QF9"
       />
+
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XJ0WFL0QF9');
+          gtag('config', 'UA-87577564-1');
+        `}
+      </script>
+
       {/*  <!-- Google Optimise --> */}
       <script
         async

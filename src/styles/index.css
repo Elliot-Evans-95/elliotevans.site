@@ -1,7 +1,5 @@
 @media (prefers-color-scheme: light) {
     :root {
-        color-scheme: light;
-
         /*--backgound: #252525;*/
         --backgound: #c3d1f1;
         /*--card-backgound: #59667A;*/
@@ -32,10 +30,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        color-scheme: dark;
-
         /*--backgound: #252525;*/
-        --backgound: #0e0e10;
+        /*--backgound: #0e0e10;*/
+        --backgound: #101010;
         /*--card-backgound: #59667A;*/
         --card-backgound: #614BD1;
 

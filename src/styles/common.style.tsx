@@ -73,7 +73,7 @@ export const AppNavigation = styled.nav`
 `;
 
 export const ToggleTheme = styled.button`
-  z-index: 10;
+  z-index: 100;
   grid-area: nav;
   width: 4rem;
   height: 4rem;
@@ -83,11 +83,11 @@ export const ToggleTheme = styled.button`
   background: none;
   font-size: 2rem;
   border: 0;
+  overflow: visible;
 `;
 
 export const NavItems = styled.li`
   display: inline-block;
-  margin: 0 1em;
 `;
 
 export const profileImage = css`
@@ -100,7 +100,7 @@ export const profileImage = css`
 `;
 
 export const StyledLink = css`
-  color: #f2e0d7;
+  color: var(--cite-text-color);
   text-decoration: none;
 
   &:hover {
@@ -134,10 +134,6 @@ export const BlogCard = styled.section`
   :last-child {
     margin-bottom: 6rem;
   }
-`;
-
-export const BlogPostWrapper = styled.section`
-  padding: 1rem;
 `;
 
 export const BlogCardInfo = styled.div`

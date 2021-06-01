@@ -6,7 +6,6 @@ import { IHeaderQuery } from '../models/home.types';
 import {
   BlogCardInfo,
   BlogCardInfoCite,
-  BlogPostWrapper,
   CardContainer,
   Main,
   ToggleTheme,
@@ -48,7 +47,7 @@ export default ({ data }: IndexBlogPostProps): VNode => {
       <BackToHome />
       <ToggleTheme>🌑</ToggleTheme>
       <Main>
-        <BlogPostWrapper>
+        <section>
           <Icons page="blog" />
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <BlogCardInfo>
@@ -65,7 +64,7 @@ export default ({ data }: IndexBlogPostProps): VNode => {
           )}
 
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        </BlogPostWrapper>
+        </section>
         <Newsletter />
       </Main>
       <Footer />

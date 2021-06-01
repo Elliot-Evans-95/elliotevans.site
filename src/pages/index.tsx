@@ -8,7 +8,7 @@ import Head from '../components/head/head';
 import { FixedImage, HomeProps } from '../models/home.types';
 
 import '../styles/index.css';
-import { IHeader, Theme } from '../models/shared.types';
+import { IHeader, IndexState, Theme } from '../models/shared.types';
 import Header from '../components/header';
 import { Main, ToggleTheme } from '../styles/common.style';
 import Card from '../components/card/card';
@@ -18,11 +18,14 @@ const desc = 'Home Page';
 const keywords =
   'Front End Developer, Web Application Developer, Web Developer, Javascript Developer';
 
-export default class extends Component<HomeProps, Record<string, unknown>> {
+export default class extends Component<HomeProps, IndexState> {
   private readonly _header: IHeader;
   private readonly _profileImage: FixedImage;
   private readonly _about: string;
-  private _theme: Theme = 'dark';
+
+  public state: IndexState = {
+    theme: undefined,
+  };
 
   constructor(props: HomeProps, context: Record<string, unknown>) {
     super(props, context);
@@ -41,9 +44,14 @@ export default class extends Component<HomeProps, Record<string, unknown>> {
   }
 
   componentDidMount(): void {
-    this._theme = window.matchMedia('(prefers-color-scheme: dark)')
+    const colorScheme: Theme = window.matchMedia('(prefers-color-scheme: dark)')
+      .matches
       ? 'dark'
       : 'light';
+
+    this.setState(() => ({
+      theme: colorScheme,
+    }));
   }
 
   public render(): VNode {
@@ -52,7 +60,7 @@ export default class extends Component<HomeProps, Record<string, unknown>> {
         <Head title={title} description={desc} keywords={keywords} />
 
         <ToggleTheme>
-          {this._theme === 'dark' ? (
+          {this.state.theme === 'dark' ? (
             <span role="img" aria-label="moon">
               🌑
             </span>

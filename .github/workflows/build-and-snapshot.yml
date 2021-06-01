@@ -3,6 +3,9 @@ name: Build & Snapshot
 on:
   push
 
+env:
+  PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+
 jobs:
   build-snapshot:
     runs-on: ubuntu-latest

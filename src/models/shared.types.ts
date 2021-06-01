@@ -10,3 +10,6 @@ export type IEdge = {
 };
 
 export type Theme = 'light' | 'dark';
+export type IndexState = {
+  theme: Theme | undefined;
+};

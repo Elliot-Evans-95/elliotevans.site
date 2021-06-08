@@ -72,7 +72,7 @@ export const AppNavigation = styled.nav`
   }
 `;
 
-export const ToggleTheme = styled.button`
+export const ToggleThemeWrapper = styled.button`
   z-index: 100;
   grid-area: nav;
   width: 4rem;
@@ -116,7 +116,7 @@ export const AltCardContainer = styled.section`
   padding: 0 1rem;
   margin: 2rem 0 4rem 0;
   border-radius: 1rem;
-  background: var(--alt-card-background);
+  background: var(--newsletter-background);
 
   //  just for the newsletter component
   max-width: 30rem;
@@ -144,6 +144,7 @@ export const BlogCardInfo = styled.div`
 export const BlogCardInfoCite = styled.cite`
   width: 10rem;
   color: var(--cite-text-color);
+  margin-bottom: 2rem;
 `;
 
 export const CardContainer = styled.section`
@@ -159,5 +160,15 @@ export const CardContainer = styled.section`
   p {
     text-align: left;
     color: var(--white);
+  }
+`;
+
+export const BlogContent = styled.div`
+  h2 {
+    :first-child {
+      margin-top: 0;
+    }
+
+    margin-top: 2.25rem;
   }
 `;

@@ -62,7 +62,7 @@ export const NewsletterButton = styled.button`
   background: var(--card-backgound);
   color: var(--white);
   border-radius: 1rem;
-  border: 1px solid var(--card-text-color);
+  border: 0;
   font-size: 1.2rem;
   line-height: 1.6rem;
   padding: 0.6rem 1.2rem;

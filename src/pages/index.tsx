@@ -8,10 +8,11 @@ import Head from '../components/head/head';
 import { FixedImage, HomeProps } from '../models/home.types';
 
 import '../styles/index.css';
-import { IHeader, IndexState, Theme } from '../models/shared.types';
+import { IHeader, IndexState } from '../models/shared.types';
 import Header from '../components/header';
-import { Main, ToggleTheme } from '../styles/common.style';
+import { Main } from '../styles/common.style';
 import Card from '../components/card/card';
+import { ToggleTheme } from '../components/toggle-theme/toggleTheme';
 
 const title = 'Elliot Evans - Home';
 const desc = 'Home Page';
@@ -22,10 +23,6 @@ export default class extends Component<HomeProps, IndexState> {
   private readonly _header: IHeader;
   private readonly _profileImage: FixedImage;
   private readonly _about: string;
-
-  public state: IndexState = {
-    theme: undefined,
-  };
 
   constructor(props: HomeProps, context: Record<string, unknown>) {
     super(props, context);
@@ -43,33 +40,12 @@ export default class extends Component<HomeProps, IndexState> {
     this._header = header ? header.node.header : defaultHeader;
   }
 
-  componentDidMount(): void {
-    const colorScheme: Theme = window.matchMedia('(prefers-color-scheme: dark)')
-      .matches
-      ? 'dark'
-      : 'light';
-
-    this.setState(() => ({
-      theme: colorScheme,
-    }));
-  }
-
   public render(): VNode {
     return (
       <div className={'appGrid'}>
         <Head title={title} description={desc} keywords={keywords} />
 
-        <ToggleTheme>
-          {this.state.theme === 'dark' ? (
-            <span role="img" aria-label="moon">
-              🌑
-            </span>
-          ) : (
-            <span role="img" aria-label="sun">
-              ☀️
-            </span>
-          )}
-        </ToggleTheme>
+        <ToggleTheme />
 
         <Main>
           <Header header={this._header} profileImage={this._profileImage} />

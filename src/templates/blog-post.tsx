@@ -6,15 +6,16 @@ import { IHeaderQuery } from '../models/home.types';
 import {
   BlogCardInfo,
   BlogCardInfoCite,
+  BlogContent,
   CardContainer,
   Main,
-  ToggleTheme,
 } from '../styles/common.style';
 import Footer from '../components/footer';
 import BackToHome from '../components/backToHome';
 import Icons from '../components/icons/icons';
 import Newsletter from '../components/newsletter/newsletter';
 import Head from '../components/head/head';
+import { ToggleTheme } from '../components/toggle-theme/toggleTheme';
 
 interface IndexBlogPostProps {
   data: {
@@ -45,7 +46,7 @@ export default ({ data }: IndexBlogPostProps): VNode => {
         keywords={keywords}
       />
       <BackToHome />
-      <ToggleTheme>🌑</ToggleTheme>
+      <ToggleTheme />
       <Main>
         <section>
           <Icons page="blog" />
@@ -63,7 +64,9 @@ export default ({ data }: IndexBlogPostProps): VNode => {
             </CardContainer>
           )}
 
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          <BlogContent
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          />
         </section>
         <Newsletter />
       </Main>

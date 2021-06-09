@@ -1,22 +1,14 @@
 @media (prefers-color-scheme: light) {
     :root {
-        /*--backgound: #252525;*/
         --backgound: #c3d1f1;
-        /*--card-backgound: #59667A;*/
         --card-backgound: #6d56f3;
 
-        /*--heading-color: #C85127;*/
         --heading-color: #07328e;
         --heading-color-hover: #032742;
-        /*--text-color: #59667A;*/
         --text-color: #03233d;
-        /*--card-text-color: #F2E0D7;*/
         --card-text-color: #17171c;
-        /*--cite-text-color: #E3B7A9;*/
-        /*--cite-text-color: #F2E0D7;*/
         --cite-text-color: #21242a;
 
-        /*--icon-color: #E3B7A9;*/
         --icon-color: #241c4e;
         --icon-color-hover: #202428;
 
@@ -25,35 +17,29 @@
         --alt-card-background: #b4c2e2;
 
         --sky-color: #f2e0d7;
+
+        --newsletter-background: #b4c2e2;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /*--backgound: #252525;*/
-        /*--backgound: #0e0e10;*/
-        --backgound: #101010;
-        /*--card-backgound: #59667A;*/
+        --backgound: #262626;
         --card-backgound: #614BD1;
 
-        /*--heading-color: #C85127;*/
-        --heading-color: #0D4ADB;
+        --heading-color: #d3e0ff;
         --heading-color-hover: #0D82DB;
-        /*--text-color: #59667A;*/
-        --text-color: #0D7BD1;
-        /*--card-text-color: #F2E0D7;*/
-        --card-text-color: #A9B5D1;
-        /*--cite-text-color: #E3B7A9;*/
-        /*--cite-text-color: #F2E0D7;*/
-        --cite-text-color: #A9B5D1;
+        --text-color: #0e94fc;
+        --card-text-color: #af8eff;
 
-        /*--icon-color: #E3B7A9;*/
         --icon-color: #614BD1;
         --icon-color-hover: #A9B5D1;
 
         --white: #BECBEB;
         --alt-card-background: #BECBEB;
         --sky-color: #326bf8;
+
+        --newsletter-background: #263250;
     }
 }
 
